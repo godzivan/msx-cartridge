@@ -1,0 +1,62 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=C:/altera/13.1/msxslot/ --output-directory=C:/altera/13.1/msxslot/plltest/simulation/ --file-set=SIM_VERILOG --report-file=html:C:/altera/13.1/msxslot/plltest.html --report-file=sopcinfo:C:/altera/13.1/msxslot/plltest.sopcinfo --report-file=csv:C:/altera/13.1/msxslot/plltest.csv --report-file=spd:C:/altera/13.1/msxslot/plltest.spd --report-file=sip:C:/altera/13.1/msxslot/plltest/simulation/plltest.sip --report-file=cmp:C:/altera/13.1/msxslot/plltest.cmp --system-info=DEVICE_FAMILY="MAX II" --system-info=DEVICE=EPM240T100C5 --system-info=DEVICE_SPEEDGRADE=5 --component-file=C:/altera/13.1/msxslot/plltest.qsys
+Progress: Loading msxslot/plltest.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: plltest: Generating plltest "plltest" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: plltest: Done "plltest" with 1 modules, 1 files, 323 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:/altera/13.1/msxslot/plltest.spd --output-directory=C:/altera/13.1/msxslot/plltest/simulation/
+Info: Doing: ip-make-simscript --spd=C:/altera/13.1/msxslot/plltest.spd --output-directory=C:/altera/13.1/msxslot/plltest/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in C:/altera/13.1/msxslot/plltest/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in C:/altera/13.1/msxslot/plltest/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in C:/altera/13.1/msxslot/plltest/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/altera/13.1/msxslot/plltest/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: Generating the following file(s) for RIVIERA simulator in C:/altera/13.1/msxslot/plltest/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=C:/altera/13.1/msxslot/ --output-directory=C:/altera/13.1/msxslot/plltest/ --report-file=bsf:C:/altera/13.1/msxslot/plltest.bsf --system-info=DEVICE_FAMILY="MAX II" --system-info=DEVICE=EPM240T100C5 --system-info=DEVICE_SPEEDGRADE=5 --component-file=C:/altera/13.1/msxslot/plltest.qsys
+Progress: Loading msxslot/plltest.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=C:/altera/13.1/msxslot/ --output-directory=C:/altera/13.1/msxslot/plltest/synthesis/ --file-set=QUARTUS_SYNTH --report-file=html:C:/altera/13.1/msxslot/plltest.html --report-file=sopcinfo:C:/altera/13.1/msxslot/plltest.sopcinfo --report-file=cmp:C:/altera/13.1/msxslot/plltest.cmp --report-file=qip:C:/altera/13.1/msxslot/plltest/synthesis/plltest.qip --report-file=svd --report-file=regmap:C:/altera/13.1/msxslot/plltest/synthesis/plltest.regmap --report-file=debuginfo:C:/altera/13.1/msxslot/plltest/synthesis/plltest.debuginfo --system-info=DEVICE_FAMILY="MAX II" --system-info=DEVICE=EPM240T100C5 --system-info=DEVICE_SPEEDGRADE=5 --component-file=C:/altera/13.1/msxslot/plltest.qsys --language=VERILOG
+Progress: Loading msxslot/plltest.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: plltest: Generating plltest "plltest" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: plltest: Done "plltest" with 1 modules, 1 files, 323 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
