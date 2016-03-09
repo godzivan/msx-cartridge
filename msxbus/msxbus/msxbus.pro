@@ -1,4 +1,4 @@
-update=2016-03-09 오전 1:43:34
+update=2016-03-09 오전 1:49:26
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,9 +23,11 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=../libraries
+LibDir=
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -56,8 +58,6 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/kicad/msx-cartridge/libraries/IC_raspberry
+LibName30=C:/kicad/msx-cartridge/libraries/altera_maxII_epm240
 LibName31=C:/kicad/msx-cartridge/libraries/msx_slot
-LibName32=altera_maxII_epm240
-[general]
-version=1
+LibName32=C:/kicad/msx-cartridge/libraries/IC_raspberry

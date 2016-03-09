@@ -30,6 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:IC_raspberry
 LIBS:msx_slot
+LIBS:altera_maxII_epm240
 LIBS:msxslotpi-cache
 EELAYER 25 0
 EELAYER END
