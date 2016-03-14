@@ -31,6 +31,7 @@ LIBS:valves
 LIBS:EMP240
 LIBS:IC_raspberry
 LIBS:msx_slot
+LIBS:msxbus-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -268,10 +269,10 @@ Entry Wire Line
 Entry Wire Line
 	10700 6100 10600 6000
 $Comp
-L +5V #PWR1
+L +5V #PWR01
 U 1 1 56DFFFDE
 P 3300 5250
-F 0 "#PWR1" H 3300 5100 50  0001 C CNN
+F 0 "#PWR01" H 3300 5100 50  0001 C CNN
 F 1 "+5V" H 3300 5390 50  0000 C CNN
 F 2 "" H 3300 5250 50  0000 C CNN
 F 3 "" H 3300 5250 50  0000 C CNN
@@ -279,10 +280,10 @@ F 3 "" H 3300 5250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR2
+L +5V #PWR02
 U 1 1 56E0008C
 P 9500 3550
-F 0 "#PWR2" H 9500 3400 50  0001 C CNN
+F 0 "#PWR02" H 9500 3400 50  0001 C CNN
 F 1 "+5V" H 9500 3690 50  0000 C CNN
 F 2 "" H 9500 3550 50  0000 C CNN
 F 3 "" H 9500 3550 50  0000 C CNN
@@ -290,10 +291,10 @@ F 3 "" H 9500 3550 50  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L +5V #PWR3
+L +5V #PWR03
 U 1 1 56E000B6
 P 9500 6350
-F 0 "#PWR3" H 9500 6200 50  0001 C CNN
+F 0 "#PWR03" H 9500 6200 50  0001 C CNN
 F 1 "+5V" H 9500 6490 50  0000 C CNN
 F 2 "" H 9500 6350 50  0000 C CNN
 F 3 "" H 9500 6350 50  0000 C CNN
@@ -649,7 +650,7 @@ MRESET
 Text Label 3150 7250 0    60   ~ 0
 MSLTSL0
 Text Label 950  6050 0    60   ~ 0
-SLTSL1
+MSLTSL1
 Text Label 3150 6050 0    60   ~ 0
 MWAIT
 Text Label 3150 6150 0    60   ~ 0
@@ -662,8 +663,6 @@ Text Label 950  5950 0    60   ~ 0
 MEXT
 Text Label 950  5750 0    60   ~ 0
 GND
-Entry Wire Line
-	750  5450 850  5350
 Text Label 950  5350 0    60   ~ 0
 3V3
 Text Label 950  6150 0    60   ~ 0
@@ -690,7 +689,7 @@ Text Label 8050 3700 0    60   ~ 0
 GND
 Text Label 8050 4200 0    60   ~ 0
 GND
-Text Label 8050 4000 0    60   ~ 0
+Text Label 8050 5000 0    60   ~ 0
 CLOCK
 Text Label 8050 4300 0    60   ~ 0
 3V3
@@ -706,9 +705,9 @@ Text Label 3750 4700 0    60   ~ 0
 MWAIT
 Text Label 5100 5900 1    60   ~ 0
 MODE
-Text Label 5200 5900 1    60   ~ 0
-MD11
 Text Label 5500 5900 1    60   ~ 0
+MD11
+Text Label 5600 5900 1    60   ~ 0
 MD08
 Text Label 5700 5900 1    60   ~ 0
 MD07
@@ -898,8 +897,6 @@ Entry Wire Line
 	7200 1850 7300 1750
 Text Label 3750 3900 0    60   ~ 0
 3V3
-Text Label 5600 5900 1    60   ~ 0
-MD11
 Text Label 5300 5900 1    60   ~ 0
 3V3
 Text Label 5400 5900 1    60   ~ 0
@@ -918,8 +915,6 @@ Text Label 3750 5100 0    60   ~ 0
 TDO
 Text Label 8050 3900 0    60   ~ 0
 3V3
-Text Label 8050 3800 0    60   ~ 0
-CLK3
 Text Label 5400 2200 1    60   ~ 0
 3V3
 Text Label 5500 2200 1    60   ~ 0
@@ -928,32 +923,30 @@ Text Label 6800 2200 1    60   ~ 0
 3V3
 Text Label 6900 5900 1    60   ~ 0
 MRESET
-Text Label 8050 4900 0    60   ~ 0
-SWOUT
-Text Label 8050 5000 0    60   ~ 0
-SW1
 Text Label 8050 5100 0    60   ~ 0
+SWOUT
+Text Label 7200 5900 1    60   ~ 0
+SW1
+Text Label 7100 5900 1    60   ~ 0
 SW2
-Text Label 8050 4800 0    60   ~ 0
+Text Label 8050 4900 0    60   ~ 0
 D7
-Text Label 8050 4700 0    60   ~ 0
+Text Label 8050 4800 0    60   ~ 0
 D6
-Text Label 8050 4600 0    60   ~ 0
+Text Label 8050 4700 0    60   ~ 0
 D5
-Text Label 8050 4500 0    60   ~ 0
+Text Label 8050 4600 0    60   ~ 0
 D4
-Text Label 8050 4400 0    60   ~ 0
+Text Label 8050 4500 0    60   ~ 0
 D3
-Text Label 8050 4100 0    60   ~ 0
+Text Label 8050 4400 0    60   ~ 0
 D2
-Text Label 8050 3600 0    60   ~ 0
+Text Label 8050 4100 0    60   ~ 0
 D1
-Text Label 8050 3500 0    60   ~ 0
+Text Label 8050 4000 0    60   ~ 0
 D0
-Text Label 8050 3400 0    60   ~ 0
+Text Label 8050 3600 0    60   ~ 0
 A5
-Text Label 8050 3300 0    60   ~ 0
-A2
 Text Label 7200 2200 1    60   ~ 0
 A7
 Text Label 7100 2200 1    60   ~ 0
@@ -972,15 +965,15 @@ Text Label 6300 2200 1    60   ~ 0
 WR
 Text Label 6200 2200 1    60   ~ 0
 RD
-Text Label 5100 2200 1    60   ~ 0
-CS1
 Text Label 5000 2200 1    60   ~ 0
+CS1
+Text Label 4900 2200 1    60   ~ 0
 CS2
 Text Label 5200 2200 1    60   ~ 0
 CS12
-Text Label 4800 2200 1    60   ~ 0
+Text Label 5100 2200 1    60   ~ 0
 SLTSL0
-Text Label 4900 2200 1    60   ~ 0
+Text Label 4800 2200 1    60   ~ 0
 SLTSL1
 Text Label 5300 2200 1    60   ~ 0
 RFSH
@@ -1020,7 +1013,7 @@ U 1 1 56E49098
 P 2050 2800
 F 0 "P3" H 2050 3100 50  0000 C CNN
 F 1 "CONN_02X05" H 2050 2500 50  0000 C CNN
-F 2 "" H 2050 1600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 2050 1600 50  0000 C CNN
 F 3 "" H 2050 1600 50  0000 C CNN
 	1    2050 2800
 	1    0    0    -1  
@@ -1373,7 +1366,7 @@ Wire Wire Line
 Wire Bus Line
 	9300 650  10700 650 
 Wire Wire Line
-	1200 5350 850  5350
+	850  5350 1200 5350
 Wire Bus Line
 	750  4800 750  7450
 Wire Bus Line
@@ -1579,9 +1572,9 @@ $Comp
 L R R1
 U 1 1 56E4B96D
 P 1050 2050
-F 0 "R1" V 1130 2050 50  0000 C CNN
+F 0 "R1" V 1100 2200 50  0000 C CNN
 F 1 "10K" V 1050 2050 50  0000 C CNN
-F 2 "Resistors_SMD:R_2010_HandSoldering" V 980 2050 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 980 2050 50  0001 C CNN
 F 3 "" H 1050 2050 50  0000 C CNN
 	1    1050 2050
 	1    0    0    -1  
@@ -1590,9 +1583,9 @@ $Comp
 L R R2
 U 1 1 56E4BB3C
 P 1150 2050
-F 0 "R2" V 1230 2050 50  0000 C CNN
+F 0 "R2" V 1200 2200 50  0000 C CNN
 F 1 "10K" V 1150 2050 50  0000 C CNN
-F 2 "Resistors_SMD:R_2010_HandSoldering" V 1080 2050 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 1080 2050 50  0001 C CNN
 F 3 "" H 1150 2050 50  0000 C CNN
 	1    1150 2050
 	1    0    0    -1  
@@ -1601,9 +1594,9 @@ $Comp
 L R R3
 U 1 1 56E4BB63
 P 1250 2050
-F 0 "R3" V 1330 2050 50  0000 C CNN
+F 0 "R3" V 1300 2200 50  0000 C CNN
 F 1 "10K" V 1250 2050 50  0000 C CNN
-F 2 "Resistors_SMD:R_2010_HandSoldering" V 1180 2050 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 1180 2050 50  0001 C CNN
 F 3 "" H 1250 2050 50  0000 C CNN
 	1    1250 2050
 	1    0    0    -1  
@@ -1612,9 +1605,9 @@ $Comp
 L R R4
 U 1 1 56E4BB8F
 P 1350 2050
-F 0 "R4" V 1430 2050 50  0000 C CNN
+F 0 "R4" V 1400 2200 50  0000 C CNN
 F 1 "10K" V 1350 2050 50  0000 C CNN
-F 2 "Resistors_SMD:R_2010_HandSoldering" V 1280 2050 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 1280 2050 50  0001 C CNN
 F 3 "" H 1350 2050 50  0000 C CNN
 	1    1350 2050
 	1    0    0    -1  
@@ -1661,4 +1654,23 @@ Wire Wire Line
 	9000 3500 9000 6100
 Wire Wire Line
 	9000 6100 8850 6100
+Text Label 8050 3500 0    60   ~ 0
+A4
+Text Label 8050 3400 0    60   ~ 0
+A3
+Text Label 8050 3300 0    60   ~ 0
+A2
+$Comp
+L +3.3V #PWR?
+U 1 1 56E6AB74
+P 850 5100
+F 0 "#PWR?" H 850 4950 50  0001 C CNN
+F 1 "+3.3V" H 850 5240 50  0000 C CNN
+F 2 "" H 850 5100 50  0000 C CNN
+F 3 "" H 850 5100 50  0000 C CNN
+	1    850  5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  5100 850  5350
 $EndSCHEMATC
