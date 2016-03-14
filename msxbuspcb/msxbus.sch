@@ -399,11 +399,11 @@ Text Label 3750 4200 0    60   ~ 0
 MD15
 Text Label 3750 3300 0    60   ~ 0
 MD03
-Text Label 3750 3400 0    60   ~ 0
-3V3
 Text Label 3750 3500 0    60   ~ 0
-GND
+3V3
 Text Label 3750 3600 0    60   ~ 0
+GND
+Text Label 3750 3700 0    60   ~ 0
 GND
 Entry Wire Line
 	3550 2800 3650 2700
@@ -683,8 +683,6 @@ Text Label 3150 6950 0    60   ~ 0
 GND
 Text Label 3750 4000 0    60   ~ 0
 CLK
-Text Label 3750 3700 0    60   ~ 0
-3V3
 Text Label 8050 3700 0    60   ~ 0
 GND
 Text Label 8050 4200 0    60   ~ 0
@@ -1013,7 +1011,7 @@ U 1 1 56E49098
 P 2050 2800
 F 0 "P3" H 2050 3100 50  0000 C CNN
 F 1 "CONN_02X05" H 2050 2500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 2050 1600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 2050 1600 50  0001 C CNN
 F 3 "" H 2050 1600 50  0000 C CNN
 	1    2050 2800
 	1    0    0    -1  
@@ -1051,7 +1049,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 5350 3100 5350
 Wire Wire Line
-	9800 3400 9500 3400
+	9500 3400 9800 3400
 Connection ~ 9500 3400
 Wire Wire Line
 	3300 5450 3100 5450
@@ -1153,7 +1151,7 @@ Wire Wire Line
 Wire Wire Line
 	9750 6100 9500 6100
 Wire Wire Line
-	9800 6200 9500 6200
+	9500 6200 9800 6200
 Connection ~ 9500 6200
 Wire Bus Line
 	9300 3750 9300 6100
@@ -1661,10 +1659,10 @@ A3
 Text Label 8050 3300 0    60   ~ 0
 A2
 $Comp
-L +3.3V #PWR?
+L +3.3V #PWR04
 U 1 1 56E6AB74
 P 850 5100
-F 0 "#PWR?" H 850 4950 50  0001 C CNN
+F 0 "#PWR04" H 850 4950 50  0001 C CNN
 F 1 "+3.3V" H 850 5240 50  0000 C CNN
 F 2 "" H 850 5100 50  0000 C CNN
 F 3 "" H 850 5100 50  0000 C CNN
@@ -1673,4 +1671,24 @@ F 3 "" H 850 5100 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	850  5100 850  5350
+$Comp
+L GND #PWR05
+U 1 1 56E6D86B
+P 1000 7500
+F 0 "#PWR05" H 1000 7250 50  0001 C CNN
+F 1 "GND" H 1000 7350 50  0000 C CNN
+F 2 "" H 1000 7500 50  0000 C CNN
+F 3 "" H 1000 7500 50  0000 C CNN
+	1    1000 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 7500 1000 7250
+Connection ~ 1000 7250
+Connection ~ 9750 6200
+Connection ~ 9750 3400
+Text Label 9050 3500 0    60   ~ 0
+SOUNDIN1
+Text Label 9000 6300 0    60   ~ 0
+SOUNDIN0
 $EndSCHEMATC

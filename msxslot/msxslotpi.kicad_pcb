@@ -1,11 +1,11 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.1-stable)
+(kicad_pcb (version 4) (host pcbnew 4.0.2-stable)
 
   (general
     (links 136)
     (no_connects 24)
     (area 96.52 71.122 181.055001 155.575001)
     (thickness 1.6)
-    (drawings 0)
+    (drawings 1)
     (tracks 646)
     (zones 0)
     (modules 9)
@@ -1030,6 +1030,19 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
+  )
+
+  (dimension 12.802507 (width 0.3) (layer F.Mask)
+    (gr_text "12.803 mm" (at 102.709312 70.931901 0.6820603932) (layer F.Mask)
+      (effects (font (size 1.5 1.5) (thickness 0.3)))
+    )
+    (feature1 (pts (xy 109.1946 77.9526) (xy 109.094042 69.505797)))
+    (feature2 (pts (xy 96.393 78.105) (xy 96.292442 69.658197)))
+    (crossbar (pts (xy 96.324583 72.358006) (xy 109.126183 72.205606)))
+    (arrow1a (pts (xy 109.126183 72.205606) (xy 108.00674 72.805395)))
+    (arrow1b (pts (xy 109.126183 72.205606) (xy 107.992778 71.632637)))
+    (arrow2a (pts (xy 96.324583 72.358006) (xy 97.457988 72.930975)))
+    (arrow2b (pts (xy 96.324583 72.358006) (xy 97.444026 71.758217)))
   )
 
   (segment (start 111.125 135.255) (end 110.49 135.255) (width 0.25) (layer B.Cu) (net 1))
