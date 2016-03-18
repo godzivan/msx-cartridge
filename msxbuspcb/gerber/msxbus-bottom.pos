@@ -1,0 +1,12 @@
+### Module positions - created on 2016-03-18 오후 4:11:50 ###
+### Printed by Pcbnew version kicad 4.0.2-stable
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val       Package                    PosX       PosY       Rot  Side
+C1        C         C_0603_HandSoldering    36.3220    48.5140  225.0000  bottom
+C2        C         C_0603_HandSoldering    33.6550    45.8470   45.0000  bottom
+C3        C         C_0603_HandSoldering    39.0652    39.6748   45.0000  bottom
+C4        C         C_0603_HandSoldering    35.3314    40.4876  315.0000  bottom
+C5        C         C_0603_HandSoldering    41.7576    42.3418  225.0000  bottom
+C6        C         C_0603_HandSoldering    47.0002    49.9008  315.0000  bottom
+## End

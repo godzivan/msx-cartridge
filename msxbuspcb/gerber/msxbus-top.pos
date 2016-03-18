@@ -1,0 +1,11 @@
+### Module positions - created on 2016-03-18 오후 4:11:50 ###
+### Printed by Pcbnew version kicad 4.0.2-stable
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val       Package                           PosX       PosY       Rot  Side
+R1        10K       R_0603_HandSoldering           63.4492    53.0098  180.0000  top
+R2        10K       R_0603_HandSoldering           67.9196    49.3522  270.0000  top
+R3        10K       R_0603_HandSoldering           67.9196    44.6278   90.0000  top
+R4        10K       R_0603_HandSoldering           67.9704    39.8018  270.0000  top
+U1        EMP240    TQFP-100_12x12mm_Pitch0.4mm    37.8460    44.3230  225.0000  top
+## End
