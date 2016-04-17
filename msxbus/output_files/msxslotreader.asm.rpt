@@ -1,5 +1,5 @@
 Assembler report for msxslotreader
-Tue Mar 08 22:33:21 2016
+Mon Apr 18 02:45:07 2016
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/altera/13.1/msxslot/output_files/msxslotreader.pof
+  5. Assembler Device Options: C:/msys64/home/Miso Kim/msx-cartridge/msxbus/output_files/msxslotreader.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Mar 08 22:33:21 2016 ;
+; Assembler Status      ; Successful - Mon Apr 18 02:45:07 2016 ;
 ; Revision Name         ; msxslotreader                         ;
 ; Top-level Entity Name ; msxbus                                ;
 ; Family                ; MAX II                                ;
@@ -75,24 +75,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+-----------+---------------+
 
 
-+-------------------------------------------------------+
-; Assembler Generated Files                             ;
-+-------------------------------------------------------+
-; File Name                                             ;
-+-------------------------------------------------------+
-; C:/altera/13.1/msxslot/output_files/msxslotreader.pof ;
-+-------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Assembler Generated Files                                                   ;
++-----------------------------------------------------------------------------+
+; File Name                                                                   ;
++-----------------------------------------------------------------------------+
+; C:/msys64/home/Miso Kim/msx-cartridge/msxbus/output_files/msxslotreader.pof ;
++-----------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Assembler Device Options: C:/altera/13.1/msxslot/output_files/msxslotreader.pof ;
-+----------------+----------------------------------------------------------------+
-; Option         ; Setting                                                        ;
-+----------------+----------------------------------------------------------------+
-; Device         ; EPM240T100C5                                                   ;
-; JTAG usercode  ; 0x001823A9                                                     ;
-; Checksum       ; 0x001826B9                                                     ;
-+----------------+----------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/msys64/home/Miso Kim/msx-cartridge/msxbus/output_files/msxslotreader.pof ;
++----------------+--------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                              ;
++----------------+--------------------------------------------------------------------------------------+
+; Device         ; EPM240T100C5                                                                         ;
+; JTAG usercode  ; 0x00186CFD                                                                           ;
+; Checksum       ; 0x00186F75                                                                           ;
++----------------+--------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -101,13 +101,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Mar 08 22:33:20 2016
+    Info: Processing started: Mon Apr 18 02:45:06 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off msxslotreader -c msxslotreader
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 457 megabytes
-    Info: Processing ended: Tue Mar 08 22:33:21 2016
+    Info: Processing ended: Mon Apr 18 02:45:07 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

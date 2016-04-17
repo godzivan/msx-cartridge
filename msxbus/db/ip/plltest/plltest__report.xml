@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2016.03.08.22:33:07"
- outputDirectory="C:/altera/13.1/msxslot/db/ip/plltest/">
+ date="2016.04.18.02:44:56"
+ outputDirectory="C:/msys64/home/Miso Kim/msx-cartridge/msxbus/db/ip/plltest/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -67,7 +67,7 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="plltest:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EPM240T100C5,AUTO_DEVICE_FAMILY=MAX II,AUTO_GENERATION_ID=1457443984,AUTO_UNIQUE_ID=(clock_source:13.1:clockFrequency=3579545,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)"
+   parameterizationKey="plltest:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EPM240T100C5,AUTO_DEVICE_FAMILY=MAX II,AUTO_GENERATION_ID=1460915094,AUTO_UNIQUE_ID=(clock_source:13.1:clockFrequency=3579545,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)"
    instancePathKey="plltest"
    kind="plltest"
    version="1.0"
@@ -77,14 +77,16 @@
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
   <parameter name="AUTO_DEVICE" value="EPM240T100C5" />
-  <parameter name="AUTO_GENERATION_ID" value="1457443984" />
+  <parameter name="AUTO_GENERATION_ID" value="1460915094" />
   <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
   <generatedFiles>
-   <file path="C:/altera/13.1/msxslot/db/ip/plltest/plltest.v" type="VERILOG" />
+   <file
+       path="C:/msys64/home/Miso Kim/msx-cartridge/msxbus/db/ip/plltest/plltest.v"
+       type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
-   <file path="C:/altera/13.1/msxslot/plltest.qsys" />
+   <file path="C:/msys64/home/Miso Kim/msx-cartridge/msxbus/plltest.qsys" />
   </sourceFiles>
   <childSourceFiles/>
   <messages>
