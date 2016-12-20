@@ -28,7 +28,9 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:msxbus_simple-cache
+LIBS:EMP240
+LIBS:IC_raspberry
+LIBS:msx_slot
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
