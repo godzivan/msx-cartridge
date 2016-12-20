@@ -31,7 +31,6 @@ LIBS:valves
 LIBS:EMP240
 LIBS:IC_raspberry
 LIBS:msx_slot
-LIBS:msxbus-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -368,11 +367,11 @@ Entry Wire Line
 Entry Wire Line
 	3450 6850 3550 6950
 Text Label 950  6650 0    60   ~ 0
-MD00
+RCS
 Text Label 3150 6650 0    60   ~ 0
-MD01
+RA0
 Text Label 950  5450 0    60   ~ 0
-MD02
+RMODE
 Entry Wire Line
 	3450 7150 3550 7250
 Entry Wire Line
@@ -382,23 +381,23 @@ Entry Wire Line
 Entry Wire Line
 	3450 7250 3550 7350
 Text Label 950  5550 0    60   ~ 0
-MD03
+READY
 Text Label 3750 3800 0    60   ~ 0
-MD04
+CLK
 Text Label 950  6750 0    60   ~ 0
-MD05
+MD00
 Text Label 950  6850 0    60   ~ 0
-MD06
+MD01
 Text Label 3150 6550 0    60   ~ 0
-MD07
-Text Label 3150 7050 0    60   ~ 0
-MWR
-Text Label 3750 3200 0    60   ~ 0
 MD02
+Text Label 3150 7050 0    60   ~ 0
+MD11
+Text Label 3750 3200 0    60   ~ 0
+RMODE
 Text Label 3750 4200 0    60   ~ 0
-MD15
+MD10
 Text Label 3750 3300 0    60   ~ 0
-MD03
+READY
 Text Label 3750 3500 0    60   ~ 0
 3V3
 Text Label 3750 3600 0    60   ~ 0
@@ -442,13 +441,13 @@ Entry Wire Line
 Entry Wire Line
 	3550 4500 3650 4400
 Text Label 3750 4100 0    60   ~ 0
-MD14
-Text Label 4800 5900 1    60   ~ 0
-MA0
-Text Label 4900 5900 1    60   ~ 0
-MD10
-Text Label 5000 5900 1    60   ~ 0
 MD09
+Text Label 4800 5900 1    60   ~ 0
+E0
+Text Label 4900 5900 1    60   ~ 0
+MD05
+Text Label 5000 5900 1    60   ~ 0
+MD04
 Text Label 9500 1100 0    60   ~ 0
 CS1
 Text Label 9500 1200 0    60   ~ 0
@@ -622,45 +621,45 @@ SWOUT
 Text Label 10300 6100 0    60   ~ 0
 SW2
 Text Label 950  5650 0    60   ~ 0
-MD04
+CLK
 Text Label 3150 6450 0    60   ~ 0
-MD08
+MD03
 Text Label 950  6350 0    60   ~ 0
-MD09
+MD04
 Text Label 950  6250 0    60   ~ 0
-MD10
+MD05
 Text Label 950  6450 0    60   ~ 0
-MD11
+MD06
 Text Label 3150 6850 0    60   ~ 0
-MD12
+MD07
 Text Label 950  6950 0    60   ~ 0
-MD13
+MD08
 Text Label 3150 5650 0    60   ~ 0
-MD14
+MD09
 Text Label 3150 5750 0    60   ~ 0
-MD15
+MD10
 Text Label 950  5850 0    60   ~ 0
-MRD
+MD12
 Text Label 3150 5850 0    60   ~ 0
-MMERQ
+MD13
 Text Label 950  7050 0    60   ~ 0
-MIORQ
+MD14
 Text Label 3150 7150 0    60   ~ 0
-MRESET
+MD15
 Text Label 3150 7250 0    60   ~ 0
-MSLTSL0
+MRW
 Text Label 950  6050 0    60   ~ 0
-MSLTSL1
+MMEIO
 Text Label 3150 6050 0    60   ~ 0
-MWAIT
+MSLTSL
 Text Label 3150 6150 0    60   ~ 0
-MA0
+E0
 Text Label 3150 6350 0    60   ~ 0
-MODE
+E1
 Text Label 950  7150 0    60   ~ 0
-MCS
+E2
 Text Label 950  5950 0    60   ~ 0
-MEXT
+E3
 Text Label 950  5750 0    60   ~ 0
 GND
 Text Label 950  5350 0    60   ~ 0
@@ -692,43 +691,41 @@ CLOCK
 Text Label 8050 4300 0    60   ~ 0
 3V3
 Text Label 3750 4300 0    60   ~ 0
-MRD
-Text Label 3750 4400 0    60   ~ 0
-MMERQ
-Text Label 3750 4500 0    60   ~ 0
-MEXT
-Text Label 3750 4600 0    60   ~ 0
-MSLTSL1
-Text Label 3750 4700 0    60   ~ 0
-MWAIT
-Text Label 5100 5900 1    60   ~ 0
-MODE
-Text Label 5500 5900 1    60   ~ 0
-MD11
-Text Label 5600 5900 1    60   ~ 0
-MD08
-Text Label 5700 5900 1    60   ~ 0
-MD07
-Text Label 5800 5900 1    60   ~ 0
-MD00
-Text Label 5900 5900 1    60   ~ 0
-MD01
-Text Label 6000 5900 1    60   ~ 0
-MD05
-Text Label 6100 5900 1    60   ~ 0
-MD06
-Text Label 6200 5900 1    60   ~ 0
 MD12
-Text Label 6300 5900 1    60   ~ 0
+Text Label 3750 4400 0    60   ~ 0
 MD13
+Text Label 3750 4500 0    60   ~ 0
+E3
+Text Label 3750 4600 0    60   ~ 0
+MMEIO
+Text Label 3750 4700 0    60   ~ 0
+MSLTSL
+Text Label 5100 5900 1    60   ~ 0
+E0
+Text Label 5500 5900 1    60   ~ 0
+MD06
+Text Label 5700 5900 1    60   ~ 0
+MD02
+Text Label 5800 5900 1    60   ~ 0
+RCS
+Text Label 5900 5900 1    60   ~ 0
+RA0
+Text Label 6000 5900 1    60   ~ 0
+MD00
+Text Label 6100 5900 1    60   ~ 0
+MD01
+Text Label 6200 5900 1    60   ~ 0
+MD07
+Text Label 6300 5900 1    60   ~ 0
+MD08
 Text Label 6400 5900 1    60   ~ 0
-MIORQ
+MD14
 Text Label 6500 5900 1    60   ~ 0
-MWR
+MD11
 Text Label 6600 5900 1    60   ~ 0
-MCS
+E2
 Text Label 7000 5900 1    60   ~ 0
-MSLTSL0
+MRW
 Entry Wire Line
 	4700 6050 4800 5950
 Entry Wire Line
@@ -920,7 +917,7 @@ GND
 Text Label 6800 2200 1    60   ~ 0
 3V3
 Text Label 6900 5900 1    60   ~ 0
-MRESET
+MD15
 Text Label 8050 5100 0    60   ~ 0
 SWOUT
 Text Label 7200 5900 1    60   ~ 0
@@ -1798,4 +1795,6 @@ Wire Wire Line
 	9450 6400 8850 6400
 Wire Wire Line
 	9000 6200 8850 6200
+Text Label 5600 5900 1    60   ~ 0
+MD03
 $EndSCHEMATC

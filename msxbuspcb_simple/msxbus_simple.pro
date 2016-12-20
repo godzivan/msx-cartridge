@@ -1,4 +1,4 @@
-update=2016-03-15 오전 2:50:31
+update=2016-12-21 오전 2:33:59
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -56,5 +58,6 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-[general]
-version=1
+LibName30=C:/msys64/home/Miso Kim/msx-cartridge/libraries/EMP240
+LibName31=C:/msys64/home/Miso Kim/msx-cartridge/libraries/IC_raspberry
+LibName32=C:/msys64/home/Miso Kim/msx-cartridge/libraries/msx_slot

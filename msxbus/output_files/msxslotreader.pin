@@ -62,7 +62,7 @@ CHIP  "msxslotreader"  ASSIGNED TO AN: EPM240T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-GND*                         : 1         :        :                   :         : 2         :                
+rw                           : 1         : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 2         :        :                   :         : 1         :                
 GND*                         : 3         :        :                   :         : 1         :                
 GND*                         : 4         :        :                   :         : 1         :                
@@ -102,7 +102,7 @@ a0                           : 37        : input  : 3.3-V LVTTL       :         
 md[0]                        : 38        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 md[1]                        : 39        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 md[7]                        : 40        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
-mdata[0]                     : 41        : bidir  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 41        :        :                   :         : 1         :                
 md[14]                       : 42        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 md[11]                       : 43        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 rbusdir                      : 44        : output : 3.3-V LVTTL       :         : 1         : Y              
@@ -123,9 +123,9 @@ mdata[2]                     : 58        : bidir  : 3.3-V LVTTL       :         
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
 mdata[1]                     : 61        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GND*                         : 62        :        :                   :         : 2         :                
+mdata[0]                     : 62        : bidir  : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
-GND*                         : 64        :        :                   :         : 2         :                
+mio                          : 64        : input  : 3.3-V LVTTL       :         : 2         : N              
 GNDINT                       : 65        : gnd    :                   :         :           :                
 maddr[5]                     : 66        : output : 3.3-V LVTTL       :         : 2         : Y              
 maddr[4]                     : 67        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -156,7 +156,7 @@ mwait                        : 91        : input  : 3.3-V LVTTL       :         
 mint                         : 92        : input  : 3.3-V LVTTL       :         : 2         : Y              
 GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
-GND*                         : 95        :        :                   :         : 2         :                
+sltsl                        : 95        : input  : 3.3-V LVTTL       :         : 2         : N              
 mcs12                        : 96        : output : 3.3-V LVTTL       :         : 2         : Y              
 msltsl[1]                    : 97        : output : 3.3-V LVTTL       :         : 2         : Y              
 mcs1                         : 98        : output : 3.3-V LVTTL       :         : 2         : Y              

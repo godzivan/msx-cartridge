@@ -58,7 +58,6 @@ set_location_assignment PIN_52 -to msx_clk
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
 set_global_assignment -name VERILOG_FILE msxbus.v
 set_global_assignment -name QSYS_FILE plltest.qsys
-set_global_assignment -name VERILOG_FILE SPI_to_MSX_test.v
 set_location_assignment PIN_70 -to maddr[1]
 set_location_assignment PIN_71 -to maddr[0]
 set_location_assignment PIN_61 -to mdata[1]

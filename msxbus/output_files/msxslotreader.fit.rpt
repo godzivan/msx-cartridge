@@ -1,5 +1,5 @@
-Fitter report for msxslotreader
-Mon Apr 18 02:45:03 2016
+I/O Assignment Analysis report for msxslotreader
+Sat Apr 23 12:45:24 2016
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -7,31 +7,17 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Fitter Summary
-  3. Fitter Settings
-  4. Parallel Compilation
+  2. I/O Assignment Analysis Summary
+  3. Parallel Compilation
+  4. Fitter Messages
   5. Pin-Out File
-  6. Fitter Resource Usage Summary
-  7. Input Pins
-  8. Output Pins
-  9. Bidir Pins
- 10. I/O Bank Usage
- 11. All Package Pins
- 12. Output Pin Default Load For Reported TCO
- 13. Fitter Resource Utilization by Entity
- 14. Delay Chain Summary
- 15. Control Signals
- 16. Global & Other Fast Signals
- 17. Non-Global High Fan-Out Signals
- 18. Routing Usage Summary
- 19. LAB Logic Elements
- 20. LAB-wide Signals
- 21. LAB Signals Sourced
- 22. LAB Signals Sourced Out
- 23. LAB Distinct Inputs
- 24. Fitter Device Options
- 25. Fitter Messages
- 26. Fitter Suppressed Messages
+  6. Input Pins
+  7. Output Pins
+  8. Bidir Pins
+  9. I/O Bank Usage
+ 10. All Package Pins
+ 11. Output Pin Default Load For Reported TCO
+ 12. I/O Assignment Analysis Messages
 
 
 
@@ -54,70 +40,20 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------+
-; Fitter Summary                                                         ;
-+---------------------------+--------------------------------------------+
-; Fitter Status             ; Successful - Mon Apr 18 02:45:03 2016      ;
-; Quartus II 64-Bit Version ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name             ; msxslotreader                              ;
-; Top-level Entity Name     ; msxbus                                     ;
-; Family                    ; MAX II                                     ;
-; Device                    ; EPM240T100C5                               ;
-; Timing Models             ; Final                                      ;
-; Total logic elements      ; 65 / 240 ( 27 % )                          ;
-; Total pins                ; 68 / 80 ( 85 % )                           ;
-; Total virtual pins        ; 0                                          ;
-; UFM blocks                ; 0 / 1 ( 0 % )                              ;
-+---------------------------+--------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Settings                                                                                                                              ;
-+----------------------------------------------------------------------------+--------------------------------+--------------------------------+
-; Option                                                                     ; Setting                        ; Default Value                  ;
-+----------------------------------------------------------------------------+--------------------------------+--------------------------------+
-; Device                                                                     ; EPM240T100C5                   ;                                ;
-; Minimum Core Junction Temperature                                          ; 0                              ;                                ;
-; Maximum Core Junction Temperature                                          ; 85                             ;                                ;
-; Fit Attempts to Skip                                                       ; 0                              ; 0.0                            ;
-; Device I/O Standard                                                        ; 3.3-V LVTTL                    ;                                ;
-; Use smart compilation                                                      ; Off                            ; Off                            ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                             ; On                             ;
-; Enable compact report table                                                ; Off                            ; Off                            ;
-; Router Timing Optimization Level                                           ; Normal                         ; Normal                         ;
-; Placement Effort Multiplier                                                ; 1.0                            ; 1.0                            ;
-; Router Effort Multiplier                                                   ; 1.0                            ; 1.0                            ;
-; Always Enable Input Buffers                                                ; Off                            ; Off                            ;
-; Optimize Hold Timing                                                       ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
-; Optimize Multi-Corner Timing                                               ; Off                            ; Off                            ;
-; Guarantee I/O Paths Have Zero Hold Time at Fast Corner                     ; On                             ; On                             ;
-; PowerPlay Power Optimization                                               ; Normal compilation             ; Normal compilation             ;
-; Optimize Timing                                                            ; Normal compilation             ; Normal compilation             ;
-; Optimize Timing for ECOs                                                   ; Off                            ; Off                            ;
-; Regenerate full fit report during ECO compiles                             ; Off                            ; Off                            ;
-; Optimize IOC Register Placement for Timing                                 ; Normal                         ; Normal                         ;
-; Limit to One Fitting Attempt                                               ; Off                            ; Off                            ;
-; Final Placement Optimizations                                              ; Automatically                  ; Automatically                  ;
-; Fitter Aggressive Routability Optimizations                                ; Automatically                  ; Automatically                  ;
-; Fitter Initial Placement Seed                                              ; 1                              ; 1                              ;
-; Slow Slew Rate                                                             ; Off                            ; Off                            ;
-; PCI I/O                                                                    ; Off                            ; Off                            ;
-; Weak Pull-Up Resistor                                                      ; Off                            ; Off                            ;
-; Enable Bus-Hold Circuitry                                                  ; Off                            ; Off                            ;
-; Auto Delay Chains                                                          ; On                             ; On                             ;
-; Auto Delay Chains for High Fanout Input Pins                               ; Off                            ; Off                            ;
-; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                            ; Off                            ;
-; Perform Register Duplication for Performance                               ; Off                            ; Off                            ;
-; Perform Register Retiming for Performance                                  ; Off                            ; Off                            ;
-; Perform Asynchronous Signal Pipelining                                     ; Off                            ; Off                            ;
-; Fitter Effort                                                              ; Auto Fit                       ; Auto Fit                       ;
-; Physical Synthesis Effort Level                                            ; Normal                         ; Normal                         ;
-; Logic Cell Insertion - Logic Duplication                                   ; Auto                           ; Auto                           ;
-; Auto Register Duplication                                                  ; Auto                           ; Auto                           ;
-; Auto Global Clock                                                          ; On                             ; On                             ;
-; Auto Global Register Control Signals                                       ; On                             ; On                             ;
-; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                            ; Off                            ;
-+----------------------------------------------------------------------------+--------------------------------+--------------------------------+
++-----------------------------------------------------------------------------+
+; I/O Assignment Analysis Summary                                             ;
++--------------------------------+--------------------------------------------+
+; I/O Assignment Analysis Status ; Successful - Sat Apr 23 12:45:24 2016      ;
+; Quartus II 64-Bit Version      ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                  ; msxslotreader                              ;
+; Top-level Entity Name          ; msxbus                                     ;
+; Family                         ; MAX II                                     ;
+; Device                         ; EPM240T100C5                               ;
+; Timing Models                  ; Final                                      ;
+; Total pins                     ; 71 / 80 ( 89 % )                           ;
+; Total virtual pins             ; 0                                          ;
+; UFM blocks                     ; 0 / 1 ( 0 % )                              ;
++--------------------------------+--------------------------------------------+
 
 
 +------------------------------------------+
@@ -128,14 +64,65 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.50        ;
-; Maximum used               ; 2           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  50.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (20013): Ignored assignments for entity "plltest" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME Qsys -entity plltest -library plltest was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 13.1 -entity plltest -library plltest was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity plltest -library plltest was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name SLD_INFO "QSYS_NAME plltest HAS_SOPCINFO 1 GENERATION_ID 1461382900" -entity plltest -library plltest was ignored
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (119006): Selected device EPM240T100C5 for design "msxslotreader"
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info (176445): Device EPM240T100I5 is compatible
+    Info (176445): Device EPM240T100A5 is compatible
+    Info (176445): Device EPM570T100C5 is compatible
+    Info (176445): Device EPM570T100I5 is compatible
+    Info (176445): Device EPM570T100A5 is compatible
+Critical Warning (169085): No exact pin location assignment(s) for 4 pins of 71 total pins
+    Info (169086): Pin mdata[0] not assigned to an exact location on the device
+    Info (169086): Pin mio not assigned to an exact location on the device
+    Info (169086): Pin sltsl not assigned to an exact location on the device
+    Info (169086): Pin rw not assigned to an exact location on the device
+Info (186079): Completed User Assigned Global Signals Promotion Operation
+Info (186215): Automatically promoted signal "clk" to use Global clock in PIN 12
+Info (186079): Completed Auto Global Promotion Operation
+Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info (176211): Number of I/O pins in group: 4 (unused VREF, 3.3V VCCIO, 3 input, 0 output, 1 bidirectional)
+        Info (176212): I/O standards used: 3.3-V LVTTL.
+Info (176215): I/O bank details before I/O pin placement
+    Info (176214): Statistics of I/O banks
+        Info (176213): I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 29 total pin(s) used --  9 pins available
+        Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 38 total pin(s) used --  4 pins available
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Warning (169064): Following 8 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
+    Info (169065): Pin md[8] has a permanently disabled output enable
+    Info (169065): Pin md[9] has a permanently disabled output enable
+    Info (169065): Pin md[10] has a permanently disabled output enable
+    Info (169065): Pin md[11] has a permanently disabled output enable
+    Info (169065): Pin md[12] has a permanently disabled output enable
+    Info (169065): Pin md[13] has a permanently disabled output enable
+    Info (169065): Pin md[14] has a permanently disabled output enable
+    Info (169065): Pin md[15] has a permanently disabled output enable
+Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
+Info: Quartus II 64-Bit I/O Assignment Analysis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 702 megabytes
+    Info: Processing ended: Sat Apr 23 12:45:24 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +--------------+
@@ -144,65 +131,23 @@ applicable agreement for further details.
 The pin-out file can be found in C:/msys64/home/Miso Kim/msx-cartridge/msxbus/output_files/msxslotreader.pin.
 
 
-+-----------------------------------------------------------------+
-; Fitter Resource Usage Summary                                   ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Total logic elements                        ; 65 / 240 ( 27 % ) ;
-;     -- Combinational with no register       ; 6                 ;
-;     -- Register only                        ; 25                ;
-;     -- Combinational with a register        ; 34                ;
-;                                             ;                   ;
-; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 14                ;
-;     -- 3 input functions                    ; 1                 ;
-;     -- 2 input functions                    ; 9                 ;
-;     -- 1 input functions                    ; 15                ;
-;     -- 0 input functions                    ; 1                 ;
-;                                             ;                   ;
-; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 60                ;
-;     -- arithmetic mode                      ; 5                 ;
-;     -- qfbk mode                            ; 2                 ;
-;     -- register cascade mode                ; 0                 ;
-;     -- synchronous clear/load mode          ; 25                ;
-;     -- asynchronous clear/load mode         ; 0                 ;
-;                                             ;                   ;
-; Total registers                             ; 59 / 240 ( 25 % ) ;
-; Total LABs                                  ; 8 / 24 ( 33 % )   ;
-; Logic elements in carry chains              ; 6                 ;
-; Virtual pins                                ; 0                 ;
-; I/O pins                                    ; 68 / 80 ( 85 % )  ;
-;     -- Clock pins                           ; 1 / 4 ( 25 % )    ;
-;                                             ;                   ;
-; Global signals                              ; 1                 ;
-; UFM blocks                                  ; 0 / 1 ( 0 % )     ;
-; Global clocks                               ; 1 / 4 ( 25 % )    ;
-; JTAGs                                       ; 0 / 1 ( 0 % )     ;
-; Average interconnect usage (total/H/V)      ; 9% / 10% / 8%     ;
-; Peak interconnect usage (total/H/V)         ; 9% / 10% / 8%     ;
-; Maximum fan-out                             ; 59                ;
-; Highest non-global fan-out                  ; 32                ;
-; Total fan-out                               ; 284               ;
-; Average fan-out                             ; 2.14              ;
-+---------------------------------------------+-------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Input Pins                                                                                                                                                                                                     ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
-; a0      ; 37    ; 1        ; 4            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
-; clk     ; 12    ; 1        ; 1            ; 3            ; 3           ; 59                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
-; cs      ; 36    ; 1        ; 4            ; 0            ; 2           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; a0      ; 37    ; 1        ; 4            ; 0            ; 1           ; 12                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; clk     ; 12    ; 1        ; 1            ; 3            ; 3           ; 65                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; cs      ; 36    ; 1        ; 4            ; 0            ; 2           ; 32                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; mbusdir ; 90    ; 2        ; 4            ; 5            ; 1           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; mint    ; 92    ; 2        ; 3            ; 5            ; 0           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; mio     ; 64    ; 2        ; 8            ; 3            ; 4           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
 ; mode    ; 6     ; 1        ; 1            ; 3            ; 0           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; msw0    ; 50    ; 1        ; 7            ; 0            ; 1           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; msw1    ; 49    ; 1        ; 7            ; 0            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; mwait   ; 91    ; 2        ; 4            ; 5            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; rw      ; 1     ; 2        ; 2            ; 5            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; sltsl   ; 95    ; 2        ; 3            ; 5            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
 
 
@@ -211,41 +156,41 @@ The pin-out file can be found in C:/msys64/home/Miso Kim/msx-cartridge/msxbus/ou
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; maddr[0]  ; 71    ; 2        ; 8            ; 4            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[10] ; 81    ; 2        ; 6            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[11] ; 78    ; 2        ; 7            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[12] ; 74    ; 2        ; 8            ; 4            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[13] ; 73    ; 2        ; 8            ; 4            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[14] ; 72    ; 2        ; 8            ; 4            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[15] ; 83    ; 2        ; 6            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[1]  ; 70    ; 2        ; 8            ; 4            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[2]  ; 69    ; 2        ; 8            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[3]  ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[4]  ; 67    ; 2        ; 8            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[5]  ; 66    ; 2        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[6]  ; 77    ; 2        ; 7            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[7]  ; 76    ; 2        ; 7            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[8]  ; 75    ; 2        ; 7            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; maddr[9]  ; 82    ; 2        ; 6            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; mcs1      ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mcs12     ; 96    ; 2        ; 3            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mcs2      ; 99    ; 2        ; 2            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; miorq     ; 87    ; 2        ; 5            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mm1       ; 89    ; 2        ; 4            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mmreq     ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mrd       ; 86    ; 2        ; 5            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mreset    ; 84    ; 2        ; 6            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; msltsl[0] ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; msltsl[1] ; 97    ; 2        ; 3            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mswout    ; 51    ; 1        ; 7            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; msx_clk   ; 52    ; 2        ; 8            ; 1            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mwr       ; 85    ; 2        ; 5            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; rbusdir   ; 44    ; 1        ; 6            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; ready     ; 7     ; 1        ; 1            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; rint      ; 29    ; 1        ; 2            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; rsw0      ; 21    ; 1        ; 1            ; 1            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; rsw1      ; 20    ; 1        ; 1            ; 1            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; rwait     ; 26    ; 1        ; 2            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[0]  ; 71    ; 2        ; 8            ; 4            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[10] ; 81    ; 2        ; 6            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[11] ; 78    ; 2        ; 7            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[12] ; 74    ; 2        ; 8            ; 4            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[13] ; 73    ; 2        ; 8            ; 4            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[14] ; 72    ; 2        ; 8            ; 4            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[15] ; 83    ; 2        ; 6            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[1]  ; 70    ; 2        ; 8            ; 4            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[2]  ; 69    ; 2        ; 8            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[3]  ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[4]  ; 67    ; 2        ; 8            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[5]  ; 66    ; 2        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[6]  ; 77    ; 2        ; 7            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[7]  ; 76    ; 2        ; 7            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[8]  ; 75    ; 2        ; 7            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; maddr[9]  ; 82    ; 2        ; 6            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mcs1      ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mcs12     ; 96    ; 2        ; 3            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mcs2      ; 99    ; 2        ; 2            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; miorq     ; 87    ; 2        ; 5            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mm1       ; 89    ; 2        ; 4            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mmreq     ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mrd       ; 86    ; 2        ; 5            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mreset    ; 84    ; 2        ; 6            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; msltsl[0] ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; msltsl[1] ; 97    ; 2        ; 3            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mswout    ; 51    ; 1        ; 7            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; msx_clk   ; 52    ; 2        ; 8            ; 1            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mwr       ; 85    ; 2        ; 5            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; rbusdir   ; 44    ; 1        ; 6            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; ready     ; 7     ; 1        ; 1            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; rint      ; 29    ; 1        ; 2            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; rsw0      ; 21    ; 1        ; 1            ; 1            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; rsw1      ; 20    ; 1        ; 1            ; 1            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; rwait     ; 26    ; 1        ; 2            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -254,41 +199,41 @@ The pin-out file can be found in C:/msys64/home/Miso Kim/msx-cartridge/msxbus/ou
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; md[0]    ; 38    ; 1        ; 4            ; 0            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[10]   ; 16    ; 1        ; 1            ; 2            ; 2           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[11]   ; 43    ; 1        ; 6            ; 0            ; 3           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[12]   ; 17    ; 1        ; 1            ; 2            ; 3           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[13]   ; 18    ; 1        ; 1            ; 1            ; 0           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[14]   ; 42    ; 1        ; 5            ; 0            ; 0           ; 5                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[15]   ; 47    ; 1        ; 6            ; 0            ; 1           ; 5                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[1]    ; 39    ; 1        ; 5            ; 0            ; 3           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[2]    ; 35    ; 1        ; 3            ; 0            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[3]    ; 34    ; 1        ; 3            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[4]    ; 28    ; 1        ; 2            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[5]    ; 27    ; 1        ; 2            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[6]    ; 33    ; 1        ; 3            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[7]    ; 40    ; 1        ; 5            ; 0            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[8]    ; 48    ; 1        ; 6            ; 0            ; 0           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; md[9]    ; 15    ; 1        ; 1            ; 2            ; 1           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; mdata[0] ; 41    ; 1        ; 5            ; 0            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; mdata[0]~en          ; -                   ;
-; mdata[1] ; 61    ; 2        ; 8            ; 2            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; mdata[1]~en          ; -                   ;
-; mdata[2] ; 58    ; 2        ; 8            ; 2            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; mdata[2]~en          ; -                   ;
-; mdata[3] ; 57    ; 2        ; 8            ; 2            ; 3           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; mdata[3]~en          ; -                   ;
-; mdata[4] ; 56    ; 2        ; 8            ; 1            ; 0           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; mdata[4]~en          ; -                   ;
-; mdata[5] ; 55    ; 2        ; 8            ; 1            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; mdata[5]~en          ; -                   ;
-; mdata[6] ; 54    ; 2        ; 8            ; 1            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; mdata[6]~en          ; -                   ;
-; mdata[7] ; 53    ; 2        ; 8            ; 1            ; 3           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; mdata[7]~en          ; -                   ;
+; md[0]    ; 38    ; 1        ; 4            ; 0            ; 0           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; md[0]~en             ; -                   ;
+; md[10]   ; 16    ; 1        ; 1            ; 2            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; md[11]   ; 43    ; 1        ; 6            ; 0            ; 3           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; md[12]   ; 17    ; 1        ; 1            ; 2            ; 3           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; md[13]   ; 18    ; 1        ; 1            ; 1            ; 0           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; md[14]   ; 42    ; 1        ; 5            ; 0            ; 0           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; md[15]   ; 47    ; 1        ; 6            ; 0            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; md[1]    ; 39    ; 1        ; 5            ; 0            ; 3           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; md[1]~en             ; -                   ;
+; md[2]    ; 35    ; 1        ; 3            ; 0            ; 0           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; md[2]~en             ; -                   ;
+; md[3]    ; 34    ; 1        ; 3            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; md[3]~en             ; -                   ;
+; md[4]    ; 28    ; 1        ; 2            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; md[4]~en             ; -                   ;
+; md[5]    ; 27    ; 1        ; 2            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; md[5]~en             ; -                   ;
+; md[6]    ; 33    ; 1        ; 3            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; md[6]~en             ; -                   ;
+; md[7]    ; 40    ; 1        ; 5            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; md[7]~en             ; -                   ;
+; md[8]    ; 48    ; 1        ; 6            ; 0            ; 0           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; md[9]    ; 15    ; 1        ; 1            ; 2            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; mdata[0] ; 62    ; 2        ; 8            ; 2            ; 0           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; mdata[0]~en          ; -                   ;
+; mdata[1] ; 61    ; 2        ; 8            ; 2            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; mdata[1]~en          ; -                   ;
+; mdata[2] ; 58    ; 2        ; 8            ; 2            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; mdata[2]~en          ; -                   ;
+; mdata[3] ; 57    ; 2        ; 8            ; 2            ; 3           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; mdata[3]~en          ; -                   ;
+; mdata[4] ; 56    ; 2        ; 8            ; 1            ; 0           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; mdata[4]~en          ; -                   ;
+; mdata[5] ; 55    ; 2        ; 8            ; 1            ; 1           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; mdata[5]~en          ; -                   ;
+; mdata[6] ; 54    ; 2        ; 8            ; 1            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; mdata[6]~en          ; -                   ;
+; mdata[7] ; 53    ; 2        ; 8            ; 1            ; 3           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; User                 ; 10 pF ; mdata[7]~en          ; -                   ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
-+------------------------------------------------------------+
-; I/O Bank Usage                                             ;
-+----------+------------------+---------------+--------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
-+----------+------------------+---------------+--------------+
-; 1        ; 30 / 38 ( 79 % ) ; 3.3V          ; --           ;
-; 2        ; 38 / 42 ( 90 % ) ; 3.3V          ; --           ;
-+----------+------------------+---------------+--------------+
++-------------------------------------------------------------+
+; I/O Bank Usage                                              ;
++----------+-------------------+---------------+--------------+
+; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ;
++----------+-------------------+---------------+--------------+
+; 1        ; 29 / 38 ( 76 % )  ; 3.3V          ; --           ;
+; 2        ; 42 / 42 ( 100 % ) ; 3.3V          ; --           ;
++----------+-------------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -296,7 +241,7 @@ The pin-out file can be found in C:/msys64/home/Miso Kim/msx-cartridge/msxbus/ou
 +----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage   ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
-; 1        ; 83         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 1        ; 83         ; 2        ; rw             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 2        ; 0          ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 3        ; 1          ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 4        ; 2          ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
@@ -336,7 +281,7 @@ The pin-out file can be found in C:/msys64/home/Miso Kim/msx-cartridge/msxbus/ou
 ; 38       ; 30         ; 1        ; md[0]          ; bidir  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 39       ; 31         ; 1        ; md[1]          ; bidir  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 40       ; 32         ; 1        ; md[7]          ; bidir  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 41       ; 33         ; 1        ; mdata[0]       ; bidir  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 41       ; 33         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 42       ; 34         ; 1        ; md[14]         ; bidir  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 43       ; 35         ; 1        ; md[11]         ; bidir  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 44       ; 36         ; 1        ; rbusdir        ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
@@ -357,9 +302,9 @@ The pin-out file can be found in C:/msys64/home/Miso Kim/msx-cartridge/msxbus/ou
 ; 59       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 60       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 61       ; 49         ; 2        ; mdata[1]       ; bidir  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 62       ; 50         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 62       ; 50         ; 2        ; mdata[0]       ; bidir  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 63       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
-; 64       ; 51         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 64       ; 51         ; 2        ; mio            ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 65       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 66       ; 52         ; 2        ; maddr[5]       ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 67       ; 53         ; 2        ; maddr[4]       ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
@@ -390,7 +335,7 @@ The pin-out file can be found in C:/msys64/home/Miso Kim/msx-cartridge/msxbus/ou
 ; 92       ; 76         ; 2        ; mint           ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 93       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 94       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
-; 95       ; 77         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 95       ; 77         ; 2        ; sltsl          ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 96       ; 78         ; 2        ; mcs12          ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 97       ; 79         ; 2        ; msltsl[1]      ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 98       ; 80         ; 2        ; mcs1           ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
@@ -416,353 +361,18 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |msxbus                    ; 65 (65)     ; 59           ; 0          ; 68   ; 0            ; 6 (6)        ; 25 (25)           ; 34 (34)          ; 6 (6)           ; 2 (2)      ; |msxbus             ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------+
-; Delay Chain Summary                  ;
-+-----------+----------+---------------+
-; Name      ; Pin Type ; Pad to Core 0 ;
-+-----------+----------+---------------+
-; mode      ; Input    ; (0)           ;
-; rbusdir   ; Output   ; --            ;
-; rint      ; Output   ; --            ;
-; rwait     ; Output   ; --            ;
-; rsw0      ; Output   ; --            ;
-; rsw1      ; Output   ; --            ;
-; mswout    ; Output   ; --            ;
-; maddr[0]  ; Output   ; --            ;
-; maddr[1]  ; Output   ; --            ;
-; maddr[2]  ; Output   ; --            ;
-; maddr[3]  ; Output   ; --            ;
-; maddr[4]  ; Output   ; --            ;
-; maddr[5]  ; Output   ; --            ;
-; maddr[6]  ; Output   ; --            ;
-; maddr[7]  ; Output   ; --            ;
-; maddr[8]  ; Output   ; --            ;
-; maddr[9]  ; Output   ; --            ;
-; maddr[10] ; Output   ; --            ;
-; maddr[11] ; Output   ; --            ;
-; maddr[12] ; Output   ; --            ;
-; maddr[13] ; Output   ; --            ;
-; maddr[14] ; Output   ; --            ;
-; maddr[15] ; Output   ; --            ;
-; mm1       ; Output   ; --            ;
-; mreset    ; Output   ; --            ;
-; msltsl[0] ; Output   ; --            ;
-; msltsl[1] ; Output   ; --            ;
-; mmreq     ; Output   ; --            ;
-; miorq     ; Output   ; --            ;
-; mwr       ; Output   ; --            ;
-; mrd       ; Output   ; --            ;
-; msx_clk   ; Output   ; --            ;
-; mcs1      ; Output   ; --            ;
-; mcs2      ; Output   ; --            ;
-; mcs12     ; Output   ; --            ;
-; ready     ; Output   ; --            ;
-; md[0]     ; Bidir    ; (0)           ;
-; md[1]     ; Bidir    ; (0)           ;
-; md[2]     ; Bidir    ; (0)           ;
-; md[3]     ; Bidir    ; (0)           ;
-; md[4]     ; Bidir    ; (0)           ;
-; md[5]     ; Bidir    ; (0)           ;
-; md[6]     ; Bidir    ; (0)           ;
-; md[7]     ; Bidir    ; (0)           ;
-; md[8]     ; Bidir    ; (1)           ;
-; md[9]     ; Bidir    ; (1)           ;
-; md[10]    ; Bidir    ; (1)           ;
-; md[11]    ; Bidir    ; (1)           ;
-; md[12]    ; Bidir    ; (1)           ;
-; md[13]    ; Bidir    ; (1)           ;
-; md[14]    ; Bidir    ; (1)           ;
-; md[15]    ; Bidir    ; (1)           ;
-; mdata[0]  ; Bidir    ; (1)           ;
-; mdata[1]  ; Bidir    ; (1)           ;
-; mdata[2]  ; Bidir    ; (1)           ;
-; mdata[3]  ; Bidir    ; (1)           ;
-; mdata[4]  ; Bidir    ; (1)           ;
-; mdata[5]  ; Bidir    ; (1)           ;
-; mdata[6]  ; Bidir    ; (1)           ;
-; mdata[7]  ; Bidir    ; (1)           ;
-; mbusdir   ; Input    ; (1)           ;
-; mint      ; Input    ; (1)           ;
-; mwait     ; Input    ; (1)           ;
-; msw0      ; Input    ; (1)           ;
-; msw1      ; Input    ; (1)           ;
-; clk       ; Input    ; (0)           ;
-; cs        ; Input    ; (1)           ;
-; a0        ; Input    ; (1)           ;
-+-----------+----------+---------------+
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                        ;
-+-------------+-------------+---------+---------------+--------+----------------------+------------------+
-; Name        ; Location    ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ;
-+-------------+-------------+---------+---------------+--------+----------------------+------------------+
-; clk         ; PIN_12      ; 59      ; Clock         ; yes    ; Global Clock         ; GCLK0            ;
-; cs          ; PIN_36      ; 9       ; Sync. load    ; no     ; --                   ; --               ;
-; maddr[0]~0  ; LC_X7_Y2_N2 ; 16      ; Clock enable  ; no     ; --                   ; --               ;
-; mdata[0]~en ; LC_X4_Y2_N2 ; 1       ; Output enable ; no     ; --                   ; --               ;
-; mdata[1]~en ; LC_X4_Y2_N6 ; 1       ; Output enable ; no     ; --                   ; --               ;
-; mdata[2]~en ; LC_X4_Y2_N7 ; 1       ; Output enable ; no     ; --                   ; --               ;
-; mdata[3]~en ; LC_X4_Y2_N4 ; 1       ; Output enable ; no     ; --                   ; --               ;
-; mdata[4]~en ; LC_X4_Y2_N8 ; 1       ; Output enable ; no     ; --                   ; --               ;
-; mdata[5]~en ; LC_X4_Y2_N5 ; 1       ; Output enable ; no     ; --                   ; --               ;
-; mdata[6]~en ; LC_X4_Y2_N3 ; 1       ; Output enable ; no     ; --                   ; --               ;
-; mdata[7]~en ; LC_X4_Y2_N9 ; 1       ; Output enable ; no     ; --                   ; --               ;
-; mm1~0       ; LC_X7_Y2_N6 ; 32      ; Clock enable  ; no     ; --                   ; --               ;
-+-------------+-------------+---------+---------------+--------+----------------------+------------------+
-
-
-+---------------------------------------------------------------------+
-; Global & Other Fast Signals                                         ;
-+------+----------+---------+----------------------+------------------+
-; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
-+------+----------+---------+----------------------+------------------+
-; clk  ; PIN_12   ; 59      ; Global Clock         ; GCLK0            ;
-+------+----------+---------+----------------------+------------------+
-
-
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+------------------+--------------+
-; Name             ; Fan-Out      ;
-+------------------+--------------+
-; mm1~0            ; 32           ;
-; mrd~reg0         ; 17           ;
-; maddr[0]~0       ; 16           ;
-; cs               ; 9            ;
-; md[15]~0         ; 5            ;
-; md[14]~1         ; 5            ;
-; clkcount[0]      ; 4            ;
-; md[7]~reg0       ; 4            ;
-; md[6]~reg0       ; 4            ;
-; md[5]~reg0       ; 4            ;
-; md[4]~reg0       ; 4            ;
-; md[3]~reg0       ; 4            ;
-; md[2]~reg0       ; 4            ;
-; md[1]~reg0       ; 4            ;
-; md[0]~reg0       ; 4            ;
-; ~GND             ; 3            ;
-; clkcount[1]      ; 3            ;
-; msltsl[1]~reg0   ; 3            ;
-; msltsl[0]~reg0   ; 3            ;
-; cnt[5]           ; 2            ;
-; cnt[4]           ; 2            ;
-; cnt[3]~7         ; 2            ;
-; cnt[3]           ; 2            ;
-; cnt[2]           ; 2            ;
-; cnt[1]           ; 2            ;
-; cnt[0]           ; 2            ;
-; clkcount[2]      ; 2            ;
-; a0               ; 2            ;
-; ready~reg0       ; 2            ;
-; msx_clk~reg0     ; 2            ;
-; md[13]~15        ; 2            ;
-; md[12]~14        ; 2            ;
-; md[11]~13        ; 2            ;
-; md[10]~12        ; 2            ;
-; md[9]~11         ; 2            ;
-; md[8]~10         ; 2            ;
-; mdata[7]~en      ; 1            ;
-; mdata[7]~reg0    ; 1            ;
-; mdata[6]~en      ; 1            ;
-; mdata[6]~reg0    ; 1            ;
-; mdata[5]~en      ; 1            ;
-; mdata[5]~reg0    ; 1            ;
-; mdata[4]~en      ; 1            ;
-; mdata[4]~reg0    ; 1            ;
-; mdata[3]~en      ; 1            ;
-; mdata[3]~reg0    ; 1            ;
-; mdata[2]~en      ; 1            ;
-; mdata[2]~reg0    ; 1            ;
-; mdata[1]~en      ; 1            ;
-; mdata[1]~reg0    ; 1            ;
-; mdata[0]~en      ; 1            ;
-; mdata[0]~reg0    ; 1            ;
-; Equal2~1         ; 1            ;
-; cnt[4]~9COUT1_24 ; 1            ;
-; cnt[4]~9         ; 1            ;
-; Equal2~0         ; 1            ;
-; cnt[2]~5COUT1_22 ; 1            ;
-; cnt[2]~5         ; 1            ;
-; cnt[1]~3COUT1_20 ; 1            ;
-; cnt[1]~3         ; 1            ;
-; cnt[0]~1COUT1_18 ; 1            ;
-; cnt[0]~1         ; 1            ;
-; mcs12~0          ; 1            ;
-; mcs2~0           ; 1            ;
-; mcs1~0           ; 1            ;
-; mwr~reg0         ; 1            ;
-; miorq~reg0       ; 1            ;
-; mmreq~reg0       ; 1            ;
-; mreset~reg0      ; 1            ;
-; mm1~reg0         ; 1            ;
-; maddr[15]~reg0   ; 1            ;
-; maddr[14]~reg0   ; 1            ;
-; maddr[13]~reg0   ; 1            ;
-; maddr[12]~reg0   ; 1            ;
-; maddr[11]~reg0   ; 1            ;
-; maddr[10]~reg0   ; 1            ;
-; maddr[9]~reg0    ; 1            ;
-; maddr[8]~reg0    ; 1            ;
-; maddr[7]~reg0    ; 1            ;
-; maddr[6]~reg0    ; 1            ;
-; maddr[5]~reg0    ; 1            ;
-; maddr[4]~reg0    ; 1            ;
-; maddr[3]~reg0    ; 1            ;
-; maddr[2]~reg0    ; 1            ;
-; maddr[1]~reg0    ; 1            ;
-; maddr[0]~reg0    ; 1            ;
-; msw1             ; 1            ;
-; msw0             ; 1            ;
-; mwait            ; 1            ;
-; mint             ; 1            ;
-; mbusdir          ; 1            ;
-; mdata[7]~7       ; 1            ;
-; mdata[6]~6       ; 1            ;
-; mdata[5]~5       ; 1            ;
-; mdata[4]~4       ; 1            ;
-; mdata[3]~3       ; 1            ;
-; mdata[2]~2       ; 1            ;
-; mdata[1]~1       ; 1            ;
-; mdata[0]~0       ; 1            ;
-+------------------+--------------+
-
-
-+-------------------------------------------+
-; Routing Usage Summary                     ;
-+-----------------------+-------------------+
-; Routing Resource Type ; Usage             ;
-+-----------------------+-------------------+
-; C4s                   ; 69 / 784 ( 9 % )  ;
-; Direct links          ; 13 / 888 ( 1 % )  ;
-; Global clocks         ; 1 / 4 ( 25 % )    ;
-; LAB clocks            ; 5 / 32 ( 16 % )   ;
-; LUT chains            ; 1 / 216 ( < 1 % ) ;
-; Local interconnects   ; 99 / 888 ( 11 % ) ;
-; R4s                   ; 64 / 704 ( 9 % )  ;
-+-----------------------+-------------------+
-
-
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 8.13) ; Number of LABs  (Total = 8) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 0                           ;
-; 2                                          ; 0                           ;
-; 3                                          ; 0                           ;
-; 4                                          ; 1                           ;
-; 5                                          ; 1                           ;
-; 6                                          ; 0                           ;
-; 7                                          ; 0                           ;
-; 8                                          ; 2                           ;
-; 9                                          ; 0                           ;
-; 10                                         ; 4                           ;
-+--------------------------------------------+-----------------------------+
-
-
-+------------------------------------------------------------------+
-; LAB-wide Signals                                                 ;
-+------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.50) ; Number of LABs  (Total = 8) ;
-+------------------------------------+-----------------------------+
-; 1 Clock                            ; 8                           ;
-; 1 Clock enable                     ; 1                           ;
-; 2 Clock enables                    ; 3                           ;
-+------------------------------------+-----------------------------+
-
-
-+---------------------------------------------------------------------------+
-; LAB Signals Sourced                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 8.38) ; Number of LABs  (Total = 8) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 1                           ;
-; 5                                           ; 1                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 5                           ;
-+---------------------------------------------+-----------------------------+
-
-
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.88) ; Number of LABs  (Total = 8) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
-; 4                                               ; 0                           ;
-; 5                                               ; 1                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 1                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 4                           ;
-+-------------------------------------------------+-----------------------------+
-
-
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 6.00) ; Number of LABs  (Total = 8) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
-; 2                                           ; 1                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 1                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 1                           ;
-; 7                                           ; 2                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 1                           ;
-; 11                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
-
-
-+-------------------------------------------------------------------------+
-; Fitter Device Options                                                   ;
-+----------------------------------------------+--------------------------+
-; Option                                       ; Setting                  ;
-+----------------------------------------------+--------------------------+
-; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
-; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
-; Enable device-wide output enable (DEV_OE)    ; Off                      ;
-; Enable INIT_DONE output                      ; Off                      ;
-; Configuration scheme                         ; Passive Serial           ;
-; Reserve all unused pins                      ; As output driving ground ;
-; Base pin-out file on sameframe device        ; Off                      ;
-+----------------------------------------------+--------------------------+
-
-
-+-----------------+
-; Fitter Messages ;
-+-----------------+
++----------------------------------+
+; I/O Assignment Analysis Messages ;
++----------------------------------+
+Warning (20013): Ignored assignments for entity "plltest" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME Qsys -entity plltest -library plltest was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 13.1 -entity plltest -library plltest was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV Qsys -entity plltest -library plltest was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name SLD_INFO "QSYS_NAME plltest HAS_SOPCINFO 1 GENERATION_ID 1461382900" -entity plltest -library plltest was ignored
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (119006): Selected device EPM240T100C5 for design "msxslotreader"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device EPM240T100I5 is compatible
@@ -770,53 +380,23 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device EPM570T100C5 is compatible
     Info (176445): Device EPM570T100I5 is compatible
     Info (176445): Device EPM570T100A5 is compatible
-Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 68 total pins
+Critical Warning (169085): No exact pin location assignment(s) for 4 pins of 71 total pins
     Info (169086): Pin mdata[0] not assigned to an exact location on the device
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'msxslotreader.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332144): No user constrained base clocks found in the design
-Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
-    Info (332127): Assuming a default timing requirement
-Info (332111): Found 1 clocks
-    Info (332111):   Period   Clock Name
-    Info (332111): ======== ============
-    Info (332111):    1.000          clk
+    Info (169086): Pin mio not assigned to an exact location on the device
+    Info (169086): Pin sltsl not assigned to an exact location on the device
+    Info (169086): Pin rw not assigned to an exact location on the device
 Info (186079): Completed User Assigned Global Signals Promotion Operation
 Info (186215): Automatically promoted signal "clk" to use Global clock in PIN 12
 Info (186079): Completed Auto Global Promotion Operation
-Info (176234): Starting register packing
-Info (186468): Started processing fast register assignments
-Info (186469): Finished processing fast register assignments
-Info (176235): Finished register packing
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 1 (unused VREF, 3.3V VCCIO, 0 input, 0 output, 1 bidirectional)
+    Info (176211): Number of I/O pins in group: 4 (unused VREF, 3.3V VCCIO, 3 input, 0 output, 1 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
         Info (176213): I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 29 total pin(s) used --  9 pins available
         Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 38 total pin(s) used --  4 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
-Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
-Info (170191): Fitter placement operations beginning
-Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
-Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 9% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 9% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
-    Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.34 seconds.
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Warning (169064): Following 16 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin md[0] has a permanently enabled output enable
-    Info (169065): Pin md[1] has a permanently enabled output enable
-    Info (169065): Pin md[2] has a permanently enabled output enable
-    Info (169065): Pin md[3] has a permanently enabled output enable
-    Info (169065): Pin md[4] has a permanently enabled output enable
-    Info (169065): Pin md[5] has a permanently enabled output enable
-    Info (169065): Pin md[6] has a permanently enabled output enable
-    Info (169065): Pin md[7] has a permanently enabled output enable
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Warning (169064): Following 8 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin md[8] has a permanently disabled output enable
     Info (169065): Pin md[9] has a permanently disabled output enable
     Info (169065): Pin md[10] has a permanently disabled output enable
@@ -826,17 +406,10 @@ Warning (169064): Following 16 pins have no output enable or a GND or VCC output
     Info (169065): Pin md[14] has a permanently disabled output enable
     Info (169065): Pin md[15] has a permanently disabled output enable
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/msys64/home/Miso Kim/msx-cartridge/msxbus/output_files/msxslotreader.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 878 megabytes
-    Info: Processing ended: Mon Apr 18 02:45:04 2016
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
-
-
-+----------------------------+
-; Fitter Suppressed Messages ;
-+----------------------------+
-The suppressed messages can be found in C:/msys64/home/Miso Kim/msx-cartridge/msxbus/output_files/msxslotreader.fit.smsg.
+Info: Quartus II 64-Bit I/O Assignment Analysis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 702 megabytes
+    Info: Processing ended: Sat Apr 23 12:45:24 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
