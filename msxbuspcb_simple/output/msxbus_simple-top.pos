@@ -1,0 +1,12 @@
+### Module positions - created on 12/24/16 02:49:47 ###
+### Printed by Pcbnew version kicad 4.0.4-stable
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val       Package                PosX       PosY       Rot  Side
+I/O       LED       LED_0805             0.5080    57.7850    0.0000  top
+MEM       LED       LED_0805             0.5080    60.8330    0.0000  top
+RD        LED       LED_0805             0.5080    66.8020    0.0000  top
+SLOT0     LED       LED_0805             0.4775     7.3406    0.0000  top
+SLOT1     LED       LED_0805             0.3810    27.8130    0.0000  top
+WR        LED       LED_0805             0.5080    63.8810    0.0000  top
+## End
