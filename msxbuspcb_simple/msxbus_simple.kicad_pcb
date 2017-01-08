@@ -1709,7 +1709,7 @@
   (gr_line (start 171.577 60.833) (end 178.7017 60.833) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 169.926 49.022) (end 169.926 59.182) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 171.577 59.182) (end 171.577 60.833) (angle 90) (layer Edge.Cuts) (width 0.15))
-  (gr_text 2016.12.26 (at 168.783 139.065) (layer F.SilkS)
+  (gr_text 2017.1.9 (at 168.783 139.065) (layer F.SilkS)
     (effects (font (size 1.2 1.2) (thickness 0.3) italic))
   )
   (gr_line (start 116.078 48.006) (end 168.91 48.006) (layer Edge.Cuts) (width 0.15))

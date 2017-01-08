@@ -145,8 +145,6 @@ F 3 "" H 5050 6850 60  0001 C CNN
 	1    5050 6850
 	-1   0    0    1   
 $EndComp
-Text Label 6650 1550 0    60   ~ 0
-CS1
 Text Label 6650 1650 0    60   ~ 0
 CS2
 Text Label 6650 1750 0    60   ~ 0
@@ -582,9 +580,9 @@ Text Label 4600 2150 0    60   ~ 0
 DQ6
 Text Label 4600 2250 0    60   ~ 0
 DQ7
-Text Label 4600 4350 0    60   ~ 0
+Text Label 4600 3550 0    60   ~ 0
 DQMH
-Text Label 4600 4450 0    60   ~ 0
+Text Label 4600 2750 0    60   ~ 0
 CS
 Text Label 4600 2450 0    60   ~ 0
 WE
@@ -592,37 +590,37 @@ Text Label 4600 2550 0    60   ~ 0
 CAS
 Text Label 4600 2650 0    60   ~ 0
 RAS
-Text Label 4600 4150 0    60   ~ 0
+Text Label 4600 3750 0    60   ~ 0
 CKE
-Text Label 4600 4250 0    60   ~ 0
+Text Label 4600 3650 0    60   ~ 0
 CLK
-Text Label 4600 2850 0    60   ~ 0
-BA1
-Text Label 4600 2750 0    60   ~ 0
-BA0
-Text Label 4600 4050 0    60   ~ 0
-RA11
 Text Label 4600 2950 0    60   ~ 0
+BA1
+Text Label 4600 2850 0    60   ~ 0
+BA0
+Text Label 4600 3850 0    60   ~ 0
+RA11
+Text Label 4600 3050 0    60   ~ 0
 RA10
 Text Label 4600 3950 0    60   ~ 0
 RA9
-Text Label 4600 3850 0    60   ~ 0
+Text Label 4600 4050 0    60   ~ 0
 RA8
-Text Label 4600 3750 0    60   ~ 0
+Text Label 4600 4150 0    60   ~ 0
 RA7
-Text Label 4600 3650 0    60   ~ 0
+Text Label 4600 4250 0    60   ~ 0
 RA6
-Text Label 4600 3550 0    60   ~ 0
+Text Label 4600 4350 0    60   ~ 0
 RA5
-Text Label 4600 3450 0    60   ~ 0
+Text Label 4600 4450 0    60   ~ 0
 RA4
-Text Label 4600 3350 0    60   ~ 0
+Text Label 4600 3450 0    60   ~ 0
 RA3
-Text Label 4600 3250 0    60   ~ 0
+Text Label 4600 3350 0    60   ~ 0
 RA2
-Text Label 4600 3150 0    60   ~ 0
+Text Label 4600 3250 0    60   ~ 0
 RA1
-Text Label 4600 3050 0    60   ~ 0
+Text Label 4600 3150 0    60   ~ 0
 RA0
 Text Label 3100 1450 0    60   ~ 0
 DQ0
@@ -714,19 +712,6 @@ Text Label 8400 3650 0    60   ~ 0
 5V0
 Text Label 4150 6800 0    60   ~ 0
 VCC
-$Comp
-L R R1
-U 1 1 586172F9
-P 3750 7050
-F 0 "R1" V 3830 7050 50  0000 C CNN
-F 1 "R" V 3750 7050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 3680 7050 50  0001 C CNN
-F 3 "" H 3750 7050 50  0000 C CNN
-	1    3750 7050
-	1    0    0    -1  
-$EndComp
-Text Label 3750 7400 1    60   ~ 0
-5V0
 Text Label 5800 950  3    60   ~ 0
 5V0
 Text Label 5550 950  3    60   ~ 0
@@ -967,8 +952,6 @@ Wire Wire Line
 Wire Wire Line
 	4550 2650 4800 2650
 Wire Wire Line
-	4550 2750 4800 2750
-Wire Wire Line
 	4550 2850 4800 2850
 Wire Wire Line
 	4550 2950 4800 2950
@@ -1195,7 +1178,7 @@ Wire Wire Line
 Wire Wire Line
 	1400 7050 1700 7050
 Wire Wire Line
-	4550 1450 4550 1150
+	4550 1150 4550 1450
 Wire Wire Line
 	4550 1350 4550 1200
 Connection ~ 4550 1200
@@ -1229,7 +1212,7 @@ Wire Wire Line
 Wire Wire Line
 	7350 5050 7600 5050
 Wire Bus Line
-	7000 5800 7000 1150
+	7000 1150 7000 5800
 Wire Bus Line
 	7000 1150 8200 1150
 Wire Bus Line
@@ -1250,8 +1233,6 @@ Wire Wire Line
 	3550 6800 4400 6800
 Wire Wire Line
 	4400 6700 4050 6700
-Wire Wire Line
-	3750 7200 3750 7450
 Wire Wire Line
 	5800 1150 5800 850 
 Wire Wire Line
@@ -1361,9 +1342,7 @@ Entry Wire Line
 Entry Wire Line
 	3950 6900 4050 7000
 Wire Bus Line
-	3950 6450 3950 7000
-Wire Wire Line
-	3750 6800 3750 6900
+	3950 6000 3950 7000
 Wire Wire Line
 	7350 2150 7650 2150
 Text Label 7400 2150 0    60   ~ 0
@@ -1385,9 +1364,9 @@ Entry Wire Line
 Entry Wire Line
 	7600 5150 7700 5250
 Wire Bus Line
-	7700 5350 7700 4100
+	7700 4100 7700 5350
 Wire Bus Line
-	7700 4100 8200 4100
+	8200 4100 7700 4100
 $Comp
 L R_PACK4 RP2
 U 1 1 58623B17
@@ -1687,7 +1666,7 @@ Entry Wire Line
 Wire Bus Line
 	3200 4850 3200 7150
 Wire Bus Line
-	1300 7200 1300 4950
+	1300 4950 1300 7200
 Entry Wire Line
 	10250 4700 10350 4600
 Entry Wire Line
@@ -1730,9 +1709,9 @@ F 3 "" H 3800 4400 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2550 1200 1950 1200
+	1950 1200 2550 1200
 Wire Wire Line
-	2550 850  2550 1200
+	2550 1200 2550 850 
 Connection ~ 2150 1200
 Connection ~ 2050 1200
 Connection ~ 2350 1200
@@ -1809,24 +1788,11 @@ Wire Wire Line
 Connection ~ 1400 650 
 Text Label 2800 5150 0    60   ~ 0
 3V3
-$Comp
-L R R16
-U 1 1 5862C065
-P 3550 7050
-F 0 "R16" V 3630 7050 50  0000 C CNN
-F 1 "R" V 3550 7050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 3480 7050 50  0001 C CNN
-F 3 "" H 3550 7050 50  0000 C CNN
-	1    3550 7050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	3550 6800 3550 6900
+	3550 6800 3550 7450
 Connection ~ 3750 6800
 Text Label 3550 7400 1    60   ~ 0
 3V3
-Wire Wire Line
-	3550 7200 3550 7450
 $Comp
 L R R15
 U 1 1 5862D7F7
@@ -1990,13 +1956,13 @@ Text Label 2800 6350 0    60   ~ 0
 LDIR
 Text Label 2800 6450 0    60   ~ 0
 RDIR
-Text Label 2800 6550 0    60   ~ 0
-EXT0
 Text Label 2800 6650 0    60   ~ 0
+EXT0
+Text Label 2800 6550 0    60   ~ 0
 EXT1
 Text Label 4600 5150 0    60   ~ 0
 EXT0
-Text Label 4600 5250 0    60   ~ 0
+Text Label 4600 5350 0    60   ~ 0
 EXT1
 Text Label 6650 5450 0    60   ~ 0
 RST
@@ -2026,20 +1992,9 @@ F 3 "" H 3550 7450 50  0000 C CNN
 $EndComp
 $Comp
 L +5V #PWR011
-U 1 1 5863AC43
-P 3750 7450
-F 0 "#PWR011" H 3750 7300 50  0001 C CNN
-F 1 "+5V" H 3750 7590 50  0000 C CNN
-F 2 "" H 3750 7450 50  0000 C CNN
-F 3 "" H 3750 7450 50  0000 C CNN
-	1    3750 7450
-	-1   0    0    1   
-$EndComp
-$Comp
-L +5V #PWR012
 U 1 1 5863AF2D
 P 5800 850
-F 0 "#PWR012" H 5800 700 50  0001 C CNN
+F 0 "#PWR011" H 5800 700 50  0001 C CNN
 F 1 "+5V" H 5800 990 50  0000 C CNN
 F 2 "" H 5800 850 50  0000 C CNN
 F 3 "" H 5800 850 50  0000 C CNN
@@ -2047,10 +2002,10 @@ F 3 "" H 5800 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR013
+L GND #PWR012
 U 1 1 5863C14F
 P 5550 850
-F 0 "#PWR013" H 5550 600 50  0001 C CNN
+F 0 "#PWR012" H 5550 600 50  0001 C CNN
 F 1 "GND" H 5550 700 50  0000 C CNN
 F 2 "" H 5550 850 50  0000 C CNN
 F 3 "" H 5550 850 50  0000 C CNN
@@ -2059,4 +2014,73 @@ F 3 "" H 5550 850 50  0000 C CNN
 $EndComp
 Text Label 6650 1450 0    60   ~ 0
 GND
+Wire Wire Line
+	4550 2750 4800 2750
+Text Label 6650 1550 0    60   ~ 0
+3V3
+$Comp
+L 24C512 U5
+U 1 1 587236FF
+P 6300 6500
+F 0 "U5" H 6450 6850 50  0000 C CNN
+F 1 "24C512" H 6500 6150 50  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm_Socket" H 6300 6500 50  0000 C CNN
+F 3 "" H 6300 6500 50  0000 C CNN
+	1    6300 6500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5600 6400 4050 6400
+Wire Wire Line
+	5600 6300 4050 6300
+$Comp
+L +3.3V #PWR013
+U 1 1 58723CA2
+P 6300 7000
+F 0 "#PWR013" H 6300 6850 50  0001 C CNN
+F 1 "+3.3V" H 6300 7140 50  0000 C CNN
+F 2 "" H 6300 7000 50  0000 C CNN
+F 3 "" H 6300 7000 50  0000 C CNN
+	1    6300 7000
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR014
+U 1 1 58723D0D
+P 6300 6000
+F 0 "#PWR014" H 6300 5750 50  0001 C CNN
+F 1 "GND" H 6300 5850 50  0000 C CNN
+F 2 "" H 6300 6000 50  0000 C CNN
+F 3 "" H 6300 6000 50  0000 C CNN
+	1    6300 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7000 6950 7000 6700
+Wire Wire Line
+	5600 6950 7000 6950
+$Comp
+L GND #PWR015
+U 1 1 58723FAE
+P 7000 6500
+F 0 "#PWR015" H 7000 6250 50  0001 C CNN
+F 1 "GND" H 7000 6350 50  0000 C CNN
+F 2 "" H 7000 6500 50  0000 C CNN
+F 3 "" H 7000 6500 50  0000 C CNN
+	1    7000 6500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 6600 5600 6950
+Entry Wire Line
+	3950 6200 4050 6300
+Entry Wire Line
+	3950 6300 4050 6400
+Text Label 5350 6300 0    60   ~ 0
+SDA
+Text Label 5350 6400 0    60   ~ 0
+SDL
+Wire Wire Line
+	6300 6950 6300 7000
+Connection ~ 6300 6950
 $EndSCHEMATC
