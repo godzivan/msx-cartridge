@@ -10,15 +10,14 @@
 //  This module is the top level module for MAX II MSX BUS Master.
 //
 
-module msxbus_simple (MODE, MD, READY, CLK, PSW0, PSW1, 
+module msxbus_simple (MODE, MD, READY, CLK, 
 ADDR, DATA, RESET, RD, WR, MREQ, IORQ, SLTSL, CS1, CS2, CS12, INT, BUSDIR, WAIT, MCLK, SW, SWOUT, RFSH, M1);
+
 
 input [1:0] MODE;
 input CLK;
 inout reg [20:0] MD;
 output reg READY;
-output PSW0;
-output PSW1;
 
 input [1:0] SW;
 input INT, BUSDIR, WAIT;
@@ -53,10 +52,8 @@ reg reset;
 //assign MD[7:0] = MODE == 2'b01 ? rdata : 2'h00;
 
 assign MCLK = msxclk;
-assign SWOUT = 1'b0;
+assign SWOUT = 1'b1;
 assign RESET = reset;
-assign PSW0 = SW[0];
-assign PSW1 = SW[1];
 
 initial
 begin
@@ -82,7 +79,7 @@ wdata = 0;
 M1 = 1'bZ;
 end
 
-always @(CLK) begin
+always @(CLK or MODE) begin
 	case (MODE)
 	0: begin
 		MD <= 20'bZ;
@@ -92,29 +89,42 @@ always @(CLK) begin
 	1: begin
 		MREQ  = MD[16];
 		IORQ  = !MD[16];
-		RD = MD[17];
 		if (MREQ)
 			begin
 			reset <= MD[13];
 			end
-		if (!RD)
+		if (!MD[17])
 			begin
-			if (cycle > 1 & WAIT)
-				READY = 1'b0;
+			if (!MD[16])
+				begin
+				CS1 =  ADDR[15:14] == 1 ? 1'b0 : 1;
+				CS2 =  ADDR[15:14] == 2 ? 1'b0 : 1;
+				CS12 = ADDR[15] ~^ ADDR[14];
+				if (cycle > 1)
+					READY = 1'b0;
+				end
+			else
+				if (cycle > 10)
+					READY = 1'b0;
 			rdata = DATA;				
-			MD[7:0] = rdata;
+			MD[7:0] = DATA;
 			DATA = 8'bZ;
+			RD = !MD[17];
 			end
-		else 
+		else if (MD[17])
 			begin
 			WR = !MD[17] | !READY;
-			if (cycle > 8 & WAIT)
+			if (cycle > 9)
+				begin
 				READY = 1'b0;
+				DATA = MD[7:0];
+				MD[7:0] = 8'bZ;
+				end
 			else
 				begin
 				DATA = MD[7:0];
 				MD[7:0] = 8'bZ;
-			end
+				end
 			end
 		MD[12] <= INT; 
 		MD[11] <= BUSDIR; 
@@ -125,11 +135,8 @@ always @(CLK) begin
 			cycle = cycle + 1;
 		if (!MREQ)
 		begin
-			SLTSL[1] <= MD[18];
-			SLTSL[0] <= !MD[18];
-			CS1 <=  ADDR[15:14] == 1 ? 1'b0 : 1;
-			CS2 <=  ADDR[15:14] == 2 ? 1'b0 : 1;
-			CS12 <= ADDR[15] ~^ ADDR[14];
+			SLTSL[1] = MD[18];
+			SLTSL[0] = !MD[18];
 		end
 		end
 	2: READY <= 1'b1;
