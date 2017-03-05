@@ -51,9 +51,6 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name VERILOG_FILE msxbus_simple.v
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name CDF_FILE ../../../../../../altera/13.1/quartus/bin64/output_files/Chain1.cdf
-set_global_assignment -name CDF_FILE output_files/Chain2.cdf
-set_instance_assignment -name IMPLEMENT_AS_OUTPUT_OF_LOGIC_CELL ON -to md[15]
 set_location_assignment PIN_54 -to ADDR[15]
 set_location_assignment PIN_47 -to ADDR[14]
 set_location_assignment PIN_44 -to ADDR[13]
@@ -120,44 +117,31 @@ set_location_assignment PIN_84 -to MD[17]
 set_location_assignment PIN_85 -to MD[18]
 set_location_assignment PIN_14 -to MD[19]
 set_location_assignment PIN_17 -to MD[20]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[15]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[14]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[13]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[12]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[11]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[10]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[9]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[8]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR[0]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[15]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[14]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[13]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[12]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[11]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[10]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[9]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[8]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[7]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[6]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[5]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[4]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[3]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[2]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[1]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ADDR[0]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DATA[7]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DATA[6]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DATA[5]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DATA[4]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DATA[3]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DATA[2]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DATA[1]
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DATA[0]
-set_location_assignment PIN_66 -to M1
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to DATA
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to DATA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to DATA
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to DATA
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to ADDR
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to CS1
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to CS2
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to CS12
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SLTSL
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to RD
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to WR
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to IORQ
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MREQ
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SLTSL
+set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to RD
+set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to IORQ
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to ADDR
+set_global_assignment -name VERILOG_FILE SDRAM_CTRL.v
+set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to CLK
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to DATA
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to ADDR
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to MREQ
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to WR
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to WR
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to WAIT
+set_location_assignment PIN_88 -to PSW0
+set_location_assignment PIN_89 -to PSW1
