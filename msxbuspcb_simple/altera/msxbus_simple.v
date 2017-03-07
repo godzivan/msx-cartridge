@@ -49,6 +49,9 @@ reg [1:0] mode;
 reg [13:0] timeout;
 reg mclk;
 reg reset;
+reg busreq;
+reg busack;
+reg access;
 
 //assign MD[7:0] = MODE == 2'b01 ? rdata : 2'h00;
 
@@ -80,9 +83,12 @@ cnt = 0;
 timeout = 0;
 wdata = 0;
 M1 = 1'bZ;
+busreq = 1'b0;
+busack = 1'b0;
+access = 1'b0;
 end
 
-always @(CLK) begin
+always @(*) begin
 	case (MODE)
 	0: begin
 		MD <= 20'bZ;
@@ -90,64 +96,98 @@ always @(CLK) begin
 		READY = 1'b0;
 		end
 	1: begin
-		MREQ  = MD[16];
-		IORQ  = !MD[16];
-		RD = MD[17];
-		if (MREQ)
-			begin
-			reset <= MD[13];
+		if (busreq == 1'b0) begin
+			mode <= MD[17:16];
+			MD[7:0] = 8'bZ;
+			wdata = MD[7:0];
+			busreq = 1'b1;
+		end
+		else if (busack == 1'b1) begin
+			if (mode[1] == 1'b0) begin
+				MD[7:0] = rdata;
 			end
-		if (!RD)
-			begin
-			if (cycle > 1 & WAIT)
-				READY = 1'b0;
-			rdata = DATA;				
-			MD[7:0] = rdata;
-			DATA = 8'bZ;
-			end
-		else 
-			begin
-			WR = !MD[17] | !READY;
-			if (cycle > 8 & WAIT)
-				READY = 1'b0;
-			else
-				begin
-				DATA = MD[7:0];
-				MD[7:0] = 8'bZ;
-			end
-			end
-		MD[12] <= INT; 
-		MD[11] <= BUSDIR; 
-		MD[10] <= WAIT; 
-		MD[9]  <= SW[0]; 
-		MD[8]  <= SW[1];
-		if (cycle < 2047)
-			cycle = cycle + 1;
-		if (!MREQ)
-		begin
+			READY = 1'b0;
+		end
+		end
+	2: begin
+		READY <= 1'b1;
+		busreq = 1'b0;
+		end
+	3: begin
+		READY <= 1'b1;
+		busreq = 1'b0;
+		reset <= 1'b1;
+		end
+	endcase
+end
+
+always @ (negedge CLK) begin
+	if (busreq == 1'b1) begin
+		if (cycle == 0) begin
+			IORQ <= !mode[0];
+			MREQ <= mode[0];
+			RD = mode[1];
+			WR = !RD;
 			SLTSL[1] <= MD[18];
 			SLTSL[0] <= !MD[18];
 			CS1 <=  ADDR[15:14] == 1 ? 1'b0 : 1;
 			CS2 <=  ADDR[15:14] == 2 ? 1'b0 : 1;
 			CS12 <= ADDR[15] ~^ ADDR[14];
+			access = 1'b0;
 		end
+		case (mode)
+		0: begin
+			if (cycle <= 2) begin
+				DATA <= 8'bZ;
+				rdata <= DATA;
+			end
+			else if (cycle > 3) begin
+				access = 1'b1;
+			end
+			end
+	   1: begin
+			if (cycle <= 5) begin
+				DATA <= 8'bZ;
+				rdata <= DATA;
+			end
+			else if (cycle > 5) begin
+				access = 1'b1;
+			end
+			end
+		2: begin
+		   if (cycle <= 10)
+				DATA <= wdata;
+			else if (cycle > 10) begin
+				access = 1'b1;
+			end
+			end
+		3: begin
+		   if (cycle <= 15)
+				DATA <= wdata;
+			else if (cycle > 15) begin
+				access = 1'b1;
+			end
+			end
+		endcase
+		if (access == 1'b1) begin
+			//DATA <= 8'bZ;
+			MREQ <= 1'b1;
+			IORQ <= 1'b1;
+			RD <= 1'b1;
+			WR <= 1'b1;
+			SLTSL <= 2'b11;
+			CS1 <= 1'b1;
+			CS2 <= 1'b1;
+			CS12 <= 1'b1;	
+			busack <= 1'b1;
 		end
-	2: READY <= 1'b1;
-	3: begin
-		READY <= 1'b1;
-		reset <= 1'b1;
-		DATA <= 8'bZ;
-		MREQ <= 1'b1;
-		IORQ <= 1'b1;
-		RD <= 1'b1;
-		WR <= 1'b1;
-		SLTSL <= 2'b11;
-		CS1 <= 1'b1;
-		CS2 <= 1'b1;
-		CS12 <= 1'b1;	
-		cycle <= 0;
-		end
-	endcase
+		else if (cycle < 2000)
+			cycle <= cycle + 1;
+	end
+	else begin
+		busack = 1'b0;
+		cycle = 0;
+	end
 end
 
 always @ (negedge CLK) begin
