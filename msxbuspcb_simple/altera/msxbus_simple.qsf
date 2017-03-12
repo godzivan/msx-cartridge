@@ -156,3 +156,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to INT
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to INT
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RD
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to RD
+set_global_assignment -name SIGNALTAP_FILE stp2.stp
+set_global_assignment -name SIGNALTAP_FILE ../stp3.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
