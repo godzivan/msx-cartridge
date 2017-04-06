@@ -27,7 +27,7 @@ output reg RD;
 output reg WR;
 output reg MREQ;
 output reg IORQ;
-output RESET;
+output reg RESET;
 output reg [15:0] ADDR;
 output reg [1:0] SLTSL;
 output reg CS1;
@@ -39,38 +39,36 @@ output reg M1;
 reg [7:0] rdata;
 reg [7:0] wdata;
 reg [2:0] clkcount;
-reg ready1, mready0, mready1;
 reg msxclk;
-reg wr0, rd0, iorq0, mreq0;
 reg [12:0] cycle;
-reg [1:0] sltsl;
 reg [7:0] cnt;
 reg [1:0] mode;
 reg [13:0] timeout;
+reg [12:0] timing;
 reg mclk;
 reg reset;
+reg busreq;
+reg busack;
+reg access;
+reg sltsl;
+reg mio;
+reg rw;
+reg en;
+reg slot;
 
 //assign MD[7:0] = MODE == 2'b01 ? rdata : 2'h00;
 
 assign MCLK = msxclk;
 assign SWOUT = 1'b0;
-assign RESET = reset;
 assign PSW0 = SW[0];
 assign PSW1 = SW[1];
 
 initial
 begin
-mready1 = 1'b1;
-mready0 = 1'b1;
-ready1 = 1'b1;	
 SLTSL = 3;
 CS1 = 1'b1;
 CS2 = 1'b1;
 CS12 = 1'b1;
-wr0 = 1'b1;
-rd0 = 1'b1;
-mreq0 = 1'b1;
-iorq0 = 1'b1;
 clkcount = 0;
 cycle = 0;
 IORQ = 1'b1;
@@ -80,72 +78,41 @@ cnt = 0;
 timeout = 0;
 wdata = 0;
 M1 = 1'bZ;
+busreq = 1'b0;
+busack = 1'b0;
+access = 1'b0;
+timing = 21;
 end
 
-always @(CLK) begin
+MSXBUS inst(.CLK(msxclk), .RST(reset), .EN(en), .ADDRESS(addr), .ADDR(ADDR), .DATA(DATA), .RW(rw), .MIO(mio), .SLOT(slot), .SLTSL(SLTSL), 
+				.CS1(CS1), .CS2(CS2), .CS12(CS12), .RESET(RESET), .MREQ(MREQ), .IORQ(IORQ), .WDATA(wdata), .RDATA(rdata), .WAIT(WAIT),
+				.SW0(SW[0]), .SW1(SW[1]), .VAL(valid), .BUSDIR(BUSDIR));
+always @(posedge CLK) begin
 	case (MODE)
 	0: begin
-		MD <= 20'bZ;
+		MD[15:0] <= 16'bZ;
 		ADDR <= MD[15:0];
 		READY = 1'b0;
+		busreq <= 1'b0;
+		cycle <= 0;
 		end
 	1: begin
-		MREQ  = MD[16];
-		IORQ  = !MD[16];
-		RD = MD[17];
-		if (MREQ)
-			begin
-			reset <= MD[13];
+		wdata <= MD[7:0];
+		mio <= MD[15];
+		rw <= MD[14];
+		slot <= MD[13];
+		if (!valid) begin
+			MD[7:0] <= rdata;
+			READY = 1'b0;
 			end
-		if (!RD)
-			begin
-			if (cycle > 1 & WAIT)
-				READY = 1'b0;
-			rdata = DATA;				
-			MD[7:0] = rdata;
-			DATA = 8'bZ;
-			end
-		else 
-			begin
-			WR = !MD[17] | !READY;
-			if (cycle > 8 & WAIT)
-				READY = 1'b0;
-			else
-				begin
-				DATA = MD[7:0];
-				MD[7:0] = 8'bZ;
-			end
-			end
-		MD[12] <= INT; 
-		MD[11] <= BUSDIR; 
-		MD[10] <= WAIT; 
-		MD[9]  <= SW[0]; 
-		MD[8]  <= SW[1];
-		if (cycle < 2047)
-			cycle = cycle + 1;
-		if (!MREQ)
-		begin
-			SLTSL[1] <= MD[18];
-			SLTSL[0] <= !MD[18];
-			CS1 <=  ADDR[15:14] == 1 ? 1'b0 : 1;
-			CS2 <=  ADDR[15:14] == 2 ? 1'b0 : 1;
-			CS12 <= ADDR[15] ~^ ADDR[14];
+		else
+			en <= 1'b1;
 		end
+	2: begin
+		READY = 1'b1;
 		end
-	2: READY <= 1'b1;
 	3: begin
-		READY <= 1'b1;
-		reset <= 1'b1;
-		DATA <= 8'bZ;
-		MREQ <= 1'b1;
-		IORQ <= 1'b1;
-		RD <= 1'b1;
-		WR <= 1'b1;
-		SLTSL <= 2'b11;
-		CS1 <= 1'b1;
-		CS2 <= 1'b1;
-		CS12 <= 1'b1;	
-		cycle <= 0;
+		READY = 1'b1;
 		end
 	endcase
 end
@@ -162,3 +129,87 @@ end
 
 endmodule
 
+module MSXBUS (CLK, RST, EN, ADDRESS, ADDR, DATA, RW, MIO, SLOT, SLTSL, CS1, CS2, CS12, RESET, MREQ, IORQ, RD, WR, M1, WDATA, RDATA, WAIT, SW0, SW1, VAL);
+	input CLK, RST, EN;
+	input [15:0] ADDRESS;
+	output [15:0] ADDR;
+	reg [15:0] ADDR;
+	inout reg [7:0] DATA;
+	input RW, MIO, SLOT;
+	output [1:0] SLTSL;
+	reg [1:0] SLTSL;
+	output reg CS1, CS2, CS12, RESET, M1;
+	input WAIT, SW0, SW1;
+	output reg [7:0] RDATA;
+	input [7:0] WDATA;
+	output reg VAL;
+	reg [3:0] STATE;
+	output reg MREQ, IORQ, RD, WR;
+	parameter ST0 = 0, ST1 = 1, ST2 = 2, ST3 = 3, ST4 = 4, ST5 = 5;
+	
+	always @(CLK or negedge RST) begin
+		if (!RST) begin
+			ADDR <= 16'bZ;
+			DATA <= 8'bZ;
+			SLTSL<= 1'bZ;
+			CS1  <= 1'bZ;
+			CS2  <= 1'bZ;
+			CS12 <= 1'bZ;
+			RESET<= 1'bZ;
+			M1   <= 1'bZ;
+			VAL  <= 1'b1;
+			STATE<= ST0;
+		end
+		else begin
+			if (EN) 
+				case (STATE)
+					ST0: begin
+						ADDR <= ADDRESS;
+						STATE <= ST1;
+						end
+					ST1: begin
+						MREQ <= MIO;
+						IORQ <= !MIO;
+						if (!RW) begin
+							DATA <= 8'bZ;
+							RD <= 1'b0;
+							end
+						else
+							DATA <= WDATA;
+						if (!MIO) begin
+							SLTSL[0] <= SLOT;
+							SLTSL[1] <= !SLOT;
+							CS1 <= ADDR[15] && !ADDR[14];
+							CS2 <= !ADDR[15] && ADDR[14];
+							CS12 <= CS1 & CS2;
+						end
+						STATE <= ST2;
+						end
+					ST2: STATE <= ST3;
+					ST3: begin
+						if (RW)
+							WR <= 1'bZ;
+						STATE <= ST4;
+						end
+					ST4: begin
+						if (!RW)
+							RDATA <= DATA;
+						STATE <= ST5;
+						end
+					ST5: begin
+						ADDR <= 16'bZ;
+						DATA <= 8'bZ;
+						SLTSL<= 1'bZ;
+						CS1  <= 1'bZ;
+						CS2  <= 1'bZ;
+						CS12 <= 1'bZ;
+						RESET<= 1'bZ;
+						M1   <= 1'bZ;
+						VAL  <= 1'b0;
+						end
+					endcase
+			else
+				STATE <= ST0;
+		end
+	end
+endmodule

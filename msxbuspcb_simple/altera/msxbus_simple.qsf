@@ -136,7 +136,7 @@ set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to IORQ
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to ADDR
 set_global_assignment -name VERILOG_FILE SDRAM_CTRL.v
 set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to CLK
-set_instance_assignment -name FAST_INPUT_REGISTER ON -to DATA
+set_instance_assignment -name FAST_INPUT_REGISTER OFF -to DATA
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to ADDR
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to MREQ
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR
@@ -145,3 +145,17 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to WR
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to WAIT
 set_location_assignment PIN_88 -to PSW0
 set_location_assignment PIN_89 -to PSW1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to BUSDIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to CS1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to CS2
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to CS12
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to IORQ
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to IORQ
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to INT
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to INT
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RD
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to RD
+set_global_assignment -name SIGNALTAP_FILE stp2.stp
+set_global_assignment -name SIGNALTAP_FILE ../stp3.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
