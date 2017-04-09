@@ -68,7 +68,15 @@ package sram_pkg is
 			noe : out std_logic;
 			-- Chip Enable (active low)
 			ce : in std_logic;
-			nce : BUFFER std_logic
+			nce : BUFFER std_logic;
+			iorq: out std_logic;
+			merq: out std_logic;
+			sltsl0_out: out std_logic;
+			sltsl1_out: out std_logic;
+			busdir: in std_logic;
+			cs1: out std_logic;
+			cs2: out std_logic;
+			cs12: out std_logic
 			-- Debugging Purposes
 --			c_state : out states
 		);
@@ -90,6 +98,7 @@ use work.sram_pkg.all;
 entity sram_controller is
 	port (
 		reset : in std_logic;
+		reset_out : out std_logic;
 		mem_clk : in std_logic;
 		addr : in sram_addr;
 		addr_out : out sram_addr;
@@ -99,11 +108,23 @@ entity sram_controller is
 		done : BUFFER std_logic;
 		done_transac : out std_logic;
 		we : in std_logic;
+		rd : out std_logic;
+		wr : out std_logic;
 		nwe : BUFFER std_logic;
 		noe : out std_logic;
 		ce : in std_logic;
 		nce : BUFFER std_logic;
-		c_state : out states
+		c_state : out states;		
+		mio: in std_logic;
+		iorq_out: out std_logic;
+		merq_out: out std_logic;
+		sltsl: in std_logic;
+		sltsl0_out: out std_logic;
+		sltsl1_out: out std_logic;
+		busdir: in std_logic;
+		cs1: BUFFER std_logic;
+		cs2: BUFFER std_logic;
+		cs12: BUFFER std_logic	
 	);
 end sram_controller; 
 	
@@ -118,24 +139,25 @@ begin
 
 	addr_out <= saddr;
 	c_state <= cstate;
+	reset_out <= reset;
 		
 	sram_readwrite : process (mem_clk) is
 	type sram_rw_states is (SRAM_IDLE, SRAM_DONE);
 	variable sram_rw_cstate : sram_rw_states;
 	begin
 		if reset = '1' then
-			done_transac <= '1';
+			done_transac <= '0';
 			sram_rw_cstate := SRAM_IDLE;
 		elsif falling_edge(mem_clk) then
 			case sram_rw_cstate is
 			when SRAM_IDLE =>
-				if done = '1' then
-					done_transac <= '1';
+				if done = '0' then
+					done_transac <= '0';
 					sram_rw_cstate := SRAM_DONE; 
 				end if;
 			when SRAM_DONE =>
-				done_transac <= '0';
-				if done = '0' then
+				if done = '1' then
+					done_transac <= '1';
 					sram_rw_cstate := SRAM_IDLE;
 				end if;
 			end case;
@@ -147,32 +169,73 @@ begin
 		if (reset = '1') then
 			nce <= '1';
 			noe <= '1';
+			iorq_out <= '1';
+			merq_out <= '1';
+			cs1 <= '1';
+			cs2 <= '1';
+			cs12 <='1';
+			sltsl0_out <= '1';
+			sltsl1_out <= '1';
 			cstate <= WRITE_COMPL;	
 		elsif rising_edge(mem_clk) then
 			case cstate is
 			when INIT_ADDR =>
 				-- Check if user wants to access the SRAM
 				if (ce = '0') then
-					cstate <= INIT_SIG;	
+					cstate <= INIT_SIG;
+					if (we = '0') then
+						cs1 <= addr(15) and not addr(14);
+						cs2 <= not addr(15) and addr(14);
+						cs12 <= cs1 and cs2;
+					end if;
+					if (sltsl = '1') then
+						sltsl0_out <= '0';
+						sltsl1_out <= '1';
+					else
+						sltsl1_out <= '0';
+						sltsl0_out <= '1';
+					end if;
+					if (mio = '0') then
+						merq_out <= '0';
+						iorq_out <= '1';
+					else
+						iorq_out <= '0';
+						merq_out <= '1';
+					end if;
+				else
+					rd <= '1';
+					wr <= '1';
+					merq_out <= '1';
+					iorq_out <= '1';
+					cs1 <= '1';
+					cs2 <= '1';
+					cs12 <= '1';
+					sltsl0_out <= '1';
+					sltsl1_out <= '1';				
 				end if;
 				nce <=	ce;
 			when INIT_SIG =>
 				-- Determines whether to read or write
 				if (we = '0') then
 					-- Output Enable is Enabled, SRAM driving the D-bus
-					noe <= '1';
-					cstate <= WRITE_REQ;
+					rd <= '0';
+					wr <= '1';
+					cstate <= READ_REQ;
 				else
 					-- Output Enable is Disabled, SRAM Controller driving the D-bus
+					rd <= '1';
+					wr <= '0';
 					noe <= '0';
-					cstate <= READ_REQ;		
+					cstate <= WRITE_REQ;		
 				end if;
+
 			-- 0th wait cycle
 			when WRITE_REQ =>
 --				cstate <= WAIT_WRITE;
 				cstate <= WRITE_COMPL;
 			when READ_REQ =>
 				cstate <= READ_COMPL;
+				DOUT <= D;
 --				cstate <= WAIT_READ;
 			-- 1st wait cycle
 --			when WAIT_WRITE =>
@@ -181,12 +244,15 @@ begin
 --				cstate <= READ_COMPL;
 			-- 2nd wait cycle
 			when WRITE_COMPL =>
-				cstate <= INIT_ADDR;			
+				if (ce = '1') then
+					cstate <= INIT_ADDR;	
+				end if;
 			when READ_COMPL =>
 				DOUT <= D;
-				-- Data is sent to user, SRAM no longer has to drive the bus
-				noe <= '1';
-				cstate <= INIT_ADDR;			
+				if (ce = '1') then
+					-- Data is sent to user, SRAM no longer has to drive the bus
+					cstate <= INIT_ADDR;
+				end if;
 			end case;
 		end if;
 	end process MEM_LOGIC;	
@@ -200,7 +266,8 @@ begin
 			d_out WHEN others;
 
 	WITH cstate SELECT
-		done <=	'1' WHEN INIT_ADDR, 
+		done <=	'1' WHEN WRITE_COMPL,
+			   '1' WHEN READ_COMPL, 
 				'0' WHEN others;
 --	WITH cstate SELECT
 --		nce <=	ce	WHEN INIT_ADDR,

@@ -15,7 +15,7 @@ ADDR, DATA, RESET, RD, WR, MREQ, IORQ, SLTSL, CS1, CS2, CS12, INT, BUSDIR, WAIT,
 
 input [1:0] MODE;
 input CLK;
-inout reg [20:0] MD;
+inout reg [15:0] MD;
 output reg READY;
 output PSW0;
 output PSW1;
@@ -39,6 +39,7 @@ output reg M1;
 reg [7:0] rdata;
 reg [7:0] wdata;
 reg [2:0] clkcount;
+reg [15:0] address;
 reg msxclk;
 reg [12:0] cycle;
 reg [7:0] cnt;
@@ -55,6 +56,7 @@ reg mio;
 reg rw;
 reg en;
 reg slot;
+reg vaild;
 
 //assign MD[7:0] = MODE == 2'b01 ? rdata : 2'h00;
 
@@ -82,44 +84,49 @@ busreq = 1'b0;
 busack = 1'b0;
 access = 1'b0;
 timing = 21;
+reset = 1'b1;
 end
 
-MSXBUS inst(.CLK(msxclk), .RST(reset), .EN(en), .ADDRESS(addr), .ADDR(ADDR), .DATA(DATA), .RW(rw), .MIO(mio), .SLOT(slot), .SLTSL(SLTSL), 
-				.CS1(CS1), .CS2(CS2), .CS12(CS12), .RESET(RESET), .MREQ(MREQ), .IORQ(IORQ), .WDATA(wdata), .RDATA(rdata), .WAIT(WAIT),
-				.SW0(SW[0]), .SW1(SW[1]), .VAL(valid), .BUSDIR(BUSDIR));
+sram_controller inst(.mem_clk(msxclk), .reset_out(RESET), .reset(reset), .addr_out(ADDR), .addr(address), .D(DATA), .ce(en), .we(rw), .mio(mio), 
+				.sltsl0_out(SLTSL[0]), .sltsl1_out(SLTSL[1]), .sltsl(slot), .done_transac(valid), .rd(RD), .wr(WR),
+				.cs1(CS1), .cs2(CS2), .cs12(CS12), .merq_out(MREQ), .iorq_out(IORQ), .DIN(wdata), .DOUT(rdata));
 always @(posedge CLK) begin
 	case (MODE)
 	0: begin
 		MD[15:0] <= 16'bZ;
-		ADDR <= MD[15:0];
+		address <= MD[15:0];
 		READY = 1'b0;
 		busreq <= 1'b0;
 		cycle <= 0;
 		end
 	1: begin
-		wdata <= MD[7:0];
-		mio <= MD[15];
-		rw <= MD[14];
-		slot <= MD[13];
-		if (!valid) begin
+		if (valid) begin
 			MD[7:0] <= rdata;
 			READY = 1'b0;
-			end
-		else
 			en <= 1'b1;
+			end
+		else begin
+			wdata <= MD[7:0];
+			mio <= MD[15];
+			rw <= MD[14];
+			slot <= MD[13];
+			en <= 1'b0;
+			end
 		end
 	2: begin
 		READY = 1'b1;
+		en <= 1'b1;
 		end
 	3: begin
 		READY = 1'b1;
+		en <= 1'b1;
 		end
 	endcase
 end
 
 always @ (negedge CLK) begin
-    clkcount <= clkcount + 3'b001;
-    if (clkcount == 3'b000)
+    clkcount = clkcount + 3'b001;
+    if (clkcount == 3'b111)
 		msxclk = ~msxclk; 
 end
 
