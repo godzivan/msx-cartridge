@@ -42,6 +42,7 @@ reg [2:0] clkcount;
 reg [15:0] address;
 reg msxclk;
 reg [12:0] cycle;
+reg [7:0] data;
 reg [7:0] cnt;
 reg [1:0] mode;
 reg [13:0] timeout;
@@ -85,6 +86,8 @@ busack = 1'b0;
 access = 1'b0;
 timing = 21;
 reset = 1'b1;
+en = 1'b1;
+data = 0;
 end
 
 sram_controller inst(.mem_clk(msxclk), .reset_out(RESET), .reset(reset), .addr_out(ADDR), .addr(address), .D(DATA), .ce(en), .we(rw), .mio(mio), 
@@ -100,17 +103,20 @@ always @(posedge CLK) begin
 		cycle <= 0;
 		end
 	1: begin
-		if (valid) begin
-			MD[7:0] <= rdata;
-			READY = 1'b0;
-			en <= 1'b1;
-			end
-		else begin
+		if (cycle == 1'b0) begin
 			wdata <= MD[7:0];
 			mio <= MD[15];
 			rw <= MD[14];
 			slot <= MD[13];
 			en <= 1'b0;
+			cycle <= cycle + 1;
+			MD[7:0] <= 2'hff;
+			end
+		else if (valid) begin
+			if (!READY)
+				MD[7:0] <= rdata;
+			READY = 1'b0;
+			en <= 1'b1;
 			end
 		end
 	2: begin

@@ -152,12 +152,12 @@ begin
 			case sram_rw_cstate is
 			when SRAM_IDLE =>
 				if done = '0' then
-					done_transac <= '0';
+					done_transac <= '1';
 					sram_rw_cstate := SRAM_DONE; 
 				end if;
 			when SRAM_DONE =>
 				if done = '1' then
-					done_transac <= '1';
+					done_transac <= '0';
 					sram_rw_cstate := SRAM_IDLE;
 				end if;
 			end case;
@@ -235,7 +235,8 @@ begin
 				cstate <= WRITE_COMPL;
 			when READ_REQ =>
 				cstate <= READ_COMPL;
-				DOUT <= D;
+--				DOUT <= D;
+				DOUT <= X"00";				
 --				cstate <= WAIT_READ;
 			-- 1st wait cycle
 --			when WAIT_WRITE =>
@@ -248,7 +249,7 @@ begin
 					cstate <= INIT_ADDR;	
 				end if;
 			when READ_COMPL =>
-				DOUT <= D;
+				DOUT <= X"00";
 				if (ce = '1') then
 					-- Data is sent to user, SRAM no longer has to drive the bus
 					cstate <= INIT_ADDR;
