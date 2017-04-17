@@ -89,68 +89,66 @@ always @(*) begin
 		MD <= 20'bZ;
 		ADDR <= MD[15:0];
 		READY <= 1'b0;
+		cycle <= 0;
 		end
 	1: begin
-		mio <= MD[15];
-		rw <= MD[14];
-		slt <= MD[13];
+		cycle <= cycle + 1;
+		if (cycle < 10) begin
+			mio <= MD[15];
+			rw <= MD[14];
+			slt <= MD[13];
+		end
 		MREQ  <= mio;
 		IORQ  <= !mio;
 		if (!rw)
 			begin
 			RD <= 1'b0;
-			WR <= 1'bZ;
-			if (cycle > 3)
+			if (cycle > 15)
 				READY <= 1'b0;
 			MD[7:0] <= DATA;
 			DATA <= 8'bZ;
 			end
-		else if (rw)
+		if (rw)
 			begin
-			RD <= 1'bZ;
-			if (cycle > 3)
-				WR <= 1'b0;
-			if (cycle > 21)
-				READY <= 1'b0;
-			else
-				begin
+			if (cycle < 1) begin
 				DATA <= MD[7:0];
 				MD[7:0] <= 8'bZ;
 			end
+			if (cycle > 3)
+				READY <= 1'b0;
+			WR <= 1'b0;
 			end
+		if (cycle > 100) begin
+			READY <= 1'b0;
+		end
 		MD[12] <= INT; 
 		MD[11] <= BUSDIR; 
 		MD[10] <= WAIT; 
 		MD[9]  <= SW[0]; 
 		MD[8]  <= SW[1];
-		if (cycle < 2047)
-			cycle <= cycle + 1;
-		if (!MREQ)
+		if (!mio)
 		begin
-			SLTSL[1] <= MD[13];
-			SLTSL[0] <= !MD[13];
+			SLTSL[1] <= slt;
+			SLTSL[0] <= !slt;
 			CS1 <=  ADDR[15:14] == 1 ? 1'b0 : 1;
 			CS2 <=  ADDR[15:14] == 2 ? 1'b0 : 1;
 			CS12 <= ADDR[15] ~^ ADDR[14];
 		end
 		end
 	2: READY <= 1'b1;
-	3: begin
-		READY <= 1'b1;
-		cycle <= 0;
-		end
+	3: READY <= 1'b1;
 	endcase
 	if (READY) begin
 		reset <= 1'b1;
 		DATA <= 8'bZ;
 		MREQ <= 1'b1;
 		IORQ <= 1'b1;
-		RD <= 1'b1;
-		WR <= 1'b1;
-		SLTSL <= 2'b11;
-		CS1 <= 1'b1;
-		CS2 <= 1'b1;
-		CS12 <= 1'b1;	
+		RD <= 1'bZ;
+		WR <= 1'bZ;
+		SLTSL <= 2'bZZ;
+		CS1 <= 1'bZ;
+		CS2 <= 1'bZ;
+		CS12 <= 1'bZ;	
 	end
 end
 
