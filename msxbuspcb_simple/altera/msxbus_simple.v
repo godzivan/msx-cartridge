@@ -83,44 +83,39 @@ wdata = 0;
 M1 = 1'bZ;
 end
 
-always @(*) begin
+always @(negedge CLK) begin
 	case (MODE)
 	0: begin
-		MD <= 20'bZ;
+		MD <= 16'bZ;
 		ADDR <= MD[15:0];
 		READY <= 1'b0;
 		cycle <= 0;
 		end
 	1: begin
 		cycle <= cycle + 1;
-		if (cycle < 10) begin
-			mio <= MD[15];
-			rw <= MD[14];
-			slt <= MD[13];
-		end
+		mio <= MD[15];
+		rw <= MD[14];
+		slt <= MD[13];
 		MREQ  <= mio;
 		IORQ  <= !mio;
 		if (!rw)
 			begin
 			RD <= 1'b0;
-			if (cycle > 15)
+			WR <= 1'b1;
+			if (cycle > 4)
 				READY <= 1'b0;
 			MD[7:0] <= DATA;
 			DATA <= 8'bZ;
 			end
-		if (rw)
+		else
 			begin
-			if (cycle < 1) begin
-				DATA <= MD[7:0];
-				MD[7:0] <= 8'bZ;
-			end
-			if (cycle > 3)
-				READY <= 1'b0;
 			WR <= 1'b0;
+			if (cycle < 2) 
+				DATA <= MD[7:0];
+			MD[7:0] <= 8'bZ;
+			if (cycle > 18)
+				READY <= 1'b0;
 			end
-		if (cycle > 100) begin
-			READY <= 1'b0;
-		end
 		MD[12] <= INT; 
 		MD[11] <= BUSDIR; 
 		MD[10] <= WAIT; 
@@ -138,6 +133,10 @@ always @(*) begin
 	2: READY <= 1'b1;
 	3: READY <= 1'b1;
 	endcase
+	if (cycle > 100) begin
+		READY <= 1'b0;	
+		cycle <= 0;
+	end
 	if (READY) begin
 		reset <= 1'b1;
 		DATA <= 8'bZ;
