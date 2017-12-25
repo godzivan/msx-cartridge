@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:msxbus_simple-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -28,7 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:msxbus_simple-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -942,7 +942,7 @@ Wire Bus Line
 	1400 2150 4200 2150
 Connection ~ 3950 2700
 $Comp
-L CONN_01X03 P3
+L Conn_01x03 P3
 U 1 1 56E6FB9D
 P 8650 6300
 F 0 "P3" H 8650 6500 50  0000 C CNN
