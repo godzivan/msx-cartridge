@@ -1,9 +1,9 @@
-(pcb "C:\msys64\home\meeso.kim\msx-cartridge\rpmpv1\rpmpv1.dsn"
+(pcb "C:\msys64\home\meesokim\msx-cartridge\rpmpv1\rpmpv1.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "4.0.4-stable")
+    (host_version "4.0.7")
   )
   (resolution um 10)
   (unit um)
@@ -21,17 +21,13 @@
       )
     )
     (boundary
-      (path pcb 0  112636 -92900.5  101143 -92900.5  101143 -49695.1  203835 -49695.1
-            203835 -103886  190081 -103886  190081 -114084  189128 -115037
-            126035 -115037  124943 -113944  124943 -103886  112636 -103886
-            112636 -92900.5  112636 -92900.5)
+      (path pcb 0  126035 -115037  124943 -113944  124943 -49695.1  190081 -49695.1
+            190081 -114084  189128 -115037  126035 -115037  126035 -115037)
     )
-    (plane GND (polygon F.Cu 0  204061 -51674.9  203987 -114859  101321 -115049  101536 -92925.9
-            101181 -90589.1  101295 -49542.7  203835 -49911))
-    (plane GND (polygon B.Cu 0  204229 -115062  101638 -115176  101371 -91389.2  101130 -91389.2
-            101486 -49441.1  198895 -49441.1  204102 -49491.9))
-    (plane GND (polygon F.Cu 0  204127 -51676.3  204061 -51674.9  204062 -50529.1))
-    (plane GND (polygon F.Cu 0  204013 -49657  204064 -49301.4  204062 -50529.1))
+    (plane GND (polygon F.Cu 0  190119 -49657  190271 -113716  101321 -113906  101536 -93052.9
+            101181 -90716.1  101295 -49669.7))
+    (plane GND (polygon B.Cu 0  201181 -113792  98590.1 -113906  98323.4 -91897.2  98082.1 -91897.2
+            98437.7 -49949.1  195847 -49949.1  201054 -49999.9))
     (keepout "" (polygon signal 0  187552 -98894.9  187544 -98700.2  187518 -98507  187476 -98316.7
             187418 -98130.8  187343 -97950.8  187253 -97777.9  187148 -97613.6
             187030 -97459  186898 -97315.3  186754 -97183.6  186600 -97065
@@ -68,6 +64,10 @@
             130455 -95634.4  130622 -95528.4  130778 -95408.3  130924 -95274.9
             131057 -95129.4  131177 -94972.8  131283 -94806.4  131374 -94631.3
             131450 -94449  131509 -94260.7  131552 -94068.1  131578 -93872.4))
+    (keepout "" (polygon F.Cu 0  124943 -113970  190170 -113970  190170 -115138  124993 -115138
+            124993 -115037))
+    (keepout "" (polygon B.Cu 0  125044 -115189  124993 -115138  125042 -115138))
+    (keepout "" (polygon B.Cu 0  124993 -113868  190271 -113868  190271 -115138  125042 -115138))
     (via "Via[0-1]_600:400_um")
     (rule
       (width 250)
@@ -78,17 +78,17 @@
   )
   (placement
     (component Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm
-      (place J1 132080 -53340 back 90 (PN RPi_GPIO))
+      (place J1 181635 -59563 back 270 (PN RPi_GPIO))
     )
     (component MSX:card_edge_connector
       (place P1 156210 -106680 front 0 (PN CONN_02X25))
     )
     (component "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm"
-      (place U1 195580 -76200 front 0 (PN 74LS245))
-      (place U2 157860 -75565 front 180 (PN 74LS245))
-      (place U3 119380 -83440 back 90 (PN 74LS245))
-      (place U4 177800 -76200 back 180 (PN 74LS245))
-      (place U5 139700 -71120 back 90 (PN 74LS245))
+      (place U1 175489 -80035.4 front 270 (PN 74LS245))
+      (place U2 157759 -80035.4 back 90 (PN 74LS245))
+      (place U3 139421 -80035.4 back 90 (PN 74LS245))
+      (place U4 157810 -80035.4 front 270 (PN 74LS245))
+      (place U5 140691 -79984.6 front 270 (PN 74LS245))
     )
   )
   (library
@@ -345,55 +345,55 @@
       (pins J1-2 J1-4 P1-45 P1-47 U1-20 U2-1 U2-20 U3-20 U4-1 U4-20 U5-1 U5-20)
     )
     (net /RD3
-      (pins J1-5 U3-7 U5-7)
+      (pins J1-5 U3-7 U5-4)
     )
     (net /RD4
-      (pins J1-7 U3-4 U5-4)
+      (pins J1-7 U3-4 U5-7)
     )
     (net /RD6
-      (pins J1-31 U3-2 U5-2)
+      (pins J1-31 U3-2 U5-9)
     )
     (net /RD7
-      (pins J1-26 U3-3 U5-3)
+      (pins J1-26 U3-3 U5-8)
     )
     (net /RD0
-      (pins J1-27 U3-8 U5-8)
+      (pins J1-27 U3-8 U5-3)
     )
     (net /RCLK
       (pins J1-40 U1-15)
     )
     (net /RD1
-      (pins J1-28 U3-9 U5-9)
+      (pins J1-28 U3-9 U5-2)
     )
     (net /RD2
-      (pins J1-3 U3-6 U5-6)
+      (pins J1-3 U3-6 U5-5)
     )
     (net /RD5
-      (pins J1-29 U3-5 U5-5)
+      (pins J1-29 U3-5 U5-6)
     )
     (net /WAIT
-      (pins P1-7 U1-17)
+      (pins P1-7 U1-18)
     )
     (net /INT
-      (pins P1-8 U1-16)
+      (pins P1-8 U1-17)
     )
     (net /BUSDIR
-      (pins P1-10 U1-18)
+      (pins P1-10 U1-16)
     )
     (net /IORQ
-      (pins P1-11 U4-15)
+      (pins P1-11 U4-14)
     )
     (net /MREQ
-      (pins P1-12 U4-14)
+      (pins P1-12 U4-15)
     )
     (net /WR
-      (pins P1-13 U4-17)
+      (pins P1-13 U4-12)
     )
     (net /RD
-      (pins P1-14 U3-1 U4-16)
+      (pins P1-14 U3-1 U4-13)
     )
     (net /RESET
-      (pins P1-15 U4-18)
+      (pins P1-15 U4-11)
     )
     (net /A9
       (pins P1-17 U2-12)
@@ -408,10 +408,10 @@
       (pins P1-20 U2-14)
     )
     (net /A7
-      (pins P1-21 U5-17)
+      (pins P1-21 U5-12)
     )
     (net /A6
-      (pins P1-22 U5-18)
+      (pins P1-22 U5-11)
     )
     (net /A12
       (pins P1-23 U2-15)
@@ -426,22 +426,22 @@
       (pins P1-26 U2-18)
     )
     (net /A1
-      (pins P1-27 U5-11)
+      (pins P1-27 U5-18)
     )
     (net /A0
-      (pins P1-28 U5-12)
+      (pins P1-28 U5-17)
     )
     (net /A3
-      (pins P1-29 U5-13)
+      (pins P1-29 U5-16)
     )
     (net /A2
-      (pins P1-30 U5-14)
+      (pins P1-30 U5-15)
     )
     (net /A5
-      (pins P1-31 U5-15)
+      (pins P1-31 U5-14)
     )
     (net /A4
-      (pins P1-32 U5-16)
+      (pins P1-32 U5-13)
     )
     (net /D1
       (pins P1-33 U3-11)
@@ -474,10 +474,10 @@
       (pins J1-1 J1-17)
     )
     (net /RINT
-      (pins J1-38 U1-4)
+      (pins J1-38 U1-3)
     )
     (net /RWAIT
-      (pins J1-35 U1-3)
+      (pins J1-35 U1-2)
     )
     (net "Net-(P1-Pad5)"
       (pins P1-5)
@@ -486,13 +486,13 @@
       (pins P1-16)
     )
     (net /RA8
-      (pins J1-24 U2-4 U4-4)
+      (pins J1-24 U2-4 U4-7)
     )
     (net /RA10
-      (pins J1-19 U2-6 U4-6)
+      (pins J1-19 U2-6 U4-5)
     )
     (net /RA11
-      (pins J1-23 U2-7 U4-7)
+      (pins J1-23 U2-7 U4-4)
     )
     (net /RA15
       (pins J1-10 U2-9)
@@ -504,19 +504,19 @@
       (pins J1-11 U2-19 U3-19)
     )
     (net /RA12
-      (pins J1-32 U2-5 U4-5)
+      (pins J1-32 U2-5 U4-6)
     )
     (net /RA9
       (pins J1-21 U2-8)
     )
     (net /RA13
-      (pins J1-33 U2-2 U4-2)
+      (pins J1-33 U2-2 U4-9)
     )
     (net /RA14
-      (pins J1-8 U2-3 U4-3)
+      (pins J1-8 U2-3 U4-8)
     )
     (net /RBUSDIR
-      (pins J1-12 U1-2)
+      (pins J1-12 U1-4)
     )
     (net "Net-(J1-Pad13)"
       (pins J1-13)
@@ -546,7 +546,7 @@
       (pins P1-3)
     )
     (net /SLTSL
-      (pins P1-4 U4-13)
+      (pins P1-4 U4-16)
     )
     (net "Net-(P1-Pad6)"
       (pins P1-6)
@@ -590,34 +590,30 @@
     (net "Net-(U1-Pad14)"
       (pins U1-14)
     )
-    (net "Net-(U4-Pad8)"
-      (pins U4-8)
+    (net "Net-(U4-Pad2)"
+      (pins U4-2)
     )
-    (net "Net-(U4-Pad9)"
-      (pins U4-9)
+    (net "Net-(U4-Pad3)"
+      (pins U4-3)
     )
-    (net "Net-(U4-Pad11)"
-      (pins U4-11)
+    (net "Net-(U4-Pad17)"
+      (pins U4-17)
     )
-    (net "Net-(U4-Pad12)"
-      (pins U4-12)
+    (net "Net-(U4-Pad18)"
+      (pins U4-18)
     )
-    (class kicad_default "" +3V3 /+12V /+V12 /A0 /A1 /A10 /A11 /A12 /A13 /A14
-      /A15 /A2 /A3 /A4 /A5 /A6 /A7 /A8 /A9 /BUSDIR /CAPS /CLK /CS1 /CS12 /CS2
-      /D0 /D1 /D2 /D3 /D4 /D5 /D6 /D7 /HAN /INT /IORQ /LE_A /LE_B /M1 /MREQ
-      /PWR /RA10 /RA11 /RA12 /RA13 /RA14 /RA15 /RA8 /RA9 /RBUSDIR /RCLK /RCS12
-      /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6 /RD7 /RESET /RFSH /RINT /RRESET
-      /RWAIT /SLTSL /SLTSL1 /SLTSL3 /SNDIN /SW1 /SW3 /WAIT /WR GND "Net-(D1-Pad1)"
-      "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(D4-Pad1)" "Net-(D5-Pad1)" "Net-(D6-Pad1)"
-      "Net-(D7-Pad1)" "Net-(D8-Pad1)" "Net-(D9-Pad1)" "Net-(J1-Pad13)" "Net-(J1-Pad15)"
+    (class kicad_default "" +3V3 /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15 /A2
+      /A3 /A4 /A5 /A6 /A7 /A8 /A9 /BUSDIR /CLK /D0 /D1 /D2 /D3 /D4 /D5 /D6
+      /D7 /INT /IORQ /LE_A /LE_B /MREQ /RA10 /RA11 /RA12 /RA13 /RA14 /RA15
+      /RA8 /RA9 /RBUSDIR /RCLK /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6 /RD7
+      /RESET /RINT /RWAIT /SLTSL /WAIT /WR GND "Net-(J1-Pad13)" "Net-(J1-Pad15)"
       "Net-(J1-Pad16)" "Net-(J1-Pad18)" "Net-(J1-Pad22)" "Net-(J1-Pad37)"
       "Net-(P1-Pad1)" "Net-(P1-Pad16)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)"
       "Net-(P1-Pad48)" "Net-(P1-Pad49)" "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)"
-      "Net-(P1-Pad9)" "Net-(P2-Pad16)" "Net-(P2-Pad5)" "Net-(U1-Pad11)" "Net-(U1-Pad12)"
-      "Net-(U1-Pad13)" "Net-(U1-Pad14)" "Net-(U1-Pad6)" "Net-(U1-Pad7)" "Net-(U1-Pad8)"
-      "Net-(U1-Pad9)" "Net-(U3-Pad11)" "Net-(U3-Pad12)" "Net-(U3-Pad13)" "Net-(U3-Pad7)"
-      "Net-(U3-Pad8)" "Net-(U3-Pad9)" "Net-(U4-Pad11)" "Net-(U4-Pad12)" "Net-(U4-Pad8)"
-      "Net-(U4-Pad9)"
+      "Net-(P1-Pad9)" "Net-(U1-Pad11)" "Net-(U1-Pad12)" "Net-(U1-Pad13)" "Net-(U1-Pad14)"
+      "Net-(U1-Pad6)" "Net-(U1-Pad7)" "Net-(U1-Pad8)" "Net-(U1-Pad9)" "Net-(U4-Pad11)"
+      "Net-(U4-Pad12)" "Net-(U4-Pad17)" "Net-(U4-Pad18)" "Net-(U4-Pad2)" "Net-(U4-Pad3)"
+      "Net-(U4-Pad8)" "Net-(U4-Pad9)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
