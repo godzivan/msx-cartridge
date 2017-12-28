@@ -77,7 +77,7 @@ U 1 1 5A3E9A23
 P 7700 5000
 F 0 "U8" H 7800 5575 50  0000 L BNN
 F 1 "74LS245" H 7750 4425 50  0000 L TNN
-F 2 "Housings_DIP:DIP-20_W7.62mm" H 7700 5000 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-20_7.5x12.8mm_Pitch1.27mm" H 7700 5000 50  0001 C CNN
 F 3 "" H 7700 5000 50  0001 C CNN
 	1    7700 5000
 	1    0    0    1   
@@ -625,7 +625,7 @@ U 1 1 5A432FE4
 P 7700 3600
 F 0 "U7" H 7800 4175 50  0000 L BNN
 F 1 "74LS245" H 7750 3025 50  0000 L TNN
-F 2 "Housings_DIP:DIP-20_W7.62mm" H 7700 3600 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-20_7.5x12.8mm_Pitch1.27mm" H 7700 3600 50  0001 C CNN
 F 3 "" H 7700 3600 50  0001 C CNN
 	1    7700 3600
 	1    0    0    1   
@@ -1062,7 +1062,7 @@ U 1 1 5A43BEA8
 P 7700 2200
 F 0 "U3" H 7800 2775 50  0000 L BNN
 F 1 "74LS245" H 7750 1625 50  0000 L TNN
-F 2 "Housings_DIP:DIP-20_W7.62mm" H 7700 2200 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-20_7.5x12.8mm_Pitch1.27mm" H 7700 2200 50  0001 C CNN
 F 3 "" H 7700 2200 50  0001 C CNN
 	1    7700 2200
 	1    0    0    1   
@@ -1115,8 +1115,6 @@ Text Label 6750 2700 0    60   ~ 0
 RCLK
 Text Label 6800 1800 0    60   ~ 0
 GND
-Text Label 6750 2500 0    60   ~ 0
-RCS12
 Text Label 6750 2600 0    60   ~ 0
 RRESET
 NoConn ~ 8800 2000
@@ -1142,46 +1140,46 @@ MREQ
 $Comp
 L 74LS373 U1
 U 1 1 5A43CEFF
-P 5050 2200
-F 0 "U1" H 5050 2200 50  0000 C CNN
-F 1 "74LS373" H 5100 1850 50  0000 C CNN
-F 2 "Housings_DIP:DIP-20_W7.62mm" H 5050 2200 50  0001 C CNN
-F 3 "" H 5050 2200 50  0001 C CNN
-	1    5050 2200
+P 5100 3600
+F 0 "U1" H 5100 3600 50  0000 C CNN
+F 1 "74LS373" H 5150 3250 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-20_7.5x12.8mm_Pitch1.27mm" H 5100 3600 50  0001 C CNN
+F 3 "" H 5100 3600 50  0001 C CNN
+	1    5100 3600
 	1    0    0    1   
 $EndComp
 $Comp
 L 74LS373 U2
 U 1 1 5A43CF9F
-P 5050 3700
-F 0 "U2" H 5050 3700 50  0000 C CNN
-F 1 "74LS373" H 5100 3350 50  0000 C CNN
-F 2 "Housings_DIP:DIP-20_W7.62mm" H 5050 3700 50  0001 C CNN
-F 3 "" H 5050 3700 50  0001 C CNN
-	1    5050 3700
+P 5100 5000
+F 0 "U2" H 5100 5000 50  0000 C CNN
+F 1 "74LS373" H 5150 4650 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-20_7.5x12.8mm_Pitch1.27mm" H 5100 5000 50  0001 C CNN
+F 3 "" H 5100 5000 50  0001 C CNN
+	1    5100 5000
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	5750 4200 6150 4200
+	5800 5500 6200 5500
 Wire Wire Line
-	5750 4100 6150 4100
+	5800 5400 6200 5400
 Wire Wire Line
-	5750 4000 6150 4000
+	5800 5300 6200 5300
 Wire Wire Line
-	5750 3900 6150 3900
+	5800 5200 6200 5200
 Wire Wire Line
-	5750 3800 6150 3800
+	5800 5100 6200 5100
 Wire Wire Line
-	5750 3700 6150 3700
+	5800 5000 6200 5000
 Wire Wire Line
-	5750 3600 6150 3600
+	5800 4900 6200 4900
 Wire Wire Line
-	5750 3500 6150 3500
+	5800 4800 6200 4800
 Wire Wire Line
-	3950 3300 4350 3300
+	4000 4600 4400 4600
 Wire Wire Line
-	3950 3200 4350 3200
-Text Label 4100 3300 0    60   ~ 0
+	4000 4500 4400 4500
+Text Label 4150 4600 0    60   ~ 0
 LE_A
 Text Label 8400 3900 0    60   ~ 0
 CS1
@@ -1189,127 +1187,125 @@ Text Label 8400 3800 0    60   ~ 0
 CS2
 Text Label 8400 2500 0    60   ~ 0
 CS12
-Text Label 6800 1700 0    60   ~ 0
-GND
-Text Label 5850 3600 0    60   ~ 0
+Text Label 5900 4900 0    60   ~ 0
 A0
-Text Label 5850 3500 0    60   ~ 0
+Text Label 5900 4800 0    60   ~ 0
 A1
-Text Label 5850 3800 0    60   ~ 0
+Text Label 5900 5100 0    60   ~ 0
 A2
-Text Label 5850 3700 0    60   ~ 0
+Text Label 5900 5000 0    60   ~ 0
 A3
-Text Label 5850 4000 0    60   ~ 0
+Text Label 5900 5300 0    60   ~ 0
 A4
-Text Label 5850 3900 0    60   ~ 0
+Text Label 5900 5200 0    60   ~ 0
 A5
-Text Label 5850 4200 0    60   ~ 0
+Text Label 5900 5500 0    60   ~ 0
 A6
-Text Label 5850 4100 0    60   ~ 0
+Text Label 5900 5400 0    60   ~ 0
 A7
 Wire Wire Line
-	3950 4200 4350 4200
+	4000 5500 4400 5500
 Wire Wire Line
-	3950 4100 4350 4100
+	4000 5400 4400 5400
 Wire Wire Line
-	3950 4000 4350 4000
+	4000 5300 4400 5300
 Wire Wire Line
-	3950 3900 4350 3900
+	4000 5200 4400 5200
 Wire Wire Line
-	3950 3800 4350 3800
+	4000 5100 4400 5100
 Wire Wire Line
-	3950 3700 4350 3700
+	4000 5000 4400 5000
 Wire Wire Line
-	3950 3600 4350 3600
+	4000 4900 4400 4900
 Wire Wire Line
-	3950 3500 4350 3500
-Text Label 4100 3500 0    60   ~ 0
+	4000 4800 4400 4800
+Text Label 4150 4800 0    60   ~ 0
 RD1
-Text Label 4100 3600 0    60   ~ 0
+Text Label 4150 4900 0    60   ~ 0
 RD0
-Text Label 4100 3700 0    60   ~ 0
+Text Label 4150 5000 0    60   ~ 0
 RD3
-Text Label 4100 3800 0    60   ~ 0
+Text Label 4150 5100 0    60   ~ 0
 RD2
-Text Label 4100 3900 0    60   ~ 0
+Text Label 4150 5200 0    60   ~ 0
 RD5
-Text Label 4100 4100 0    60   ~ 0
+Text Label 4150 5400 0    60   ~ 0
 RD7
-Text Label 4100 4000 0    60   ~ 0
+Text Label 4150 5300 0    60   ~ 0
 RD4
-Text Label 4100 4200 0    60   ~ 0
+Text Label 4150 5500 0    60   ~ 0
 RD6
 Wire Wire Line
-	5750 2700 6150 2700
+	5800 4100 6200 4100
 Wire Wire Line
-	5750 2600 6150 2600
+	5800 4000 6200 4000
 Wire Wire Line
-	5750 2500 6150 2500
+	5800 3900 6200 3900
 Wire Wire Line
-	5750 2400 6150 2400
+	5800 3800 6200 3800
 Wire Wire Line
-	5750 2300 6150 2300
+	5800 3700 6200 3700
 Wire Wire Line
-	5750 2200 6150 2200
+	5800 3600 6200 3600
 Wire Wire Line
-	5750 2100 6150 2100
+	5800 3500 6200 3500
 Wire Wire Line
-	5750 2000 6150 2000
+	5800 3400 6200 3400
 Wire Wire Line
-	3950 1800 4350 1800
+	4000 3200 4400 3200
 Wire Wire Line
-	3950 1700 4350 1700
+	4000 3100 4400 3100
 Wire Wire Line
-	3950 2700 4350 2700
+	4000 4100 4400 4100
 Wire Wire Line
-	3950 2600 4350 2600
+	4000 4000 4400 4000
 Wire Wire Line
-	3950 2500 4350 2500
+	4000 3900 4400 3900
 Wire Wire Line
-	3950 2400 4350 2400
+	4000 3800 4400 3800
 Wire Wire Line
-	3950 2300 4350 2300
+	4000 3700 4400 3700
 Wire Wire Line
-	3950 2200 4350 2200
+	4000 3600 4400 3600
 Wire Wire Line
-	3950 2100 4350 2100
+	4000 3500 4400 3500
 Wire Wire Line
-	3950 2000 4350 2000
-Text Label 4100 1700 0    60   ~ 0
+	4000 3400 4400 3400
+Text Label 4150 3100 0    60   ~ 0
 GND
-Text Label 4100 3200 0    60   ~ 0
+Text Label 4150 4500 0    60   ~ 0
 GND
-Text Label 4100 2700 0    60   ~ 0
+Text Label 4150 4100 0    60   ~ 0
 RA8
-Text Label 4100 2500 0    60   ~ 0
+Text Label 4150 3900 0    60   ~ 0
 RA10
-Text Label 4100 2400 0    60   ~ 0
+Text Label 4150 3800 0    60   ~ 0
 RA11
-Text Label 4100 2300 0    60   ~ 0
+Text Label 4150 3700 0    60   ~ 0
 RA12
-Text Label 4100 2200 0    60   ~ 0
+Text Label 4150 3600 0    60   ~ 0
 RA13
-Text Label 4100 2100 0    60   ~ 0
+Text Label 4150 3500 0    60   ~ 0
 RA14
-Text Label 4100 2000 0    60   ~ 0
+Text Label 4150 3400 0    60   ~ 0
 RA15
-Text Label 4100 1800 0    60   ~ 0
+Text Label 4150 3200 0    60   ~ 0
 LE_A
-Text Label 5850 2700 0    60   ~ 0
+Text Label 5900 4100 0    60   ~ 0
 A8
-Text Label 5850 2600 0    60   ~ 0
+Text Label 5900 4000 0    60   ~ 0
 A9
-Text Label 5850 2500 0    60   ~ 0
+Text Label 5900 3900 0    60   ~ 0
 A10
-Text Label 5850 2400 0    60   ~ 0
+Text Label 5900 3800 0    60   ~ 0
 A11
-Text Label 5850 2300 0    60   ~ 0
+Text Label 5900 3700 0    60   ~ 0
 A12
-Text Label 5850 2200 0    60   ~ 0
+Text Label 5900 3600 0    60   ~ 0
 A13
-Text Label 5850 2100 0    60   ~ 0
+Text Label 5900 3500 0    60   ~ 0
 A14
-Text Label 5850 2000 0    60   ~ 0
+Text Label 5900 3400 0    60   ~ 0
 A15
 Text Notes 7150 6800 0    118  ~ 0
 RPMC V4 with 74HC373 and 74HC245
@@ -1353,7 +1349,7 @@ Text Label 900  4850 0    60   ~ 0
 RA10
 Text Label 3150 4850 0    60   ~ 0
 RA11
-Text Label 4100 2600 0    60   ~ 0
+Text Label 4150 4000 0    60   ~ 0
 RA9
 Text Label 900  6050 0    60   ~ 0
 RA12
@@ -1447,4 +1443,8 @@ Text Label 10800 2900 0    60   ~ 0
 V3.3
 Text Label 10800 5850 0    60   ~ 0
 V3.3
+Text Label 6800 1700 0    60   ~ 0
+GND
+Text Label 6750 2500 0    60   ~ 0
+RCS12
 $EndSCHEMATC

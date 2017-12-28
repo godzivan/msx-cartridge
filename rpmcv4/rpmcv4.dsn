@@ -1,9 +1,9 @@
-(pcb "C:\msys64\home\rubyk_ria6v9y\msx-cartridge\rpmcv4\rpmcv4.dsn"
+(pcb "C:\msys64\home\meeso.kim\msx-cartridge\rpmcv4\rpmcv4.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "4.0.7")
+    (host_version "4.0.4-stable")
   )
   (resolution um 10)
   (unit um)
@@ -21,20 +21,24 @@
       )
     )
     (boundary
-      (path pcb 0  128905 -148590  128905 -65151  128978 -64408.5  129194 -63694.5
+      (path pcb 0  128905 -128277  128905 -65151  128978 -64408.5  129194 -63694.5
             129546 -63036.4  130019 -62459.3  130595 -61985.4  131252 -61632.9
-            131966 -61415.3  132708 -61341  147066 -61341  147331 -61317.8
-            147587 -61249.1  147828 -61136.8  148046 -60984.5  148233 -60796.6
-            148386 -60579  148498 -60338.2  148567 -60081.6  148590 -59817
-            148590 -54610  148648 -53948.4  148820 -53306.9  149100 -52705
-            149481 -52161  149951 -51691.4  150495 -51310.4  151097 -51029.8
-            151738 -50857.9  152400 -50800  210820 -50800  211923 -50896.5
-            212992 -51183  213995 -51650.7  214902 -52285.6  215684 -53068.3
-            216319 -53975  216787 -54978.2  217074 -56047.3  217170 -57150
-            217170 -148590  128905 -148590  128905 -148590)
+            131966 -61415.3  132708 -61341  145796 -61341  146061 -61317.8
+            146317 -61249.1  146558 -61136.8  146776 -60984.5  146963 -60796.6
+            147116 -60579  147228 -60338.2  147297 -60081.6  147320 -59817
+            147320 -54610  147378 -53948.4  147550 -53306.9  147830 -52705
+            148211 -52161  148681 -51691.4  149225 -51310.4  149827 -51029.8
+            150468 -50857.9  151130 -50800  210185 -50800  210847 -50857.9
+            211488 -51029.8  212090 -51310.4  212634 -51691.4  213104 -52161
+            213485 -52705  213765 -53306.9  213937 -53948.4  213995 -54610
+            213995 -128270  213915 -129012  213699 -129726  213348 -130385
+            212875 -130962  212299 -131436  211641 -131788  210927 -132006
+            210185 -132080  132715 -132080  131973 -132007  131259 -131791
+            130600 -131439  130023 -130966  129549 -130390  129197 -129733
+            128979 -129019  128905 -128277  128905 -128277)
     )
-    (plane GND (polygon F.Cu 0  217170 -148590  128905 -148590  128905 -50800  217170 -50800))
-    (plane GND (polygon B.Cu 0  217170 -148590  128905 -148590  128905 -50800  217170 -50800))
+    (plane GND (polygon F.Cu 0  214071 -132283  128727 -132207  128905 -50800  214198 -51028.6))
+    (plane GND (polygon B.Cu 0  213462 -131648  128829 -132182  128905 -50800  214503 -50800))
     (via "Via[0-1]_600:400_um")
     (rule
       (width 250)
@@ -45,49 +49,51 @@
   )
   (placement
     (component Mounting_Holes:MountingHole_2.7mm_Pad
+      (place REF4 210312 -122174 front 0 (PN MountingHole_2.7mm_Pad))
+      (place REF3 132588 -122174 front 0 (PN MountingHole_2.7mm_Pad))
       (place REF1 152459 -56992.5 front 0 (PN MountingHole_2.7mm_Pad))
-      (place REF2 210454 -57017.9 front 0 (PN MountingHole_2.7mm_Pad))
+      (place REF2 210483 -57023 front 0 (PN MountingHole_2.7mm_Pad))
     )
     (component Pin_Headers:Pin_Header_Straight_2x20_Pitch2.54mm
       (place J1 205572 -55727.6 front 270 (PN RPi_GPIO))
     )
     (component MSX:MSX_SLOT
-      (place P1 173990 -131135 front 0 (PN CONN_02X25))
-      (place P2 173990 -110490 front 0 (PN CONN_02X25))
+      (place P1 172466 -113101 front 0 (PN CONN_02X25))
+      (place P2 172466 -92456 front 0 (PN CONN_02X25))
     )
     (component LEDs:LED_0805_HandSoldering
-      (place D1 208280 -143510 front 0 (PN Led_Small))
-      (place D2 203200 -143510 front 0 (PN Led_Small))
-      (place D3 195580 -143510 front 0 (PN Led_Small))
-      (place D4 190500 -143510 front 0 (PN Led_Small))
-      (place D5 185420 -143510 front 0 (PN Led_Small))
-      (place D6 180340 -143510 front 0 (PN Led_Small))
-      (place D7 149860 -143510 front 0 (PN Led_Small))
-      (place D8 143510 -143510 front 0 (PN Led_Small))
-      (place D9 137160 -143510 front 0 (PN Led_Small))
+      (place D1 206756 -127000 front 0 (PN Led_Small))
+      (place D2 201676 -127000 front 0 (PN Led_Small))
+      (place D3 194056 -127000 front 0 (PN Led_Small))
+      (place D4 188976 -127000 front 0 (PN Led_Small))
+      (place D5 183896 -127000 front 0 (PN Led_Small))
+      (place D6 178816 -127000 front 0 (PN Led_Small))
+      (place D7 149860 -127000 front 0 (PN Led_Small))
+      (place D8 143510 -127000 front 0 (PN Led_Small))
+      (place D9 137160 -127000 front 0 (PN Led_Small))
     )
     (component Resistors_SMD:R_0805_HandSoldering
-      (place R1 207010 -144700 back 270 (PN R))
-      (place R2 201930 -144780 back 270 (PN R))
-      (place R3 194310 -144780 back 270 (PN R))
-      (place R4 189230 -144780 back 270 (PN R))
-      (place R5 184150 -144780 back 270 (PN R))
-      (place R6 179070 -144780 back 270 (PN R))
-      (place R7 148590 -144780 back 270 (PN R))
-      (place R8 142240 -144780 back 270 (PN R))
-      (place R9 135890 -144780 back 270 (PN R))
-      (place R10 149860 -138430 back 270 (PN R))
-      (place R11 149809 -117856 back 270 (PN R))
-    )
-    (component "Housings_DIP:DIP-20_W7.62mm"
-      (place U1 168910 -71120 front 0 (PN 74LS373))
-      (place U2 153670 -71120 front 0 (PN 74LS373))
-      (place U3 184150 -71120 front 0 (PN 74LS245))
-      (place U7 199390 -71120 front 0 (PN 74LS245))
-      (place U8 146050 -93980 front 180 (PN 74LS245))
+      (place R1 205486 -128190 back 270 (PN R))
+      (place R2 200406 -128270 back 270 (PN R))
+      (place R3 192786 -128270 back 270 (PN R))
+      (place R4 187706 -128270 back 270 (PN R))
+      (place R5 182626 -128270 back 270 (PN R))
+      (place R6 177546 -128270 back 270 (PN R))
+      (place R7 148590 -128270 back 270 (PN R))
+      (place R8 142240 -128270 back 270 (PN R))
+      (place R9 135890 -128270 back 270 (PN R))
+      (place R10 148463 -120396 back 270 (PN R))
+      (place R11 148412 -99822 back 270 (PN R))
     )
     (component MSX:LOGO
-      (place G*** 159385 -144145 front 0 (PN LOGO))
+      (place G*** 159639 -127914 front 0 (PN LOGO))
+    )
+    (component "Housings_SOIC:SOIC-20_7.5x12.8mm_Pitch1.27mm"
+      (place U1 171450 -74930 back 270 (PN 74LS373))
+      (place U2 156210 -74930 back 270 (PN 74LS373))
+      (place U3 186690 -74930 back 90 (PN 74LS245))
+      (place U7 201930 -74930 back 90 (PN 74LS245))
+      (place U8 140970 -74930 back 90 (PN 74LS245))
     )
   )
   (library
@@ -254,43 +260,40 @@
       (pin Rect[T]Pad_1500x1300_um 1 -1350 0)
       (pin Rect[T]Pad_1500x1300_um 2 1350 0)
     )
-    (image "Housings_DIP:DIP-20_W7.62mm"
-      (outline (path signal 100  1635 1270  6985 1270))
-      (outline (path signal 100  6985 1270  6985 -24130))
-      (outline (path signal 100  6985 -24130  635 -24130))
-      (outline (path signal 100  635 -24130  635 270))
-      (outline (path signal 100  635 270  1635 1270))
-      (outline (path signal 120  2810 1330  1160 1330))
-      (outline (path signal 120  1160 1330  1160 -24190))
-      (outline (path signal 120  1160 -24190  6460 -24190))
-      (outline (path signal 120  6460 -24190  6460 1330))
-      (outline (path signal 120  6460 1330  4810 1330))
-      (outline (path signal 50  -1100 1550  -1100 -24400))
-      (outline (path signal 50  -1100 -24400  8700 -24400))
-      (outline (path signal 50  8700 -24400  8700 1550))
-      (outline (path signal 50  8700 1550  -1100 1550))
-      (pin Rect[A]Pad_1600x1600_um 1 0 0)
-      (pin Oval[A]Pad_1600x1600_um 11 7620 -22860)
-      (pin Oval[A]Pad_1600x1600_um 2 0 -2540)
-      (pin Oval[A]Pad_1600x1600_um 12 7620 -20320)
-      (pin Oval[A]Pad_1600x1600_um 3 0 -5080)
-      (pin Oval[A]Pad_1600x1600_um 13 7620 -17780)
-      (pin Oval[A]Pad_1600x1600_um 4 0 -7620)
-      (pin Oval[A]Pad_1600x1600_um 14 7620 -15240)
-      (pin Oval[A]Pad_1600x1600_um 5 0 -10160)
-      (pin Oval[A]Pad_1600x1600_um 15 7620 -12700)
-      (pin Oval[A]Pad_1600x1600_um 6 0 -12700)
-      (pin Oval[A]Pad_1600x1600_um 16 7620 -10160)
-      (pin Oval[A]Pad_1600x1600_um 7 0 -15240)
-      (pin Oval[A]Pad_1600x1600_um 17 7620 -7620)
-      (pin Oval[A]Pad_1600x1600_um 8 0 -17780)
-      (pin Oval[A]Pad_1600x1600_um 18 7620 -5080)
-      (pin Oval[A]Pad_1600x1600_um 9 0 -20320)
-      (pin Oval[A]Pad_1600x1600_um 19 7620 -2540)
-      (pin Oval[A]Pad_1600x1600_um 10 0 -22860)
-      (pin Oval[A]Pad_1600x1600_um 20 7620 0)
-    )
     (image MSX:LOGO
+    )
+    (image "Housings_SOIC:SOIC-20_7.5x12.8mm_Pitch1.27mm"
+      (outline (path signal 50  -5950 6750  -5950 -6750))
+      (outline (path signal 50  5950 6750  5950 -6750))
+      (outline (path signal 50  -5950 6750  5950 6750))
+      (outline (path signal 50  -5950 -6750  5950 -6750))
+      (outline (path signal 150  -3875 6575  -3875 6240))
+      (outline (path signal 150  3875 6575  3875 6240))
+      (outline (path signal 150  3875 -6575  3875 -6240))
+      (outline (path signal 150  -3875 -6575  -3875 -6240))
+      (outline (path signal 150  -3875 6575  3875 6575))
+      (outline (path signal 150  -3875 -6575  3875 -6575))
+      (outline (path signal 150  -3875 6240  -5675 6240))
+      (pin Rect[T]Pad_1950x600_um 1 -4700 5715)
+      (pin Rect[T]Pad_1950x600_um 2 -4700 4445)
+      (pin Rect[T]Pad_1950x600_um 3 -4700 3175)
+      (pin Rect[T]Pad_1950x600_um 4 -4700 1905)
+      (pin Rect[T]Pad_1950x600_um 5 -4700 635)
+      (pin Rect[T]Pad_1950x600_um 6 -4700 -635)
+      (pin Rect[T]Pad_1950x600_um 7 -4700 -1905)
+      (pin Rect[T]Pad_1950x600_um 8 -4700 -3175)
+      (pin Rect[T]Pad_1950x600_um 9 -4700 -4445)
+      (pin Rect[T]Pad_1950x600_um 10 -4700 -5715)
+      (pin Rect[T]Pad_1950x600_um 11 4700 -5715)
+      (pin Rect[T]Pad_1950x600_um 12 4700 -4445)
+      (pin Rect[T]Pad_1950x600_um 13 4700 -3175)
+      (pin Rect[T]Pad_1950x600_um 14 4700 -1905)
+      (pin Rect[T]Pad_1950x600_um 15 4700 -635)
+      (pin Rect[T]Pad_1950x600_um 16 4700 635)
+      (pin Rect[T]Pad_1950x600_um 17 4700 1905)
+      (pin Rect[T]Pad_1950x600_um 18 4700 3175)
+      (pin Rect[T]Pad_1950x600_um 19 4700 4445)
+      (pin Rect[T]Pad_1950x600_um 20 4700 5715)
     )
     (padstack Round[A]Pad_1524_um
       (shape (circle F.Cu 1524))
@@ -302,11 +305,6 @@
       (shape (circle B.Cu 5400))
       (attach off)
     )
-    (padstack Oval[A]Pad_1600x1600_um
-      (shape (path F.Cu 1600  0 0  0 0))
-      (shape (path B.Cu 1600  0 0  0 0))
-      (attach off)
-    )
     (padstack Oval[A]Pad_1700x1700_um
       (shape (path F.Cu 1700  0 0  0 0))
       (shape (path B.Cu 1700  0 0  0 0))
@@ -316,14 +314,13 @@
       (shape (rect F.Cu -750 -650 750 650))
       (attach off)
     )
-    (padstack Rect[A]Pad_1600x1600_um
-      (shape (rect F.Cu -800 -800 800 800))
-      (shape (rect B.Cu -800 -800 800 800))
-      (attach off)
-    )
     (padstack Rect[A]Pad_1700x1700_um
       (shape (rect F.Cu -850 -850 850 850))
       (shape (rect B.Cu -850 -850 850 850))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1950x600_um
+      (shape (rect F.Cu -975 -300 975 300))
       (attach off)
     )
     (padstack "Via[0-1]_600:400_um"
@@ -335,7 +332,7 @@
   (network
     (net GND
       (pins J1-6 J1-9 J1-14 J1-20 J1-25 J1-30 J1-34 J1-39 P1-41 P1-43 P1-46 P2-41
-        P2-43 P2-46 U1-1 U1-10 U2-1 U2-10 U3-1 U3-19 U3-10 U7-1 U7-10 U8-10)
+        P2-43 P2-46 U1-1 U1-10 U2-1 U2-10 U3-1 U3-10 U3-19 U7-1 U7-10 U8-10)
     )
     (net "Net-(U3-Pad7)"
       (pins U3-7)
