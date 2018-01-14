@@ -1,5 +1,5 @@
 
-(rules PCB rpmpv1
+(rules PCB rpmcv4
   (snap_angle 
     fortyfive_degree
   )
@@ -11,16 +11,16 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 2124)
+    (start_pass_no 10368)
     (layer_rule F.Cu
       (active on)
-      (preferred_direction vertical)
+      (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
       (against_preferred_direction_trace_costs 2.0)
     )
     (layer_rule B.Cu
       (active on)
-      (preferred_direction horizontal)
+      (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
       (against_preferred_direction_trace_costs 2.0)
     )
@@ -69,17 +69,18 @@
     )
   )
   (class "kicad_default"
-    GND /RD3 /RD4 /RD6 /RD7 /RD0 /RCLK /RD1
-    /RD2 /RD5 /WAIT /INT /BUSDIR /IORQ /MREQ /WR
-    /RD /RESET /A9 /A15 /A11 /A10 /A7 /A6
-    /A12 /A8 /A14 /A13 /A1 /A0 /A3 /A2
-    /A5 /A4 /D1 /D0 /D3 /D2 /D5 /D4
-    /D7 /D6 /CLK +3V3 /RINT /RWAIT "Net-(P1-Pad5)" "Net-(P1-Pad16)"
-    /RA8 /RA10 /RA11 /RA15 "/LE_A" "/LE_B" /RA12 /RA9
-    /RA13 /RA14 /RBUSDIR "Net-(J1-Pad13)" "Net-(J1-Pad15)" "Net-(J1-Pad16)" "Net-(J1-Pad18)" "Net-(J1-Pad22)"
-    "Net-(J1-Pad37)" "Net-(P1-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" /SLTSL "Net-(P1-Pad6)" "Net-(P1-Pad9)" "Net-(P1-Pad44)"
-    "Net-(P1-Pad48)" "Net-(P1-Pad49)" "Net-(P1-Pad50)" "Net-(U1-Pad6)" "Net-(U1-Pad7)" "Net-(U1-Pad8)" "Net-(U1-Pad9)" "Net-(U1-Pad11)"
-    "Net-(U1-Pad12)" "Net-(U1-Pad13)" "Net-(U1-Pad14)" "Net-(U4-Pad2)" "Net-(U4-Pad3)" "Net-(U4-Pad17)" "Net-(U4-Pad18)"
+    GND "Net-(U3-Pad7)" "Net-(U3-Pad9)" /RD3 /RD4 /RD6 /RD7 /CAPS
+    /HAN /RD0 /RCLK /RD1 /RD2 /RD5 /RRESET /PWR
+    /CS1 /CS2 /CS12 /SLTSL1 /RFSH /WAIT /INT /M1
+    /BUSDIR /IORQ /MREQ /WR /RD /RESET /A9 /A15
+    /A11 /A10 /A7 /A6 /A12 /A8 /A14 /A13
+    /A1 /A0 /A3 /A2 /A5 /A4 /D1 /D0
+    /D3 /D2 /D5 /D4 /D7 /D6 /CLK /SW1
+    /+12V /SNDIN /+V12 /SLTSL3 +3V3 /RINT /RWAIT "Net-(P1-Pad5)"
+    "Net-(P1-Pad16)" "Net-(P2-Pad5)" "Net-(P2-Pad16)" "Net-(D1-Pad1)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(D4-Pad1)" "Net-(D5-Pad1)"
+    "Net-(D6-Pad1)" "Net-(D7-Pad1)" "Net-(D8-Pad1)" "Net-(D9-Pad1)" /RA8 /RA10 /RA11 /RA15
+    /RCS12 "/LE_A" "/LE_B" /SW3 /RA12 /RA9 /RA13 /RA14
+    "Net-(U3-Pad11)" "Net-(U3-Pad12)" "Net-(U3-Pad13)" "Net-(U3-Pad8)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

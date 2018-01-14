@@ -33,6 +33,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:IC_raspberry
 LIBS:msx_slot
+LIBS:rpmpv1-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -85,21 +86,17 @@ Wire Wire Line
 Wire Wire Line
 	3500 3100 3100 3100
 Wire Wire Line
-	3100 3200 3500 3200
+	3100 3200 3630 3200
 Wire Wire Line
 	3100 3300 3500 3300
 Wire Wire Line
 	3100 3400 3500 3400
 Wire Wire Line
-	3100 3500 3500 3500
-Wire Wire Line
-	3100 3600 3500 3600
-Wire Wire Line
 	3100 3700 3500 3700
 Wire Wire Line
 	3100 3800 3500 3800
 Wire Wire Line
-	3100 3900 3500 3900
+	3630 3900 3100 3900
 Wire Wire Line
 	3100 4000 3500 4000
 Wire Wire Line
@@ -109,19 +106,17 @@ Wire Wire Line
 Wire Wire Line
 	3100 4300 3500 4300
 Wire Wire Line
-	3100 4400 3500 4400
+	3630 4400 3100 4400
 Wire Wire Line
 	3100 4500 3500 4500
 Wire Wire Line
-	3100 4600 3500 4600
+	3630 4600 3100 4600
 Wire Wire Line
 	3100 4700 3500 4700
 Wire Wire Line
 	3100 4800 3500 4800
 Wire Wire Line
 	3100 4900 3500 4900
-Wire Wire Line
-	800  3000 1200 3000
 Wire Wire Line
 	800  3100 1200 3100
 Wire Wire Line
@@ -235,8 +230,6 @@ Wire Wire Line
 Wire Wire Line
 	10150 4550 10550 4550
 Wire Wire Line
-	10150 4650 10550 4650
-Wire Wire Line
 	10150 4750 10550 4750
 Wire Wire Line
 	10150 4950 10550 4950
@@ -282,8 +275,6 @@ Wire Wire Line
 	9250 4450 9650 4450
 Wire Wire Line
 	9250 4550 9650 4550
-Wire Wire Line
-	9250 4650 9650 4650
 Wire Wire Line
 	9250 4750 9650 4750
 Wire Wire Line
@@ -414,7 +405,7 @@ Wire Wire Line
 Wire Wire Line
 	8250 3400 8650 3400
 Wire Wire Line
-	6450 3600 6850 3600
+	6435 3600 6850 3600
 Wire Wire Line
 	6450 3700 6850 3700
 Text Label 4100 4400 0    60   ~ 0
@@ -433,10 +424,6 @@ Text Label 4100 4900 0    60   ~ 0
 RD4
 Text Label 4100 5100 0    60   ~ 0
 RD6
-Text Label 6600 3600 0    60   ~ 0
-VCC
-Text Label 4100 4200 0    60   ~ 0
-RD
 Text Label 3150 4700 0    60   ~ 0
 LE_A
 Text Label 900  3500 0    60   ~ 0
@@ -513,7 +500,7 @@ F 3 "" H 800 4900 50  0000 C CNN
 	1    800  4900
 	0    1    1    0   
 $EndComp
-Text Label 3150 3600 0    60   ~ 0
+Text Label 3155 3600 0    60   ~ 0
 GND
 $Comp
 L +3.3V #PWR03
@@ -527,9 +514,7 @@ F 3 "" H 800 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	800  2900 800  3000
-Wire Wire Line
-	800  3800 1200 3800
+	590  3800 1200 3800
 Connection ~ 3500 3000
 Text Label 8250 2900 0    60   ~ 0
 SLTSL
@@ -541,8 +526,8 @@ Text Label 8250 3100 0    60   ~ 0
 IORQ
 Text Label 8250 3000 0    60   ~ 0
 MREQ
-Text Notes 7150 6800 0    118  ~ 0
-RPMC V4 with 74HC373 and 74HC245
+Text Notes 7320 7520 0    98   ~ 0
+RPMP V1 only with 74HC245
 Wire Wire Line
 	6450 2700 6850 2700
 Wire Wire Line
@@ -629,7 +614,7 @@ Wire Wire Line
 Wire Wire Line
 	6450 4150 6850 4150
 Wire Wire Line
-	6450 5050 6850 5050
+	6350 5050 6850 5050
 Wire Wire Line
 	6450 5150 6850 5150
 $Comp
@@ -679,8 +664,6 @@ Text Label 6600 4650 0    60   ~ 0
 RD4
 Text Label 6600 4850 0    60   ~ 0
 RD6
-Text Label 6600 5050 0    60   ~ 0
-VCC
 Text Label 6600 5150 0    60   ~ 0
 LE_A
 Wire Wire Line
@@ -747,78 +730,25 @@ Text Label 5750 3600 0    60   ~ 0
 A14
 Text Label 5750 3000 0    60   ~ 0
 A15
-Text Label 4100 2800 0    60   ~ 0
-VCC
 Text Label 8250 3400 0    60   ~ 0
 RESET
 Wire Wire Line
 	10150 4850 10550 4850
-$Comp
-L 74LS245 U1
-U 1 1 5A44DD35
-P 5050 1800
-F 0 "U1" H 5150 2375 50  0000 L BNN
-F 1 "74LS245" H 5100 1225 50  0000 L TNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5050 1800 50  0001 C CNN
-F 3 "" H 5050 1800 50  0001 C CNN
-	1    5050 1800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5750 1300 6150 1300
-Wire Wire Line
-	5750 1400 6150 1400
-Wire Wire Line
-	5750 1500 6150 1500
-Wire Wire Line
-	5750 1600 6150 1600
-Wire Wire Line
-	5750 1700 6150 1700
-Wire Wire Line
-	5750 1800 6150 1800
-Wire Wire Line
-	5750 1900 6150 1900
-Wire Wire Line
-	5750 2000 6150 2000
-Wire Wire Line
-	3950 2200 4350 2200
-Wire Wire Line
-	3950 2300 4350 2300
-Wire Wire Line
-	3950 1300 4350 1300
-Wire Wire Line
-	3950 1400 4350 1400
-Wire Wire Line
-	3950 1500 4350 1500
-Wire Wire Line
-	3950 1600 4350 1600
-Wire Wire Line
-	3950 1700 4350 1700
-Wire Wire Line
-	3950 1800 4350 1800
-Wire Wire Line
-	3950 1900 4350 1900
-Wire Wire Line
-	3950 2000 4350 2000
-Text Label 4100 1500 0    60   ~ 0
+Text Label 4105 1585 0    60   ~ 0
 RBUSDIR
-Text Label 4100 1300 0    60   ~ 0
+Text Label 4150 950  0    60   ~ 0
 RWAIT
-Text Label 4100 2200 0    60   ~ 0
-GND
-Text Label 5750 1300 0    60   ~ 0
+Text Label 5560 950  0    60   ~ 0
 WAIT
-Text Label 5750 1500 0    60   ~ 0
+Text Label 5515 1585 0    60   ~ 0
 BUSDIR
-Text Label 4100 2300 0    60   ~ 0
-GND
-Text Label 4100 1600 0    60   ~ 0
+Text Label 4100 1900 0    60   ~ 0
 CLK
-Text Label 5750 1600 0    60   ~ 0
+Text Label 5510 1900 0    60   ~ 0
 RCLK
-Text Label 5750 1400 0    60   ~ 0
+Text Label 5560 1270 0    60   ~ 0
 INT
-Text Label 4100 1400 0    60   ~ 0
+Text Label 4155 1270 0    60   ~ 0
 RINT
 Text Label 4100 2700 0    60   ~ 0
 LE_B
@@ -826,15 +756,7 @@ Text Label 3150 3500 0    60   ~ 0
 RBUSDIR
 NoConn ~ 8650 2700
 NoConn ~ 8650 2800
-NoConn ~ 6150 1800
-NoConn ~ 6150 1900
-NoConn ~ 6150 2000
-NoConn ~ 3950 2000
-NoConn ~ 3950 1900
-NoConn ~ 3950 1800
-NoConn ~ 3950 1700
 NoConn ~ 800  3600
-NoConn ~ 3500 3700
 NoConn ~ 3500 3800
 NoConn ~ 800  4800
 NoConn ~ 6450 2800
@@ -851,8 +773,165 @@ NoConn ~ 9250 5050
 NoConn ~ 800  3700
 NoConn ~ 3500 4000
 NoConn ~ 9250 3050
-NoConn ~ 6150 1700
 NoConn ~ 4900 3950
 Text Label 6600 3300 0    60   ~ 0
 RA14
+Text Notes 7280 7245 0    60   ~ 0
+1 1
+Text Notes 8155 7640 0    60   ~ 0
+2017.12.29
+Text Label 4115 2800 0    60   ~ 0
+GND
+Text Label 6605 5050 0    60   ~ 0
+GND
+Text Label 6610 3600 0    60   ~ 0
+GND
+Text Label 4105 4200 0    60   ~ 0
+WR
+$Comp
+L 74LS05 U1
+U 1 1 5A5A2AEA
+P 4955 950
+F 0 "U1" H 5150 1065 50  0000 C CNN
+F 1 "74LS05" H 5145 825 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 4955 950 50  0000 C CNN
+F 3 "" H 4955 950 50  0001 C CNN
+	1    4955 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74LS05 U1
+U 2 1 5A5A2B7F
+P 4960 1270
+F 0 "U1" H 5155 1385 50  0000 C CNN
+F 1 "74LS05" H 5150 1145 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14W_7.5x9.0mm_Pitch1.27mm" H 4960 1270 50  0001 C CNN
+F 3 "" H 4960 1270 50  0001 C CNN
+	2    4960 1270
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74LS05 U1
+U 3 1 5A5A2BC6
+P 4960 1585
+F 0 "U1" H 5155 1700 50  0000 C CNN
+F 1 "74LS05" H 5150 1460 50  0000 C CNN
+F 2 "" H 4960 1585 50  0001 C CNN
+F 3 "" H 4960 1585 50  0001 C CNN
+	3    4960 1585
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74LS05 U1
+U 4 1 5A5A2C1F
+P 4960 1900
+F 0 "U1" H 5155 2015 50  0000 C CNN
+F 1 "74LS05" H 5150 1775 50  0000 C CNN
+F 2 "" H 4960 1900 50  0001 C CNN
+F 3 "" H 4960 1900 50  0001 C CNN
+	4    4960 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 950  4020 950 
+Wire Wire Line
+	4020 950  4020 945 
+Wire Wire Line
+	3995 1270 3995 1275
+Wire Wire Line
+	4505 950  4010 950 
+Wire Wire Line
+	5405 950  5945 950 
+Wire Wire Line
+	5410 1270 5940 1270
+Wire Wire Line
+	5940 1270 5940 1275
+Wire Wire Line
+	5955 1580 5955 1575
+Wire Wire Line
+	5410 1585 5955 1585
+Wire Wire Line
+	5410 1900 5965 1900
+Wire Wire Line
+	5965 1900 5965 1895
+Wire Wire Line
+	4510 1585 3990 1585
+Wire Wire Line
+	4510 1900 4000 1900
+Wire Wire Line
+	10150 4650 10550 4650
+Wire Wire Line
+	10550 4650 10550 4645
+Wire Wire Line
+	3515 3500 3515 3495
+Wire Wire Line
+	3100 3600 3630 3600
+Wire Wire Line
+	3100 3500 3515 3500
+Wire Wire Line
+	590  2995 590  3800
+Wire Wire Line
+	590  3000 1200 3000
+Connection ~ 590  3000
+Wire Wire Line
+	800  2900 800  3000
+Connection ~ 800  3000
+Wire Wire Line
+	3630 2795 3630 5605
+Connection ~ 3630 3600
+Connection ~ 3630 3900
+Connection ~ 3630 4400
+Wire Wire Line
+	805  4900 805  5170
+Wire Wire Line
+	805  5170 3630 5170
+Connection ~ 3630 4600
+Connection ~ 805  4900
+Wire Wire Line
+	3955 2795 3630 2795
+Connection ~ 3630 3200
+Wire Wire Line
+	6445 3600 6350 3600
+Wire Wire Line
+	6350 3600 6350 5050
+Connection ~ 6435 3600
+Wire Wire Line
+	6350 5045 6350 5605
+Wire Wire Line
+	3630 5605 8960 5605
+Connection ~ 3630 5170
+Connection ~ 6350 5045
+Connection ~ 9255 4750
+Wire Wire Line
+	9250 4650 9250 4750
+Wire Wire Line
+	9250 4650 9650 4650
+Wire Wire Line
+	9260 4750 8960 4750
+Wire Wire Line
+	8960 4750 8960 5605
+Connection ~ 6350 5605
+$Comp
+L 74LS05 U?
+U 5 1 5A5B6491
+P 4960 2230
+F 0 "U?" H 5155 2345 50  0000 C CNN
+F 1 "74LS05" H 5150 2105 50  0000 C CNN
+F 2 "" H 4960 2230 50  0001 C CNN
+F 3 "" H 4960 2230 50  0001 C CNN
+	5    4960 2230
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5410 2230 5960 2230
+Wire Wire Line
+	4510 2230 4000 2230
+Text Label 5510 2230 0    60   ~ 0
+RESET
+Text Label 4110 2230 0    60   ~ 0
+RRESET
+Text Label 3150 3700 0    60   ~ 0
+RRESET
+Wire Wire Line
+	4510 1270 4010 1270
 $EndSCHEMATC

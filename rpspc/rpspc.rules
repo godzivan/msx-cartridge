@@ -11,18 +11,18 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 487)
+    (start_pass_no 1672)
     (layer_rule F.Cu
-      (active on)
-      (preferred_direction vertical)
-      (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 2.0)
-    )
-    (layer_rule B.Cu
       (active on)
       (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 2.0)
+      (against_preferred_direction_trace_costs 2.9)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.5)
     )
   )
   (rule
@@ -69,14 +69,14 @@
     )
   )
   (class "kicad_default"
-    GND "Net-(J1-Pad1)" /RD2 /RD3 /RD4 /RRD /RWR /RRESET
-    /RCLK /RA0 /RA1 "Net-(J1-Pad17)" /RA2 "Net-(J1-Pad19)" "Net-(J1-Pad21)" "Net-(J1-Pad22)"
-    "Net-(J1-Pad23)" /REXT1 /RD7 /RD0 /RD1 /RD5 /RD6 "Net-(J1-Pad32)"
-    "Net-(J1-Pad33)" "Net-(J1-Pad35)" "Net-(J1-Pad36)" "Net-(J1-Pad37)" "Net-(J1-Pad38)" "Net-(J1-Pad40)" "Net-(J2-Pad1)" "Net-(J2-Pad2)"
-    "Net-(J2-Pad3)" "Net-(J2-Pad4)" /A2 /A1 /A0 /D0 /D1 /D2
-    /D3 /RESET /CLK /WR "Net-(J2-Pad22)" /D7 /D6 /D5
-    /D4 "Net-(J2-Pad28)" "Net-(J2-Pad29)" /EXT1 /RD "Net-(J2-Pad5)" "Net-(J2-Pad6)" "Net-(J2-Pad7)"
-    "Net-(J2-Pad8)" "Net-(J2-Pad10)" "Net-(J2-Pad12)" "Net-(J2-Pad24)" "Net-(J2-Pad25)" "Net-(J2-Pad32)" "Net-(J1-Pad24)"
+    GND "Net-(J1-Pad1)" /RD2 /RD3 /RD4 /RWR /RRESET /RCLK
+    /RA0 /RA1 "Net-(J1-Pad17)" /RA2 "Net-(J1-Pad19)" "Net-(J1-Pad21)" "Net-(J1-Pad23)" /REXT1
+    /RD7 /RD0 /RD1 /RD5 /RD6 "Net-(J1-Pad32)" "Net-(J1-Pad33)" "Net-(J1-Pad35)"
+    "Net-(J1-Pad36)" "Net-(J1-Pad37)" "Net-(J1-Pad38)" "Net-(J1-Pad40)" /A2 /A1 /A0 /D0
+    /D1 /D2 /D3 /RESET /CLK /WR "Net-(J2-Pad22)" /D7
+    /D6 /D5 /D4 "Net-(J2-Pad28)" "Net-(J2-Pad29)" /EXT1 "Net-(J2-Pad24)" "Net-(J2-Pad25)"
+    "Net-(J2-Pad32)" "Net-(J1-Pad24)" "Net-(J1-Pad10)" /RA4 /A6 /A12 /A5 /A7
+    /A4 /A8 /A3 /A9 /A11 /A10 "Net-(J2-Pad30)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

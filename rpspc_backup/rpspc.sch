@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:rpspc-rescue
 LIBS:power
 LIBS:device
 LIBS:switches
@@ -72,7 +71,7 @@ F 3 "" H 5500 4000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Conn_02x17_Top_Bottom-RESCUE-rpspc J2
+L Conn_02x17_Top_Bottom J2
 U 1 1 5A3E9D10
 P 2450 3200
 F 0 "J2" H 2500 4100 50  0000 C CNN
@@ -172,7 +171,9 @@ Text Label 8150 3600 0    60   ~ 0
 RD6
 Text Label 10450 3300 0    60   ~ 0
 RD7
-Text Label 6350 3500 0    60   ~ 0
+Text Label 6300 3500 0    60   ~ 0
+RD
+Text Label 6300 3600 0    60   ~ 0
 EXT1
 Text Label 10450 2100 0    60   ~ 0
 VCC
@@ -206,7 +207,7 @@ $EndComp
 Text Label 4500 2700 0    60   ~ 0
 A2
 Text Label 6550 2000 0    60   ~ 0
-RWR
+RRD
 Wire Wire Line
 	1950 2900 2250 2900
 Wire Wire Line
@@ -346,7 +347,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 2000 6250 2000
 Text Label 6550 2100 0    60   ~ 0
-RRD
+RWR
 Text Label 6550 2400 0    60   ~ 0
 RRESET
 Text Label 6550 2200 0    60   ~ 0
@@ -379,9 +380,9 @@ Text Label 10450 2800 0    60   ~ 0
 RA1
 Text Label 10450 2900 0    60   ~ 0
 RA2
-Text Label 10460 2495 0    60   ~ 0
+Text Label 10450 2400 0    60   ~ 0
 RRD
-Text Label 10455 2400 0    60   ~ 0
+Text Label 10450 2500 0    60   ~ 0
 RWR
 Text Label 8150 2700 0    60   ~ 0
 RRESET
@@ -425,6 +426,7 @@ NoConn ~ 2750 2400
 NoConn ~ 2750 2500
 NoConn ~ 2750 2600
 NoConn ~ 2750 2700
+NoConn ~ 2750 2800
 NoConn ~ 2750 2900
 NoConn ~ 2250 2700
 NoConn ~ 2250 2600
@@ -453,9 +455,11 @@ Text Label 2000 3500 0    60   ~ 0
 RESET
 Text Label 4500 2400 0    60   ~ 0
 RESET
+Wire Wire Line
+	2250 2800 1950 2800
 Text Label 4500 2200 0    60   ~ 0
 CLK
-Text Label 2910 2800 0    60   ~ 0
+Text Label 2000 2800 0    60   ~ 0
 A2
 NoConn ~ 10300 3600
 NoConn ~ 8400 3700
@@ -505,8 +509,6 @@ Connection ~ 11150 2300
 Wire Wire Line
 	8400 2700 7950 2700
 NoConn ~ 10300 3200
-Text Label 6350 3600 0    60   ~ 0
-WR
-Wire Wire Line
-	3095 2800 2750 2800
+Text Notes 7180 6915 0    118  ~ 0
+RASPBERRY PI 3 Extension Box V0.5
 $EndSCHEMATC
