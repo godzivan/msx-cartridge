@@ -61,9 +61,4 @@
   (pad "" np_thru_hole circle (at 61.5 -26.5) (size 6 6) (drill 2.75) (layers *.Cu *.Mask F.SilkS))
   (pad "" np_thru_hole circle (at 3.5 -26.5) (size 6 6) (drill 2.75) (layers *.Cu *.Mask F.SilkS))
   (pad "" np_thru_hole circle (at 3.5 -3.5) (size 6 6) (drill 2.75) (layers *.Cu *.Mask F.SilkS))
-  (model Pin_Headers.3dshapes/Pin_Header_Straight_2x20_Pitch2.54mm.wrl
-    (at (xyz 0.05 -0.95 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 90))
-  )
 )

@@ -35,6 +35,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:IC_raspberry
 LIBS:msx_slot
+LIBS:rpmcv4-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -98,7 +99,7 @@ Wire Wire Line
 Wire Wire Line
 	3500 4450 3100 4450
 Wire Wire Line
-	3100 4550 3500 4550
+	3100 4550 3655 4550
 Wire Wire Line
 	3100 4650 3500 4650
 Wire Wire Line
@@ -106,13 +107,13 @@ Wire Wire Line
 Wire Wire Line
 	3100 4850 3500 4850
 Wire Wire Line
-	3100 4950 3500 4950
+	3100 4950 3655 4950
 Wire Wire Line
 	3100 5050 3500 5050
 Wire Wire Line
 	3100 5150 3500 5150
 Wire Wire Line
-	3100 5250 3500 5250
+	3100 5250 3655 5250
 Wire Wire Line
 	3100 5350 3500 5350
 Wire Wire Line
@@ -142,7 +143,7 @@ Wire Wire Line
 Wire Wire Line
 	800  4650 1200 4650
 Wire Wire Line
-	800  4750 1200 4750
+	655  4750 1200 4750
 Wire Wire Line
 	800  4850 1200 4850
 Wire Wire Line
@@ -156,7 +157,7 @@ Wire Wire Line
 Wire Wire Line
 	800  5450 1200 5450
 Wire Wire Line
-	800  5550 1200 5550
+	655  5550 1200 5550
 Wire Wire Line
 	800  5650 1200 5650
 Wire Wire Line
@@ -170,7 +171,7 @@ Wire Wire Line
 Wire Wire Line
 	800  6150 1200 6150
 Wire Wire Line
-	800  6250 1200 6250
+	655  6250 1200 6250
 Wire Wire Line
 	8400 5500 8800 5500
 Wire Wire Line
@@ -549,8 +550,6 @@ Wire Wire Line
 Wire Wire Line
 	10100 5850 10500 5850
 Wire Wire Line
-	10100 5950 10800 5950
-Wire Wire Line
 	10100 6050 10500 6050
 Wire Wire Line
 	10100 6150 10500 6150
@@ -600,9 +599,9 @@ D6
 Text Label 10150 5750 0    60   ~ 0
 CLK
 Text Label 10150 5850 0    60   ~ 0
-SW3
+SW1
 Text Label 10150 5950 0    60   ~ 0
-SW3_
+SW1_
 Text Label 8450 4800 0    60   ~ 0
 D1
 Text Label 8450 4900 0    60   ~ 0
@@ -668,12 +667,8 @@ Text Label 6750 5500 0    60   ~ 0
 RD6
 Text Label 8400 4000 0    60   ~ 0
 SLTSL3
-Text Label 900  5850 0    60   ~ 0
-SW3
-Text Label 6750 3200 0    60   ~ 0
-GND
 Text Label 6750 4600 0    60   ~ 0
-WR
+RD
 Text Label 900  5650 0    60   ~ 0
 LE_A
 Text Label 3150 5650 0    60   ~ 0
@@ -746,13 +741,13 @@ Wire Wire Line
 $Comp
 L GND #PWR02
 U 1 1 5A4358D3
-P 800 6250
-F 0 "#PWR02" H 800 6000 50  0001 C CNN
-F 1 "GND" H 800 6100 50  0000 C CNN
-F 2 "" H 800 6250 50  0000 C CNN
-F 3 "" H 800 6250 50  0000 C CNN
-	1    800  6250
-	0    1    1    0   
+P 655 6410
+F 0 "#PWR02" H 655 6160 50  0001 C CNN
+F 1 "GND" H 655 6260 50  0000 C CNN
+F 2 "" H 655 6410 50  0000 C CNN
+F 3 "" H 655 6410 50  0000 C CNN
+	1    655  6410
+	1    0    0    -1  
 $EndComp
 $Comp
 L LED_Small D1
@@ -1100,7 +1095,7 @@ Wire Wire Line
 Wire Wire Line
 	6600 2000 7000 2000
 Wire Wire Line
-	6600 1800 7000 1800
+	6160 1800 7000 1800
 Wire Wire Line
 	6600 1700 7000 1700
 Text Label 8400 2700 0    60   ~ 0
@@ -1114,15 +1109,13 @@ WAIT
 Text Label 6750 2700 0    60   ~ 0
 RCLK
 Text Label 6800 1800 0    60   ~ 0
-GND
+VCC
 Text Label 6750 2600 0    60   ~ 0
 RRESET
 NoConn ~ 8800 2000
 NoConn ~ 8800 2100
-NoConn ~ 8800 2200
 NoConn ~ 6600 2000
 NoConn ~ 6600 2100
-NoConn ~ 6600 2200
 Text Label 8400 2300 0    60   ~ 0
 RINT
 Text Label 8400 2400 0    60   ~ 0
@@ -1390,34 +1383,10 @@ $EndComp
 Wire Wire Line
 	10800 2900 10800 2700
 $Comp
-L R R11
-U 1 1 5A446BA6
-P 10650 5850
-F 0 "R11" V 10730 5850 50  0000 C CNN
-F 1 "R" V 10650 5850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 10580 5850 50  0001 C CNN
-F 3 "" H 10650 5850 50  0001 C CNN
-	1    10650 5850
-	0    1    1    0   
-$EndComp
-$Comp
-L +3.3V #PWR05
-U 1 1 5A446BAC
-P 10800 5650
-F 0 "#PWR05" H 10800 5500 50  0001 C CNN
-F 1 "+3.3V" H 10800 5790 50  0000 C CNN
-F 2 "" H 10800 5650 50  0001 C CNN
-F 3 "" H 10800 5650 50  0001 C CNN
-	1    10800 5650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10800 5850 10800 5650
-$Comp
-L GND #PWR06
+L GND #PWR05
 U 1 1 5A446BD1
 P 10800 3200
-F 0 "#PWR06" H 10800 2950 50  0001 C CNN
+F 0 "#PWR05" H 10800 2950 50  0001 C CNN
 F 1 "GND" H 10800 3050 50  0000 C CNN
 F 2 "" H 10800 3200 50  0001 C CNN
 F 3 "" H 10800 3200 50  0001 C CNN
@@ -1426,22 +1395,7 @@ F 3 "" H 10800 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10800 3000 10800 3200
-$Comp
-L GND #PWR07
-U 1 1 5A446D64
-P 10800 6100
-F 0 "#PWR07" H 10800 5850 50  0001 C CNN
-F 1 "GND" H 10800 5950 50  0000 C CNN
-F 2 "" H 10800 6100 50  0001 C CNN
-F 3 "" H 10800 6100 50  0001 C CNN
-	1    10800 6100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10800 5950 10800 6100
 Text Label 10800 2900 0    60   ~ 0
-V3.3
-Text Label 10800 5850 0    60   ~ 0
 V3.3
 Text Label 6800 1700 0    60   ~ 0
 GND
@@ -1451,4 +1405,94 @@ Text Notes 8165 7635 0    60   ~ 0
 2017.12.29
 Text Notes 7275 7245 0    60   ~ 0
 1 1
+Wire Wire Line
+	10100 5950 10500 5950
+Text Label 6750 3200 0    60   ~ 0
+VCC
+$Comp
+L R R11
+U 1 1 5A5D6E33
+P 6450 2300
+F 0 "R11" V 6530 2300 50  0000 C CNN
+F 1 "R" V 6450 2300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6380 2300 50  0001 C CNN
+F 3 "" H 6450 2300 50  0001 C CNN
+	1    6450 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R12
+U 1 1 5A5D70B3
+P 6450 2400
+F 0 "R12" V 6530 2400 50  0000 C CNN
+F 1 "R" V 6450 2400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6380 2400 50  0001 C CNN
+F 3 "" H 6450 2400 50  0001 C CNN
+	1    6450 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L +5V #PWR06
+U 1 1 5A5D72A0
+P 6160 1350
+F 0 "#PWR06" H 6160 1200 50  0001 C CNN
+F 1 "+5V" H 6160 1490 50  0000 C CNN
+F 2 "" H 6160 1350 50  0000 C CNN
+F 3 "" H 6160 1350 50  0000 C CNN
+	1    6160 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6160 1350 6160 2600
+Wire Wire Line
+	6160 2300 6300 2300
+Wire Wire Line
+	6160 2400 6300 2400
+Connection ~ 6160 2300
+Connection ~ 6160 2400
+Text Label 6750 2200 0    60   ~ 0
+RESET
+Text Label 8405 2200 0    60   ~ 0
+RRESET
+$Comp
+L R R13
+U 1 1 5A5D7C24
+P 8950 2600
+F 0 "R13" V 9030 2600 50  0000 C CNN
+F 1 "R" V 8950 2600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8880 2600 50  0001 C CNN
+F 3 "" H 8950 2600 50  0001 C CNN
+	1    8950 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9100 1435 9100 2600
+Wire Wire Line
+	6160 1435 9100 1435
+Connection ~ 6160 1435
+NoConn ~ 800  5850
+Wire Wire Line
+	655  4750 655  6410
+Connection ~ 655  6250
+Connection ~ 655  5550
+$Comp
+L GND #PWR07
+U 1 1 5A5D9C37
+P 3655 6420
+F 0 "#PWR07" H 3655 6170 50  0001 C CNN
+F 1 "GND" H 3655 6270 50  0000 C CNN
+F 2 "" H 3655 6420 50  0000 C CNN
+F 3 "" H 3655 6420 50  0000 C CNN
+	1    3655 6420
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3495 5750 3655 5750
+Wire Wire Line
+	3655 4550 3655 6420
+Connection ~ 3495 5750
+Connection ~ 3655 5750
+Connection ~ 3655 4950
+Connection ~ 3655 5250
+Connection ~ 6160 1800
 $EndSCHEMATC
