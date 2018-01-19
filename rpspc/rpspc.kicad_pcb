@@ -3,7 +3,7 @@
   (general
     (links 50)
     (no_connects 1)
-    (area 120.813282 87.501924 186.031418 121.250516)
+    (area 120.454 64.888439 187.337701 121.465341)
     (thickness 1.6)
     (drawings 16)
     (tracks 318)
@@ -87,7 +87,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ./output2))
+      (outputdirectory ./output))
   )
 
   (net 0 "")

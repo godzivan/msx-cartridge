@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 4534)
+    (start_pass_no 6230)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -28,7 +28,7 @@
   (rule
     (width 250.0)
     (clear 200.2)
-    (clear 125.0 (type smd_to_turn_gap))
+    (clear -0.1 (type smd_to_turn_gap))
     (clear 50.0 (type smd_smd))
   )
   (padstack "Via[0-1]_600:400_um"
@@ -76,10 +76,9 @@
     /A5 /A4 /D1 /D0 /D3 /D2 /D5 /D4
     /D7 /D6 /CLK +3V3 /RINT /RWAIT "Net-(P1-Pad5)" "Net-(P1-Pad16)"
     /RA8 /RA10 /RA11 /RA15 "/LE_A" "/LE_B" /RA12 /RA9
-    /RA13 /RA14 /RBUSDIR "Net-(J1-Pad13)" "Net-(J1-Pad15)" "Net-(J1-Pad18)" "Net-(J1-Pad22)" "Net-(J1-Pad37)"
-    "Net-(P1-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" /SLTSL "Net-(P1-Pad6)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad49)"
-    "Net-(P1-Pad50)" "Net-(U4-Pad2)" "Net-(U4-Pad18)" /RRESET /M1 "Net-(J2-Pad13)" "Net-(J2-Pad15)" "Net-(J2-Pad18)"
-    "Net-(J2-Pad22)" "Net-(J2-Pad37)"
+    /RA13 /RA14 /RBUSDIR "Net-(J1-Pad13)" "Net-(J1-Pad37)" "Net-(P1-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad3)"
+    /SLTSL "Net-(P1-Pad6)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad50)" "Net-(U4-Pad2)" "Net-(U4-Pad18)" /RRESET
+    /M1 "Net-(J2-Pad13)" "Net-(J2-Pad37)" /SOUNDIN "Net-(C1-Pad1)" /BCK /LRCK /DOUT
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
