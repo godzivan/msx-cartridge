@@ -1,0 +1,1265 @@
+TimeQuest Timing Analyzer report for msxbus_simple
+Sun Apr 16 21:21:49 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'msxclk'
+ 12. Setup: 'CLK'
+ 13. Hold: 'CLK'
+ 14. Hold: 'msxclk'
+ 15. Minimum Pulse Width: 'CLK'
+ 16. Minimum Pulse Width: 'msxclk'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Output Enable Times
+ 24. Minimum Output Enable Times
+ 25. Output Disable Times
+ 26. Minimum Output Disable Times
+ 27. Setup Transfers
+ 28. Hold Transfers
+ 29. Report TCCS
+ 30. Report RSKM
+ 31. Unconstrained Paths
+ 32. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; msxbus_simple                                      ;
+; Device Family      ; MAX II                                             ;
+; Device Name        ; EPM240T100C5                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Slow Model                                         ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }    ;
+; msxclk     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { msxclk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 139.16 MHz ; 139.16 MHz      ; msxclk     ;      ;
+; 183.39 MHz ; 183.39 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Setup Summary                   ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; msxclk ; -6.186 ; -346.730      ;
+; CLK    ; -5.052 ; -159.674      ;
++--------+--------+---------------+
+
+
++---------------------------------+
+; Hold Summary                    ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; CLK    ; -1.622 ; -1.622        ;
+; msxclk ; 1.412  ; 0.000         ;
++--------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++---------------------------------+
+; Minimum Pulse Width Summary     ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; CLK    ; -2.289 ; -2.289        ;
+; msxclk ; 0.234  ; 0.000         ;
++--------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'msxclk'                                                                                                                          ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -6.186 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|SLTSL[1]~reg0   ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.853      ;
+; -6.152 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|SLTSL[0]~reg0   ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.819      ;
+; -6.037 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|SLTSL[1]~reg0   ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.704      ;
+; -6.003 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|SLTSL[0]~reg0   ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.670      ;
+; -5.876 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|CS12~en         ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.543      ;
+; -5.876 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|CS12~reg0       ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.543      ;
+; -5.876 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|CS2~en          ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.543      ;
+; -5.876 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|CS2~reg0        ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.543      ;
+; -5.876 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|CS1~en          ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.543      ;
+; -5.876 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|CS1~reg0        ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.543      ;
+; -5.876 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|SLTSL[1]~en     ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.543      ;
+; -5.876 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|SLTSL[0]~en     ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.543      ;
+; -5.794 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|RESET1~en       ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.461      ;
+; -5.794 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|M1~en           ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.461      ;
+; -5.727 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|CS12~en         ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.394      ;
+; -5.727 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|CS12~reg0       ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.394      ;
+; -5.727 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|CS2~en          ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.394      ;
+; -5.727 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|CS2~reg0        ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.394      ;
+; -5.727 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|CS1~en          ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.394      ;
+; -5.727 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|CS1~reg0        ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.394      ;
+; -5.727 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|SLTSL[1]~en     ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.394      ;
+; -5.727 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|SLTSL[0]~en     ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.394      ;
+; -5.645 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|RESET1~en       ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.312      ;
+; -5.645 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|M1~en           ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.312      ;
+; -5.545 ; en                          ; MSXBUS:inst|SLTSL[1]~reg0   ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.926      ;
+; -5.511 ; en                          ; MSXBUS:inst|SLTSL[0]~reg0   ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.892      ;
+; -5.495 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|SLTSL[1]~reg0   ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.162      ;
+; -5.461 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|SLTSL[0]~reg0   ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 6.128      ;
+; -5.330 ; rw                          ; MSXBUS:inst|RD              ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.711      ;
+; -5.235 ; en                          ; MSXBUS:inst|CS12~en         ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.616      ;
+; -5.235 ; en                          ; MSXBUS:inst|CS12~reg0       ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.616      ;
+; -5.235 ; en                          ; MSXBUS:inst|CS2~en          ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.616      ;
+; -5.235 ; en                          ; MSXBUS:inst|CS2~reg0        ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.616      ;
+; -5.235 ; en                          ; MSXBUS:inst|CS1~en          ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.616      ;
+; -5.235 ; en                          ; MSXBUS:inst|CS1~reg0        ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.616      ;
+; -5.235 ; en                          ; MSXBUS:inst|SLTSL[1]~en     ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.616      ;
+; -5.235 ; en                          ; MSXBUS:inst|SLTSL[0]~en     ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.616      ;
+; -5.223 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[2]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.890      ;
+; -5.205 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|WR              ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.872      ;
+; -5.185 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|CS12~en         ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.852      ;
+; -5.185 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|CS12~reg0       ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.852      ;
+; -5.185 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|CS2~en          ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.852      ;
+; -5.185 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|CS2~reg0        ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.852      ;
+; -5.185 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|CS1~en          ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.852      ;
+; -5.185 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|CS1~reg0        ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.852      ;
+; -5.185 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|SLTSL[1]~en     ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.852      ;
+; -5.185 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|SLTSL[0]~en     ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.852      ;
+; -5.168 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[0]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.835      ;
+; -5.168 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[7]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.835      ;
+; -5.168 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[7]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.835      ;
+; -5.168 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[6]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.835      ;
+; -5.168 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[6]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.835      ;
+; -5.168 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[5]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.835      ;
+; -5.168 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[3]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.835      ;
+; -5.168 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[1]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.835      ;
+; -5.153 ; en                          ; MSXBUS:inst|RESET1~en       ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.534      ;
+; -5.153 ; en                          ; MSXBUS:inst|M1~en           ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.534      ;
+; -5.074 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[2]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.741      ;
+; -5.056 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|WR              ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.723      ;
+; -5.019 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[0]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.686      ;
+; -5.019 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[7]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.686      ;
+; -5.019 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[7]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.686      ;
+; -5.019 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[6]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.686      ;
+; -5.019 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[6]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.686      ;
+; -5.019 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[5]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.686      ;
+; -5.019 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[3]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.686      ;
+; -5.019 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|DATA[1]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.686      ;
+; -4.929 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[2]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.596      ;
+; -4.899 ; en                          ; MSXBUS:inst|IORQ            ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.280      ;
+; -4.899 ; en                          ; MSXBUS:inst|MREQ            ; CLK          ; msxclk      ; 0.500        ; 0.214      ; 5.280      ;
+; -4.874 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[0]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.541      ;
+; -4.874 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[7]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.541      ;
+; -4.874 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[7]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.541      ;
+; -4.874 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[6]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.541      ;
+; -4.874 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[6]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.541      ;
+; -4.874 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[5]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.541      ;
+; -4.874 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[3]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.541      ;
+; -4.874 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|DATA[1]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.541      ;
+; -4.766 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[2]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.433      ;
+; -4.711 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[0]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.378      ;
+; -4.711 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[7]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.378      ;
+; -4.711 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[7]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.378      ;
+; -4.711 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[6]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.378      ;
+; -4.711 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[6]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.378      ;
+; -4.711 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[5]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.378      ;
+; -4.711 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[3]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.378      ;
+; -4.711 ; MSXBUS:inst|STATE.READ_REQ  ; MSXBUS:inst|DATA[1]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.378      ;
+; -4.710 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|IORQ            ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.377      ;
+; -4.710 ; MSXBUS:inst|STATE.COMPLETE  ; MSXBUS:inst|MREQ            ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.377      ;
+; -4.703 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|ADDR[5]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.370      ;
+; -4.703 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|ADDR[3]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.370      ;
+; -4.703 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|ADDR[2]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.370      ;
+; -4.703 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|ADDR[2]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.370      ;
+; -4.703 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|ADDR[0]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.370      ;
+; -4.703 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|ADDR[0]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.370      ;
+; -4.622 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|STATE.READ_REQ  ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.289      ;
+; -4.622 ; MSXBUS:inst|STATE.INIT_SIG  ; MSXBUS:inst|STATE.WRITE_REQ ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.289      ;
+; -4.621 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[5]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.288      ;
+; -4.621 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[4]~en      ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.288      ;
+; -4.621 ; MSXBUS:inst|STATE.INIT_ADDR ; MSXBUS:inst|DATA[4]~reg0    ; msxclk       ; msxclk      ; 1.000        ; 0.000      ; 5.288      ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLK'                                                                                                    ;
++--------+--------------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+-------------+--------------+-------------+--------------+------------+------------+
+; -5.052 ; MSXBUS:inst|VAL    ; MD[0]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.052 ; MSXBUS:inst|VAL    ; MD[1]~en    ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.052 ; MSXBUS:inst|VAL    ; MD[2]~en    ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.052 ; MSXBUS:inst|VAL    ; MD[3]~en    ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.052 ; MSXBUS:inst|VAL    ; MD[4]~en    ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.052 ; MSXBUS:inst|VAL    ; MD[5]~en    ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.052 ; MSXBUS:inst|VAL    ; MD[6]~en    ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.052 ; MSXBUS:inst|VAL    ; MD[7]~en    ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.052 ; MSXBUS:inst|VAL    ; MD[0]~en    ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 5.005      ;
+; -5.013 ; MSXBUS:inst|VAL    ; MD[1]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 4.966      ;
+; -5.013 ; MSXBUS:inst|VAL    ; MD[7]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 4.966      ;
+; -4.973 ; MSXBUS:inst|VAL    ; MD[2]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 4.926      ;
+; -4.973 ; MSXBUS:inst|VAL    ; MD[3]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 4.926      ;
+; -4.973 ; MSXBUS:inst|VAL    ; MD[4]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 4.926      ;
+; -4.973 ; MSXBUS:inst|VAL    ; MD[5]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 4.926      ;
+; -4.973 ; MSXBUS:inst|VAL    ; MD[6]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 4.926      ;
+; -4.512 ; MSXBUS:inst|VAL    ; READY~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 4.465      ;
+; -4.453 ; en                 ; MD[0]~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.453 ; en                 ; MD[1]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.453 ; en                 ; MD[2]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.453 ; en                 ; MD[3]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.453 ; en                 ; MD[4]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.453 ; en                 ; MD[5]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.453 ; en                 ; MD[6]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.453 ; en                 ; MD[7]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.453 ; en                 ; MD[0]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.120      ;
+; -4.414 ; en                 ; MD[1]~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.081      ;
+; -4.414 ; en                 ; MD[7]~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.081      ;
+; -4.374 ; en                 ; MD[2]~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.041      ;
+; -4.374 ; en                 ; MD[3]~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.041      ;
+; -4.374 ; en                 ; MD[4]~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.041      ;
+; -4.374 ; en                 ; MD[5]~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.041      ;
+; -4.374 ; en                 ; MD[6]~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 5.041      ;
+; -3.760 ; en                 ; MD[8]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.427      ;
+; -3.760 ; en                 ; MD[9]~en    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.427      ;
+; -3.760 ; en                 ; MD[10]~en   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.427      ;
+; -3.760 ; en                 ; MD[11]~en   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.427      ;
+; -3.760 ; en                 ; MD[12]~en   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.427      ;
+; -3.760 ; en                 ; MD[13]~en   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.427      ;
+; -3.760 ; en                 ; MD[14]~en   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.427      ;
+; -3.760 ; en                 ; MD[15]~en   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.427      ;
+; -3.696 ; en                 ; slot        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.363      ;
+; -3.696 ; en                 ; wdata[4]    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.363      ;
+; -3.232 ; MSXBUS:inst|CNT[1] ; MD[1]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 3.185      ;
+; -3.204 ; en                 ; wdata[0]    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.871      ;
+; -3.204 ; en                 ; wdata[1]    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.871      ;
+; -3.204 ; en                 ; wdata[5]    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.871      ;
+; -3.190 ; en                 ; mio         ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.857      ;
+; -3.190 ; en                 ; rw          ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.857      ;
+; -3.190 ; en                 ; wdata[2]    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.857      ;
+; -3.190 ; en                 ; wdata[3]    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.857      ;
+; -3.190 ; en                 ; wdata[6]    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.857      ;
+; -3.190 ; en                 ; wdata[7]    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.857      ;
+; -2.995 ; MSXBUS:inst|CNT[0] ; MD[0]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 2.948      ;
+; -2.781 ; MSXBUS:inst|CNT[7] ; MD[7]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 2.734      ;
+; -2.385 ; MSXBUS:inst|VAL    ; en          ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 2.338      ;
+; -2.316 ; MSXBUS:inst|CNT[6] ; MD[6]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 2.269      ;
+; -1.908 ; MSXBUS:inst|CNT[5] ; MD[5]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 1.861      ;
+; -1.730 ; clkcount[1]        ; clkcount[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.397      ;
+; -1.710 ; clkcount[2]        ; msxclk      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.377      ;
+; -1.653 ; MSXBUS:inst|CNT[4] ; MD[4]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 1.606      ;
+; -1.652 ; MSXBUS:inst|CNT[2] ; MD[2]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 1.605      ;
+; -1.645 ; MSXBUS:inst|CNT[3] ; MD[3]~reg0  ; msxclk       ; CLK         ; 0.500        ; -0.214     ; 1.598      ;
+; -1.519 ; clkcount[1]        ; msxclk      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.186      ;
+; -1.502 ; clkcount[1]        ; clkcount[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.169      ;
+; -1.498 ; clkcount[2]        ; clkcount[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.165      ;
+; -1.258 ; clkcount[0]        ; clkcount[1] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.925      ;
+; -1.254 ; clkcount[0]        ; clkcount[2] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.921      ;
+; -1.253 ; clkcount[0]        ; msxclk      ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.920      ;
+; -1.252 ; clkcount[0]        ; clkcount[0] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.919      ;
+; -1.193 ; READY~reg0         ; READY~reg0  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.860      ;
+; 1.568  ; msxclk             ; msxclk      ; msxclk       ; CLK         ; 0.500        ; 3.458      ; 2.433      ;
+; 2.068  ; msxclk             ; msxclk      ; msxclk       ; CLK         ; 1.000        ; 3.458      ; 2.433      ;
++--------+--------------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLK'                                                                                                     ;
++--------+--------------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+-------------+--------------+-------------+--------------+------------+------------+
+; -1.622 ; msxclk             ; msxclk      ; msxclk       ; CLK         ; 0.000        ; 3.458      ; 2.433      ;
+; -1.122 ; msxclk             ; msxclk      ; msxclk       ; CLK         ; -0.500       ; 3.458      ; 2.433      ;
+; 1.639  ; READY~reg0         ; READY~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.860      ;
+; 1.698  ; clkcount[0]        ; clkcount[0] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.919      ;
+; 1.699  ; clkcount[0]        ; msxclk      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.920      ;
+; 1.700  ; clkcount[0]        ; clkcount[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.921      ;
+; 1.704  ; clkcount[0]        ; clkcount[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.925      ;
+; 1.944  ; clkcount[2]        ; clkcount[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.165      ;
+; 1.948  ; clkcount[1]        ; clkcount[1] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.169      ;
+; 1.965  ; clkcount[1]        ; msxclk      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.186      ;
+; 2.091  ; MSXBUS:inst|CNT[3] ; MD[3]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 1.598      ;
+; 2.098  ; MSXBUS:inst|CNT[2] ; MD[2]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 1.605      ;
+; 2.099  ; MSXBUS:inst|CNT[4] ; MD[4]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 1.606      ;
+; 2.156  ; clkcount[2]        ; msxclk      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.377      ;
+; 2.176  ; clkcount[1]        ; clkcount[2] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.397      ;
+; 2.354  ; MSXBUS:inst|CNT[5] ; MD[5]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 1.861      ;
+; 2.762  ; MSXBUS:inst|CNT[6] ; MD[6]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 2.269      ;
+; 2.831  ; MSXBUS:inst|VAL    ; en          ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 2.338      ;
+; 3.227  ; MSXBUS:inst|CNT[7] ; MD[7]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 2.734      ;
+; 3.441  ; MSXBUS:inst|CNT[0] ; MD[0]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 2.948      ;
+; 3.636  ; en                 ; mio         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.857      ;
+; 3.636  ; en                 ; rw          ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.857      ;
+; 3.636  ; en                 ; wdata[2]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.857      ;
+; 3.636  ; en                 ; wdata[3]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.857      ;
+; 3.636  ; en                 ; wdata[6]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.857      ;
+; 3.636  ; en                 ; wdata[7]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.857      ;
+; 3.650  ; en                 ; wdata[0]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.871      ;
+; 3.650  ; en                 ; wdata[1]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.871      ;
+; 3.650  ; en                 ; wdata[5]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.871      ;
+; 3.678  ; MSXBUS:inst|CNT[1] ; MD[1]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 3.185      ;
+; 4.142  ; en                 ; slot        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.363      ;
+; 4.142  ; en                 ; wdata[4]    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.363      ;
+; 4.166  ; MSXBUS:inst|VAL    ; MD[0]~en    ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 3.673      ;
+; 4.206  ; en                 ; MD[8]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.427      ;
+; 4.206  ; en                 ; MD[9]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.427      ;
+; 4.206  ; en                 ; MD[10]~en   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.427      ;
+; 4.206  ; en                 ; MD[11]~en   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.427      ;
+; 4.206  ; en                 ; MD[12]~en   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.427      ;
+; 4.206  ; en                 ; MD[13]~en   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.427      ;
+; 4.206  ; en                 ; MD[14]~en   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.427      ;
+; 4.206  ; en                 ; MD[15]~en   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.427      ;
+; 4.671  ; MSXBUS:inst|VAL    ; MD[1]~en    ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.178      ;
+; 4.820  ; en                 ; MD[2]~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.041      ;
+; 4.820  ; en                 ; MD[3]~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.041      ;
+; 4.820  ; en                 ; MD[4]~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.041      ;
+; 4.820  ; en                 ; MD[5]~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.041      ;
+; 4.820  ; en                 ; MD[6]~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.041      ;
+; 4.860  ; en                 ; MD[1]~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.081      ;
+; 4.860  ; en                 ; MD[7]~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.081      ;
+; 4.899  ; en                 ; MD[0]~reg0  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; en                 ; MD[1]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; en                 ; MD[2]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; en                 ; MD[3]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; en                 ; MD[4]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; en                 ; MD[5]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; en                 ; MD[6]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; en                 ; MD[7]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; en                 ; MD[0]~en    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 5.120      ;
+; 4.899  ; MSXBUS:inst|VAL    ; MD[7]~en    ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.406      ;
+; 4.900  ; MSXBUS:inst|VAL    ; MD[5]~en    ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.407      ;
+; 4.904  ; MSXBUS:inst|VAL    ; MD[4]~en    ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.411      ;
+; 4.911  ; MSXBUS:inst|VAL    ; MD[3]~en    ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.418      ;
+; 4.915  ; MSXBUS:inst|VAL    ; MD[6]~en    ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.422      ;
+; 4.916  ; MSXBUS:inst|VAL    ; MD[2]~en    ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.423      ;
+; 4.958  ; MSXBUS:inst|VAL    ; READY~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.465      ;
+; 5.419  ; MSXBUS:inst|VAL    ; MD[2]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.926      ;
+; 5.419  ; MSXBUS:inst|VAL    ; MD[3]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.926      ;
+; 5.419  ; MSXBUS:inst|VAL    ; MD[4]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.926      ;
+; 5.419  ; MSXBUS:inst|VAL    ; MD[5]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.926      ;
+; 5.419  ; MSXBUS:inst|VAL    ; MD[6]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.926      ;
+; 5.459  ; MSXBUS:inst|VAL    ; MD[1]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.966      ;
+; 5.459  ; MSXBUS:inst|VAL    ; MD[7]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 4.966      ;
+; 5.498  ; MSXBUS:inst|VAL    ; MD[0]~reg0  ; msxclk       ; CLK         ; -0.500       ; -0.214     ; 5.005      ;
++--------+--------------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'msxclk'                                                                                                                              ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.412 ; MSXBUS:inst|STATE.WRITE_REQ   ; MSXBUS:inst|STATE.WRITE_COMPL ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 1.633      ;
+; 1.661 ; wdata[5]                      ; MSXBUS:inst|DATA[5]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.596      ;
+; 1.663 ; wdata[0]                      ; MSXBUS:inst|DATA[0]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.598      ;
+; 1.665 ; address[8]                    ; MSXBUS:inst|ADDR[8]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.600      ;
+; 1.667 ; address[10]                   ; MSXBUS:inst|ADDR[10]~reg0     ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.602      ;
+; 1.671 ; address[3]                    ; MSXBUS:inst|ADDR[3]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.606      ;
+; 1.672 ; address[5]                    ; MSXBUS:inst|ADDR[5]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.607      ;
+; 1.674 ; address[12]                   ; MSXBUS:inst|ADDR[12]~reg0     ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.609      ;
+; 1.676 ; address[9]                    ; MSXBUS:inst|ADDR[9]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.611      ;
+; 1.683 ; address[13]                   ; MSXBUS:inst|ADDR[13]~reg0     ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.618      ;
+; 1.687 ; address[2]                    ; MSXBUS:inst|ADDR[2]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.622      ;
+; 1.688 ; address[1]                    ; MSXBUS:inst|ADDR[1]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.623      ;
+; 1.690 ; address[0]                    ; MSXBUS:inst|ADDR[0]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.625      ;
+; 1.692 ; MSXBUS:inst|RD                ; MSXBUS:inst|RD                ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 1.913      ;
+; 1.735 ; MSXBUS:inst|STATE.COMPLETE    ; MSXBUS:inst|STATE.INIT_ADDR   ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 1.956      ;
+; 1.931 ; wdata[1]                      ; MSXBUS:inst|DATA[1]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.866      ;
+; 1.955 ; MSXBUS:inst|STATE.INIT_SIG    ; MSXBUS:inst|RD                ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.176      ;
+; 1.959 ; MSXBUS:inst|STATE.INIT_SIG    ; MSXBUS:inst|STATE.READ_REQ    ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.180      ;
+; 1.959 ; MSXBUS:inst|STATE.INIT_SIG    ; MSXBUS:inst|STATE.WRITE_REQ   ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.180      ;
+; 2.053 ; wdata[2]                      ; MSXBUS:inst|DATA[2]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 1.988      ;
+; 2.197 ; MSXBUS:inst|STATE.COMPLETE    ; MSXBUS:inst|STATE.COMPLETE    ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.418      ;
+; 2.221 ; MSXBUS:inst|WR                ; MSXBUS:inst|WR                ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.442      ;
+; 2.288 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|STATE.INIT_ADDR   ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.509      ;
+; 2.290 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|STATE.INIT_SIG    ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.511      ;
+; 2.291 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|VAL               ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.512      ;
+; 2.339 ; MSXBUS:inst|STATE.WRITE_COMPL ; MSXBUS:inst|VAL               ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.560      ;
+; 2.348 ; MSXBUS:inst|STATE.READ_REQ    ; MSXBUS:inst|STATE.COMPLETE    ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.569      ;
+; 2.638 ; MSXBUS:inst|STATE.WRITE_REQ   ; MSXBUS:inst|DATA[0]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 2.859      ;
+; 2.641 ; wdata[4]                      ; MSXBUS:inst|DATA[4]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.576      ;
+; 2.711 ; address[11]                   ; MSXBUS:inst|ADDR[11]~reg0     ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.646      ;
+; 2.712 ; wdata[3]                      ; MSXBUS:inst|DATA[3]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.647      ;
+; 2.718 ; address[7]                    ; MSXBUS:inst|ADDR[7]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.653      ;
+; 2.733 ; address[6]                    ; MSXBUS:inst|ADDR[6]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.668      ;
+; 2.743 ; slot                          ; MSXBUS:inst|SLTSL[1]~reg0     ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.678      ;
+; 2.744 ; address[14]                   ; MSXBUS:inst|ADDR[14]~reg0     ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.679      ;
+; 2.778 ; en                            ; MSXBUS:inst|STATE.INIT_SIG    ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.713      ;
+; 2.781 ; wdata[7]                      ; MSXBUS:inst|DATA[7]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.716      ;
+; 2.783 ; en                            ; MSXBUS:inst|STATE.INIT_ADDR   ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.718      ;
+; 2.802 ; en                            ; MSXBUS:inst|ADDR[0]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.737      ;
+; 2.805 ; MSXBUS:inst|STATE.WRITE_COMPL ; MSXBUS:inst|STATE.COMPLETE    ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.026      ;
+; 2.808 ; en                            ; MSXBUS:inst|ADDR[2]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.743      ;
+; 2.854 ; en                            ; MSXBUS:inst|ADDR[7]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.789      ;
+; 2.936 ; MSXBUS:inst|STATE.COMPLETE    ; MSXBUS:inst|VAL               ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.157      ;
+; 2.971 ; slot                          ; MSXBUS:inst|SLTSL[0]~reg0     ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.906      ;
+; 2.974 ; wdata[6]                      ; MSXBUS:inst|DATA[6]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 2.909      ;
+; 3.040 ; MSXBUS:inst|STATE.WRITE_COMPL ; MSXBUS:inst|DATA[0]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.261      ;
+; 3.078 ; en                            ; MSXBUS:inst|VAL               ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.013      ;
+; 3.078 ; MSXBUS:inst|STATE.WRITE_REQ   ; MSXBUS:inst|WR                ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.299      ;
+; 3.089 ; en                            ; MSXBUS:inst|STATE.COMPLETE    ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.024      ;
+; 3.116 ; en                            ; MSXBUS:inst|ADDR[5]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.051      ;
+; 3.126 ; en                            ; MSXBUS:inst|ADDR[4]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.061      ;
+; 3.128 ; en                            ; MSXBUS:inst|ADDR[3]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.063      ;
+; 3.129 ; en                            ; MSXBUS:inst|ADDR[13]~en       ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.064      ;
+; 3.151 ; address[4]                    ; MSXBUS:inst|ADDR[4]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.086      ;
+; 3.217 ; MSXBUS:inst|STATE.COMPLETE    ; MSXBUS:inst|RD                ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.438      ;
+; 3.245 ; MSXBUS:inst|STATE.COMPLETE    ; MSXBUS:inst|RESET1~en         ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.466      ;
+; 3.286 ; MSXBUS:inst|STATE.INIT_SIG    ; MSXBUS:inst|DATA[0]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.507      ;
+; 3.295 ; address[15]                   ; MSXBUS:inst|ADDR[15]~reg0     ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.230      ;
+; 3.297 ; mio                           ; MSXBUS:inst|MREQ              ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.232      ;
+; 3.298 ; mio                           ; MSXBUS:inst|IORQ              ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.233      ;
+; 3.353 ; MSXBUS:inst|STATE.WRITE_REQ   ; MSXBUS:inst|DATA[6]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.574      ;
+; 3.356 ; MSXBUS:inst|STATE.WRITE_REQ   ; MSXBUS:inst|DATA[3]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.577      ;
+; 3.365 ; MSXBUS:inst|STATE.WRITE_REQ   ; MSXBUS:inst|DATA[1]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.586      ;
+; 3.368 ; MSXBUS:inst|STATE.WRITE_REQ   ; MSXBUS:inst|DATA[5]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.589      ;
+; 3.370 ; MSXBUS:inst|STATE.WRITE_REQ   ; MSXBUS:inst|DATA[7]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.591      ;
+; 3.383 ; rw                            ; MSXBUS:inst|DATA[5]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.318      ;
+; 3.383 ; rw                            ; MSXBUS:inst|DATA[4]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.318      ;
+; 3.383 ; rw                            ; MSXBUS:inst|DATA[4]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.318      ;
+; 3.383 ; rw                            ; MSXBUS:inst|DATA[3]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.318      ;
+; 3.383 ; rw                            ; MSXBUS:inst|DATA[2]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.318      ;
+; 3.383 ; rw                            ; MSXBUS:inst|DATA[1]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.318      ;
+; 3.383 ; rw                            ; MSXBUS:inst|DATA[0]~reg0      ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.318      ;
+; 3.387 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|ADDR[15]~en       ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.608      ;
+; 3.387 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|ADDR[12]~en       ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.608      ;
+; 3.387 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|ADDR[11]~en       ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.608      ;
+; 3.387 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|ADDR[10]~en       ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.608      ;
+; 3.387 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|ADDR[9]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.608      ;
+; 3.387 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|ADDR[7]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.608      ;
+; 3.387 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|ADDR[6]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.608      ;
+; 3.405 ; MSXBUS:inst|STATE.INIT_SIG    ; MSXBUS:inst|IORQ              ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.626      ;
+; 3.408 ; MSXBUS:inst|STATE.INIT_SIG    ; MSXBUS:inst|MREQ              ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.629      ;
+; 3.614 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|RESET1~en         ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 3.835      ;
+; 3.673 ; en                            ; MSXBUS:inst|ADDR[1]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.608      ;
+; 3.674 ; en                            ; MSXBUS:inst|ADDR[8]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.609      ;
+; 3.675 ; en                            ; MSXBUS:inst|ADDR[14]~en       ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.610      ;
+; 3.786 ; address[14]                   ; MSXBUS:inst|CS12~reg0         ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.721      ;
+; 3.787 ; address[14]                   ; MSXBUS:inst|CS2~reg0          ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.722      ;
+; 3.789 ; address[14]                   ; MSXBUS:inst|CS1~reg0          ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.724      ;
+; 3.821 ; MSXBUS:inst|STATE.INIT_ADDR   ; MSXBUS:inst|WR                ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 4.042      ;
+; 3.824 ; en                            ; MSXBUS:inst|ADDR[10]~en       ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.759      ;
+; 3.825 ; en                            ; MSXBUS:inst|ADDR[12]~en       ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.760      ;
+; 3.838 ; en                            ; MSXBUS:inst|ADDR[6]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.773      ;
+; 3.839 ; en                            ; MSXBUS:inst|ADDR[9]~en        ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.774      ;
+; 3.839 ; MSXBUS:inst|STATE.COMPLETE    ; MSXBUS:inst|STATE.READ_REQ    ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 4.060      ;
+; 3.839 ; MSXBUS:inst|STATE.COMPLETE    ; MSXBUS:inst|STATE.WRITE_REQ   ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 4.060      ;
+; 3.840 ; en                            ; MSXBUS:inst|ADDR[15]~en       ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.775      ;
+; 3.841 ; en                            ; MSXBUS:inst|ADDR[11]~en       ; CLK          ; msxclk      ; -0.500       ; 0.214      ; 3.776      ;
+; 3.853 ; MSXBUS:inst|STATE.WRITE_COMPL ; MSXBUS:inst|DATA[6]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 4.074      ;
+; 3.856 ; MSXBUS:inst|STATE.WRITE_COMPL ; MSXBUS:inst|DATA[3]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 4.077      ;
+; 3.865 ; MSXBUS:inst|STATE.WRITE_COMPL ; MSXBUS:inst|DATA[1]~en        ; msxclk       ; msxclk      ; 0.000        ; 0.000      ; 4.086      ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'CLK'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target      ;
++--------+--------------+----------------+------------------+-------+------------+-------------+
+; -2.289 ; 1.000        ; 3.289          ; Port Rate        ; CLK   ; Rise       ; CLK         ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[0]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[0]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[0]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[0]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[10]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[10]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[11]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[11]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[12]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[12]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[13]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[13]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[14]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[14]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[15]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[15]~en   ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[1]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[1]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[1]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[1]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[2]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[2]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[2]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[2]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[3]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[3]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[3]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[3]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[4]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[4]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[4]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[4]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[5]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[5]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[5]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[5]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[6]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[6]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[6]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[6]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[7]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[7]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[7]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[7]~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[8]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[8]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; MD[9]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; MD[9]~en    ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; READY~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; READY~reg0  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[0]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[0]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[10] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[10] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[11] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[11] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[12] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[12] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[13] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[13] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[14] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[14] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[15] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[15] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[1]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[1]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[2]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[2]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[3]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[3]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[4]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[4]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[5]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[5]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[6]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[6]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[7]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[7]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[8]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[8]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; address[9]  ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; address[9]  ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Fall       ; clkcount[0] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Fall       ; clkcount[0] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Fall       ; clkcount[1] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Fall       ; clkcount[1] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Fall       ; clkcount[2] ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Fall       ; clkcount[2] ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; en          ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; en          ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; mio         ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; mio         ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Fall       ; msxclk      ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Fall       ; msxclk      ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; rw          ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; rw          ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; slot        ;
+; 0.234  ; 0.500        ; 0.266          ; Low Pulse Width  ; CLK   ; Rise       ; slot        ;
+; 0.234  ; 0.500        ; 0.266          ; High Pulse Width ; CLK   ; Rise       ; wdata[0]    ;
++--------+--------------+----------------+------------------+-------+------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'msxclk'                                                                              ;
++-------+--------------+----------------+------------------+--------+------------+---------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                    ;
++-------+--------------+----------------+------------------+--------+------------+---------------------------+
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[0]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[0]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[0]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[0]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[10]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[10]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[10]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[10]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[11]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[11]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[11]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[11]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[12]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[12]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[12]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[12]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[13]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[13]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[13]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[13]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[14]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[14]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[14]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[14]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[15]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[15]~en   ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[15]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[15]~reg0 ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[1]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[1]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[1]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[1]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[2]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[2]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[2]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[2]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[3]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[3]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[3]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[3]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[4]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[4]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[4]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[4]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[5]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[5]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[5]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[5]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[6]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[6]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[6]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[6]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[7]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[7]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[7]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[7]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[8]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[8]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[8]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[8]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[9]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[9]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|ADDR[9]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|ADDR[9]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CNT[0]        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CNT[0]        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CNT[1]        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CNT[1]        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CNT[2]        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CNT[2]        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CNT[3]        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CNT[3]        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CNT[4]        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CNT[4]        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CNT[5]        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CNT[5]        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CNT[6]        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CNT[6]        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CNT[7]        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CNT[7]        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CS12~en       ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CS12~en       ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CS12~reg0     ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CS12~reg0     ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CS1~en        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CS1~en        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CS1~reg0      ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CS1~reg0      ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CS2~en        ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CS2~en        ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|CS2~reg0      ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|CS2~reg0      ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|DATA[0]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|DATA[0]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|DATA[0]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|DATA[0]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|DATA[1]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|DATA[1]~en    ;
+; 0.234 ; 0.500        ; 0.266          ; High Pulse Width ; msxclk ; Fall       ; MSXBUS:inst|DATA[1]~reg0  ;
+; 0.234 ; 0.500        ; 0.266          ; Low Pulse Width  ; msxclk ; Fall       ; MSXBUS:inst|DATA[1]~reg0  ;
++-------+--------------+----------------+------------------+--------+------------+---------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MD[*]     ; CLK        ; 3.910 ; 3.910 ; Rise       ; CLK             ;
+;  MD[0]    ; CLK        ; 3.225 ; 3.225 ; Rise       ; CLK             ;
+;  MD[1]    ; CLK        ; 3.518 ; 3.518 ; Rise       ; CLK             ;
+;  MD[2]    ; CLK        ; 3.629 ; 3.629 ; Rise       ; CLK             ;
+;  MD[3]    ; CLK        ; 3.906 ; 3.906 ; Rise       ; CLK             ;
+;  MD[4]    ; CLK        ; 2.634 ; 2.634 ; Rise       ; CLK             ;
+;  MD[5]    ; CLK        ; 3.318 ; 3.318 ; Rise       ; CLK             ;
+;  MD[6]    ; CLK        ; 3.350 ; 3.350 ; Rise       ; CLK             ;
+;  MD[7]    ; CLK        ; 3.910 ; 3.910 ; Rise       ; CLK             ;
+;  MD[8]    ; CLK        ; 3.739 ; 3.739 ; Rise       ; CLK             ;
+;  MD[9]    ; CLK        ; 3.217 ; 3.217 ; Rise       ; CLK             ;
+;  MD[10]   ; CLK        ; 3.560 ; 3.560 ; Rise       ; CLK             ;
+;  MD[11]   ; CLK        ; 3.128 ; 3.128 ; Rise       ; CLK             ;
+;  MD[12]   ; CLK        ; 3.523 ; 3.523 ; Rise       ; CLK             ;
+;  MD[13]   ; CLK        ; 3.591 ; 3.591 ; Rise       ; CLK             ;
+;  MD[14]   ; CLK        ; 3.290 ; 3.290 ; Rise       ; CLK             ;
+;  MD[15]   ; CLK        ; 3.174 ; 3.174 ; Rise       ; CLK             ;
+; MODE[*]   ; CLK        ; 7.096 ; 7.096 ; Rise       ; CLK             ;
+;  MODE[0]  ; CLK        ; 6.388 ; 6.388 ; Rise       ; CLK             ;
+;  MODE[1]  ; CLK        ; 7.096 ; 7.096 ; Rise       ; CLK             ;
+; DATA[*]   ; msxclk     ; 2.387 ; 2.387 ; Fall       ; msxclk          ;
+;  DATA[0]  ; msxclk     ; 2.334 ; 2.334 ; Fall       ; msxclk          ;
+;  DATA[1]  ; msxclk     ; 2.323 ; 2.323 ; Fall       ; msxclk          ;
+;  DATA[2]  ; msxclk     ; 2.336 ; 2.336 ; Fall       ; msxclk          ;
+;  DATA[3]  ; msxclk     ; 2.365 ; 2.365 ; Fall       ; msxclk          ;
+;  DATA[4]  ; msxclk     ; 2.112 ; 2.112 ; Fall       ; msxclk          ;
+;  DATA[5]  ; msxclk     ; 2.361 ; 2.361 ; Fall       ; msxclk          ;
+;  DATA[6]  ; msxclk     ; 2.387 ; 2.387 ; Fall       ; msxclk          ;
+;  DATA[7]  ; msxclk     ; 2.104 ; 2.104 ; Fall       ; msxclk          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; MD[*]     ; CLK        ; -2.075 ; -2.075 ; Rise       ; CLK             ;
+;  MD[0]    ; CLK        ; -2.645 ; -2.645 ; Rise       ; CLK             ;
+;  MD[1]    ; CLK        ; -2.435 ; -2.435 ; Rise       ; CLK             ;
+;  MD[2]    ; CLK        ; -2.579 ; -2.579 ; Rise       ; CLK             ;
+;  MD[3]    ; CLK        ; -2.584 ; -2.584 ; Rise       ; CLK             ;
+;  MD[4]    ; CLK        ; -2.078 ; -2.078 ; Rise       ; CLK             ;
+;  MD[5]    ; CLK        ; -2.516 ; -2.516 ; Rise       ; CLK             ;
+;  MD[6]    ; CLK        ; -2.521 ; -2.521 ; Rise       ; CLK             ;
+;  MD[7]    ; CLK        ; -3.139 ; -3.139 ; Rise       ; CLK             ;
+;  MD[8]    ; CLK        ; -3.185 ; -3.185 ; Rise       ; CLK             ;
+;  MD[9]    ; CLK        ; -2.663 ; -2.663 ; Rise       ; CLK             ;
+;  MD[10]   ; CLK        ; -3.006 ; -3.006 ; Rise       ; CLK             ;
+;  MD[11]   ; CLK        ; -2.574 ; -2.574 ; Rise       ; CLK             ;
+;  MD[12]   ; CLK        ; -2.969 ; -2.969 ; Rise       ; CLK             ;
+;  MD[13]   ; CLK        ; -3.017 ; -3.017 ; Rise       ; CLK             ;
+;  MD[14]   ; CLK        ; -2.075 ; -2.075 ; Rise       ; CLK             ;
+;  MD[15]   ; CLK        ; -2.323 ; -2.323 ; Rise       ; CLK             ;
+; MODE[*]   ; CLK        ; -2.699 ; -2.699 ; Rise       ; CLK             ;
+;  MODE[0]  ; CLK        ; -2.739 ; -2.739 ; Rise       ; CLK             ;
+;  MODE[1]  ; CLK        ; -2.699 ; -2.699 ; Rise       ; CLK             ;
+; DATA[*]   ; msxclk     ; -1.550 ; -1.550 ; Fall       ; msxclk          ;
+;  DATA[0]  ; msxclk     ; -1.780 ; -1.780 ; Fall       ; msxclk          ;
+;  DATA[1]  ; msxclk     ; -1.769 ; -1.769 ; Fall       ; msxclk          ;
+;  DATA[2]  ; msxclk     ; -1.782 ; -1.782 ; Fall       ; msxclk          ;
+;  DATA[3]  ; msxclk     ; -1.811 ; -1.811 ; Fall       ; msxclk          ;
+;  DATA[4]  ; msxclk     ; -1.558 ; -1.558 ; Fall       ; msxclk          ;
+;  DATA[5]  ; msxclk     ; -1.807 ; -1.807 ; Fall       ; msxclk          ;
+;  DATA[6]  ; msxclk     ; -1.833 ; -1.833 ; Fall       ; msxclk          ;
+;  DATA[7]  ; msxclk     ; -1.550 ; -1.550 ; Fall       ; msxclk          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MD[*]     ; CLK        ; 8.912 ; 8.912 ; Rise       ; CLK             ;
+;  MD[0]    ; CLK        ; 8.637 ; 8.637 ; Rise       ; CLK             ;
+;  MD[1]    ; CLK        ; 8.324 ; 8.324 ; Rise       ; CLK             ;
+;  MD[2]    ; CLK        ; 8.912 ; 8.912 ; Rise       ; CLK             ;
+;  MD[3]    ; CLK        ; 8.884 ; 8.884 ; Rise       ; CLK             ;
+;  MD[4]    ; CLK        ; 8.858 ; 8.858 ; Rise       ; CLK             ;
+;  MD[5]    ; CLK        ; 8.771 ; 8.771 ; Rise       ; CLK             ;
+;  MD[6]    ; CLK        ; 8.756 ; 8.756 ; Rise       ; CLK             ;
+;  MD[7]    ; CLK        ; 8.289 ; 8.289 ; Rise       ; CLK             ;
+;  MD[8]    ; CLK        ; 8.104 ; 8.104 ; Rise       ; CLK             ;
+;  MD[9]    ; CLK        ; 8.093 ; 8.093 ; Rise       ; CLK             ;
+;  MD[10]   ; CLK        ; 8.098 ; 8.098 ; Rise       ; CLK             ;
+;  MD[11]   ; CLK        ; 8.099 ; 8.099 ; Rise       ; CLK             ;
+;  MD[12]   ; CLK        ; 8.058 ; 8.058 ; Rise       ; CLK             ;
+;  MD[13]   ; CLK        ; 8.064 ; 8.064 ; Rise       ; CLK             ;
+;  MD[14]   ; CLK        ; 8.622 ; 8.622 ; Rise       ; CLK             ;
+;  MD[15]   ; CLK        ; 8.661 ; 8.661 ; Rise       ; CLK             ;
+; READY     ; CLK        ; 8.770 ; 8.770 ; Rise       ; CLK             ;
+; MCLK      ; msxclk     ; 4.627 ;       ; Rise       ; msxclk          ;
+; ADDR[*]   ; msxclk     ; 9.037 ; 9.037 ; Fall       ; msxclk          ;
+;  ADDR[0]  ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[1]  ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[2]  ; msxclk     ; 9.037 ; 9.037 ; Fall       ; msxclk          ;
+;  ADDR[3]  ; msxclk     ; 8.907 ; 8.907 ; Fall       ; msxclk          ;
+;  ADDR[4]  ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[5]  ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[6]  ; msxclk     ; 9.005 ; 9.005 ; Fall       ; msxclk          ;
+;  ADDR[7]  ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[8]  ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[9]  ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[10] ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[11] ; msxclk     ; 7.820 ; 7.820 ; Fall       ; msxclk          ;
+;  ADDR[12] ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[13] ; msxclk     ; 8.897 ; 8.897 ; Fall       ; msxclk          ;
+;  ADDR[14] ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[15] ; msxclk     ; 8.454 ; 8.454 ; Fall       ; msxclk          ;
+; CS1       ; msxclk     ; 8.963 ; 8.963 ; Fall       ; msxclk          ;
+; CS2       ; msxclk     ; 9.132 ; 9.132 ; Fall       ; msxclk          ;
+; CS12      ; msxclk     ; 8.938 ; 8.938 ; Fall       ; msxclk          ;
+; DATA[*]   ; msxclk     ; 9.104 ; 9.104 ; Fall       ; msxclk          ;
+;  DATA[0]  ; msxclk     ; 8.982 ; 8.982 ; Fall       ; msxclk          ;
+;  DATA[1]  ; msxclk     ; 9.100 ; 9.100 ; Fall       ; msxclk          ;
+;  DATA[2]  ; msxclk     ; 8.976 ; 8.976 ; Fall       ; msxclk          ;
+;  DATA[3]  ; msxclk     ; 8.975 ; 8.975 ; Fall       ; msxclk          ;
+;  DATA[4]  ; msxclk     ; 9.075 ; 9.075 ; Fall       ; msxclk          ;
+;  DATA[5]  ; msxclk     ; 9.104 ; 9.104 ; Fall       ; msxclk          ;
+;  DATA[6]  ; msxclk     ; 9.073 ; 9.073 ; Fall       ; msxclk          ;
+;  DATA[7]  ; msxclk     ; 9.074 ; 9.074 ; Fall       ; msxclk          ;
+; IORQ      ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+; M1        ; msxclk     ; 8.323 ; 8.323 ; Fall       ; msxclk          ;
+; MCLK      ; msxclk     ;       ; 4.627 ; Fall       ; msxclk          ;
+; MREQ      ; msxclk     ; 7.152 ; 7.152 ; Fall       ; msxclk          ;
+; RD        ; msxclk     ; 9.122 ; 9.122 ; Fall       ; msxclk          ;
+; RESET     ; msxclk     ; 8.920 ; 8.920 ; Fall       ; msxclk          ;
+; SLTSL[*]  ; msxclk     ; 7.165 ; 7.165 ; Fall       ; msxclk          ;
+;  SLTSL[0] ; msxclk     ; 7.144 ; 7.144 ; Fall       ; msxclk          ;
+;  SLTSL[1] ; msxclk     ; 7.165 ; 7.165 ; Fall       ; msxclk          ;
+; WR        ; msxclk     ; 9.583 ; 9.583 ; Fall       ; msxclk          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MD[*]     ; CLK        ; 8.058 ; 8.058 ; Rise       ; CLK             ;
+;  MD[0]    ; CLK        ; 8.637 ; 8.637 ; Rise       ; CLK             ;
+;  MD[1]    ; CLK        ; 8.324 ; 8.324 ; Rise       ; CLK             ;
+;  MD[2]    ; CLK        ; 8.912 ; 8.912 ; Rise       ; CLK             ;
+;  MD[3]    ; CLK        ; 8.884 ; 8.884 ; Rise       ; CLK             ;
+;  MD[4]    ; CLK        ; 8.858 ; 8.858 ; Rise       ; CLK             ;
+;  MD[5]    ; CLK        ; 8.771 ; 8.771 ; Rise       ; CLK             ;
+;  MD[6]    ; CLK        ; 8.756 ; 8.756 ; Rise       ; CLK             ;
+;  MD[7]    ; CLK        ; 8.289 ; 8.289 ; Rise       ; CLK             ;
+;  MD[8]    ; CLK        ; 8.104 ; 8.104 ; Rise       ; CLK             ;
+;  MD[9]    ; CLK        ; 8.093 ; 8.093 ; Rise       ; CLK             ;
+;  MD[10]   ; CLK        ; 8.098 ; 8.098 ; Rise       ; CLK             ;
+;  MD[11]   ; CLK        ; 8.099 ; 8.099 ; Rise       ; CLK             ;
+;  MD[12]   ; CLK        ; 8.058 ; 8.058 ; Rise       ; CLK             ;
+;  MD[13]   ; CLK        ; 8.064 ; 8.064 ; Rise       ; CLK             ;
+;  MD[14]   ; CLK        ; 8.622 ; 8.622 ; Rise       ; CLK             ;
+;  MD[15]   ; CLK        ; 8.661 ; 8.661 ; Rise       ; CLK             ;
+; READY     ; CLK        ; 8.770 ; 8.770 ; Rise       ; CLK             ;
+; MCLK      ; msxclk     ; 4.627 ;       ; Rise       ; msxclk          ;
+; ADDR[*]   ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[0]  ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[1]  ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[2]  ; msxclk     ; 9.037 ; 9.037 ; Fall       ; msxclk          ;
+;  ADDR[3]  ; msxclk     ; 8.907 ; 8.907 ; Fall       ; msxclk          ;
+;  ADDR[4]  ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[5]  ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[6]  ; msxclk     ; 9.005 ; 9.005 ; Fall       ; msxclk          ;
+;  ADDR[7]  ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[8]  ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[9]  ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[10] ; msxclk     ; 7.802 ; 7.802 ; Fall       ; msxclk          ;
+;  ADDR[11] ; msxclk     ; 7.820 ; 7.820 ; Fall       ; msxclk          ;
+;  ADDR[12] ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[13] ; msxclk     ; 8.897 ; 8.897 ; Fall       ; msxclk          ;
+;  ADDR[14] ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+;  ADDR[15] ; msxclk     ; 8.454 ; 8.454 ; Fall       ; msxclk          ;
+; CS1       ; msxclk     ; 8.963 ; 8.963 ; Fall       ; msxclk          ;
+; CS2       ; msxclk     ; 9.132 ; 9.132 ; Fall       ; msxclk          ;
+; CS12      ; msxclk     ; 8.938 ; 8.938 ; Fall       ; msxclk          ;
+; DATA[*]   ; msxclk     ; 8.975 ; 8.975 ; Fall       ; msxclk          ;
+;  DATA[0]  ; msxclk     ; 8.982 ; 8.982 ; Fall       ; msxclk          ;
+;  DATA[1]  ; msxclk     ; 9.100 ; 9.100 ; Fall       ; msxclk          ;
+;  DATA[2]  ; msxclk     ; 8.976 ; 8.976 ; Fall       ; msxclk          ;
+;  DATA[3]  ; msxclk     ; 8.975 ; 8.975 ; Fall       ; msxclk          ;
+;  DATA[4]  ; msxclk     ; 9.075 ; 9.075 ; Fall       ; msxclk          ;
+;  DATA[5]  ; msxclk     ; 9.104 ; 9.104 ; Fall       ; msxclk          ;
+;  DATA[6]  ; msxclk     ; 9.073 ; 9.073 ; Fall       ; msxclk          ;
+;  DATA[7]  ; msxclk     ; 9.074 ; 9.074 ; Fall       ; msxclk          ;
+; IORQ      ; msxclk     ; 7.808 ; 7.808 ; Fall       ; msxclk          ;
+; M1        ; msxclk     ; 8.323 ; 8.323 ; Fall       ; msxclk          ;
+; MCLK      ; msxclk     ;       ; 4.627 ; Fall       ; msxclk          ;
+; MREQ      ; msxclk     ; 7.152 ; 7.152 ; Fall       ; msxclk          ;
+; RD        ; msxclk     ; 9.122 ; 9.122 ; Fall       ; msxclk          ;
+; RESET     ; msxclk     ; 8.920 ; 8.920 ; Fall       ; msxclk          ;
+; SLTSL[*]  ; msxclk     ; 7.144 ; 7.144 ; Fall       ; msxclk          ;
+;  SLTSL[0] ; msxclk     ; 7.144 ; 7.144 ; Fall       ; msxclk          ;
+;  SLTSL[1] ; msxclk     ; 7.165 ; 7.165 ; Fall       ; msxclk          ;
+; WR        ; msxclk     ; 9.583 ; 9.583 ; Fall       ; msxclk          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; PSW0        ; 8.404 ;    ;    ; 8.404 ;
+; SW[1]      ; PSW1        ; 8.288 ;    ;    ; 8.288 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; PSW0        ; 8.404 ;    ;    ; 8.404 ;
+; SW[1]      ; PSW1        ; 8.288 ;    ;    ; 8.288 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------------------------+
+; Output Enable Times                                                  ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; MD[*]     ; CLK        ; 6.977 ;      ; Rise       ; CLK             ;
+;  MD[0]    ; CLK        ; 7.495 ;      ; Rise       ; CLK             ;
+;  MD[1]    ; CLK        ; 7.492 ;      ; Rise       ; CLK             ;
+;  MD[2]    ; CLK        ; 7.562 ;      ; Rise       ; CLK             ;
+;  MD[3]    ; CLK        ; 7.446 ;      ; Rise       ; CLK             ;
+;  MD[4]    ; CLK        ; 7.666 ;      ; Rise       ; CLK             ;
+;  MD[5]    ; CLK        ; 7.546 ;      ; Rise       ; CLK             ;
+;  MD[6]    ; CLK        ; 6.977 ;      ; Rise       ; CLK             ;
+;  MD[7]    ; CLK        ; 7.481 ;      ; Rise       ; CLK             ;
+; ADDR[*]   ; msxclk     ; 7.130 ;      ; Fall       ; msxclk          ;
+;  ADDR[0]  ; msxclk     ; 7.163 ;      ; Fall       ; msxclk          ;
+;  ADDR[1]  ; msxclk     ; 7.152 ;      ; Fall       ; msxclk          ;
+;  ADDR[2]  ; msxclk     ; 7.132 ;      ; Fall       ; msxclk          ;
+;  ADDR[3]  ; msxclk     ; 7.130 ;      ; Fall       ; msxclk          ;
+;  ADDR[4]  ; msxclk     ; 7.132 ;      ; Fall       ; msxclk          ;
+;  ADDR[5]  ; msxclk     ; 7.745 ;      ; Fall       ; msxclk          ;
+;  ADDR[6]  ; msxclk     ; 7.211 ;      ; Fall       ; msxclk          ;
+;  ADDR[7]  ; msxclk     ; 7.210 ;      ; Fall       ; msxclk          ;
+;  ADDR[8]  ; msxclk     ; 7.250 ;      ; Fall       ; msxclk          ;
+;  ADDR[9]  ; msxclk     ; 7.363 ;      ; Fall       ; msxclk          ;
+;  ADDR[10] ; msxclk     ; 7.367 ;      ; Fall       ; msxclk          ;
+;  ADDR[11] ; msxclk     ; 7.366 ;      ; Fall       ; msxclk          ;
+;  ADDR[12] ; msxclk     ; 7.435 ;      ; Fall       ; msxclk          ;
+;  ADDR[13] ; msxclk     ; 7.652 ;      ; Fall       ; msxclk          ;
+;  ADDR[14] ; msxclk     ; 7.274 ;      ; Fall       ; msxclk          ;
+;  ADDR[15] ; msxclk     ; 7.230 ;      ; Fall       ; msxclk          ;
+; CS1       ; msxclk     ; 7.331 ;      ; Fall       ; msxclk          ;
+; CS2       ; msxclk     ; 7.372 ;      ; Fall       ; msxclk          ;
+; CS12      ; msxclk     ; 7.186 ;      ; Fall       ; msxclk          ;
+; DATA[*]   ; msxclk     ; 7.212 ;      ; Fall       ; msxclk          ;
+;  DATA[0]  ; msxclk     ; 7.869 ;      ; Fall       ; msxclk          ;
+;  DATA[1]  ; msxclk     ; 7.973 ;      ; Fall       ; msxclk          ;
+;  DATA[2]  ; msxclk     ; 7.294 ;      ; Fall       ; msxclk          ;
+;  DATA[3]  ; msxclk     ; 7.237 ;      ; Fall       ; msxclk          ;
+;  DATA[4]  ; msxclk     ; 7.212 ;      ; Fall       ; msxclk          ;
+;  DATA[5]  ; msxclk     ; 8.307 ;      ; Fall       ; msxclk          ;
+;  DATA[6]  ; msxclk     ; 7.363 ;      ; Fall       ; msxclk          ;
+;  DATA[7]  ; msxclk     ; 7.234 ;      ; Fall       ; msxclk          ;
+; SLTSL[*]  ; msxclk     ; 7.138 ;      ; Fall       ; msxclk          ;
+;  SLTSL[0] ; msxclk     ; 7.787 ;      ; Fall       ; msxclk          ;
+;  SLTSL[1] ; msxclk     ; 7.138 ;      ; Fall       ; msxclk          ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Minimum Output Enable Times                                          ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; MD[*]     ; CLK        ; 6.977 ;      ; Rise       ; CLK             ;
+;  MD[0]    ; CLK        ; 7.495 ;      ; Rise       ; CLK             ;
+;  MD[1]    ; CLK        ; 7.492 ;      ; Rise       ; CLK             ;
+;  MD[2]    ; CLK        ; 7.562 ;      ; Rise       ; CLK             ;
+;  MD[3]    ; CLK        ; 7.446 ;      ; Rise       ; CLK             ;
+;  MD[4]    ; CLK        ; 7.666 ;      ; Rise       ; CLK             ;
+;  MD[5]    ; CLK        ; 7.546 ;      ; Rise       ; CLK             ;
+;  MD[6]    ; CLK        ; 6.977 ;      ; Rise       ; CLK             ;
+;  MD[7]    ; CLK        ; 7.481 ;      ; Rise       ; CLK             ;
+; ADDR[*]   ; msxclk     ; 7.130 ;      ; Fall       ; msxclk          ;
+;  ADDR[0]  ; msxclk     ; 7.163 ;      ; Fall       ; msxclk          ;
+;  ADDR[1]  ; msxclk     ; 7.152 ;      ; Fall       ; msxclk          ;
+;  ADDR[2]  ; msxclk     ; 7.132 ;      ; Fall       ; msxclk          ;
+;  ADDR[3]  ; msxclk     ; 7.130 ;      ; Fall       ; msxclk          ;
+;  ADDR[4]  ; msxclk     ; 7.132 ;      ; Fall       ; msxclk          ;
+;  ADDR[5]  ; msxclk     ; 7.745 ;      ; Fall       ; msxclk          ;
+;  ADDR[6]  ; msxclk     ; 7.211 ;      ; Fall       ; msxclk          ;
+;  ADDR[7]  ; msxclk     ; 7.210 ;      ; Fall       ; msxclk          ;
+;  ADDR[8]  ; msxclk     ; 7.250 ;      ; Fall       ; msxclk          ;
+;  ADDR[9]  ; msxclk     ; 7.363 ;      ; Fall       ; msxclk          ;
+;  ADDR[10] ; msxclk     ; 7.367 ;      ; Fall       ; msxclk          ;
+;  ADDR[11] ; msxclk     ; 7.366 ;      ; Fall       ; msxclk          ;
+;  ADDR[12] ; msxclk     ; 7.435 ;      ; Fall       ; msxclk          ;
+;  ADDR[13] ; msxclk     ; 7.652 ;      ; Fall       ; msxclk          ;
+;  ADDR[14] ; msxclk     ; 7.274 ;      ; Fall       ; msxclk          ;
+;  ADDR[15] ; msxclk     ; 7.230 ;      ; Fall       ; msxclk          ;
+; CS1       ; msxclk     ; 7.331 ;      ; Fall       ; msxclk          ;
+; CS2       ; msxclk     ; 7.372 ;      ; Fall       ; msxclk          ;
+; CS12      ; msxclk     ; 7.186 ;      ; Fall       ; msxclk          ;
+; DATA[*]   ; msxclk     ; 7.212 ;      ; Fall       ; msxclk          ;
+;  DATA[0]  ; msxclk     ; 7.869 ;      ; Fall       ; msxclk          ;
+;  DATA[1]  ; msxclk     ; 7.973 ;      ; Fall       ; msxclk          ;
+;  DATA[2]  ; msxclk     ; 7.294 ;      ; Fall       ; msxclk          ;
+;  DATA[3]  ; msxclk     ; 7.237 ;      ; Fall       ; msxclk          ;
+;  DATA[4]  ; msxclk     ; 7.212 ;      ; Fall       ; msxclk          ;
+;  DATA[5]  ; msxclk     ; 8.307 ;      ; Fall       ; msxclk          ;
+;  DATA[6]  ; msxclk     ; 7.363 ;      ; Fall       ; msxclk          ;
+;  DATA[7]  ; msxclk     ; 7.234 ;      ; Fall       ; msxclk          ;
+; SLTSL[*]  ; msxclk     ; 7.138 ;      ; Fall       ; msxclk          ;
+;  SLTSL[0] ; msxclk     ; 7.787 ;      ; Fall       ; msxclk          ;
+;  SLTSL[1] ; msxclk     ; 7.138 ;      ; Fall       ; msxclk          ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Output Disable Times                                                          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; MD[*]     ; CLK        ; 6.977     ;           ; Rise       ; CLK             ;
+;  MD[0]    ; CLK        ; 7.495     ;           ; Rise       ; CLK             ;
+;  MD[1]    ; CLK        ; 7.492     ;           ; Rise       ; CLK             ;
+;  MD[2]    ; CLK        ; 7.562     ;           ; Rise       ; CLK             ;
+;  MD[3]    ; CLK        ; 7.446     ;           ; Rise       ; CLK             ;
+;  MD[4]    ; CLK        ; 7.666     ;           ; Rise       ; CLK             ;
+;  MD[5]    ; CLK        ; 7.546     ;           ; Rise       ; CLK             ;
+;  MD[6]    ; CLK        ; 6.977     ;           ; Rise       ; CLK             ;
+;  MD[7]    ; CLK        ; 7.481     ;           ; Rise       ; CLK             ;
+; ADDR[*]   ; msxclk     ; 7.130     ;           ; Fall       ; msxclk          ;
+;  ADDR[0]  ; msxclk     ; 7.163     ;           ; Fall       ; msxclk          ;
+;  ADDR[1]  ; msxclk     ; 7.152     ;           ; Fall       ; msxclk          ;
+;  ADDR[2]  ; msxclk     ; 7.132     ;           ; Fall       ; msxclk          ;
+;  ADDR[3]  ; msxclk     ; 7.130     ;           ; Fall       ; msxclk          ;
+;  ADDR[4]  ; msxclk     ; 7.132     ;           ; Fall       ; msxclk          ;
+;  ADDR[5]  ; msxclk     ; 7.745     ;           ; Fall       ; msxclk          ;
+;  ADDR[6]  ; msxclk     ; 7.211     ;           ; Fall       ; msxclk          ;
+;  ADDR[7]  ; msxclk     ; 7.210     ;           ; Fall       ; msxclk          ;
+;  ADDR[8]  ; msxclk     ; 7.250     ;           ; Fall       ; msxclk          ;
+;  ADDR[9]  ; msxclk     ; 7.363     ;           ; Fall       ; msxclk          ;
+;  ADDR[10] ; msxclk     ; 7.367     ;           ; Fall       ; msxclk          ;
+;  ADDR[11] ; msxclk     ; 7.366     ;           ; Fall       ; msxclk          ;
+;  ADDR[12] ; msxclk     ; 7.435     ;           ; Fall       ; msxclk          ;
+;  ADDR[13] ; msxclk     ; 7.652     ;           ; Fall       ; msxclk          ;
+;  ADDR[14] ; msxclk     ; 7.274     ;           ; Fall       ; msxclk          ;
+;  ADDR[15] ; msxclk     ; 7.230     ;           ; Fall       ; msxclk          ;
+; CS1       ; msxclk     ; 7.331     ;           ; Fall       ; msxclk          ;
+; CS2       ; msxclk     ; 7.372     ;           ; Fall       ; msxclk          ;
+; CS12      ; msxclk     ; 7.186     ;           ; Fall       ; msxclk          ;
+; DATA[*]   ; msxclk     ; 7.212     ;           ; Fall       ; msxclk          ;
+;  DATA[0]  ; msxclk     ; 7.869     ;           ; Fall       ; msxclk          ;
+;  DATA[1]  ; msxclk     ; 7.973     ;           ; Fall       ; msxclk          ;
+;  DATA[2]  ; msxclk     ; 7.294     ;           ; Fall       ; msxclk          ;
+;  DATA[3]  ; msxclk     ; 7.237     ;           ; Fall       ; msxclk          ;
+;  DATA[4]  ; msxclk     ; 7.212     ;           ; Fall       ; msxclk          ;
+;  DATA[5]  ; msxclk     ; 8.307     ;           ; Fall       ; msxclk          ;
+;  DATA[6]  ; msxclk     ; 7.363     ;           ; Fall       ; msxclk          ;
+;  DATA[7]  ; msxclk     ; 7.234     ;           ; Fall       ; msxclk          ;
+; SLTSL[*]  ; msxclk     ; 7.138     ;           ; Fall       ; msxclk          ;
+;  SLTSL[0] ; msxclk     ; 7.787     ;           ; Fall       ; msxclk          ;
+;  SLTSL[1] ; msxclk     ; 7.138     ;           ; Fall       ; msxclk          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                  ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; MD[*]     ; CLK        ; 6.977     ;           ; Rise       ; CLK             ;
+;  MD[0]    ; CLK        ; 7.495     ;           ; Rise       ; CLK             ;
+;  MD[1]    ; CLK        ; 7.492     ;           ; Rise       ; CLK             ;
+;  MD[2]    ; CLK        ; 7.562     ;           ; Rise       ; CLK             ;
+;  MD[3]    ; CLK        ; 7.446     ;           ; Rise       ; CLK             ;
+;  MD[4]    ; CLK        ; 7.666     ;           ; Rise       ; CLK             ;
+;  MD[5]    ; CLK        ; 7.546     ;           ; Rise       ; CLK             ;
+;  MD[6]    ; CLK        ; 6.977     ;           ; Rise       ; CLK             ;
+;  MD[7]    ; CLK        ; 7.481     ;           ; Rise       ; CLK             ;
+; ADDR[*]   ; msxclk     ; 7.130     ;           ; Fall       ; msxclk          ;
+;  ADDR[0]  ; msxclk     ; 7.163     ;           ; Fall       ; msxclk          ;
+;  ADDR[1]  ; msxclk     ; 7.152     ;           ; Fall       ; msxclk          ;
+;  ADDR[2]  ; msxclk     ; 7.132     ;           ; Fall       ; msxclk          ;
+;  ADDR[3]  ; msxclk     ; 7.130     ;           ; Fall       ; msxclk          ;
+;  ADDR[4]  ; msxclk     ; 7.132     ;           ; Fall       ; msxclk          ;
+;  ADDR[5]  ; msxclk     ; 7.745     ;           ; Fall       ; msxclk          ;
+;  ADDR[6]  ; msxclk     ; 7.211     ;           ; Fall       ; msxclk          ;
+;  ADDR[7]  ; msxclk     ; 7.210     ;           ; Fall       ; msxclk          ;
+;  ADDR[8]  ; msxclk     ; 7.250     ;           ; Fall       ; msxclk          ;
+;  ADDR[9]  ; msxclk     ; 7.363     ;           ; Fall       ; msxclk          ;
+;  ADDR[10] ; msxclk     ; 7.367     ;           ; Fall       ; msxclk          ;
+;  ADDR[11] ; msxclk     ; 7.366     ;           ; Fall       ; msxclk          ;
+;  ADDR[12] ; msxclk     ; 7.435     ;           ; Fall       ; msxclk          ;
+;  ADDR[13] ; msxclk     ; 7.652     ;           ; Fall       ; msxclk          ;
+;  ADDR[14] ; msxclk     ; 7.274     ;           ; Fall       ; msxclk          ;
+;  ADDR[15] ; msxclk     ; 7.230     ;           ; Fall       ; msxclk          ;
+; CS1       ; msxclk     ; 7.331     ;           ; Fall       ; msxclk          ;
+; CS2       ; msxclk     ; 7.372     ;           ; Fall       ; msxclk          ;
+; CS12      ; msxclk     ; 7.186     ;           ; Fall       ; msxclk          ;
+; DATA[*]   ; msxclk     ; 7.212     ;           ; Fall       ; msxclk          ;
+;  DATA[0]  ; msxclk     ; 7.869     ;           ; Fall       ; msxclk          ;
+;  DATA[1]  ; msxclk     ; 7.973     ;           ; Fall       ; msxclk          ;
+;  DATA[2]  ; msxclk     ; 7.294     ;           ; Fall       ; msxclk          ;
+;  DATA[3]  ; msxclk     ; 7.237     ;           ; Fall       ; msxclk          ;
+;  DATA[4]  ; msxclk     ; 7.212     ;           ; Fall       ; msxclk          ;
+;  DATA[5]  ; msxclk     ; 8.307     ;           ; Fall       ; msxclk          ;
+;  DATA[6]  ; msxclk     ; 7.363     ;           ; Fall       ; msxclk          ;
+;  DATA[7]  ; msxclk     ; 7.234     ;           ; Fall       ; msxclk          ;
+; SLTSL[*]  ; msxclk     ; 7.138     ;           ; Fall       ; msxclk          ;
+;  SLTSL[0] ; msxclk     ; 7.787     ;           ; Fall       ; msxclk          ;
+;  SLTSL[1] ; msxclk     ; 7.138     ;           ; Fall       ; msxclk          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 36       ; 0        ; 0        ; 9        ;
+; msxclk     ; CLK      ; 0        ; 34       ; 1        ; 1        ;
+; CLK        ; msxclk   ; 0        ; 0        ; 117      ; 0        ;
+; msxclk     ; msxclk   ; 0        ; 0        ; 0        ; 217      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 36       ; 0        ; 0        ; 9        ;
+; msxclk     ; CLK      ; 0        ; 34       ; 1        ; 1        ;
+; CLK        ; msxclk   ; 0        ; 0        ; 117      ; 0        ;
+; msxclk     ; msxclk   ; 0        ; 0        ; 0        ; 217      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 28    ; 28   ;
+; Unconstrained Input Port Paths  ; 143   ; 143  ;
+; Unconstrained Output Ports      ; 55    ; 55   ;
+; Unconstrained Output Port Paths ; 92    ; 92   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sun Apr 16 21:21:46 2017
+Info: Command: quartus_sta msxbus_simple -c msxbus_simple
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'msxbus_simple.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name msxclk msxclk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -6.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.186            -346.730 msxclk 
+    Info (332119):    -5.052            -159.674 CLK 
+Info (332146): Worst-case hold slack is -1.622
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.622              -1.622 CLK 
+    Info (332119):     1.412               0.000 msxclk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 CLK 
+    Info (332119):     0.234               0.000 msxclk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 438 megabytes
+    Info: Processing ended: Sun Apr 16 21:21:49 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

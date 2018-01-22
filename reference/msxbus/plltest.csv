@@ -1,0 +1,16 @@
+# system info plltest on 2016.03.02.01:21:27
+system_info:
+name,value
+DEVICE,EPM240T100C5
+DEVICE_FAMILY,MAX II
+GENERATION_ID,1456849287
+#
+#
+# Files generated for plltest on 2016.03.02.01:21:27
+files:
+filepath,kind,attributes,module,is_top
+plltest/simulation/plltest.v,VERILOG,,plltest,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module

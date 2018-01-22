@@ -758,7 +758,7 @@ F 1 "Led_Small" H 1275 1100 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 1200 50  0001 C CNN
 F 3 "" V 1450 1200 50  0000 C CNN
 	1    1450 1200
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L LED_Small D2
@@ -769,7 +769,7 @@ F 1 "Led_Small" H 1275 1350 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 1450 50  0001 C CNN
 F 3 "" V 1450 1450 50  0000 C CNN
 	1    1450 1450
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L LED_Small D3
@@ -780,7 +780,7 @@ F 1 "Led_Small" H 1275 1600 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 1700 50  0001 C CNN
 F 3 "" V 1450 1700 50  0000 C CNN
 	1    1450 1700
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L LED_Small D4
@@ -791,7 +791,7 @@ F 1 "Led_Small" H 1275 1850 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 1950 50  0001 C CNN
 F 3 "" V 1450 1950 50  0000 C CNN
 	1    1450 1950
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L LED_Small D5
@@ -802,7 +802,7 @@ F 1 "Led_Small" H 1275 2100 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 2200 50  0001 C CNN
 F 3 "" V 1450 2200 50  0000 C CNN
 	1    1450 2200
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L LED_Small D6
@@ -813,7 +813,7 @@ F 1 "Led_Small" H 1275 2350 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 2450 50  0001 C CNN
 F 3 "" V 1450 2450 50  0000 C CNN
 	1    1450 2450
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2050 1200 2450 1200
@@ -902,7 +902,7 @@ F 1 "Led_Small" H 1275 2850 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 2950 50  0001 C CNN
 F 3 "" V 1450 2950 50  0000 C CNN
 	1    1450 2950
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L LED_Small D8
@@ -913,7 +913,7 @@ F 1 "Led_Small" H 1275 3100 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 3200 50  0001 C CNN
 F 3 "" V 1450 3200 50  0000 C CNN
 	1    1450 3200
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L LED_Small D9
@@ -924,7 +924,7 @@ F 1 "Led_Small" H 1275 3350 50  0000 L CNN
 F 2 "LEDs:LED_0805_HandSoldering" V 1450 3450 50  0001 C CNN
 F 3 "" V 1450 3450 50  0000 C CNN
 	1    1450 3450
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2050 2950 2450 2950
@@ -1443,8 +1443,6 @@ F 3 "" H 6160 1350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6160 1350 6160 2600
-Wire Wire Line
 	6160 2300 6300 2300
 Wire Wire Line
 	6160 2400 6300 2400
@@ -1573,4 +1571,6 @@ Connection ~ 9100 3600
 Connection ~ 9100 3500
 Connection ~ 9100 3400
 Connection ~ 9100 2600
+Wire Wire Line
+	6160 1350 6160 2600
 $EndSCHEMATC

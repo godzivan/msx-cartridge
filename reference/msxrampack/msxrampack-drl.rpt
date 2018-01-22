@@ -1,0 +1,28 @@
+Drill report for C:/msys64/home/Miso Kim/msx-cartridge/msxrampack/msxrampack.kicad_pcb
+Created on 2017-01-08 오후 2:22:36
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'C:msxrampack.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.40mm  0.016"  (50 holes)
+    T2  0.74mm  0.029"  (90 holes)
+    T3  0.76mm  0.030"  (48 holes)
+    T4  1.00mm  0.039"  (5 holes)
+    T5  2.20mm  0.087"  (2 holes)
+
+    Total plated holes count 195
+
+
+Drill file 'C:msxrampack-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  1.00mm  0.039"  (2 holes)
+    T2  5.30mm  0.209"  (2 holes)
+
+    Total unplated holes count 4

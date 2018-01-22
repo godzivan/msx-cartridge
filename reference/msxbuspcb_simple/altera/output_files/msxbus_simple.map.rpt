@@ -1,0 +1,472 @@
+Analysis & Synthesis report for msxbus_simple
+Mon Apr 17 00:10:24 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                             ;
++-----------------------------+--------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Apr 17 00:10:24 2017      ;
+; Quartus II 64-Bit Version   ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name               ; msxbus_simple                              ;
+; Top-level Entity Name       ; msxbus_simple                              ;
+; Family                      ; MAX II                                     ;
+; Total logic elements        ; 119                                        ;
+; Total pins                  ; 70                                         ;
+; Total virtual pins          ; 0                                          ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                              ;
++-----------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM240T100C5       ;                    ;
+; Top-level entity name                                                      ; msxbus_simple      ; msxbus_simple      ;
+; Family name                                                                ; MAX II             ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; msxbus_simple.v                  ; yes             ; User Verilog HDL File  ; C:/msys64/home/anson/msx-cart/msxbuspcb_simple/altera/msxbus_simple.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Total logic elements                        ; 119     ;
+;     -- Combinational with no register       ; 115     ;
+;     -- Register only                        ; 0       ;
+;     -- Combinational with a register        ; 4       ;
+;                                             ;         ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 30      ;
+;     -- 3 input functions                    ; 54      ;
+;     -- 2 input functions                    ; 33      ;
+;     -- 1 input functions                    ; 2       ;
+;     -- 0 input functions                    ; 0       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 107     ;
+;     -- arithmetic mode                      ; 12      ;
+;     -- qfbk mode                            ; 0       ;
+;     -- register cascade mode                ; 0       ;
+;     -- synchronous clear/load mode          ; 0       ;
+;     -- asynchronous clear/load mode         ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 4       ;
+; Total logic cells in carry chains           ; 13      ;
+; I/O pins                                    ; 70      ;
+; Maximum fan-out node                        ; MODE[1] ;
+; Maximum fan-out                             ; 27      ;
+; Total fan-out                               ; 427     ;
+; Average fan-out                             ; 2.26    ;
++---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |msxbus_simple             ; 119 (119)   ; 4            ; 0          ; 70   ; 0            ; 115 (115)    ; 0 (0)             ; 4 (4)            ; 13 (13)         ; 0 (0)      ; |msxbus_simple      ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; READY$latch                                         ; Mux32               ; yes                    ;
+; ADDR[0]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[1]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[2]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[3]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[4]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[5]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[6]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[7]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[8]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[9]$latch                                       ; Decoder0            ; yes                    ;
+; ADDR[10]$latch                                      ; Decoder0            ; yes                    ;
+; ADDR[11]$latch                                      ; Decoder0            ; yes                    ;
+; ADDR[12]$latch                                      ; Decoder0            ; yes                    ;
+; ADDR[13]$latch                                      ; Decoder0            ; yes                    ;
+; ADDR[14]$latch                                      ; Decoder0            ; yes                    ;
+; ADDR[15]$latch                                      ; Decoder0            ; yes                    ;
+; MREQ$latch                                          ; Mux32               ; yes                    ;
+; IORQ$latch                                          ; Mux32               ; yes                    ;
+; SLTSL[0]$latch                                      ; SLTSL[1]            ; yes                    ;
+; SLTSL[1]$latch                                      ; SLTSL[1]            ; yes                    ;
+; CS1$latch                                           ; SLTSL[1]            ; yes                    ;
+; CS2$latch                                           ; SLTSL[1]            ; yes                    ;
+; CS12$latch                                          ; SLTSL[1]            ; yes                    ;
+; cycle[5]                                            ; Mux18               ; yes                    ;
+; cycle[6]                                            ; Mux18               ; yes                    ;
+; cycle[7]                                            ; Mux18               ; yes                    ;
+; cycle[8]                                            ; Mux18               ; yes                    ;
+; cycle[9]                                            ; Mux18               ; yes                    ;
+; cycle[10]                                           ; Mux18               ; yes                    ;
+; cycle[11]                                           ; Mux18               ; yes                    ;
+; cycle[12]                                           ; Mux18               ; yes                    ;
+; cycle[2]                                            ; Mux18               ; yes                    ;
+; cycle[3]                                            ; Mux18               ; yes                    ;
+; cycle[4]                                            ; Mux18               ; yes                    ;
+; cycle[1]                                            ; Mux18               ; yes                    ;
+; rw                                                  ; Mux32               ; yes                    ;
+; RD$latch                                            ; Mux32               ; yes                    ;
+; RD_935                                              ; Mux32               ; yes                    ;
+; WR$latch                                            ; WR                  ; yes                    ;
+; WR_922                                              ; WR                  ; yes                    ;
+; mio                                                 ; Mux32               ; yes                    ;
+; cycle[0]                                            ; Mux18               ; yes                    ;
+; MD[0]$latch                                         ; Mux0                ; yes                    ;
+; MD[0]_622                                           ; Mux0                ; yes                    ;
+; MD[1]$latch                                         ; Mux0                ; yes                    ;
+; MD[2]$latch                                         ; Mux0                ; yes                    ;
+; MD[3]$latch                                         ; Mux0                ; yes                    ;
+; MD[4]$latch                                         ; Mux0                ; yes                    ;
+; MD[5]$latch                                         ; Mux0                ; yes                    ;
+; MD[6]$latch                                         ; Mux0                ; yes                    ;
+; MD[7]$latch                                         ; Mux0                ; yes                    ;
+; MD[8]$latch                                         ; MODE[1]             ; yes                    ;
+; MD[8]_791                                           ; MODE[1]             ; yes                    ;
+; MD[9]$latch                                         ; MODE[1]             ; yes                    ;
+; MD[10]$latch                                        ; MODE[1]             ; yes                    ;
+; MD[11]$latch                                        ; MODE[1]             ; yes                    ;
+; MD[12]$latch                                        ; MODE[1]             ; yes                    ;
+; DATA[0]$latch                                       ; DATA[0]             ; yes                    ;
+; DATA[0]_481                                         ; DATA[0]             ; yes                    ;
+; DATA[1]$latch                                       ; DATA[0]             ; yes                    ;
+; DATA[2]$latch                                       ; DATA[0]             ; yes                    ;
+; DATA[3]$latch                                       ; DATA[0]             ; yes                    ;
+; DATA[4]$latch                                       ; DATA[0]             ; yes                    ;
+; DATA[5]$latch                                       ; DATA[0]             ; yes                    ;
+; DATA[6]$latch                                       ; DATA[0]             ; yes                    ;
+; DATA[7]$latch                                       ; DATA[0]             ; yes                    ;
+; Number of user-specified and inferred latches = 67  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |msxbus_simple|Mux18       ;
+; 1:1                ; 13 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |msxbus_simple|Mux1        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Mon Apr 17 00:10:20 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off msxbus_simple -c msxbus_simple
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 3 design units, including 1 entities, in source file sram_controller.vhd
+    Info (12022): Found design unit 1: sram_pkg
+    Info (12022): Found design unit 2: sram_controller-beh_component
+    Info (12023): Found entity 1: sram_controller
+Info (12021): Found 1 design units, including 1 entities, in source file msxbus_simple.v
+    Info (12023): Found entity 1: msxbus_simple
+Info (12127): Elaborating entity "msxbus_simple" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(40): object "wdata" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(42): object "ready1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(42): object "mready0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(42): object "mready1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(44): object "wr0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(44): object "rd0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(44): object "iorq0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(44): object "mreq0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(47): object "cnt" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(49): object "timeout" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at msxbus_simple.v(52): object "slt" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at msxbus_simple.v(127): truncated value with size 32 to match size of target (13)
+Warning (10230): Verilog HDL assignment warning at msxbus_simple.v(132): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at msxbus_simple.v(133): truncated value with size 32 to match size of target (1)
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "READY", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "cycle", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "mio", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "rw", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "MREQ", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "IORQ", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "RD", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "WR", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "MD", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "DATA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "SLTSL", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "CS1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "CS2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "CS12", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "ADDR", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at msxbus_simple.v(87): inferring latch(es) for variable "reset", which holds its previous value in one or more paths through the always construct
+Warning (10034): Output port "RFSH" at msxbus_simple.v(36) has no driver
+Info (10041): Inferred latch for "reset" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[0]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[1]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[2]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[3]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[4]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[5]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[6]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[7]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[8]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[9]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[10]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[11]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[12]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[13]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[14]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "ADDR[15]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "CS12" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "CS2" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "CS1" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "SLTSL[0]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "SLTSL[1]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "DATA[0]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "DATA[1]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "DATA[2]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "DATA[3]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "DATA[4]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "DATA[5]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "DATA[6]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "DATA[7]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[0]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[1]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[2]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[3]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[4]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[5]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[6]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[7]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[8]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[9]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[10]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[11]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[12]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[13]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[14]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[15]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[16]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[17]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[18]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[19]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MD[20]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "WR" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "RD" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "IORQ" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "MREQ" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "rw" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "mio" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[0]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[1]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[2]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[3]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[4]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[5]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[6]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[7]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[8]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[9]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[10]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[11]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "cycle[12]" at msxbus_simple.v(87)
+Info (10041): Inferred latch for "READY" at msxbus_simple.v(87)
+Warning (13012): Latch READY$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch cycle[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch WR_922 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rw
+Warning (13012): Latch cycle[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch MD[0]_622 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MODE[1]
+Warning (13012): Latch DATA[0]_481 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rw
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "RESET" is stuck at VCC
+    Warning (13410): Pin "SWOUT" is stuck at GND
+    Warning (13410): Pin "RFSH" is stuck at GND
+Info (21057): Implemented 189 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21060): Implemented 29 bidirectional pins
+    Info (21061): Implemented 119 logic cells
+Info (144001): Generated suppressed messages file C:/msys64/home/anson/msx-cart/msxbuspcb_simple/altera/output_files/msxbus_simple.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 70 warnings
+    Info: Peak virtual memory: 533 megabytes
+    Info: Processing ended: Mon Apr 17 00:10:24 2017
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/msys64/home/anson/msx-cart/msxbuspcb_simple/altera/output_files/msxbus_simple.map.smsg.
+
+
