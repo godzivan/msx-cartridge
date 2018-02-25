@@ -11,18 +11,18 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 5398)
+    (start_pass_no 4925)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 2.0)
+      (against_preferred_direction_trace_costs 2.3)
     )
     (layer_rule B.Cu
       (active on)
       (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 2.0)
+      (against_preferred_direction_trace_costs 1.8)
     )
   )
   (rule
@@ -76,10 +76,9 @@
     /A4 /D1 /D0 /D3 /D2 /D5 /D4 /D7
     /D6 /CLK +3V3 "Net-(P1-Pad5)" "Net-(P1-Pad16)" /RA8 /RA10 /RA11
     /RA15 /RA12 /RA9 /RA13 /RA14 "Net-(P1-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad3)"
-    /SLTSL "Net-(P1-Pad6)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad50)" /M1 /SOUNDIN /RA6
-    /RA7 /RS3 /RS0 /RA2 /RA1 /RS1 /RA3 /RA0
-    /RA4 /RA5 /RS2 /WAIT0 /INT0 /BDIR0 /RST0 /nIORQ
-    "/LE_D" /nWR0 /WR0
+    /SLTSL "Net-(P1-Pad6)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad50)" /M1 /RC17 /RC18
+    /RC27 /RC22 /RC23 /RC24 /RC25 /RC19 /RC16 /RC26
+    /RC20 /RC21 /nRC24 /TP2 /TP1 /TP0 /SOUNDIN
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

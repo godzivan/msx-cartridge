@@ -71,10 +71,10 @@ F 3 "" H 10130 1925 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS245 U3
+L 74LS245 U2
 U 1 1 5A3E9A23
 P 5280 3425
-F 0 "U3" H 5380 4000 50  0000 L BNN
+F 0 "U2" H 5380 4000 50  0000 L BNN
 F 1 "74LS245" H 5330 2850 50  0000 L TNN
 F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5280 3425 50  0001 C CNN
 F 3 "" H 5280 3425 50  0001 C CNN
@@ -226,15 +226,15 @@ F 3 "" H 1030 1725 50  0000 C CNN
 	1    1030 1725
 	1    0    0    -1  
 $EndComp
-Text Label 8570 2010 0    60   ~ 0
+Text Label 8555 2110 0    60   ~ 0
 RD
 Text Notes 7380 7515 0    98   ~ 0
-RPMP V1 only with 74HC245
+RPMP V0.7 only with 74HC245
 $Comp
-L 74LS245 U5
+L 74LS245 U4
 U 1 1 5A44D20E
 P 7780 3415
-F 0 "U5" H 7880 3990 50  0000 L BNN
+F 0 "U4" H 7880 3990 50  0000 L BNN
 F 1 "74LS245" H 7830 2840 50  0000 L TNN
 F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 7780 3415 50  0001 C CNN
 F 3 "" H 7780 3415 50  0001 C CNN
@@ -242,10 +242,10 @@ F 3 "" H 7780 3415 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS245 U2
+L 74LS245 U1
 U 1 1 5A44D22E
 P 5280 2025
-F 0 "U2" H 5380 2600 50  0000 L BNN
+F 0 "U1" H 5380 2600 50  0000 L BNN
 F 1 "74LS245" H 5330 1450 50  0000 L TNN
 F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5280 2025 50  0001 C CNN
 F 3 "" H 5280 2025 50  0001 C CNN
@@ -269,65 +269,61 @@ RD4
 Text Label 6830 3615 0    60   ~ 0
 RD6
 Text Label 4330 2325 0    60   ~ 0
-RA8
-Text Label 4330 1925 0    60   ~ 0
-RA9
-Text Label 4330 2125 0    60   ~ 0
 RA10
-Text Label 4330 2025 0    60   ~ 0
-RA11
-Text Label 4330 2225 0    60   ~ 0
-RA12
-Text Label 4330 2525 0    60   ~ 0
-RA13
-Text Label 4330 2425 0    60   ~ 0
+Text Label 4330 1925 0    60   ~ 0
 RA14
+Text Label 4330 2125 0    60   ~ 0
+RA8
+Text Label 4330 2025 0    60   ~ 0
+RA9
+Text Label 4330 2225 0    60   ~ 0
+RA11
+Text Label 4330 2525 0    60   ~ 0
+RA12
+Text Label 4330 2425 0    60   ~ 0
+RA13
 Text Label 4330 1825 0    60   ~ 0
 RA15
 Text Label 8580 2915 0    60   ~ 0
-A1
-Text Label 8580 3015 0    60   ~ 0
-A0
-Text Label 8580 3115 0    60   ~ 0
-A3
-Text Label 8580 3215 0    60   ~ 0
-A2
-Text Label 8580 3315 0    60   ~ 0
-A5
-Text Label 8580 3415 0    60   ~ 0
-A4
-Text Label 8580 3515 0    60   ~ 0
-A7
-Text Label 8580 3615 0    60   ~ 0
-A6
-Text Label 5980 2325 0    60   ~ 0
-A8
-Text Label 5980 1925 0    60   ~ 0
 A9
-Text Label 5980 2125 0    60   ~ 0
-A10
-Text Label 5980 2025 0    60   ~ 0
+Text Label 8580 3015 0    60   ~ 0
+A8
+Text Label 8580 3115 0    60   ~ 0
 A11
-Text Label 5980 2225 0    60   ~ 0
-A12
-Text Label 5980 2525 0    60   ~ 0
+Text Label 8580 3215 0    60   ~ 0
+A10
+Text Label 8580 3315 0    60   ~ 0
 A13
-Text Label 5980 2425 0    60   ~ 0
-A14
-Text Label 5980 1825 0    60   ~ 0
+Text Label 8580 3415 0    60   ~ 0
+A12
+Text Label 8580 3515 0    60   ~ 0
 A15
+Text Label 8580 3615 0    60   ~ 0
+A14
+Text Label 5980 2325 0    60   ~ 0
+A2
+Text Label 5980 1925 0    60   ~ 0
+A6
+Text Label 5980 2125 0    60   ~ 0
+A0
+Text Label 5980 2025 0    60   ~ 0
+A1
+Text Label 5980 2225 0    60   ~ 0
+A3
+Text Label 5980 2525 0    60   ~ 0
+A4
+Text Label 5980 2425 0    60   ~ 0
+A5
+Text Label 5980 1825 0    60   ~ 0
+A7
 Text Label 6730 2110 0    60   ~ 0
 RC19
-Text Label 8550 2210 0    60   ~ 0
-RC20
-Text Label 5985 4820 0    60   ~ 0
+Text Label 8750 4800 0    60   ~ 0
 WAIT
-Text Label 5940 5455 0    60   ~ 0
+Text Label 8705 5435 0    60   ~ 0
 BUSDIR
-Text Label 5985 5140 0    60   ~ 0
+Text Label 8750 5120 0    60   ~ 0
 INT
-Text Label 8555 2310 0    60   ~ 0
-RC21
 Text Label 4350 1525 0    60   ~ 0
 GND
 NoConn ~ 9480 1475
@@ -336,62 +332,60 @@ NoConn ~ 10780 1475
 NoConn ~ 10780 1675
 NoConn ~ 10780 3775
 NoConn ~ 10780 3875
-Text Notes 7270 7260 0    60   ~ 0
+Text Notes 7285 7245 0    60   ~ 0
 1 1
 Text Notes 8175 7650 0    60   ~ 0
 2018.2.24
 Text Label 4345 1625 0    60   ~ 0
-GND
+RC26
 Text Label 4335 3025 0    60   ~ 0
 RC25
 $Comp
-L 74LS05 U1
+L 74LS05 U5
 U 1 1 5A5A2AEA
-P 5380 4820
-F 0 "U1" H 5575 4935 50  0000 C CNN
-F 1 "74LS05" H 5570 4695 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5380 4820 50  0001 C CNN
-F 3 "" H 5380 4820 50  0001 C CNN
-	1    5380 4820
+P 8145 4800
+F 0 "U5" H 8340 4915 50  0000 C CNN
+F 1 "74LS05" H 8335 4675 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 8145 4800 50  0001 C CNN
+F 3 "" H 8145 4800 50  0001 C CNN
+	1    8145 4800
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS05 U1
+L 74LS05 U5
 U 2 1 5A5A2B7F
-P 5385 5140
-F 0 "U1" H 5580 5255 50  0000 C CNN
-F 1 "74LS05" H 5575 5015 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14W_7.5x9.0mm_Pitch1.27mm" H 5385 5140 50  0001 C CNN
-F 3 "" H 5385 5140 50  0001 C CNN
-	2    5385 5140
+P 8150 5120
+F 0 "U5" H 8345 5235 50  0000 C CNN
+F 1 "74LS05" H 8340 4995 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14W_7.5x9.0mm_Pitch1.27mm" H 8150 5120 50  0001 C CNN
+F 3 "" H 8150 5120 50  0001 C CNN
+	2    8150 5120
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS05 U1
+L 74LS05 U5
 U 3 1 5A5A2BC6
-P 5385 5455
-F 0 "U1" H 5580 5570 50  0000 C CNN
-F 1 "74LS05" H 5575 5330 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5385 5455 50  0001 C CNN
-F 3 "" H 5385 5455 50  0001 C CNN
-	3    5385 5455
+P 8150 5435
+F 0 "U5" H 8345 5550 50  0000 C CNN
+F 1 "74LS05" H 8340 5310 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 8150 5435 50  0001 C CNN
+F 3 "" H 8150 5435 50  0001 C CNN
+	3    8150 5435
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS05 U1
+L 74LS05 U5
 U 4 1 5A5A2C1F
-P 5385 5770
-F 0 "U1" H 5580 5885 50  0000 C CNN
-F 1 "74LS05" H 5575 5645 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5385 5770 50  0001 C CNN
-F 3 "" H 5385 5770 50  0001 C CNN
-	4    5385 5770
+P 8150 5750
+F 0 "U5" H 8345 5865 50  0000 C CNN
+F 1 "74LS05" H 8340 5625 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 8150 5750 50  0001 C CNN
+F 3 "" H 8150 5750 50  0001 C CNN
+	4    8150 5750
 	1    0    0    -1  
 $EndComp
-Text Label 5940 5770 0    60   ~ 0
+Text Label 8705 5750 0    60   ~ 0
 RESET
-Text Label 8555 2410 0    60   ~ 0
-RC22
 Text Label 9575 1875 0    60   ~ 0
 M1
 $Comp
@@ -438,42 +432,20 @@ F 3 "" H 1030 4225 50  0000 C CNN
 	1    1030 4225
 	1    0    0    -1  
 $EndComp
-Text Label 9580 3875 0    60   ~ 0
-SOUNDIN
 Text Label 8540 1810 0    60   ~ 0
 SLTSL
 Text Label 8560 1910 0    60   ~ 0
 IORQ
-Text Label 6730 2510 0    60   ~ 0
-BDIR0
-Text Label 6730 2410 0    60   ~ 0
-RST0
 Text Label 6720 1810 0    60   ~ 0
 RC16
 Text Label 6725 1910 0    60   ~ 0
 RC17
 Text Label 6725 2010 0    60   ~ 0
 RC18
-Text Label 6730 2210 0    60   ~ 0
-WAIT0
-Text Label 6730 2310 0    60   ~ 0
-INT0
-Text Label 4570 5455 0    60   ~ 0
-BDIR0
-Text Label 4570 4820 0    60   ~ 0
-WAIT0
-Text Label 4575 5140 0    60   ~ 0
-INT0
-Text Label 4570 5770 0    60   ~ 0
-RST0
-Text Label 6825 3815 0    60   ~ 0
+Text Label 6835 3915 0    60   ~ 0
 RC24
-Text Label 8550 2110 0    60   ~ 0
+Text Label 8560 2010 0    60   ~ 0
 RESET
-Text Label 8555 2510 0    60   ~ 0
-RC23
-NoConn ~ 9480 1875
-NoConn ~ 10780 1975
 Text Label 3380 3525 0    60   ~ 0
 RC16
 Text Label 3380 3625 0    60   ~ 0
@@ -554,8 +526,182 @@ Text Label 1135 3625 0    60   ~ 0
 RC26
 Text Label 1130 2425 0    60   ~ 0
 RC27
-NoConn ~ 9475 3875
-NoConn ~ 10780 3475
+$Comp
+L 74LS05 U5
+U 5 1 5A907A86
+P 8155 6100
+F 0 "U5" H 8350 6215 50  0000 C CNN
+F 1 "74LS05" H 8345 5975 50  0000 C CNN
+F 2 "" H 8155 6100 50  0001 C CNN
+F 3 "" H 8155 6100 50  0001 C CNN
+	5    8155 6100
+	1    0    0    -1  
+$EndComp
+Text Label 8675 6100 0    60   ~ 0
+nRC24
+Text Label 7355 6100 0    60   ~ 0
+RC24
+$Comp
+L R R1
+U 1 1 5A90827C
+P 9280 6100
+F 0 "R1" V 9360 6100 50  0000 C CNN
+F 1 "R" V 9280 6100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 9210 6100 50  0001 C CNN
+F 3 "" H 9280 6100 50  0001 C CNN
+	1    9280 6100
+	0    -1   -1   0   
+$EndComp
+Text Label 9660 6100 2    60   ~ 0
+VCC
+$Comp
+L 74LS245 U3
+U 1 1 5A909313
+P 7750 2010
+F 0 "U3" H 7850 2585 50  0000 L BNN
+F 1 "74LS245" H 7800 1435 50  0000 L TNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 7750 2010 50  0001 C CNN
+F 3 "" H 7750 2010 50  0001 C CNN
+	1    7750 2010
+	1    0    0    1   
+$EndComp
+Text Label 6820 1510 0    60   ~ 0
+GND
+Text Label 6815 1610 0    60   ~ 0
+GND
+Text Label 1130 4825 0    60   ~ 0
+RC17
+Text Label 1130 5625 0    60   ~ 0
+RD0
+Text Label 1130 4425 0    60   ~ 0
+RD2
+Text Label 1130 4525 0    60   ~ 0
+RD3
+Text Label 1130 4625 0    60   ~ 0
+RD4
+Text Label 1130 5725 0    60   ~ 0
+RD5
+Text Label 1130 5825 0    60   ~ 0
+RD6
+Text Label 1130 6225 0    60   ~ 0
+GND
+Text Label 1130 5525 0    60   ~ 0
+GND
+Text Label 1130 4725 0    60   ~ 0
+GND
+Text Label 1130 5125 0    60   ~ 0
+V3.3
+Text Label 1130 4325 0    60   ~ 0
+V3.3
+Text Label 1130 5325 0    60   ~ 0
+RA9
+Text Label 1130 5225 0    60   ~ 0
+RA10
+Text Label 1130 5425 0    60   ~ 0
+RA11
+Text Label 1130 5925 0    60   ~ 0
+RA13
+Text Label 1130 5025 0    60   ~ 0
+RC22
+Text Label 1140 6025 0    60   ~ 0
+RC19
+Text Label 1135 6125 0    60   ~ 0
+RC26
+Text Label 1130 4925 0    60   ~ 0
+RC27
+Text Label 3380 6025 0    60   ~ 0
+RC16
+Text Label 3380 6125 0    60   ~ 0
+RC20
+Text Label 3380 5125 0    60   ~ 0
+RC24
+Text Label 3380 5325 0    60   ~ 0
+RC25
+Text Label 3380 5625 0    60   ~ 0
+RD1
+Text Label 3380 5525 0    60   ~ 0
+RD7
+Text Label 3380 4325 0    60   ~ 0
+VCC
+Text Label 3380 4425 0    60   ~ 0
+VCC
+Text Label 3380 4525 0    60   ~ 0
+GND
+Text Label 3380 5225 0    60   ~ 0
+GND
+Text Label 3380 5725 0    60   ~ 0
+GND
+Text Label 3380 5925 0    60   ~ 0
+GND
+Text Label 3385 4925 0    60   ~ 0
+GND
+Text Label 3380 5425 0    60   ~ 0
+RA8
+Text Label 3380 5825 0    60   ~ 0
+RA12
+Text Label 3380 4625 0    60   ~ 0
+RA14
+Text Label 3380 4725 0    60   ~ 0
+RA15
+Text Label 3380 5025 0    60   ~ 0
+RC23
+Text Label 3380 4825 0    60   ~ 0
+RC18
+Text Label 3380 6225 0    60   ~ 0
+RC21
+Text Label 6835 3815 0    60   ~ 0
+GND
+Text Label 7350 4800 0    60   ~ 0
+RC21
+Text Label 6730 2210 0    60   ~ 0
+RC20
+Text Label 8555 2210 0    60   ~ 0
+MREQ
+Text Label 7355 5120 0    60   ~ 0
+RC22
+Text Label 7355 5435 0    60   ~ 0
+RC23
+Text Label 8565 2310 0    60   ~ 0
+WR
+Text Label 8560 2410 0    60   ~ 0
+M1
+Text Label 8560 2510 0    60   ~ 0
+CLK
+Text Label 7355 5750 0    60   ~ 0
+RC27
+$Comp
+L TEST_1P J3
+U 1 1 5A924E75
+P 4285 4890
+F 0 "J3" H 4285 5160 50  0000 C CNN
+F 1 "TEST_1P" H 4285 5090 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4485 4890 50  0001 C CNN
+F 3 "" H 4485 4890 50  0001 C CNN
+	1    4285 4890
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P J4
+U 1 1 5A924F76
+P 4645 4890
+F 0 "J4" H 4645 5160 50  0000 C CNN
+F 1 "TEST_1P" H 4645 5090 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4845 4890 50  0001 C CNN
+F 3 "" H 4845 4890 50  0001 C CNN
+	1    4645 4890
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P J5
+U 1 1 5A925129
+P 5000 4895
+F 0 "J5" H 5000 5165 50  0000 C CNN
+F 1 "TEST_1P" H 5000 5095 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 5200 4895 50  0001 C CNN
+F 3 "" H 5200 4895 50  0001 C CNN
+	1    5000 4895
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	5980 3925 6380 3925
 Wire Wire Line
@@ -762,25 +908,25 @@ Wire Wire Line
 Wire Wire Line
 	10780 3675 10780 3575
 Wire Wire Line
-	4930 4820 4435 4820
+	7695 4800 7200 4800
 Wire Wire Line
-	5830 4820 6370 4820
+	8595 4800 9135 4800
 Wire Wire Line
-	5835 5140 6365 5140
+	8600 5120 9130 5120
 Wire Wire Line
-	6365 5140 6365 5145
+	9130 5120 9130 5125
 Wire Wire Line
-	6380 5450 6380 5445
+	9145 5430 9145 5425
 Wire Wire Line
-	5835 5455 6380 5455
+	8600 5435 9145 5435
 Wire Wire Line
-	5835 5770 6390 5770
+	8600 5750 9155 5750
 Wire Wire Line
-	6390 5770 6390 5765
+	9155 5750 9155 5745
 Wire Wire Line
-	4935 5455 4415 5455
+	7700 5435 7180 5435
 Wire Wire Line
-	4935 5770 4425 5770
+	7700 5750 7190 5750
 Wire Wire Line
 	10380 3475 10780 3475
 Wire Wire Line
@@ -818,9 +964,7 @@ Wire Wire Line
 Wire Wire Line
 	9190 4430 9190 3575
 Wire Wire Line
-	4935 5140 4435 5140
-Wire Wire Line
-	4580 1625 3860 1625
+	7700 5120 7200 5120
 Wire Wire Line
 	830  3025 830  3875
 Connection ~ 830  3725
@@ -850,7 +994,6 @@ Connection ~ 3860 4525
 Connection ~ 3860 4925
 Connection ~ 3860 5225
 Connection ~ 3860 5725
-Connection ~ 3860 5925
 Wire Wire Line
 	6650 1810 7050 1810
 Wire Wire Line
@@ -961,103 +1104,20 @@ Wire Wire Line
 	820  2625 1430 2625
 Wire Wire Line
 	820  1825 1430 1825
-$Comp
-L 74LS05 U1
-U 5 1 5A907A86
-P 5390 6120
-F 0 "U1" H 5585 6235 50  0000 C CNN
-F 1 "74LS05" H 5580 5995 50  0000 C CNN
-F 2 "" H 5390 6120 50  0001 C CNN
-F 3 "" H 5390 6120 50  0001 C CNN
-	5    5390 6120
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	4940 6120 4460 6120
-Text Label 5910 6120 0    60   ~ 0
-nRC24
-Text Label 4590 6120 0    60   ~ 0
-RC24
-$Comp
-L R R1
-U 1 1 5A90827C
-P 6515 6120
-F 0 "R1" V 6595 6120 50  0000 C CNN
-F 1 "R" V 6515 6120 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 6445 6120 50  0001 C CNN
-F 3 "" H 6515 6120 50  0001 C CNN
-	1    6515 6120
-	0    -1   -1   0   
-$EndComp
+	7705 6100 7225 6100
 Wire Wire Line
-	5840 6120 6365 6120
+	8605 6100 9130 6100
 Wire Wire Line
-	6665 6120 7035 6120
-Text Label 6895 6120 2    60   ~ 0
-VCC
-$Comp
-L 74LS245 U4
-U 1 1 5A909313
-P 7750 2010
-F 0 "U4" H 7850 2585 50  0000 L BNN
-F 1 "74LS245" H 7800 1435 50  0000 L TNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 7750 2010 50  0001 C CNN
-F 3 "" H 7750 2010 50  0001 C CNN
-	1    7750 2010
-	1    0    0    1   
-$EndComp
+	9430 6100 9800 6100
 Wire Wire Line
 	8850 1910 8450 1910
 Wire Wire Line
 	6680 3815 7080 3815
-Text Label 6820 1510 0    60   ~ 0
-GND
-Text Label 6815 1610 0    60   ~ 0
-GND
 Wire Wire Line
 	6650 1510 7050 1510
 Wire Wire Line
 	6650 1610 7050 1610
-Text Label 1130 4825 0    60   ~ 0
-RC17
-Text Label 1130 5625 0    60   ~ 0
-RD0
-Text Label 1130 4425 0    60   ~ 0
-RD2
-Text Label 1130 4525 0    60   ~ 0
-RD3
-Text Label 1130 4625 0    60   ~ 0
-RD4
-Text Label 1130 5725 0    60   ~ 0
-RD5
-Text Label 1130 5825 0    60   ~ 0
-RD6
-Text Label 1130 6225 0    60   ~ 0
-GND
-Text Label 1130 5525 0    60   ~ 0
-GND
-Text Label 1130 4725 0    60   ~ 0
-GND
-Text Label 1130 5125 0    60   ~ 0
-V3.3
-Text Label 1130 4325 0    60   ~ 0
-V3.3
-Text Label 1130 5325 0    60   ~ 0
-RA9
-Text Label 1130 5225 0    60   ~ 0
-RA10
-Text Label 1130 5425 0    60   ~ 0
-RA11
-Text Label 1130 5925 0    60   ~ 0
-RA13
-Text Label 1130 5025 0    60   ~ 0
-RC22
-Text Label 1140 6025 0    60   ~ 0
-RC19
-Text Label 1135 6125 0    60   ~ 0
-RC26
-Text Label 1130 4925 0    60   ~ 0
-RC27
 Wire Wire Line
 	1030 4425 1430 4425
 Wire Wire Line
@@ -1098,46 +1158,6 @@ Wire Wire Line
 	820  5125 1430 5125
 Wire Wire Line
 	820  4325 1430 4325
-Text Label 3380 6025 0    60   ~ 0
-RC16
-Text Label 3380 6125 0    60   ~ 0
-RC20
-Text Label 3380 5125 0    60   ~ 0
-RC24
-Text Label 3380 5325 0    60   ~ 0
-RC25
-Text Label 3380 5625 0    60   ~ 0
-RD1
-Text Label 3380 5525 0    60   ~ 0
-RD7
-Text Label 3380 4325 0    60   ~ 0
-VCC
-Text Label 3380 4425 0    60   ~ 0
-VCC
-Text Label 3380 4525 0    60   ~ 0
-GND
-Text Label 3380 5225 0    60   ~ 0
-GND
-Text Label 3380 5725 0    60   ~ 0
-GND
-Text Label 3380 5925 0    60   ~ 0
-GND
-Text Label 3385 4925 0    60   ~ 0
-GND
-Text Label 3380 5425 0    60   ~ 0
-RA8
-Text Label 3380 5825 0    60   ~ 0
-RA12
-Text Label 3380 4625 0    60   ~ 0
-RA14
-Text Label 3380 4725 0    60   ~ 0
-RA15
-Text Label 3380 5025 0    60   ~ 0
-RC23
-Text Label 3380 4825 0    60   ~ 0
-RC18
-Text Label 3380 6225 0    60   ~ 0
-RC21
 Wire Wire Line
 	3330 4325 3730 4325
 Wire Wire Line
@@ -1167,7 +1187,7 @@ Wire Wire Line
 Wire Wire Line
 	3330 5825 3730 5825
 Wire Wire Line
-	3860 5925 3330 5925
+	3330 5925 4635 5925
 Wire Wire Line
 	3330 6025 3730 6025
 Wire Wire Line
@@ -1178,6 +1198,74 @@ Wire Wire Line
 	3860 4925 3330 4925
 Wire Wire Line
 	3330 4825 3745 4825
-Text Label 6830 3915 0    60   ~ 0
-GND
+Wire Wire Line
+	4580 1625 4180 1625
+Wire Wire Line
+	4285 4890 4285 5070
+Wire Wire Line
+	4645 4890 4645 5065
+Wire Wire Line
+	5000 4895 5000 5060
+Text Label 6735 2310 0    60   ~ 0
+TP0
+Text Label 6745 2410 0    60   ~ 0
+TP1
+Text Label 6745 2510 0    60   ~ 0
+TP2
+Text Label 4285 5045 1    60   ~ 0
+TP0
+Text Label 4645 5040 1    60   ~ 0
+TP1
+Text Label 5000 5040 1    60   ~ 0
+TP2
+$Comp
+L R R2
+U 1 1 5A927298
+P 4350 5695
+F 0 "R2" V 4430 5695 50  0000 C CNN
+F 1 "R" V 4350 5695 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4280 5695 50  0001 C CNN
+F 3 "" H 4350 5695 50  0001 C CNN
+	1    4350 5695
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5A927341
+P 4635 5695
+F 0 "C1" H 4660 5795 50  0000 L CNN
+F 1 "C" H 4660 5595 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4673 5545 50  0001 C CNN
+F 3 "" H 4635 5695 50  0001 C CNN
+	1    4635 5695
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C2
+U 1 1 5A9273DC
+P 5015 5545
+F 0 "C2" H 5040 5645 50  0000 L CNN
+F 1 "CP" H 5040 5445 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_4x5.3" H 5053 5395 50  0001 C CNN
+F 3 "" H 5015 5545 50  0001 C CNN
+	1    5015 5545
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4130 5545 4865 5545
+Connection ~ 4350 5545
+Connection ~ 4635 5545
+Text Label 4155 5545 0    60   ~ 0
+RC18
+Wire Wire Line
+	4350 5925 4350 5845
+Wire Wire Line
+	4635 5925 4635 5845
+Connection ~ 4350 5925
+Wire Wire Line
+	5165 5545 5460 5545
+Text Label 5225 5545 0    60   ~ 0
+SOUNDIN
+Text Label 9580 3875 0    60   ~ 0
+SOUNDIN
 $EndSCHEMATC
