@@ -1,0 +1,764 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+                              kernel.o (CMemorySystem::~CMemorySystem())
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+                              main.o (__aeabi_atexit)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o) (CPageTable::CPageTable())
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o) (assertion_failed)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o) (debug_stacktrace(unsigned int const*, char const*))
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o) (CLogger::Get())
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o) (CString::~CString())
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o) (CInterruptSystem::DisableFIQ())
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o) (CMachineInfo::CMachineInfo())
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o) (operator new(unsigned int))
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o) (mem_init)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o) (CBcmPropertyTags::CBcmPropertyTags())
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o) (EnterCritical)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o) (CTimer::GetTimeZone() const)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o) (memset)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(util_fast.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o) (memcpy)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(delayloop.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o) (DelayLoop)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionstub.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o) (IRQStub)
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o) (CPtrList::CPtrList())
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o) (CBcmMailBox::CBcmMailBox(unsigned int))
+C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionstub.o) (ExceptionHandler)
+c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_udivsi3.o)
+                              C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o) (__aeabi_uidiv)
+c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_dvmd_tls.o)
+                              c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00008000                . = 0x8000
+
+.text           0x00008000     0x70f0
+ *(.text*)
+ .text          0x00008000       0x70 C:/msys64/home/meesokim/c1/lib/startup.o
+                0x00008000                _start
+                0x00008064                _start_secondary
+ .text          0x00008070        0x0 main.o
+ .text.startup  0x00008070       0x60 main.o
+                0x00008070                main
+ .text          0x000080d0      0x218 kernel.o
+                0x000080d0                CKernel::CKernel()
+                0x000080d0                CKernel::CKernel()
+                0x000080e8                CKernel::~CKernel()
+                0x000080e8                CKernel::~CKernel()
+                0x000080fc                CKernel::Initialize()
+                0x00008138                CKernel::Run()
+ .text          0x000082e8      0x338 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+                0x000082e8                CMemorySystem::~CMemorySystem()
+                0x000082e8                CMemorySystem::~CMemorySystem()
+                0x00008388                CMemorySystem::GetMemSize() const
+                0x000083cc                CMemorySystem::Get()
+                0x00008404                CMemorySystem::EnableMMU()
+                0x00008510                CMemorySystem::CMemorySystem(bool)
+                0x00008510                CMemorySystem::CMemorySystem(bool)
+                0x00008614                CMemorySystem::GetCoherentPage(unsigned int)
+ .text          0x00008620      0x1bc C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+                0x00008620                __aeabi_atexit
+                0x00008624                halt
+                0x00008630                reboot
+                0x0000865c                sysinit
+ .text          0x000087dc      0x204 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+                0x000087dc                CPageTable::CPageTable()
+                0x000087dc                CPageTable::CPageTable()
+                0x00008888                CPageTable::CPageTable(unsigned int)
+                0x00008888                CPageTable::CPageTable(unsigned int)
+                0x000089b0                CPageTable::~CPageTable()
+                0x000089b0                CPageTable::~CPageTable()
+                0x000089d4                CPageTable::GetBaseAddress() const
+ .text          0x000089e0       0x90 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+                0x000089e0                assertion_failed
+ .text          0x00008a70      0x194 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+                0x00008a70                debug_hexdump(void const*, unsigned int, char const*)
+                0x00008b74                debug_stacktrace(unsigned int const*, char const*)
+ .text          0x00008c04      0x8f0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+                0x00008c04                CLogger::CLogger(unsigned int, CTimer*)
+                0x00008c04                CLogger::CLogger(unsigned int, CTimer*)
+                0x00008c5c                CLogger::~CLogger()
+                0x00008c5c                CLogger::~CLogger()
+                0x00008ccc                CLogger::WriteNoAlloc(char const*, TLogSeverity, char const*)
+                0x00008e38                CLogger::Get()
+                0x00008e48                CLogger::Write(char const*)
+                0x00008ef4                CLogger::Read(void*, unsigned int)
+                0x00008fc4                CLogger::WriteEvent(char const*, TLogSeverity, char const*)
+                0x00009124                CLogger::ReadEvent(TLogSeverity*, char*, char*, long*, unsigned int*, int*)
+                0x00009200                CLogger::RegisterEventNotificationHandler(void (*)())
+                0x00009208                CLogger::RegisterPanicHandler(void (*)())
+                0x00009210                CLogger::WriteV(char const*, TLogSeverity, char const*, std::__va_list)
+                0x00009480                CLogger::Write(char const*, TLogSeverity, char const*, ...)
+                0x000094b0                CLogger::Initialize(CDevice*)
+ *fill*         0x000094f4        0x4 
+ .text          0x000094f8     0x1f84 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+                0x000094f8                CString::~CString()
+                0x000094f8                CString::~CString()
+                0x00009524                CString::~CString()
+                0x0000955c                CString::CString()
+                0x0000955c                CString::CString()
+                0x00009574                CString::CString(char const*)
+                0x00009574                CString::CString(char const*)
+                0x000095b4                CString::operator char const*() const
+                0x000095cc                CString::operator=(char const*)
+                0x00009610                CString::operator=(CString const&)
+                0x0000966c                CString::GetLength() const
+                0x0000967c                CString::Append(char const*)
+                0x00009700                CString::Compare(char const*) const
+                0x00009708                CString::Find(char) const
+                0x00009748                CString::Replace(char const*, char const*)
+                0x00009a68                CString::PutChar(char, unsigned int)
+                0x00009b00                CString::PutString(char const*)
+                0x00009b9c                CString::ReserveSpace(unsigned int)
+                0x00009c0c                CString::ntoa(char*, unsigned long, unsigned int, bool)
+                0x00009ce0                CString::ftoa(char*, double, unsigned int)
+                0x0000a084                CString::FormatV(char const*, std::__va_list)
+                0x0000b44c                CString::Format(char const*, ...)
+ .text          0x0000b47c      0x740 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+                0x0000b47c                CInterruptSystem::CInterruptSystem()
+                0x0000b47c                CInterruptSystem::CInterruptSystem()
+                0x0000b4b4                CInterruptSystem::~CInterruptSystem()
+                0x0000b4b4                CInterruptSystem::~CInterruptSystem()
+                0x0000b4c8                CInterruptSystem::Initialize()
+                0x0000b530                CInterruptSystem::ConnectIRQ(unsigned int, void (*)(void*), void*)
+                0x0000b600                CInterruptSystem::DisconnectIRQ(unsigned int)
+                0x0000b6d8                CInterruptSystem::ConnectFIQ(unsigned int, void (*)(void*), void*)
+                0x0000b798                CInterruptSystem::DisconnectFIQ()
+                0x0000b7f0                CInterruptSystem::EnableIRQ(unsigned int)
+                0x0000b86c                CInterruptSystem::DisableIRQ(unsigned int)
+                0x0000b8e8                CInterruptSystem::EnableFIQ(unsigned int)
+                0x0000b934                CInterruptSystem::DisableFIQ()
+                0x0000b950                CInterruptSystem::Get()
+                0x0000b988                CInterruptSystem::CallIRQHandler(unsigned int)
+                0x0000ba40                CInterruptSystem::InterruptHandler()
+                0x0000bba4                InterruptHandler
+ .text          0x0000bbbc      0x52c C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+                0x0000bbbc                CMachineInfo::CMachineInfo()
+                0x0000bbbc                CMachineInfo::CMachineInfo()
+                0x0000beac                CMachineInfo::~CMachineInfo()
+                0x0000beac                CMachineInfo::~CMachineInfo()
+                0x0000bed0                CMachineInfo::GetMachineModel() const
+                0x0000bed8                CMachineInfo::GetMachineName() const
+                0x0000bef0                CMachineInfo::GetModelMajor() const
+                0x0000bef8                CMachineInfo::GetModelRevision() const
+                0x0000bf00                CMachineInfo::GetSoCType() const
+                0x0000bf08                CMachineInfo::GetRAMSize() const
+                0x0000bf10                CMachineInfo::GetSoCName() const
+                0x0000bf28                CMachineInfo::GetRevisionRaw() const
+                0x0000bf30                CMachineInfo::GetClockRate(unsigned int) const
+                0x0000bffc                CMachineInfo::GetGPIOPin(TGPIOVirtualPin) const
+                0x0000c070                CMachineInfo::GetDevice(TDeviceId) const
+                0x0000c0b0                CMachineInfo::Get()
+ .text          0x0000c0e8       0x18 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+                0x0000c0e8                operator new(unsigned int)
+                0x0000c0ec                operator new[](unsigned int)
+                0x0000c0f0                operator delete(void*)
+                0x0000c0f4                operator delete[](void*)
+                0x0000c0f8                operator delete(void*, unsigned int)
+                0x0000c0fc                operator delete[](void*, unsigned int)
+ .text          0x0000c100      0x9d0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+                0x0000c100                mem_init
+                0x0000c13c                mem_get_size
+                0x0000c164                malloc
+                0x0000c364                free
+                0x0000c480                calloc
+                0x0000c6c0                realloc
+                0x0000c988                palloc
+                0x0000ca70                pfree
+ .text.startup  0x0000cad0       0x18 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .text          0x0000cae8      0x260 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+                0x0000cae8                CBcmPropertyTags::CBcmPropertyTags()
+                0x0000cae8                CBcmPropertyTags::CBcmPropertyTags()
+                0x0000cb00                CBcmPropertyTags::~CBcmPropertyTags()
+                0x0000cb00                CBcmPropertyTags::~CBcmPropertyTags()
+                0x0000cb14                CBcmPropertyTags::GetTag(unsigned int, void*, unsigned int, unsigned int)
+                0x0000cc58                CBcmPropertyTags::GetTags(void*, unsigned int)
+ .text          0x0000cd48      0x178 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+                0x0000cd48                CurrentExecutionLevel
+                0x0000cd60                EnterCritical
+                0x0000ce10                LeaveCritical
+                0x0000ce64                CleanAndInvalidateDataCacheRange
+                0x0000cea0                SyncDataAndInstructionCache
+ .text          0x0000cec0      0xf30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+                0x0000cec0                CTimer::CTimer(CInterruptSystem*)
+                0x0000cec0                CTimer::CTimer(CInterruptSystem*)
+                0x0000cf44                CTimer::~CTimer()
+                0x0000cf44                CTimer::~CTimer()
+                0x0000d02c                CTimer::Initialize()
+                0x0000d14c                CTimer::SetTimeZone(int)
+                0x0000d170                CTimer::GetTimeZone() const
+                0x0000d178                CTimer::SetTime(unsigned int, bool)
+                0x0000d1f4                CTimer::GetClockTicks()
+                0x0000d210                CTimer::GetTicks() const
+                0x0000d218                CTimer::GetUptime() const
+                0x0000d220                CTimer::GetTime() const
+                0x0000d228                CTimer::GetUniversalTime() const
+                0x0000d248                CTimer::GetTimeString()
+                0x0000d59c                CTimer::StartKernelTimer(unsigned int, void (*)(unsigned int, void*, void*), void*, void*)
+                0x0000d6f0                CTimer::CancelKernelTimer(unsigned int)
+                0x0000d7b0                CTimer::PollKernelTimers()
+                0x0000d914                CTimer::InterruptHandler(void*)
+                0x0000da3c                CTimer::InterruptHandler()
+                0x0000db40                CTimer::TuneMsDelay()
+                0x0000dbec                CTimer::RegisterPeriodicHandler(void (*)())
+                0x0000dc48                CTimer::SimpleMsDelay(unsigned int)
+                0x0000dc98                CTimer::SimpleusDelay(unsigned int)
+                0x0000dcd8                CTimer::IsLeapYear(unsigned int)
+                0x0000dd30                CTimer::GetDaysOfMonth(unsigned int, unsigned int)
+                0x0000ddb4                CTimer::Get()
+ .text          0x0000ddf0      0x63c C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+                0x0000ddf0                memset
+                0x0000dee8                memcmp
+                0x0000df44                strlen
+                0x0000df6c                strcmp
+                0x0000dfdc                strcasecmp
+                0x0000e058                strncmp
+                0x0000e0ec                strcpy
+                0x0000e118                strncpy
+                0x0000e160                strcat
+                0x0000e1a4                strchr
+                0x0000e1e0                strtok_r
+                0x0000e2b4                strtoul
+                0x0000e428                char2int
+ .text          0x0000e42c       0x5c C:/msys64/home/meesokim/c1/lib/libcircle1.a(util_fast.o)
+                0x0000e42c                memcpy
+ .text          0x0000e488        0xc C:/msys64/home/meesokim/c1/lib/libcircle1.a(delayloop.o)
+                0x0000e488                DelayLoop
+ .text          0x0000e494      0x14c C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionstub.o)
+                0x0000e494                UndefinedInstructionInternal
+                0x0000e4d4                PrefetchAbortStub
+                0x0000e514                DataAbortStub
+                0x0000e554                UndefinedInstructionStub
+                0x0000e570                IRQStub
+                0x0000e580                FIQStub
+ .text          0x0000e5e0      0x4c8 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+                0x0000e5e0                CPtrList::CPtrList()
+                0x0000e5e0                CPtrList::CPtrList()
+                0x0000e5ec                CPtrList::~CPtrList()
+                0x0000e5ec                CPtrList::~CPtrList()
+                0x0000e620                CPtrList::GetFirst()
+                0x0000e628                CPtrList::GetNext(TPtrListElement*)
+                0x0000e680                CPtrList::GetPtr(TPtrListElement*)
+                0x0000e6d8                CPtrList::InsertBefore(TPtrListElement*, void*)
+                0x0000e7e0                CPtrList::InsertAfter(TPtrListElement*, void*)
+                0x0000e8dc                CPtrList::Remove(TPtrListElement*)
+                0x0000ea30                CPtrList::Find(void*)
+ .text          0x0000eaa8      0x1a8 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+                0x0000eaa8                CBcmMailBox::CBcmMailBox(unsigned int)
+                0x0000eaa8                CBcmMailBox::CBcmMailBox(unsigned int)
+                0x0000eab0                CBcmMailBox::~CBcmMailBox()
+                0x0000eab0                CBcmMailBox::~CBcmMailBox()
+                0x0000eab4                CBcmMailBox::WriteRead(unsigned int)
+                0x0000eb98                CBcmMailBox::Flush()
+                0x0000ebcc                CBcmMailBox::Read()
+                0x0000ebfc                CBcmMailBox::Write(unsigned int)
+ .text.startup  0x0000ec50       0x14 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .text          0x0000ec64      0x374 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+                0x0000ec64                CExceptionHandler::CExceptionHandler()
+                0x0000ec64                CExceptionHandler::CExceptionHandler()
+                0x0000ecf0                CExceptionHandler::~CExceptionHandler()
+                0x0000ecf0                CExceptionHandler::~CExceptionHandler()
+                0x0000ed04                CExceptionHandler::Throw(unsigned int)
+                0x0000ed44                CExceptionHandler::Throw(unsigned int, TAbortFrame*)
+                0x0000ee20                CExceptionHandler::Get()
+                0x0000ee58                ExceptionHandler
+                0x0000ef68                raise
+ .text          0x0000efd8      0x114 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_udivsi3.o)
+                0x0000efd8                __aeabi_uidiv
+                0x0000efd8                __udivsi3
+                0x0000f0cc                __aeabi_uidivmod
+ .text          0x0000f0ec        0x4 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_dvmd_tls.o)
+                0x0000f0ec                __aeabi_idiv0
+                0x0000f0ec                __aeabi_ldiv0
+                0x0000f0f0                _etext = .
+
+.glue_7         0x0000f0f0        0x0
+ .glue_7        0x0000f0f0        0x0 linker stubs
+
+.glue_7t        0x0000f0f0        0x0
+ .glue_7t       0x0000f0f0        0x0 linker stubs
+
+.vfp11_veneer   0x0000f0f0        0x0
+ .vfp11_veneer  0x0000f0f0        0x0 linker stubs
+
+.v4_bx          0x0000f0f0        0x0
+ .v4_bx         0x0000f0f0        0x0 linker stubs
+
+.iplt           0x0000f0f0        0x0
+ .iplt          0x0000f0f0        0x0 C:/msys64/home/meesokim/c1/lib/startup.o
+
+.rodata         0x0000f0f0     0x4bb4
+ *(.rodata*)
+ .rodata        0x0000f0f0     0x4020 kernel.o
+ .rodata.str1.4
+                0x00013110       0xa4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .rodata.str1.4
+                0x000131b4       0x3e C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ *fill*         0x000131f2        0x2 
+ .rodata.str1.4
+                0x000131f4       0x1d C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ *fill*         0x00013211        0x3 
+ .rodata        0x00013214        0x6 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ *fill*         0x0001321a        0x2 
+ .rodata.str1.4
+                0x0001321c       0x8e C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ *fill*         0x000132aa        0x2 
+ .rodata.str1.4
+                0x000132ac       0x3b C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ *fill*         0x000132e7        0x1 
+ .rodata        0x000132e8       0x10 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+                0x000132e8                vtable for CString
+ .rodata.str1.4
+                0x000132f8        0x9 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+                                  0xd (size before relaxing)
+ *fill*         0x00013301        0x3 
+ .rodata.str1.4
+                0x00013304       0x9e C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+                                 0xbd (size before relaxing)
+ *fill*         0x000133a2        0x2 
+ .rodata        0x000133a4      0x1cc C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .rodata.str1.4
+                0x00013570      0x121 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+                                0x135 (size before relaxing)
+ *fill*         0x00013691        0x3 
+ .rodata.str1.4
+                0x00013694       0xd4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .rodata.str1.4
+                0x00013768       0x97 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ *fill*         0x000137ff        0x1 
+ .rodata.str1.4
+                0x00013800       0xb5 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ *fill*         0x000138b5        0x3 
+ .rodata        0x000138b8       0x38 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+                0x000138c0                CTimer::s_nDaysOfMonth
+ .rodata.str1.4
+                0x000138f0      0x154 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+                                0x174 (size before relaxing)
+ .rodata.str1.4
+                0x00013a44      0x176 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ *fill*         0x00013bba        0x2 
+ .rodata.str1.4
+                0x00013bbc       0x23 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ *fill*         0x00013bdf        0x1 
+ .rodata        0x00013be0        0x7 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+ *fill*         0x00013be7        0x1 
+ .rodata.str1.4
+                0x00013be8       0xbc C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+                                 0xe4 (size before relaxing)
+
+.rel.dyn        0x00013ca4        0x0
+ .rel.iplt      0x00013ca4        0x0 C:/msys64/home/meesokim/c1/lib/startup.o
+
+.init_array     0x00013ca4        0xc
+                0x00013ca4                __init_start = .
+ *(.init_array*)
+ .init_array    0x00013ca4        0x4 main.o
+ .init_array    0x00013ca8        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .init_array    0x00013cac        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+                0x00013cb0                __init_end = .
+
+.ARM.exidx      0x00013cb0        0x0
+                0x00013cb0                __exidx_start = .
+ *(.ARM.exidx*)
+                0x00013cb0                __exidx_end = .
+
+.data           0x00013cb0       0x94
+ *(.data*)
+ .data          0x00013cb0        0x0 C:/msys64/home/meesokim/c1/lib/startup.o
+ .data          0x00013cb0        0x0 main.o
+ .data          0x00013cb0        0x4 kernel.o
+                0x00013cb0                gpio
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .data          0x00013cb4        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .data          0x00013cb4       0x44 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .data          0x00013cf8        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .data          0x00013cf8        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .data          0x00013cf8       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+                0x00013cf8                CTimer::s_pMonthName
+ .data          0x00013d28        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .data          0x00013d28        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util_fast.o)
+ .data          0x00013d28        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(delayloop.o)
+ .data          0x00013d28        0x8 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionstub.o)
+                0x00013d28                FIQData
+ .data          0x00013d30        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .data          0x00013d30        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .data          0x00013d30       0x14 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+                0x00013d30                CExceptionHandler::s_pExceptionName
+ .data          0x00013d44        0x0 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_udivsi3.o)
+ .data          0x00013d44        0x0 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_dvmd_tls.o)
+
+.igot.plt       0x00013d44        0x0
+ .igot.plt      0x00013d44        0x0 C:/msys64/home/meesokim/c1/lib/startup.o
+
+.bss            0x00013d44       0xa0
+                0x00013d44                __bss_start = .
+ *(.bss*)
+ .bss           0x00013d44        0x0 C:/msys64/home/meesokim/c1/lib/startup.o
+ .bss           0x00013d44       0x10 main.o
+                0x00013d44                Kernel
+ .bss           0x00013d54        0x0 kernel.o
+ .bss           0x00013d54        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+                0x00013d54                CMemorySystem::s_pThis
+ .bss           0x00013d58        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+                0x00013d58                __dso_handle
+ .bss           0x00013d5c        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .bss           0x00013d5c        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .bss           0x00013d5c        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .bss           0x00013d5c        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+                0x00013d5c                CLogger::s_pThis
+ .bss           0x00013d60        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .bss           0x00013d60        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+                0x00013d60                CInterruptSystem::s_pThis
+ .bss           0x00013d64        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+                0x00013d64                CMachineInfo::s_pThis
+ .bss           0x00013d68        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .bss           0x00013d68       0x1c C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .bss           0x00013d84        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .bss           0x00013d84       0x54 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .bss           0x00013dd8        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+                0x00013dd8                CTimer::s_pThis
+ .bss           0x00013ddc        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .bss           0x00013ddc        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util_fast.o)
+ .bss           0x00013ddc        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(delayloop.o)
+ .bss           0x00013ddc        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionstub.o)
+ .bss           0x00013ddc        0x0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .bss           0x00013ddc        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+                0x00013ddc                CBcmMailBox::s_SpinLock
+ .bss           0x00013de0        0x4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+                0x00013de0                CExceptionHandler::s_pThis
+ .bss           0x00013de4        0x0 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_udivsi3.o)
+ .bss           0x00013de4        0x0 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_dvmd_tls.o)
+ *(COMMON)
+                0x00013de4                _end = .
+LOAD C:/msys64/home/meesokim/c1/lib/startup.o
+LOAD main.o
+LOAD kernel.o
+LOAD c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a
+LOAD C:/msys64/home/meesokim/c1/lib/libcircle1.a
+LOAD C:/msys64/home/meesokim/c1/addon/SDCard/libsdcard1.a
+LOAD C:/msys64/home/meesokim/c1/addon/fatfs/libfatfs1.a
+LOAD C:/msys64/home/meesokim/c1/lib/fs/libfs1.a
+LOAD c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a
+OUTPUT(kernel.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x35
+ .ARM.attributes
+                0x00000000       0x25 C:/msys64/home/meesokim/c1/lib/startup.o
+ .ARM.attributes
+                0x00000025       0x30 main.o
+ .ARM.attributes
+                0x00000055       0x30 kernel.o
+ .ARM.attributes
+                0x00000085       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .ARM.attributes
+                0x000000b5       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .ARM.attributes
+                0x000000e5       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .ARM.attributes
+                0x00000115       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .ARM.attributes
+                0x00000145       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .ARM.attributes
+                0x00000175       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .ARM.attributes
+                0x000001a5       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .ARM.attributes
+                0x000001d5       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .ARM.attributes
+                0x00000205       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .ARM.attributes
+                0x00000235       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .ARM.attributes
+                0x00000265       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .ARM.attributes
+                0x00000295       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .ARM.attributes
+                0x000002c5       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .ARM.attributes
+                0x000002f5       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .ARM.attributes
+                0x00000325       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .ARM.attributes
+                0x00000355       0x1c C:/msys64/home/meesokim/c1/lib/libcircle1.a(util_fast.o)
+ .ARM.attributes
+                0x00000371       0x1c C:/msys64/home/meesokim/c1/lib/libcircle1.a(delayloop.o)
+ .ARM.attributes
+                0x0000038d       0x1c C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionstub.o)
+ .ARM.attributes
+                0x000003a9       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .ARM.attributes
+                0x000003d9       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .ARM.attributes
+                0x00000409       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+ .ARM.attributes
+                0x00000439       0x18 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000451       0x18 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_dvmd_tls.o)
+
+.comment        0x00000000       0x7e
+ .comment       0x00000000       0x7e main.o
+                                 0x7f (size before relaxing)
+ .comment       0x0000007e       0x7f kernel.o
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .comment       0x0000007e       0x7f C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+
+.debug_info     0x00000000    0x1243b
+ .debug_info    0x00000000      0x5d9 main.o
+ .debug_info    0x000005d9      0xf18 kernel.o
+ .debug_info    0x000014f1      0xab1 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .debug_info    0x00001fa2      0x590 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .debug_info    0x00002532      0x4c9 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .debug_info    0x000029fb      0xd8e C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .debug_info    0x00003789      0xdd8 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .debug_info    0x00004561     0x1e9b C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .debug_info    0x000063fc     0x2e7d C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .debug_info    0x00009279      0xd61 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .debug_info    0x00009fda      0xc11 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .debug_info    0x0000abeb      0x1fa C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .debug_info    0x0000ade5     0x173c C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .debug_info    0x0000c521      0xa79 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .debug_info    0x0000cf9a      0x22a C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .debug_info    0x0000d1c4     0x2263 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .debug_info    0x0000f427      0x58c C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .debug_info    0x0000f9b3      0x788 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .debug_info    0x0001013b      0xf78 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .debug_info    0x000110b3     0x1388 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+
+.debug_abbrev   0x00000000     0x41ac
+ .debug_abbrev  0x00000000      0x2b2 main.o
+ .debug_abbrev  0x000002b2      0x3de kernel.o
+ .debug_abbrev  0x00000690      0x356 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .debug_abbrev  0x000009e6      0x281 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .debug_abbrev  0x00000c67      0x220 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .debug_abbrev  0x00000e87      0x300 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .debug_abbrev  0x00001187      0x2f8 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .debug_abbrev  0x0000147f      0x56a C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .debug_abbrev  0x000019e9      0x431 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .debug_abbrev  0x00001e1a      0x3bf C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .debug_abbrev  0x000021d9      0x366 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .debug_abbrev  0x0000253f       0xf5 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .debug_abbrev  0x00002634      0x50a C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .debug_abbrev  0x00002b3e      0x2f9 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .debug_abbrev  0x00002e37      0x10b C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .debug_abbrev  0x00002f42      0x654 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .debug_abbrev  0x00003596      0x1fb C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .debug_abbrev  0x00003791      0x1b8 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .debug_abbrev  0x00003949      0x419 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .debug_abbrev  0x00003d62      0x44a C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+
+.debug_loc      0x00000000     0x91a2
+ .debug_loc     0x00000000       0x13 main.o
+ .debug_loc     0x00000013      0x13d kernel.o
+ .debug_loc     0x00000150      0x1f2 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .debug_loc     0x00000342       0xff C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .debug_loc     0x00000441      0x111 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .debug_loc     0x00000552       0x84 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .debug_loc     0x000005d6      0x189 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .debug_loc     0x0000075f      0xb0d C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .debug_loc     0x0000126c     0x3ad7 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .debug_loc     0x00004d43      0x822 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .debug_loc     0x00005565      0x536 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .debug_loc     0x00005a9b       0x84 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .debug_loc     0x00005b1f      0x978 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .debug_loc     0x00006497      0x328 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .debug_loc     0x000067bf       0xa0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .debug_loc     0x0000685f     0x143e C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .debug_loc     0x00007c9d      0xbd5 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .debug_loc     0x00008872      0x370 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .debug_loc     0x00008be2      0x294 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .debug_loc     0x00008e76      0x32c C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+
+.debug_aranges  0x00000000      0x298
+ .debug_aranges
+                0x00000000       0x28 main.o
+ .debug_aranges
+                0x00000028       0x20 kernel.o
+ .debug_aranges
+                0x00000048       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .debug_aranges
+                0x00000068       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .debug_aranges
+                0x00000088       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .debug_aranges
+                0x000000a8       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .debug_aranges
+                0x000000c8       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .debug_aranges
+                0x000000e8       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .debug_aranges
+                0x00000108       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .debug_aranges
+                0x00000128       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .debug_aranges
+                0x00000148       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .debug_aranges
+                0x00000168       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .debug_aranges
+                0x00000188       0x28 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .debug_aranges
+                0x000001b0       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .debug_aranges
+                0x000001d0       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .debug_aranges
+                0x000001f0       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .debug_aranges
+                0x00000210       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .debug_aranges
+                0x00000230       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .debug_aranges
+                0x00000250       0x28 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .debug_aranges
+                0x00000278       0x20 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+
+.debug_ranges   0x00000000     0x1698
+ .debug_ranges  0x00000000       0x30 main.o
+ .debug_ranges  0x00000030       0x40 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .debug_ranges  0x00000070       0x30 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .debug_ranges  0x000000a0       0x58 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .debug_ranges  0x000000f8       0x38 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .debug_ranges  0x00000130      0x1e0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .debug_ranges  0x00000310      0x940 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .debug_ranges  0x00000c50      0x170 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .debug_ranges  0x00000dc0       0x90 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .debug_ranges  0x00000e50      0x2f0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .debug_ranges  0x00001140       0x28 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .debug_ranges  0x00001168      0x398 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .debug_ranges  0x00001500       0x38 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .debug_ranges  0x00001538       0xf8 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .debug_ranges  0x00001630       0x68 C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+
+.debug_line     0x00000000     0x2c28
+ .debug_line    0x00000000       0xd1 main.o
+ .debug_line    0x000000d1      0x1aa kernel.o
+ .debug_line    0x0000027b      0x185 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .debug_line    0x00000400       0xd1 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .debug_line    0x000004d1      0x12d C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .debug_line    0x000005fe       0xf5 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .debug_line    0x000006f3       0xff C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .debug_line    0x000007f2      0x3de C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .debug_line    0x00000bd0      0x820 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .debug_line    0x000013f0      0x317 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .debug_line    0x00001707      0x1d0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .debug_line    0x000018d7       0x68 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .debug_line    0x0000193f      0x40f C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .debug_line    0x00001d4e      0x15c C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .debug_line    0x00001eaa       0xcb C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .debug_line    0x00001f75      0x5ec C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .debug_line    0x00002561      0x1b6 C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .debug_line    0x00002717      0x174 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .debug_line    0x0000288b      0x1de C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .debug_line    0x00002a69      0x1bf C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+
+.debug_str      0x00000000     0x2d60
+ .debug_str     0x00000000      0x571 main.o
+                                0x5f0 (size before relaxing)
+ .debug_str     0x00000571      0x445 kernel.o
+                                0x9f7 (size before relaxing)
+ .debug_str     0x000009b6      0x309 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+                                0x7b6 (size before relaxing)
+ .debug_str     0x00000cbf      0x4e0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+                                0x6ca (size before relaxing)
+ .debug_str     0x0000119f       0x6c C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+                                0x324 (size before relaxing)
+ .debug_str     0x0000120b      0xcee C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+                                0xfb6 (size before relaxing)
+ .debug_str     0x00001ef9       0x63 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+                                0xf98 (size before relaxing)
+ .debug_str     0x00001f5c      0x1b9 C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+                               0x162b (size before relaxing)
+ .debug_str     0x00002115      0x31e C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+                                0x63f (size before relaxing)
+ .debug_str     0x00002433       0xef C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+                                0x5b5 (size before relaxing)
+ .debug_str     0x00002522       0xe0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+                                0x985 (size before relaxing)
+ .debug_str     0x00002602       0x1e C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+                                0x1fd (size before relaxing)
+ .debug_str     0x00002620      0x177 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+                               0x116d (size before relaxing)
+ .debug_str     0x00002797       0xb8 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+                                0x788 (size before relaxing)
+ .debug_str     0x0000284f       0x60 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+                                0x23f (size before relaxing)
+ .debug_str     0x000028af      0x197 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+                               0x11ce (size before relaxing)
+ .debug_str     0x00002a46       0xca C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+                                0x2d5 (size before relaxing)
+ .debug_str     0x00002b10       0x48 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+                                0x339 (size before relaxing)
+ .debug_str     0x00002b58       0x6c C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+                                0xda5 (size before relaxing)
+ .debug_str     0x00002bc4      0x19c C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+                               0x118f (size before relaxing)
+
+.debug_frame    0x00000000     0x12f0
+ .debug_frame   0x00000000       0x44 main.o
+ .debug_frame   0x00000044       0x78 kernel.o
+ .debug_frame   0x000000bc       0xb0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(memory.o)
+ .debug_frame   0x0000016c       0x58 C:/msys64/home/meesokim/c1/lib/libcircle1.a(sysinit.o)
+ .debug_frame   0x000001c4       0x74 C:/msys64/home/meesokim/c1/lib/libcircle1.a(pagetable.o)
+ .debug_frame   0x00000238       0x34 C:/msys64/home/meesokim/c1/lib/libcircle1.a(assert.o)
+ .debug_frame   0x0000026c       0x64 C:/msys64/home/meesokim/c1/lib/libcircle1.a(debug.o)
+ .debug_frame   0x000002d0      0x1b4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(logger.o)
+ .debug_frame   0x00000484      0x284 C:/msys64/home/meesokim/c1/lib/libcircle1.a(string.o)
+ .debug_frame   0x00000708      0x1a0 C:/msys64/home/meesokim/c1/lib/libcircle1.a(interrupt.o)
+ .debug_frame   0x000008a8      0x13c C:/msys64/home/meesokim/c1/lib/libcircle1.a(machineinfo.o)
+ .debug_frame   0x000009e4       0x70 C:/msys64/home/meesokim/c1/lib/libcircle1.a(new.o)
+ .debug_frame   0x00000a54      0x110 C:/msys64/home/meesokim/c1/lib/libcircle1.a(alloc.o)
+ .debug_frame   0x00000b64       0x88 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmpropertytags.o)
+ .debug_frame   0x00000bec       0x74 C:/msys64/home/meesokim/c1/lib/libcircle1.a(synchronize.o)
+ .debug_frame   0x00000c60      0x2d4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(timer.o)
+ .debug_frame   0x00000f34      0x10c C:/msys64/home/meesokim/c1/lib/libcircle1.a(util.o)
+ .debug_frame   0x00001040      0x100 C:/msys64/home/meesokim/c1/lib/libcircle1.a(ptrlist.o)
+ .debug_frame   0x00001140       0xa4 C:/msys64/home/meesokim/c1/lib/libcircle1.a(bcmmailbox.o)
+ .debug_frame   0x000011e4       0xec C:/msys64/home/meesokim/c1/lib/libcircle1.a(exceptionhandler.o)
+ .debug_frame   0x000012d0       0x20 c:/msys64/opt/arm/bin/../lib/gcc/arm-none-eabi/7.2.1/hard/libgcc.a(_udivsi3.o)
