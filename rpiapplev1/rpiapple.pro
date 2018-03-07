@@ -1,4 +1,4 @@
-update=2018-02-27 오후 1:37:38
+update=2018-03-07 오후 2:54:11
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,4 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=C:/msys64/home/meeso.kim/msx-cartridge/libraries/apple2
+LibName34=C:/msys64/home/meeso.kim/msx-cartridge/libraries/altera_maxII_epm240
