@@ -1,4 +1,4 @@
-update=2018-01-21 오후 8:47:19
+update=2018-03-19 오후 4:13:12
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,9 +25,19 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
-LibDir=../libraries;../libraries/msx.pretty
+LibDir=../libraries;../libraries/msx.pretty;../libraries
 [eeschema/libraries]
 LibName1=rpmcv4-rescue
 LibName2=rpmcv3-rescue
@@ -65,13 +75,5 @@ LibName33=contrib
 LibName34=valves
 LibName35=IC_raspberry
 LibName36=msx_slot
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName37=EMP240
+LibName38=altera_maxII_epm240
