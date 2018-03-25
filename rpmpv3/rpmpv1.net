@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\msys64\home\meeso.kim\msx-cartridge\rpmpv3\rpmpv1.sch)
-    (date "2018-03-20 오후 9:31:22")
+    (date "2018-03-22 오전 2:54:55")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block

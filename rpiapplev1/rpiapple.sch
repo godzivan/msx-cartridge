@@ -347,8 +347,6 @@ Text Label 2570 7130 0    60   ~ 0
 PH1
 Text Label 2565 7230 0    60   ~ 0
 7M
-Text Label 10580 3765 0    60   ~ 0
-PH0
 $Comp
 L 74HC245 U7
 U 1 1 5AB2B383
@@ -374,8 +372,6 @@ Text Label 5155 7015 0    60   ~ 0
 DMA
 Text Label 5155 7115 0    60   ~ 0
 DMAO
-Text Label 5155 7215 0    60   ~ 0
-INTO
 Text Label 5865 4175 0    60   ~ 0
 RD2
 Text Label 5865 4475 0    60   ~ 0
@@ -404,7 +400,7 @@ Text Label 5870 4575 0    60   ~ 0
 RA6
 Text Label 5870 4975 0    60   ~ 0
 RA7
-Text Label 5865 6575 0    60   ~ 0
+Text Label 5865 4075 0    60   ~ 0
 RD0
 Text Label 7850 5675 0    60   ~ 0
 RD1
@@ -412,7 +408,7 @@ Text Label 7855 1475 0    60   ~ 0
 RC0
 Text Label 5870 3775 0    60   ~ 0
 RC1
-Text Label 5870 6675 0    60   ~ 0
+Text Label 5870 6375 0    60   ~ 0
 RC2
 Text Label 7855 1575 0    60   ~ 0
 RC3
@@ -540,7 +536,7 @@ Text Label 855  6205 0    60   ~ 0
 GND
 Text Label 5910 2775 0    60   ~ 0
 TD0
-Text Label 5910 7075 0    60   ~ 0
+Text Label 7895 1975 0    60   ~ 0
 TD1
 Text Label 7895 2275 0    60   ~ 0
 TD2
@@ -552,9 +548,9 @@ Text Label 7895 3075 0    60   ~ 0
 TD5
 Text Label 7895 3275 0    60   ~ 0
 TD6
-Text Label 7895 3475 0    60   ~ 0
+Text Label 7860 2375 0    60   ~ 0
 TD7
-Text Label 5840 6775 0    60   ~ 0
+Text Label 7825 2175 0    60   ~ 0
 TIOSEL
 Text Label 5835 3175 0    60   ~ 0
 TDEVSEL
@@ -588,7 +584,7 @@ Text Label 7865 3375 0    60   ~ 0
 TA7
 Text Label 7860 3575 0    60   ~ 0
 TA8
-Text Label 5875 7275 0    60   ~ 0
+Text Label 5875 6175 0    60   ~ 0
 TA9
 Text Label 7865 3675 0    60   ~ 0
 TA10
@@ -618,9 +614,9 @@ Text Label 7875 5175 0    60   ~ 0
 TDMAO
 Text Label 7875 5275 0    60   ~ 0
 TINTO
-Text Label 5885 6875 0    60   ~ 0
+Text Label 7880 5375 0    60   ~ 0
 TDIR2
-Text Label 7875 2375 0    60   ~ 0
+Text Label 7865 3475 0    60   ~ 0
 TDIR
 Text Label 2415 670  0    60   ~ 0
 VCC
@@ -651,8 +647,6 @@ TCK
 Text Label 4470 1495 0    60   ~ 0
 TDO
 NoConn ~ 6130 2675
-NoConn ~ 7730 2175
-NoConn ~ 7730 1975
 Wire Wire Line
 	10460 1565 10845 1565
 Wire Wire Line
@@ -858,10 +852,6 @@ Wire Wire Line
 Wire Wire Line
 	2480 7230 2865 7230
 Wire Wire Line
-	10460 3765 10845 3765
-Wire Wire Line
-	2480 7530 2865 7530
-Wire Wire Line
 	5010 6815 5395 6815
 Wire Wire Line
 	5010 6515 5395 6515
@@ -906,7 +896,7 @@ Wire Wire Line
 Wire Wire Line
 	5745 4975 6130 4975
 Wire Wire Line
-	5745 6575 6130 6575
+	5745 4075 6130 4075
 Wire Wire Line
 	7730 5675 8115 5675
 Wire Wire Line
@@ -914,7 +904,7 @@ Wire Wire Line
 Wire Wire Line
 	5745 3775 6130 3775
 Wire Wire Line
-	5745 6675 6130 6675
+	5745 6375 6130 6375
 Wire Wire Line
 	7730 1575 8115 1575
 Wire Wire Line
@@ -1014,8 +1004,6 @@ Wire Wire Line
 Wire Wire Line
 	695  7230 1080 7230
 Wire Wire Line
-	695  7530 1080 7530
-Wire Wire Line
 	705  4205 1090 4205
 Wire Wire Line
 	4355 1495 4750 1495
@@ -1068,7 +1056,7 @@ Wire Wire Line
 Wire Wire Line
 	5745 2775 6130 2775
 Wire Wire Line
-	5745 7075 6130 7075
+	7730 1975 8115 1975
 Wire Wire Line
 	7730 2275 8115 2275
 Wire Wire Line
@@ -1082,7 +1070,7 @@ Wire Wire Line
 Wire Wire Line
 	7730 3475 8115 3475
 Wire Wire Line
-	5745 6775 6130 6775
+	7730 2175 8115 2175
 Wire Wire Line
 	5745 3175 6130 3175
 Wire Wire Line
@@ -1116,7 +1104,7 @@ Wire Wire Line
 Wire Wire Line
 	7730 3575 8115 3575
 Wire Wire Line
-	5745 7275 6130 7275
+	5745 6175 6130 6175
 Wire Wire Line
 	7730 3675 8115 3675
 Wire Wire Line
@@ -1146,7 +1134,7 @@ Wire Wire Line
 Wire Wire Line
 	7730 5275 8115 5275
 Wire Wire Line
-	5735 6875 6130 6875
+	7730 5375 8125 5375
 Wire Wire Line
 	7730 2375 8125 2375
 Wire Wire Line
@@ -1313,4 +1301,74 @@ Connection ~ 5275 2940
 Wire Wire Line
 	5245 2540 5275 2540
 Connection ~ 5275 2740
+Wire Wire Line
+	5735 1975 6130 1975
+Text Label 5835 1275 0    60   ~ 0
+3V3
+Wire Wire Line
+	5735 1275 6130 1275
+Wire Wire Line
+	5745 6575 6130 6575
+Wire Wire Line
+	5745 6675 6130 6675
+Wire Wire Line
+	5745 6975 6130 6975
+Wire Wire Line
+	5745 6775 6130 6775
+Wire Wire Line
+	5745 7075 6130 7075
+Wire Wire Line
+	5745 6875 6130 6875
+Wire Wire Line
+	5745 7175 6130 7175
+Wire Wire Line
+	5745 7275 6130 7275
+Text Label 5870 6575 0    60   ~ 0
+GND
+Text Label 5870 6675 0    60   ~ 0
+GND
+Text Label 5870 6775 0    60   ~ 0
+GND
+Text Label 5870 6875 0    60   ~ 0
+GND
+Text Label 5875 6975 0    60   ~ 0
+GND
+Text Label 5870 7075 0    60   ~ 0
+GND
+Text Label 5870 7175 0    60   ~ 0
+GND
+Text Label 5870 7275 0    60   ~ 0
+GND
+NoConn ~ 2490 4305
+NoConn ~ 2490 4405
+NoConn ~ 2490 4505
+NoConn ~ 2490 4605
+NoConn ~ 2490 4705
+NoConn ~ 2490 4805
+NoConn ~ 2490 4905
+NoConn ~ 1090 4305
+NoConn ~ 1090 4405
+NoConn ~ 1090 4505
+NoConn ~ 1090 4605
+NoConn ~ 1090 4705
+NoConn ~ 1090 4805
+NoConn ~ 1090 4905
+NoConn ~ 6130 4375
+NoConn ~ 6130 4775
+NoConn ~ 6130 5175
+NoConn ~ 6130 5375
+NoConn ~ 2480 7530
+NoConn ~ 1080 7530
+Text Label 5865 5775 0    60   ~ 0
+TRW
+Wire Wire Line
+	5745 5775 6130 5775
+Text Label 7845 1275 0    60   ~ 0
+TDO
+Wire Wire Line
+	7730 1275 8125 1275
+Text Label 5155 7215 0    60   ~ 0
+INT0
+NoConn ~ 10460 3765
+NoConn ~ 5840 4130
 $EndSCHEMATC

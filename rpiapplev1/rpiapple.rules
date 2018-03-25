@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 5833)
+    (start_pass_no 10166)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -72,18 +72,17 @@
     /A1 /A0 /IOSEL GND /DMAI /NMI /IRQ /RES
     /INH "Net-(P1-Pad33)" "Net-(P1-Pad34)" "Net-(P1-Pad35)" "Net-(P1-Pad37)" /PH1 "Net-(P1-Pad39)" /DEVSEL
     /D7 /D6 /D5 /D4 /D3 /D2 /D1 /D0
-    "Net-(P1-Pad50)" "Net-(U6-Pad1)" "Net-(U6-Pad2)" "Net-(U6-Pad3)" "Net-(U6-Pad4)" "Net-(U6-Pad5)" "Net-(U6-Pad6)" "Net-(U6-Pad7)"
-    "Net-(U6-Pad8)" "Net-(U6-Pad10)" "Net-(U6-Pad11)" "Net-(U6-Pad13)" "Net-(U6-Pad14)" "Net-(U6-Pad25)" "Net-(U6-Pad56)" "Net-(U6-Pad57)"
-    "Net-(U6-Pad94)" "Net-(U6-Pad100)" "Net-(U2-Pad2)" "Net-(U2-Pad3)" "Net-(U2-Pad4)" "Net-(U2-Pad5)" "Net-(U2-Pad6)" "Net-(U2-Pad7)"
-    "Net-(U2-Pad8)" "Net-(U2-Pad12)" "Net-(U2-Pad13)" "Net-(U2-Pad14)" "Net-(U2-Pad15)" "Net-(U2-Pad16)" "Net-(U2-Pad17)" "Net-(U2-Pad18)"
-    "Net-(U3-Pad2)" "Net-(U3-Pad18)" /INT0 /IOSTRB /INTI /7M /PH0 /INTO
-    /TWR /TD0 /TD1 /TD2 /TD3 /TD4 /TD5 /TD6
-    /TD7 /TDIR /TRW /TDMAI /TINTI /T7M /TPH1 /TDEVSEL
-    /TIOSTRB /TIOSEL /TA7 /TA6 /TA5 /TA4 /TA3 /TA2
-    /TA1 /TA0 /TA15 /TA14 /TA13 /TA12 /TA11 /TA10
-    /TA9 /TA8 /TINH /TRES /TIRQ /TDIR2 /TNMI /TRDY
-    /TDMA /TDMAO /TINTO /3V3 /TMS /TDI /TCK /TDO
-    /LED1 /LED2 /LED3 "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)"
+    "Net-(P1-Pad50)" "Net-(U6-Pad2)" "Net-(U6-Pad3)" "Net-(U6-Pad4)" "Net-(U6-Pad5)" "Net-(U6-Pad14)" "Net-(U2-Pad2)" "Net-(U2-Pad3)"
+    "Net-(U2-Pad4)" "Net-(U2-Pad5)" "Net-(U2-Pad6)" "Net-(U2-Pad7)" "Net-(U2-Pad8)" "Net-(U2-Pad12)" "Net-(U2-Pad13)" "Net-(U2-Pad14)"
+    "Net-(U2-Pad15)" "Net-(U2-Pad16)" "Net-(U2-Pad17)" "Net-(U2-Pad18)" "Net-(U3-Pad2)" "Net-(U3-Pad18)" /INT0 /IOSTRB
+    /INTI /7M /TWR /TD0 /TD1 /TD2 /TD3 /TD4
+    /TD5 /TD6 /TD7 /TDIR /TRW /TDMAI /TINTI /T7M
+    /TPH1 /TDEVSEL /TIOSTRB /TIOSEL /TA7 /TA6 /TA5 /TA4
+    /TA3 /TA2 /TA1 /TA0 /TA15 /TA14 /TA13 /TA12
+    /TA11 /TA10 /TA9 /TA8 /TINH /TRES /TIRQ /TDIR2
+    /TNMI /TRDY /TDMA /TDMAO /TINTO /3V3 /TMS /TDI
+    /TCK /TDO /LED1 /LED2 /LED3 "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)"
+    "Net-(P1-Pad40)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
