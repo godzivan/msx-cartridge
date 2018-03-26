@@ -1,4 +1,4 @@
-update=2018-03-26 오후 12:22:50
+update=2018-03-26 오후 10:22:02
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../libraries
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -63,3 +63,4 @@ LibName31=contrib
 LibName32=valves
 LibName33=C:/msys64/home/meeso.kim/msx-cartridge/libraries/EMP240
 LibName34=C:/msys64/home/meeso.kim/msx-cartridge/libraries/altera_maxII_epm240
+LibName35=C:/msys64/home/meesokim/msx-cartridge/libraries/altera_maxII_epm240
