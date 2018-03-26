@@ -34,6 +34,7 @@ LIBS:valves
 LIBS:EMP240
 LIBS:altera_maxII_epm240
 LIBS:jtagboard-cache
+LIBS:tqfp100-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -98,7 +99,7 @@ Text Label 3960 1735 0    60   ~ 0
 TMS
 Text Label 3965 1835 0    60   ~ 0
 TDI
-Text Label 3950 1635 0    60   ~ 0
+Text Label 3980 1635 0    60   ~ 0
 VCC(TRGT)
 Text Label 3970 1435 0    60   ~ 0
 GND
@@ -268,8 +269,8 @@ Connection ~ 2440 5595
 Wire Wire Line
 	2740 5600 2740 5715
 Wire Wire Line
-	2740 5715 3045 5715
-Text Label 2805 5715 0    60   ~ 0
+	2340 5715 4230 5715
+Text Label 3085 5715 0    60   ~ 0
 GND
 Text Label 3695 3395 0    60   ~ 0
 piVSYNC
@@ -724,14 +725,281 @@ Wire Wire Line
 Wire Wire Line
 	4640 1835 4640 1635
 $Comp
-L EPM240 U?
-U 1 1 5AB8679F
-P 6905 3985
-F 0 "U?" H 6905 3985 0   0001 C CNN
-F 1 "EPM240" H 6905 3985 0   0001 C CNN
-F 2 "" H 6905 3985 60  0000 C CNN
-F 3 "" H 6905 3985 60  0000 C CNN
-	1    6905 3985
+L MaxII_EPM240 U1
+U 1 1 5AB8692F
+P 9585 3850
+F 0 "U1" H 9585 3850 60  0001 C CNN
+F 1 "MaxII_EPM240" H 9585 3850 60  0001 C CNN
+F 2 "msx:tqfp100" H 9585 3850 60  0000 C CNN
+F 3 "" H 9585 3850 60  0000 C CNN
+	1    9585 3850
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8785 950  8440 950 
+Wire Wire Line
+	8785 1050 8440 1050
+Wire Wire Line
+	8785 1150 8440 1150
+Wire Wire Line
+	8785 1250 8440 1250
+Wire Wire Line
+	8785 1350 8440 1350
+Wire Wire Line
+	8785 1550 8440 1550
+Wire Wire Line
+	8785 1450 8440 1450
+Wire Wire Line
+	8785 1650 8440 1650
+Wire Wire Line
+	8785 1850 8440 1850
+Wire Wire Line
+	8785 1950 8440 1950
+Wire Wire Line
+	8785 2050 8440 2050
+Wire Wire Line
+	8785 6250 8440 6250
+Wire Wire Line
+	8785 6350 8440 6350
+Wire Wire Line
+	8785 6450 8440 6450
+Wire Wire Line
+	8785 6550 8440 6550
+Wire Wire Line
+	8785 6650 8440 6650
+Wire Wire Line
+	8785 6750 8440 6750
+Wire Wire Line
+	8785 6850 8440 6850
+Wire Wire Line
+	8785 6950 8440 6950
+Wire Wire Line
+	10730 950  10385 950 
+Text Label 8530 950  0    60   ~ 0
+3V3
+Text Label 8530 1050 0    60   ~ 0
+3V3
+Text Label 8530 1150 0    60   ~ 0
+3V3
+Text Label 8530 1250 0    60   ~ 0
+3V3
+Text Label 8530 1350 0    60   ~ 0
+3V3
+Text Label 8530 1450 0    60   ~ 0
+3V3
+Text Label 8530 1550 0    60   ~ 0
+3V3
+Text Label 8535 1650 0    60   ~ 0
+3V3
+Text Label 8535 1850 0    60   ~ 0
+TMS
+Text Label 8535 1950 0    60   ~ 0
+TDI
+Text Label 8535 2050 0    60   ~ 0
+TCK
+Text Label 10460 950  0    60   ~ 0
+TDO
+$Comp
+L Conn_02x05_Odd_Even J5
+U 1 1 5AB86930
+P 7620 1685
+F 0 "J5" H 7670 1985 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 7670 1385 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 7620 1685 50  0001 C CNN
+F 3 "" H 7620 1685 50  0001 C CNN
+	1    7620 1685
+	1    0    0    -1  
+$EndComp
+Text Label 8545 6250 0    60   ~ 0
+GND
+Text Label 8545 6350 0    60   ~ 0
+GND
+Text Label 8545 6450 0    60   ~ 0
+GND
+Text Label 8545 6550 0    60   ~ 0
+GND
+Text Label 8545 6650 0    60   ~ 0
+GND
+Text Label 8545 6750 0    60   ~ 0
+GND
+Text Label 8545 6850 0    60   ~ 0
+GND
+Text Label 8550 6950 0    60   ~ 0
+GND
+Text Label 8005 1485 0    60   ~ 0
+GND
+Wire Wire Line
+	7420 1485 7075 1485
+Wire Wire Line
+	7420 1585 7075 1585
+Wire Wire Line
+	6855 1685 7420 1685
+Wire Wire Line
+	7420 1785 7075 1785
+Wire Wire Line
+	6735 1885 7420 1885
+Wire Wire Line
+	8265 1485 7920 1485
+Wire Wire Line
+	8265 1585 7920 1585
+Wire Wire Line
+	8265 1685 7920 1685
+Wire Wire Line
+	8265 1785 7920 1785
+Wire Wire Line
+	8265 1885 7920 1885
+Text Label 8010 1885 0    60   ~ 0
+GND
+Text Label 7180 1485 0    60   ~ 0
+TCK
+Text Label 7185 1585 0    60   ~ 0
+TDO
+Text Label 7190 1685 0    60   ~ 0
+TMS
+Text Label 7185 1885 0    60   ~ 0
+TDI
+Text Label 8005 1585 0    60   ~ 0
+3V3
+Text Label 8015 1685 0    60   ~ 0
+NC
+Text Label 8015 1785 0    60   ~ 0
+NC
+Text Label 7195 1785 0    60   ~ 0
+NC
+$Comp
+L Conn_01x07 J6
+U 1 1 5AB86931
+P 7620 3025
+F 0 "J6" H 7620 3425 50  0000 C CNN
+F 1 "Conn_01x07" H 7620 2625 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x07" H 7620 3025 50  0001 C CNN
+F 3 "" H 7620 3025 50  0001 C CNN
+	1    7620 3025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7420 2725 7075 2725
+Wire Wire Line
+	7420 2925 7075 2925
+Wire Wire Line
+	7420 3125 7075 3125
+Wire Wire Line
+	7420 3225 7075 3225
+Wire Wire Line
+	7420 3325 7075 3325
+Text Label 7180 2725 0    60   ~ 0
+TCK
+Text Label 7185 2925 0    60   ~ 0
+TDO
+Text Label 7190 3125 0    60   ~ 0
+TMS
+Text Label 7195 3225 0    60   ~ 0
+TDI
+Wire Wire Line
+	7420 3025 7075 3025
+Wire Wire Line
+	7420 2825 7075 2825
+Text Label 7180 3025 0    60   ~ 0
+3V3
+Text Label 7180 2825 0    60   ~ 0
+GND
+Text Label 7190 3325 0    60   ~ 0
+GND
+Wire Wire Line
+	7080 1485 7080 1300
+Connection ~ 7080 1485
+Wire Wire Line
+	7080 1585 6960 1585
+Wire Wire Line
+	6960 1585 6960 1305
+Connection ~ 7080 1585
+Wire Wire Line
+	6855 1685 6855 1305
+Wire Wire Line
+	6735 1885 6735 1305
+$Comp
+L R R27
+U 1 1 5AB86932
+P 7080 1150
+F 0 "R27" V 7160 1150 50  0000 C CNN
+F 1 "R" V 7080 1150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7010 1150 50  0001 C CNN
+F 3 "" H 7080 1150 50  0001 C CNN
+	1    7080 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R26
+U 1 1 5AB86933
+P 6960 1155
+F 0 "R26" V 7040 1155 50  0000 C CNN
+F 1 "R" V 6960 1155 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6890 1155 50  0001 C CNN
+F 3 "" H 6960 1155 50  0001 C CNN
+	1    6960 1155
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R25
+U 1 1 5AB86934
+P 6855 1155
+F 0 "R25" V 6935 1155 50  0000 C CNN
+F 1 "R" V 6855 1155 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6785 1155 50  0001 C CNN
+F 3 "" H 6855 1155 50  0001 C CNN
+	1    6855 1155
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5AB86935
+P 6735 1155
+F 0 "R2" V 6815 1155 50  0000 C CNN
+F 1 "R" V 6735 1155 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6665 1155 50  0001 C CNN
+F 3 "" H 6735 1155 50  0001 C CNN
+	1    6735 1155
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6735 1005 6735 895 
+Wire Wire Line
+	6735 895  7310 895 
+Wire Wire Line
+	7080 895  7080 1000
+Wire Wire Line
+	6960 1005 6960 895 
+Connection ~ 6960 895 
+Wire Wire Line
+	6855 1005 6855 895 
+Connection ~ 6855 895 
+Wire Wire Line
+	7310 895  7310 890 
+Connection ~ 7080 895 
+Text Label 7135 895  0    60   ~ 0
+3V3
+Wire Wire Line
+	4230 5715 4230 1935
+Connection ~ 4230 1935
+Wire Wire Line
+	2340 5595 2340 5715
+Connection ~ 2740 5715
+Wire Wire Line
+	2440 5595 2440 5715
+Connection ~ 2440 5715
+Wire Wire Line
+	2540 5595 2540 5715
+Connection ~ 2540 5715
+Wire Wire Line
+	2640 5595 2640 5715
+Connection ~ 2640 5715
+Wire Wire Line
+	2840 5595 2840 5715
+Connection ~ 2840 5715
+Wire Wire Line
+	2940 5595 2940 5715
+Connection ~ 2940 5715
+Wire Wire Line
+	3040 5595 3040 5715
+Connection ~ 3040 5715
 $EndSCHEMATC

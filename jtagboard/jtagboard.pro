@@ -1,4 +1,4 @@
-update=2018-03-20 오후 10:59:15
+update=2018-03-26 오후 12:22:50
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -59,5 +61,5 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
-[general]
-version=1
+LibName33=C:/msys64/home/meeso.kim/msx-cartridge/libraries/EMP240
+LibName34=C:/msys64/home/meeso.kim/msx-cartridge/libraries/altera_maxII_epm240
