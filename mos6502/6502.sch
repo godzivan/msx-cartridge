@@ -47,642 +47,664 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L WD65C02 U?
+L WD65C02 U5
 U 1 1 5AB911E3
-P 8945 2000
-F 0 "U?" H 8945 850 60  0000 C CNN
-F 1 "WD65C02" V 8945 1900 60  0000 C CNN
-F 2 "" H 8445 2200 60  0000 C CNN
-F 3 "" H 8445 2200 60  0000 C CNN
-	1    8945 2000
+P 8945 2495
+F 0 "U5" H 8945 1345 60  0000 C CNN
+F 1 "WD65C02" V 8945 2395 60  0000 C CNN
+F 2 "Housings_DIP:DIP-40_W25.4mm_LongPads" H 8445 2695 60  0000 C CNN
+F 3 "" H 8445 2695 60  0000 C CNN
+	1    8945 2495
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74HC245 U?
+L 74HC245 U2
 U 1 1 5AB91284
-P 2355 1645
-F 0 "U?" H 2455 2220 50  0000 L BNN
-F 1 "74HC245" H 2405 1070 50  0000 L TNN
-F 2 "" H 2355 1645 50  0001 C CNN
-F 3 "" H 2355 1645 50  0001 C CNN
-	1    2355 1645
+P 2355 2140
+F 0 "U2" H 2455 2715 50  0000 L BNN
+F 1 "74HC245" H 2405 1565 50  0000 L TNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2355 2140 50  0001 C CNN
+F 3 "" H 2355 2140 50  0001 C CNN
+	1    2355 2140
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74HC245 U?
+L 74HC245 U3
 U 1 1 5AB9135B
-P 2355 3125
-F 0 "U?" H 2455 3700 50  0000 L BNN
-F 1 "74HC245" H 2405 2550 50  0000 L TNN
-F 2 "" H 2355 3125 50  0001 C CNN
-F 3 "" H 2355 3125 50  0001 C CNN
-	1    2355 3125
+P 2355 3620
+F 0 "U3" H 2455 4195 50  0000 L BNN
+F 1 "74HC245" H 2405 3045 50  0000 L TNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2355 3620 50  0001 C CNN
+F 3 "" H 2355 3620 50  0001 C CNN
+	1    2355 3620
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74HC245 U?
+L 74HC245 U1
 U 1 1 5AB913D6
-P 2345 4620
-F 0 "U?" H 2445 5195 50  0000 L BNN
-F 1 "74HC245" H 2395 4045 50  0000 L TNN
-F 2 "" H 2345 4620 50  0001 C CNN
-F 3 "" H 2345 4620 50  0001 C CNN
-	1    2345 4620
+P 2345 5115
+F 0 "U1" H 2445 5690 50  0000 L BNN
+F 1 "74HC245" H 2395 4540 50  0000 L TNN
+F 2 "" H 2345 5115 50  0001 C CNN
+F 3 "" H 2345 5115 50  0001 C CNN
+	1    2345 5115
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74HC245 U?
+L 74HC245 U4
 U 1 1 5AB91494
-P 5385 1650
-F 0 "U?" H 5485 2225 50  0000 L BNN
-F 1 "74HC245" H 5435 1075 50  0000 L TNN
-F 2 "" H 5385 1650 50  0001 C CNN
-F 3 "" H 5385 1650 50  0001 C CNN
-	1    5385 1650
+P 5385 2145
+F 0 "U4" H 5485 2720 50  0000 L BNN
+F 1 "74HC245" H 5435 1570 50  0000 L TNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5385 2145 50  0001 C CNN
+F 3 "" H 5385 2145 50  0001 C CNN
+	1    5385 2145
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9595 1700 10020 1700
+	9595 2195 10020 2195
 Wire Wire Line
-	9595 1800 10020 1800
+	9595 2295 10020 2295
 Wire Wire Line
-	9595 1900 10020 1900
+	9595 2395 10020 2395
 Wire Wire Line
-	9595 2000 10020 2000
+	9595 2495 10020 2495
 Wire Wire Line
-	9595 2100 10020 2100
+	9595 2595 10020 2595
 Wire Wire Line
-	9595 2200 10020 2200
+	9595 2695 10020 2695
 Wire Wire Line
-	9595 2300 10020 2300
+	9595 2795 10020 2795
 Wire Wire Line
-	9595 2400 10020 2400
+	9595 2895 10020 2895
 Wire Wire Line
-	9595 2500 10020 2500
+	9595 2995 10020 2995
 Wire Wire Line
-	9595 2600 10020 2600
+	9595 3095 10020 3095
 Wire Wire Line
-	9595 2700 10020 2700
+	9595 3195 10020 3195
 Wire Wire Line
-	9595 2800 10020 2800
+	9595 3295 10020 3295
 Wire Wire Line
-	9595 2900 10020 2900
+	9595 3395 10020 3395
 Wire Wire Line
-	9595 3000 10020 3000
+	9595 3495 10020 3495
 Wire Wire Line
-	9595 1100 10020 1100
+	9595 1595 10020 1595
 Wire Wire Line
-	9595 1200 10020 1200
+	9595 1695 10020 1695
 Wire Wire Line
-	9595 1300 10020 1300
+	9595 1795 10020 1795
 Wire Wire Line
-	9595 1400 10020 1400
+	9595 1895 10020 1895
 Wire Wire Line
-	9595 1500 10020 1500
+	9595 1995 10020 1995
 Wire Wire Line
-	7870 1700 8295 1700
+	7870 2195 8295 2195
 Wire Wire Line
-	7870 1800 8295 1800
+	7870 2295 8295 2295
 Wire Wire Line
-	7870 1900 8295 1900
+	7870 2395 8295 2395
 Wire Wire Line
-	7870 2000 8295 2000
+	7870 2495 8295 2495
 Wire Wire Line
-	7870 2100 8295 2100
+	7870 2595 8295 2595
 Wire Wire Line
-	7870 2200 8295 2200
+	7870 2695 8295 2695
 Wire Wire Line
-	7870 2300 8295 2300
+	7870 2795 8295 2795
 Wire Wire Line
-	7870 2400 8295 2400
+	7870 2895 8295 2895
 Wire Wire Line
-	7870 2500 8295 2500
+	7870 2995 8295 2995
 Wire Wire Line
-	7870 2600 8295 2600
+	7870 3095 8295 3095
 Wire Wire Line
-	7870 2700 8295 2700
+	7870 3195 8295 3195
 Wire Wire Line
-	7870 2800 8295 2800
+	7870 3295 8295 3295
 Wire Wire Line
-	7870 2900 8295 2900
+	7870 3395 8295 3395
 Wire Wire Line
-	7870 3000 8295 3000
+	7870 3495 8295 3495
 Wire Wire Line
-	7870 1100 8295 1100
+	7870 1595 8295 1595
 Wire Wire Line
-	7870 1200 8295 1200
+	7870 1695 8295 1695
 Wire Wire Line
-	7870 1300 8295 1300
+	7870 1795 8295 1795
 Wire Wire Line
-	7870 1400 8295 1400
+	7870 1895 8295 1895
 Wire Wire Line
-	7870 1500 8295 1500
+	7870 1995 8295 1995
 Wire Wire Line
-	7870 1600 8295 1600
+	7870 2095 8295 2095
 Wire Wire Line
-	1230 1145 1655 1145
+	1230 1640 1655 1640
 Wire Wire Line
-	1230 1245 1655 1245
+	1230 1740 1655 1740
 Wire Wire Line
-	1230 1345 1655 1345
+	1230 1840 1655 1840
 Wire Wire Line
-	1230 1445 1655 1445
+	1230 1940 1655 1940
 Wire Wire Line
-	1230 1545 1655 1545
+	1230 2040 1655 2040
 Wire Wire Line
-	1230 1645 1655 1645
+	1230 2140 1655 2140
 Wire Wire Line
-	1230 1745 1655 1745
+	1230 2240 1655 2240
 Wire Wire Line
-	1230 1845 1655 1845
+	1230 2340 1655 2340
 Wire Wire Line
-	3055 1145 3480 1145
+	3055 1640 3480 1640
 Wire Wire Line
-	3055 1245 3480 1245
+	3055 1740 3480 1740
 Wire Wire Line
-	3055 1345 3480 1345
+	3055 1840 3480 1840
 Wire Wire Line
-	3055 1445 3480 1445
+	3055 1940 3480 1940
 Wire Wire Line
-	3055 1545 3480 1545
+	3055 2040 3480 2040
 Wire Wire Line
-	3055 1645 3480 1645
+	3055 2140 3480 2140
 Wire Wire Line
-	3055 1745 3480 1745
+	3055 2240 3480 2240
 Wire Wire Line
-	3055 1845 3480 1845
-Text Label 9700 1800 0    60   ~ 0
+	3055 2340 3480 2340
+Text Label 9700 2295 0    60   ~ 0
 D0
-Text Label 9700 1900 0    60   ~ 0
+Text Label 9700 2395 0    60   ~ 0
 D1
-Text Label 9700 2000 0    60   ~ 0
+Text Label 9700 2495 0    60   ~ 0
 D2
-Text Label 9700 2100 0    60   ~ 0
+Text Label 9700 2595 0    60   ~ 0
 D3
-Text Label 9700 2200 0    60   ~ 0
+Text Label 9700 2695 0    60   ~ 0
 D4
-Text Label 9700 2300 0    60   ~ 0
+Text Label 9700 2795 0    60   ~ 0
 D5
-Text Label 9700 2400 0    60   ~ 0
+Text Label 9700 2895 0    60   ~ 0
 D6
-Text Label 9700 2500 0    60   ~ 0
+Text Label 9700 2995 0    60   ~ 0
 D7
-Text Label 9710 2600 0    60   ~ 0
+Text Label 9710 3095 0    60   ~ 0
 A15
-Text Label 9705 2700 0    60   ~ 0
+Text Label 9705 3195 0    60   ~ 0
 A14
-Text Label 9700 2800 0    60   ~ 0
+Text Label 9700 3295 0    60   ~ 0
 A13
-Text Label 9700 2900 0    60   ~ 0
+Text Label 9700 3395 0    60   ~ 0
 A12
-Text Label 9695 3000 0    60   ~ 0
+Text Label 9695 3495 0    60   ~ 0
 GND
-Text Label 8050 1900 0    60   ~ 0
+Text Label 8050 2395 0    60   ~ 0
 A0
-Text Label 8055 2000 0    60   ~ 0
+Text Label 8055 2495 0    60   ~ 0
 A1
-Text Label 8055 2100 0    60   ~ 0
+Text Label 8055 2595 0    60   ~ 0
 A2
-Text Label 8055 2200 0    60   ~ 0
+Text Label 8055 2695 0    60   ~ 0
 A3
-Text Label 8060 2300 0    60   ~ 0
+Text Label 8060 2795 0    60   ~ 0
 A4
-Text Label 8060 2400 0    60   ~ 0
+Text Label 8060 2895 0    60   ~ 0
 A5
-Text Label 8060 2500 0    60   ~ 0
+Text Label 8060 2995 0    60   ~ 0
 A6
-Text Label 8060 2600 0    60   ~ 0
+Text Label 8060 3095 0    60   ~ 0
 A7
-Text Label 8060 2700 0    60   ~ 0
+Text Label 8060 3195 0    60   ~ 0
 A8
-Text Label 8060 2800 0    60   ~ 0
+Text Label 8060 3295 0    60   ~ 0
 A9
-Text Label 8060 2900 0    60   ~ 0
+Text Label 8060 3395 0    60   ~ 0
 A10
-Text Label 8060 3000 0    60   ~ 0
+Text Label 8060 3495 0    60   ~ 0
 A11
-Text Label 8055 1800 0    60   ~ 0
+Text Label 8055 2295 0    60   ~ 0
 VCC
-Text Label 8050 1700 0    60   ~ 0
+Text Label 8050 2195 0    60   ~ 0
 SYNC
-Text Label 8050 1600 0    60   ~ 0
+Text Label 8050 2095 0    60   ~ 0
 NMI
-Text Label 8050 1500 0    60   ~ 0
+Text Label 8050 1995 0    60   ~ 0
 ML
-Text Label 8060 1400 0    60   ~ 0
+Text Label 8060 1895 0    60   ~ 0
 NC
-Text Label 8060 1300 0    60   ~ 0
+Text Label 8060 1795 0    60   ~ 0
 PH1o
-Text Label 8065 1200 0    60   ~ 0
+Text Label 8065 1695 0    60   ~ 0
 RDY
-Text Label 9635 1100 0    60   ~ 0
+Text Label 9635 1595 0    60   ~ 0
 RESET
-Text Label 9635 1200 0    60   ~ 0
+Text Label 9635 1695 0    60   ~ 0
 PHI2o
-Text Label 9650 1300 0    60   ~ 0
+Text Label 9650 1795 0    60   ~ 0
 SO
-Text Label 9640 1400 0    60   ~ 0
+Text Label 9640 1895 0    60   ~ 0
 PHI0
-Text Label 9650 1500 0    60   ~ 0
+Text Label 9650 1995 0    60   ~ 0
 NC
-Text Label 8075 1100 0    60   ~ 0
+Text Label 8075 1595 0    60   ~ 0
 GND
 Wire Wire Line
-	6085 1150 6510 1150
+	6085 1645 6510 1645
 Wire Wire Line
-	6085 1250 6510 1250
+	6085 1745 6510 1745
 Wire Wire Line
-	6085 1350 6510 1350
+	6085 1845 6510 1845
 Wire Wire Line
-	6085 1450 6510 1450
+	6085 1945 6510 1945
 Wire Wire Line
-	6085 1550 6510 1550
+	6085 2045 6510 2045
 Wire Wire Line
-	6085 1650 6510 1650
+	6085 2145 6510 2145
 Wire Wire Line
-	6085 1750 6510 1750
-Text Label 6265 1150 0    60   ~ 0
+	6085 2245 6510 2245
+Text Label 6265 1645 0    60   ~ 0
 A0
-Text Label 6270 1250 0    60   ~ 0
+Text Label 6270 1745 0    60   ~ 0
 A1
-Text Label 6270 1350 0    60   ~ 0
+Text Label 6270 1845 0    60   ~ 0
 A2
-Text Label 6270 1450 0    60   ~ 0
+Text Label 6270 1945 0    60   ~ 0
 A3
-Text Label 6275 1550 0    60   ~ 0
+Text Label 6275 2045 0    60   ~ 0
 A4
-Text Label 6275 1650 0    60   ~ 0
+Text Label 6275 2145 0    60   ~ 0
 A5
-Text Label 6275 1750 0    60   ~ 0
+Text Label 6275 2245 0    60   ~ 0
 A6
-Text Label 6275 1850 0    60   ~ 0
+Text Label 6275 2345 0    60   ~ 0
 A7
 Wire Wire Line
-	6085 1850 6510 1850
+	6085 2345 6510 2345
 Wire Wire Line
-	3045 4120 3470 4120
+	3045 4615 3470 4615
 Wire Wire Line
-	3045 4220 3470 4220
+	3045 4715 3470 4715
 Wire Wire Line
-	3045 4320 3470 4320
+	3045 4815 3470 4815
 Wire Wire Line
-	3045 4420 3470 4420
-Text Label 3215 4120 0    60   ~ 0
+	3045 4915 3470 4915
+Text Label 3215 4615 0    60   ~ 0
 A8
-Text Label 3210 4220 0    60   ~ 0
+Text Label 3210 4715 0    60   ~ 0
 A9
-Text Label 3200 4320 0    60   ~ 0
+Text Label 3200 4815 0    60   ~ 0
 A10
-Text Label 3195 4420 0    60   ~ 0
+Text Label 3195 4915 0    60   ~ 0
 A11
 Wire Wire Line
-	3045 4520 3470 4520
+	3045 5015 3470 5015
 Wire Wire Line
-	3045 4620 3470 4620
+	3045 5115 3470 5115
 Wire Wire Line
-	3045 4720 3470 4720
+	3045 5215 3470 5215
 Wire Wire Line
-	3045 4820 3470 4820
-Text Label 3185 4820 0    60   ~ 0
+	3045 5315 3470 5315
+Text Label 3185 5315 0    60   ~ 0
 A15
-Text Label 3190 4720 0    60   ~ 0
+Text Label 3190 5215 0    60   ~ 0
 A14
-Text Label 3185 4620 0    60   ~ 0
+Text Label 3185 5115 0    60   ~ 0
 A13
-Text Label 3190 4520 0    60   ~ 0
+Text Label 3190 5015 0    60   ~ 0
 A12
 Wire Wire Line
-	1230 2625 1655 2625
+	1230 3120 1655 3120
 Wire Wire Line
-	1230 2725 1655 2725
+	1230 3220 1655 3220
 Wire Wire Line
-	1230 2825 1655 2825
+	1230 3320 1655 3320
 Wire Wire Line
-	1230 2925 1655 2925
+	1230 3420 1655 3420
 Wire Wire Line
-	1230 3025 1655 3025
+	1230 3520 1655 3520
 Wire Wire Line
-	1230 3125 1655 3125
+	1230 3620 1655 3620
 Wire Wire Line
-	1230 3225 1655 3225
+	1230 3720 1655 3720
 Wire Wire Line
-	1230 3325 1655 3325
-Text Label 1335 2625 0    60   ~ 0
+	1230 3820 1655 3820
+Text Label 1335 3120 0    60   ~ 0
 D0
-Text Label 1335 2725 0    60   ~ 0
+Text Label 1335 3220 0    60   ~ 0
 D1
-Text Label 1335 2825 0    60   ~ 0
+Text Label 1335 3320 0    60   ~ 0
 D2
-Text Label 1335 2925 0    60   ~ 0
+Text Label 1335 3420 0    60   ~ 0
 D3
-Text Label 1335 3025 0    60   ~ 0
+Text Label 1335 3520 0    60   ~ 0
 D4
-Text Label 1335 3125 0    60   ~ 0
+Text Label 1335 3620 0    60   ~ 0
 D5
-Text Label 1335 3225 0    60   ~ 0
+Text Label 1335 3720 0    60   ~ 0
 D6
-Text Label 1335 3325 0    60   ~ 0
+Text Label 1335 3820 0    60   ~ 0
 D7
-Text Label 3125 1145 0    60   ~ 0
+Text Label 3125 1640 0    60   ~ 0
 RDY
-Text Label 1360 1345 0    60   ~ 0
+Text Label 1360 1840 0    60   ~ 0
 PHI2o
-Text Label 3120 1445 0    60   ~ 0
+Text Label 3120 1940 0    60   ~ 0
 RESET
-Text Label 3125 1245 0    60   ~ 0
+Text Label 3125 1740 0    60   ~ 0
 PHI0
-Text Label 3120 1645 0    60   ~ 0
+Text Label 3120 2140 0    60   ~ 0
 NMI
-Text Label 3125 1745 0    60   ~ 0
+Text Label 3125 2240 0    60   ~ 0
 IRQ
-Text Label 9705 1700 0    60   ~ 0
+Text Label 9705 2195 0    60   ~ 0
 RW
-Text Label 1355 1845 0    60   ~ 0
+Text Label 1355 2340 0    60   ~ 0
 RW
 $Comp
-L Raspberry_Pi_2_3 J?
+L Raspberry_Pi_2_3 J1
 U 1 1 5AB93425
-P 5650 4680
-F 0 "J?" H 6350 3430 50  0000 C CNN
-F 1 "Raspberry_Pi_2_3" H 5250 5580 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x20" H 6650 5930 50  0001 C CNN
-F 3 "" H 5700 4530 50  0001 C CNN
-	1    5650 4680
+P 5650 5175
+F 0 "J1" H 6350 3925 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 5250 6075 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x20" H 6650 6425 50  0001 C CNN
+F 3 "" H 5700 5025 50  0001 C CNN
+	1    5650 5175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4325 5380 4750 5380
+	4325 5875 4750 5875
 Wire Wire Line
-	4325 5480 4750 5480
-Text Label 4430 5380 0    60   ~ 0
+	4325 5975 4750 5975
+Text Label 4430 5875 0    60   ~ 0
 RD0
-Text Label 4430 5480 0    60   ~ 0
+Text Label 4430 5975 0    60   ~ 0
 RD1
 Wire Wire Line
-	6550 3780 6975 3780
+	6550 4275 6975 4275
 Wire Wire Line
-	6550 3880 6975 3880
+	6550 4375 6975 4375
 Wire Wire Line
-	6550 3980 6975 3980
-Text Label 6655 3780 0    60   ~ 0
+	6550 4475 6975 4475
+Text Label 6655 4275 0    60   ~ 0
 RD2
-Text Label 6655 3880 0    60   ~ 0
+Text Label 6655 4375 0    60   ~ 0
 RD3
-Text Label 6655 3980 0    60   ~ 0
+Text Label 6655 4475 0    60   ~ 0
 RD4
 Wire Wire Line
-	6550 4180 6975 4180
+	6550 4675 6975 4675
 Wire Wire Line
-	6550 4280 6975 4280
+	6550 4775 6975 4775
 Wire Wire Line
-	6550 4480 6975 4480
-Text Label 6655 4180 0    60   ~ 0
+	6550 4975 6975 4975
+Text Label 6655 4675 0    60   ~ 0
 RD5
-Text Label 6655 4280 0    60   ~ 0
+Text Label 6655 4775 0    60   ~ 0
 RD6
-Text Label 6655 4480 0    60   ~ 0
+Text Label 6655 4975 0    60   ~ 0
 RD7
 Wire Wire Line
-	6550 4580 6975 4580
+	6550 5075 6975 5075
 Wire Wire Line
-	6550 4680 6975 4680
+	6550 5175 6975 5175
 Wire Wire Line
-	6550 4780 6975 4780
+	6550 5275 6975 5275
 Wire Wire Line
-	6550 4880 6975 4880
-Text Label 6655 4580 0    60   ~ 0
+	6550 5375 6975 5375
+Text Label 6655 5075 0    60   ~ 0
 RA8
-Text Label 6655 4680 0    60   ~ 0
+Text Label 6655 5175 0    60   ~ 0
 RA9
-Text Label 6655 4780 0    60   ~ 0
+Text Label 6655 5275 0    60   ~ 0
 RA10
-Text Label 6655 4880 0    60   ~ 0
+Text Label 6655 5375 0    60   ~ 0
 RA11
 Wire Wire Line
-	6550 5080 6975 5080
+	6550 5575 6975 5575
 Wire Wire Line
-	6550 5180 6975 5180
+	6550 5675 6975 5675
 Wire Wire Line
-	6550 5380 6975 5380
+	6550 5875 6975 5875
 Wire Wire Line
-	6550 5480 6975 5480
-Text Label 6655 5480 0    60   ~ 0
+	6550 5975 6975 5975
+Text Label 6655 5975 0    60   ~ 0
 RA15
-Text Label 6655 5380 0    60   ~ 0
+Text Label 6655 5875 0    60   ~ 0
 RA14
-Text Label 6655 5180 0    60   ~ 0
+Text Label 6655 5675 0    60   ~ 0
 RA13
-Text Label 6655 5080 0    60   ~ 0
+Text Label 6655 5575 0    60   ~ 0
 RA12
 Wire Wire Line
-	4325 3980 4750 3980
+	4325 4475 4750 4475
 Wire Wire Line
-	4325 4080 4750 4080
-Text Label 4430 4080 0    60   ~ 0
+	4325 4575 4750 4575
+Text Label 4430 4575 0    60   ~ 0
 RC17
-Text Label 4430 3980 0    60   ~ 0
+Text Label 4430 4475 0    60   ~ 0
 RC16
 Wire Wire Line
-	4325 4180 4750 4180
+	4325 4675 4750 4675
 Wire Wire Line
-	4325 4280 4750 4280
-Text Label 4430 4280 0    60   ~ 0
+	4325 4775 4750 4775
+Text Label 4430 4775 0    60   ~ 0
 RC19
-Text Label 4430 4180 0    60   ~ 0
+Text Label 4430 4675 0    60   ~ 0
 RC18
 Wire Wire Line
-	4325 4380 4750 4380
+	4325 4875 4750 4875
 Wire Wire Line
-	4325 4480 4750 4480
-Text Label 4430 4480 0    60   ~ 0
+	4325 4975 4750 4975
+Text Label 4430 4975 0    60   ~ 0
 RC21
-Text Label 4430 4380 0    60   ~ 0
+Text Label 4430 4875 0    60   ~ 0
 RC20
 Wire Wire Line
-	4325 4580 4750 4580
+	4325 5075 4750 5075
 Wire Wire Line
-	4325 4680 4750 4680
-Text Label 4430 4680 0    60   ~ 0
+	4325 5175 4750 5175
+Text Label 4430 5175 0    60   ~ 0
 RC23
-Text Label 4430 4580 0    60   ~ 0
+Text Label 4430 5075 0    60   ~ 0
 RC22
-Text Label 1355 1245 0    60   ~ 0
+Text Label 1355 1740 0    60   ~ 0
 RC20
-Text Label 3115 1345 0    60   ~ 0
+Text Label 3115 1840 0    60   ~ 0
 RC21
-Text Label 1360 1145 0    60   ~ 0
+Text Label 1360 1640 0    60   ~ 0
 RC16
-Text Label 1360 1445 0    60   ~ 0
+Text Label 1360 1940 0    60   ~ 0
 RC17
-Text Label 1355 1545 0    60   ~ 0
+Text Label 1355 2040 0    60   ~ 0
 SYNC
-Text Label 3120 1545 0    60   ~ 0
+Text Label 3120 2040 0    60   ~ 0
 RC22
-Text Label 1360 1645 0    60   ~ 0
+Text Label 1360 2140 0    60   ~ 0
 RC18
-Text Label 1360 1745 0    60   ~ 0
+Text Label 1360 2240 0    60   ~ 0
 RC19
-Text Label 3125 1845 0    60   ~ 0
+Text Label 3125 2340 0    60   ~ 0
 RC23
 Wire Wire Line
-	3055 2625 3480 2625
+	3055 3120 3480 3120
 Wire Wire Line
-	3055 2725 3480 2725
-Text Label 3160 2625 0    60   ~ 0
+	3055 3220 3480 3220
+Text Label 3160 3120 0    60   ~ 0
 RD0
-Text Label 3160 2725 0    60   ~ 0
+Text Label 3160 3220 0    60   ~ 0
 RD1
 Wire Wire Line
-	3055 2825 3480 2825
+	3055 3320 3480 3320
 Wire Wire Line
-	3055 2925 3480 2925
+	3055 3420 3480 3420
 Wire Wire Line
-	3055 3025 3480 3025
-Text Label 3160 2825 0    60   ~ 0
+	3055 3520 3480 3520
+Text Label 3160 3320 0    60   ~ 0
 RD2
-Text Label 3160 2925 0    60   ~ 0
+Text Label 3160 3420 0    60   ~ 0
 RD3
-Text Label 3160 3025 0    60   ~ 0
+Text Label 3160 3520 0    60   ~ 0
 RD4
 Wire Wire Line
-	3055 3125 3480 3125
+	3055 3620 3480 3620
 Wire Wire Line
-	3055 3225 3480 3225
-Text Label 3160 3125 0    60   ~ 0
+	3055 3720 3480 3720
+Text Label 3160 3620 0    60   ~ 0
 RD5
-Text Label 3160 3225 0    60   ~ 0
+Text Label 3160 3720 0    60   ~ 0
 RD6
-Text Label 3160 3325 0    60   ~ 0
+Text Label 3160 3820 0    60   ~ 0
 RD7
 Wire Wire Line
-	3055 3325 3480 3325
+	3055 3820 3480 3820
 Wire Wire Line
-	4260 1150 4685 1150
+	4260 1645 4685 1645
 Wire Wire Line
-	4260 1250 4685 1250
-Text Label 4365 1150 0    60   ~ 0
+	4260 1745 4685 1745
+Text Label 4365 1645 0    60   ~ 0
 RD0
-Text Label 4365 1250 0    60   ~ 0
+Text Label 4365 1745 0    60   ~ 0
 RD1
 Wire Wire Line
-	4260 1350 4685 1350
+	4260 1845 4685 1845
 Wire Wire Line
-	4260 1450 4685 1450
+	4260 1945 4685 1945
 Wire Wire Line
-	4260 1550 4685 1550
-Text Label 4365 1350 0    60   ~ 0
+	4260 2045 4685 2045
+Text Label 4365 1845 0    60   ~ 0
 RD2
-Text Label 4365 1450 0    60   ~ 0
+Text Label 4365 1945 0    60   ~ 0
 RD3
-Text Label 4365 1550 0    60   ~ 0
+Text Label 4365 2045 0    60   ~ 0
 RD4
 Wire Wire Line
-	4260 1650 4685 1650
+	4260 2145 4685 2145
 Wire Wire Line
-	4260 1750 4685 1750
-Text Label 4365 1650 0    60   ~ 0
+	4260 2245 4685 2245
+Text Label 4365 2145 0    60   ~ 0
 RD5
-Text Label 4365 1750 0    60   ~ 0
+Text Label 4365 2245 0    60   ~ 0
 RD6
-Text Label 4365 1850 0    60   ~ 0
+Text Label 4365 2345 0    60   ~ 0
 RD7
 Wire Wire Line
-	4260 1850 4685 1850
+	4260 2345 4685 2345
 Wire Wire Line
-	4260 2050 4685 2050
+	4260 2545 4685 2545
 Wire Wire Line
-	4260 2150 4685 2150
+	4260 2645 4685 2645
 Wire Wire Line
-	5250 5980 5250 6170
+	5250 6475 5250 6665
 Wire Wire Line
-	5250 6170 6270 6170
+	5250 6665 6270 6665
 Wire Wire Line
-	5350 5980 5350 6170
-Connection ~ 5350 6170
+	5350 6475 5350 6665
+Connection ~ 5350 6665
 Wire Wire Line
-	5450 5980 5450 6170
-Connection ~ 5450 6170
+	5450 6475 5450 6665
+Connection ~ 5450 6665
 Wire Wire Line
-	5550 5980 5550 6170
-Connection ~ 5550 6170
+	5550 6475 5550 6665
+Connection ~ 5550 6665
 Wire Wire Line
-	5650 5980 5650 6170
-Connection ~ 5650 6170
+	5650 6475 5650 6665
+Connection ~ 5650 6665
 Wire Wire Line
-	5750 5980 5750 6170
-Connection ~ 5750 6170
+	5750 6475 5750 6665
+Connection ~ 5750 6665
 Wire Wire Line
-	5850 5980 5850 6170
-Connection ~ 5850 6170
+	5850 6475 5850 6665
+Connection ~ 5850 6665
 Wire Wire Line
-	5950 5980 5950 6170
-Connection ~ 5950 6170
-Text Label 4380 2050 0    60   ~ 0
+	5950 6475 5950 6665
+Connection ~ 5950 6665
+Text Label 4380 2545 0    60   ~ 0
 GND
-Text Label 4380 2150 0    60   ~ 0
+Text Label 4380 2645 0    60   ~ 0
 RC24
 Wire Wire Line
-	1230 2045 1655 2045
+	1230 2540 1655 2540
 Wire Wire Line
-	1230 2145 1655 2145
-Text Label 1350 2045 0    60   ~ 0
+	1230 2640 1655 2640
+Text Label 1350 2540 0    60   ~ 0
 GND
-Text Label 1350 2145 0    60   ~ 0
+Text Label 1350 2640 0    60   ~ 0
 GND
 Wire Wire Line
-	1230 3525 1655 3525
+	1230 4020 1655 4020
 Wire Wire Line
-	1230 3625 1655 3625
-Text Label 1350 3625 0    60   ~ 0
+	1230 4120 1655 4120
+Text Label 1350 4120 0    60   ~ 0
 RC25
 Wire Wire Line
-	1220 5020 1645 5020
+	1220 5515 1645 5515
 Wire Wire Line
-	1220 5120 1645 5120
-Text Label 1340 5020 0    60   ~ 0
+	1220 5615 1645 5615
+Text Label 1340 5515 0    60   ~ 0
 GND
-Text Label 1340 5120 0    60   ~ 0
+Text Label 1340 5615 0    60   ~ 0
 RC24
 Wire Wire Line
-	4325 4780 4750 4780
+	4325 5275 4750 5275
 Wire Wire Line
-	4325 4880 4750 4880
-Text Label 4430 4880 0    60   ~ 0
+	4325 5375 4750 5375
+Text Label 4430 5375 0    60   ~ 0
 RC25
-Text Label 4430 4780 0    60   ~ 0
+Text Label 4430 5275 0    60   ~ 0
 RC24
-Text Label 1360 3525 0    60   ~ 0
+Text Label 1360 4020 0    60   ~ 0
 RW
 Wire Wire Line
-	1220 4120 1645 4120
+	1220 4615 1645 4615
 Wire Wire Line
-	1220 4220 1645 4220
-Text Label 1325 4120 0    60   ~ 0
+	1220 4715 1645 4715
+Text Label 1325 4615 0    60   ~ 0
 RA8
-Text Label 1325 4220 0    60   ~ 0
+Text Label 1325 4715 0    60   ~ 0
 RA9
 Wire Wire Line
-	1220 4320 1645 4320
+	1220 4815 1645 4815
 Wire Wire Line
-	1220 4420 1645 4420
+	1220 4915 1645 4915
 Wire Wire Line
-	1220 4520 1645 4520
-Text Label 1325 4320 0    60   ~ 0
+	1220 5015 1645 5015
+Text Label 1325 4815 0    60   ~ 0
 RA10
-Text Label 1325 4420 0    60   ~ 0
+Text Label 1325 4915 0    60   ~ 0
 RA11
-Text Label 1325 4520 0    60   ~ 0
+Text Label 1325 5015 0    60   ~ 0
 RA12
 Wire Wire Line
-	1220 4620 1645 4620
+	1220 5115 1645 5115
 Wire Wire Line
-	1220 4720 1645 4720
-Text Label 1325 4620 0    60   ~ 0
+	1220 5215 1645 5215
+Text Label 1325 5115 0    60   ~ 0
 RA13
-Text Label 1325 4720 0    60   ~ 0
+Text Label 1325 5215 0    60   ~ 0
 RA14
-Text Label 1325 4820 0    60   ~ 0
+Text Label 1325 5315 0    60   ~ 0
 RA15
 Wire Wire Line
-	1220 4820 1645 4820
+	1220 5315 1645 5315
+Wire Wire Line
+	5450 3875 5450 3315
+Wire Wire Line
+	5450 3315 5550 3315
+Wire Wire Line
+	5550 3315 5550 3875
+Wire Wire Line
+	5750 3875 5750 3310
+Wire Wire Line
+	5750 3310 5850 3310
+Wire Wire Line
+	5850 3310 5850 3875
+Text Label 5450 3615 1    60   ~ 0
+VCC
+Wire Wire Line
+	4325 5475 4750 5475
+Wire Wire Line
+	4325 5575 4750 5575
+Text Label 4430 5575 0    60   ~ 0
+RC27
+Text Label 4430 5475 0    60   ~ 0
+RC26
 $EndSCHEMATC
