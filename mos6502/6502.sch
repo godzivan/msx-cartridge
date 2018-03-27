@@ -32,6 +32,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:65xx
+LIBS:6502-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -58,17 +59,6 @@ F 3 "" H 8445 2695 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74HC245 U2
-U 1 1 5AB91284
-P 2355 2140
-F 0 "U2" H 2455 2715 50  0000 L BNN
-F 1 "74HC245" H 2405 1565 50  0000 L TNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2355 2140 50  0001 C CNN
-F 3 "" H 2355 2140 50  0001 C CNN
-	1    2355 2140
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74HC245 U3
 U 1 1 5AB9135B
 P 2355 3620
@@ -77,28 +67,6 @@ F 1 "74HC245" H 2405 3045 50  0000 L TNN
 F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2355 3620 50  0001 C CNN
 F 3 "" H 2355 3620 50  0001 C CNN
 	1    2355 3620
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74HC245 U1
-U 1 1 5AB913D6
-P 2345 5115
-F 0 "U1" H 2445 5690 50  0000 L BNN
-F 1 "74HC245" H 2395 4540 50  0000 L TNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2345 5115 50  0001 C CNN
-F 3 "" H 2345 5115 50  0001 C CNN
-	1    2345 5115
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74HC245 U4
-U 1 1 5AB91494
-P 5385 2145
-F 0 "U4" H 5485 2720 50  0000 L BNN
-F 1 "74HC245" H 5435 1570 50  0000 L TNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5385 2145 50  0001 C CNN
-F 3 "" H 5385 2145 50  0001 C CNN
-	1    5385 2145
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -180,37 +148,37 @@ Wire Wire Line
 Wire Wire Line
 	7870 2095 8295 2095
 Wire Wire Line
-	1230 1640 1655 1640
+	1425 1470 1850 1470
 Wire Wire Line
-	1230 1740 1655 1740
+	1425 1570 1850 1570
 Wire Wire Line
-	1230 1840 1655 1840
+	1425 1670 1850 1670
 Wire Wire Line
-	1230 1940 1655 1940
+	1425 1770 1850 1770
 Wire Wire Line
-	1230 2040 1655 2040
+	1425 1870 1850 1870
 Wire Wire Line
-	1230 2140 1655 2140
+	1425 1970 1850 1970
 Wire Wire Line
-	1230 2240 1655 2240
+	1425 2070 1850 2070
 Wire Wire Line
-	1230 2340 1655 2340
+	1425 2170 1850 2170
 Wire Wire Line
-	3055 1640 3480 1640
+	2850 1470 3275 1470
 Wire Wire Line
-	3055 1740 3480 1740
+	2850 1570 3275 1570
 Wire Wire Line
-	3055 1840 3480 1840
+	2850 1670 3275 1670
 Wire Wire Line
-	3055 1940 3480 1940
+	2850 1770 3275 1770
 Wire Wire Line
-	3055 2040 3480 2040
+	2850 1870 3275 1870
 Wire Wire Line
-	3055 2140 3480 2140
+	2850 1970 3275 1970
 Wire Wire Line
-	3055 2240 3480 2240
+	2850 2070 3275 2070
 Wire Wire Line
-	3055 2340 3480 2340
+	2850 2170 3275 2170
 Text Label 9700 2295 0    60   ~ 0
 D0
 Text Label 9700 2395 0    60   ~ 0
@@ -288,68 +256,68 @@ NC
 Text Label 8075 1595 0    60   ~ 0
 GND
 Wire Wire Line
-	6085 1645 6510 1645
+	4685 1450 5110 1450
 Wire Wire Line
-	6085 1745 6510 1745
+	4685 1550 5110 1550
 Wire Wire Line
-	6085 1845 6510 1845
+	4685 1650 5110 1650
 Wire Wire Line
-	6085 1945 6510 1945
+	4685 1750 5110 1750
 Wire Wire Line
-	6085 2045 6510 2045
+	4685 1850 5110 1850
 Wire Wire Line
-	6085 2145 6510 2145
+	4685 1950 5110 1950
 Wire Wire Line
-	6085 2245 6510 2245
-Text Label 6265 1645 0    60   ~ 0
+	4685 2050 5110 2050
+Text Label 4865 1450 0    60   ~ 0
 A0
-Text Label 6270 1745 0    60   ~ 0
+Text Label 4870 1550 0    60   ~ 0
 A1
-Text Label 6270 1845 0    60   ~ 0
+Text Label 4870 1650 0    60   ~ 0
 A2
-Text Label 6270 1945 0    60   ~ 0
+Text Label 4870 1750 0    60   ~ 0
 A3
-Text Label 6275 2045 0    60   ~ 0
+Text Label 4875 1850 0    60   ~ 0
 A4
-Text Label 6275 2145 0    60   ~ 0
+Text Label 4875 1950 0    60   ~ 0
 A5
-Text Label 6275 2245 0    60   ~ 0
+Text Label 4875 2050 0    60   ~ 0
 A6
-Text Label 6275 2345 0    60   ~ 0
+Text Label 4875 2150 0    60   ~ 0
 A7
 Wire Wire Line
-	6085 2345 6510 2345
+	4685 2150 5110 2150
 Wire Wire Line
-	3045 4615 3470 4615
+	1410 4625 1835 4625
 Wire Wire Line
-	3045 4715 3470 4715
+	1410 4725 1835 4725
 Wire Wire Line
-	3045 4815 3470 4815
+	1410 4825 1835 4825
 Wire Wire Line
-	3045 4915 3470 4915
-Text Label 3215 4615 0    60   ~ 0
+	1410 4925 1835 4925
+Text Label 1580 4625 0    60   ~ 0
 A8
-Text Label 3210 4715 0    60   ~ 0
+Text Label 1575 4725 0    60   ~ 0
 A9
-Text Label 3200 4815 0    60   ~ 0
+Text Label 1565 4825 0    60   ~ 0
 A10
-Text Label 3195 4915 0    60   ~ 0
+Text Label 1560 4925 0    60   ~ 0
 A11
 Wire Wire Line
-	3045 5015 3470 5015
+	1410 5025 1835 5025
 Wire Wire Line
-	3045 5115 3470 5115
+	1410 5125 1835 5125
 Wire Wire Line
-	3045 5215 3470 5215
+	1410 5225 1835 5225
 Wire Wire Line
-	3045 5315 3470 5315
-Text Label 3185 5315 0    60   ~ 0
+	1410 5325 1835 5325
+Text Label 1550 5325 0    60   ~ 0
 A15
-Text Label 3190 5215 0    60   ~ 0
+Text Label 1555 5225 0    60   ~ 0
 A14
-Text Label 3185 5115 0    60   ~ 0
+Text Label 1550 5125 0    60   ~ 0
 A13
-Text Label 3190 5015 0    60   ~ 0
+Text Label 1555 5025 0    60   ~ 0
 A12
 Wire Wire Line
 	1230 3120 1655 3120
@@ -383,21 +351,21 @@ Text Label 1335 3720 0    60   ~ 0
 D6
 Text Label 1335 3820 0    60   ~ 0
 D7
-Text Label 3125 1640 0    60   ~ 0
+Text Label 2920 1470 0    60   ~ 0
 RDY
-Text Label 1360 1840 0    60   ~ 0
+Text Label 1555 1670 0    60   ~ 0
 PHI2o
-Text Label 3120 1940 0    60   ~ 0
+Text Label 2915 1770 0    60   ~ 0
 RESET
-Text Label 3125 1740 0    60   ~ 0
+Text Label 2920 1570 0    60   ~ 0
 PHI0
-Text Label 3120 2140 0    60   ~ 0
+Text Label 2915 1970 0    60   ~ 0
 NMI
-Text Label 3125 2240 0    60   ~ 0
+Text Label 2920 2070 0    60   ~ 0
 IRQ
 Text Label 9705 2195 0    60   ~ 0
 RW
-Text Label 1355 2340 0    60   ~ 0
+Text Label 1550 2170 0    60   ~ 0
 RW
 $Comp
 L Raspberry_Pi_2_3 J1
@@ -506,23 +474,23 @@ Text Label 4430 5175 0    60   ~ 0
 RC23
 Text Label 4430 5075 0    60   ~ 0
 RC22
-Text Label 1355 1740 0    60   ~ 0
+Text Label 1550 1570 0    60   ~ 0
 RC20
-Text Label 3115 1840 0    60   ~ 0
+Text Label 2910 1670 0    60   ~ 0
 RC21
-Text Label 1360 1640 0    60   ~ 0
+Text Label 1555 1470 0    60   ~ 0
 RC16
-Text Label 1360 1940 0    60   ~ 0
+Text Label 1555 1770 0    60   ~ 0
 RC17
-Text Label 1355 2040 0    60   ~ 0
+Text Label 1550 1870 0    60   ~ 0
 SYNC
-Text Label 3120 2040 0    60   ~ 0
+Text Label 2915 1870 0    60   ~ 0
 RC22
-Text Label 1360 2140 0    60   ~ 0
+Text Label 1555 1970 0    60   ~ 0
 RC18
-Text Label 1360 2240 0    60   ~ 0
+Text Label 1555 2070 0    60   ~ 0
 RC19
-Text Label 3125 2340 0    60   ~ 0
+Text Label 2920 2170 0    60   ~ 0
 RC23
 Wire Wire Line
 	3055 3120 3480 3120
@@ -557,41 +525,41 @@ RD7
 Wire Wire Line
 	3055 3820 3480 3820
 Wire Wire Line
-	4260 1645 4685 1645
+	6110 1450 6535 1450
 Wire Wire Line
-	4260 1745 4685 1745
-Text Label 4365 1645 0    60   ~ 0
+	6110 1550 6535 1550
+Text Label 6215 1450 0    60   ~ 0
 RD0
-Text Label 4365 1745 0    60   ~ 0
+Text Label 6215 1550 0    60   ~ 0
 RD1
 Wire Wire Line
-	4260 1845 4685 1845
+	6110 1650 6535 1650
 Wire Wire Line
-	4260 1945 4685 1945
+	6110 1750 6535 1750
 Wire Wire Line
-	4260 2045 4685 2045
-Text Label 4365 1845 0    60   ~ 0
+	6110 1850 6535 1850
+Text Label 6215 1650 0    60   ~ 0
 RD2
-Text Label 4365 1945 0    60   ~ 0
+Text Label 6215 1750 0    60   ~ 0
 RD3
-Text Label 4365 2045 0    60   ~ 0
+Text Label 6215 1850 0    60   ~ 0
 RD4
 Wire Wire Line
-	4260 2145 4685 2145
+	6110 1950 6535 1950
 Wire Wire Line
-	4260 2245 4685 2245
-Text Label 4365 2145 0    60   ~ 0
+	6110 2050 6535 2050
+Text Label 6215 1950 0    60   ~ 0
 RD5
-Text Label 4365 2245 0    60   ~ 0
+Text Label 6215 2050 0    60   ~ 0
 RD6
-Text Label 4365 2345 0    60   ~ 0
+Text Label 6215 2150 0    60   ~ 0
 RD7
 Wire Wire Line
-	4260 2345 4685 2345
+	6110 2150 6535 2150
 Wire Wire Line
-	4260 2545 4685 2545
+	4685 2350 5110 2350
 Wire Wire Line
-	4260 2645 4685 2645
+	4685 2450 5110 2450
 Wire Wire Line
 	5250 6475 5250 6665
 Wire Wire Line
@@ -617,17 +585,13 @@ Connection ~ 5850 6665
 Wire Wire Line
 	5950 6475 5950 6665
 Connection ~ 5950 6665
-Text Label 4380 2545 0    60   ~ 0
-GND
-Text Label 4380 2645 0    60   ~ 0
+Text Label 4805 2450 0    60   ~ 0
 RC24
 Wire Wire Line
-	1230 2540 1655 2540
+	1425 2370 1850 2370
 Wire Wire Line
-	1230 2640 1655 2640
-Text Label 1350 2540 0    60   ~ 0
-VCC
-Text Label 1350 2640 0    60   ~ 0
+	1425 2470 1850 2470
+Text Label 1545 2470 0    60   ~ 0
 GND
 Wire Wire Line
 	1230 4020 1655 4020
@@ -636,12 +600,10 @@ Wire Wire Line
 Text Label 1350 4120 0    60   ~ 0
 RC25
 Wire Wire Line
-	1220 5515 1645 5515
+	1410 5525 1835 5525
 Wire Wire Line
-	1220 5615 1645 5615
-Text Label 1340 5515 0    60   ~ 0
-GND
-Text Label 1340 5615 0    60   ~ 0
+	1410 5625 1835 5625
+Text Label 1530 5625 0    60   ~ 0
 RC24
 Wire Wire Line
 	4325 5275 4750 5275
@@ -654,37 +616,37 @@ RC24
 Text Label 1360 4020 0    60   ~ 0
 RW
 Wire Wire Line
-	1220 4615 1645 4615
+	2835 4625 3260 4625
 Wire Wire Line
-	1220 4715 1645 4715
-Text Label 1325 4615 0    60   ~ 0
+	2835 4725 3260 4725
+Text Label 2940 4625 0    60   ~ 0
 RA8
-Text Label 1325 4715 0    60   ~ 0
+Text Label 2940 4725 0    60   ~ 0
 RA9
 Wire Wire Line
-	1220 4815 1645 4815
+	2835 4825 3260 4825
 Wire Wire Line
-	1220 4915 1645 4915
+	2835 4925 3260 4925
 Wire Wire Line
-	1220 5015 1645 5015
-Text Label 1325 4815 0    60   ~ 0
+	2835 5025 3260 5025
+Text Label 2940 4825 0    60   ~ 0
 RA10
-Text Label 1325 4915 0    60   ~ 0
+Text Label 2940 4925 0    60   ~ 0
 RA11
-Text Label 1325 5015 0    60   ~ 0
+Text Label 2940 5025 0    60   ~ 0
 RA12
 Wire Wire Line
-	1220 5115 1645 5115
+	2835 5125 3260 5125
 Wire Wire Line
-	1220 5215 1645 5215
-Text Label 1325 5115 0    60   ~ 0
+	2835 5225 3260 5225
+Text Label 2940 5125 0    60   ~ 0
 RA13
-Text Label 1325 5215 0    60   ~ 0
+Text Label 2940 5225 0    60   ~ 0
 RA14
-Text Label 1325 5315 0    60   ~ 0
+Text Label 2940 5325 0    60   ~ 0
 RA15
 Wire Wire Line
-	1220 5315 1645 5315
+	2835 5325 3260 5325
 Wire Wire Line
 	5450 3875 5450 3315
 Wire Wire Line
@@ -858,4 +820,61 @@ Text Label 5750 3795 1    60   ~ 0
 3V3
 Text Label 5850 3795 1    60   ~ 0
 3V3
+$Comp
+L 74HC244 U4
+U 1 1 5ABA6A2C
+P 5610 1950
+F 0 "U4" H 5710 2600 50  0000 L CNN
+F 1 "74HC244" H 5660 1300 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5610 1950 50  0001 C CNN
+F 3 "" H 5610 1950 50  0000 C CNN
+	1    5610 1950
+	1    0    0    -1  
+$EndComp
+Text Label 4805 2350 0    60   ~ 0
+RC24
+$Comp
+L 74HC244 U2
+U 1 1 5ABA6EFE
+P 2350 1970
+F 0 "U2" H 2450 2620 50  0000 L CNN
+F 1 "74HC244" H 2400 1320 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2350 1970 50  0001 C CNN
+F 3 "" H 2350 1970 50  0000 C CNN
+	1    2350 1970
+	1    0    0    -1  
+$EndComp
+Text Label 1545 2370 0    60   ~ 0
+GND
+$Comp
+L 74HC244 U1
+U 1 1 5ABA7387
+P 2335 5125
+F 0 "U1" H 2435 5775 50  0000 L CNN
+F 1 "74HC244" H 2385 4475 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2335 5125 50  0001 C CNN
+F 3 "" H 2335 5125 50  0000 C CNN
+	1    2335 5125
+	1    0    0    -1  
+$EndComp
+Text Label 1530 5525 0    60   ~ 0
+RC24
+Wire Wire Line
+	5610 1250 5610 920 
+Wire Wire Line
+	5610 2650 5610 3015
+Wire Wire Line
+	2350 2670 2350 2785
+Wire Wire Line
+	2350 2785 2670 2785
+Wire Wire Line
+	2350 1270 2350 1205
+Wire Wire Line
+	2350 1205 2750 1205
+Wire Wire Line
+	2335 4425 2740 4425
+Wire Wire Line
+	2335 5825 2335 5930
+Wire Wire Line
+	2335 5930 2730 5930
 $EndSCHEMATC

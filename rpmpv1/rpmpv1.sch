@@ -979,10 +979,7 @@ F 3 "" H 1080 5230 50  0000 C CNN
 $EndComp
 Connection ~ 3780 5330
 NoConn ~ 1080 5930
-NoConn ~ 3780 6130
 NoConn ~ 1080 7130
-NoConn ~ 1080 6030
-NoConn ~ 3780 6330
 Wire Wire Line
 	3795 5830 3795 5825
 Wire Wire Line
