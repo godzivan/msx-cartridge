@@ -373,19 +373,6 @@ F 3 "" H 8150 5435 50  0001 C CNN
 	3    8150 5435
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74LS05 U5
-U 4 1 5A5A2C1F
-P 8150 5750
-F 0 "U5" H 8345 5865 50  0000 C CNN
-F 1 "74LS05" H 8340 5625 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 8150 5750 50  0001 C CNN
-F 3 "" H 8150 5750 50  0001 C CNN
-	4    8150 5750
-	1    0    0    -1  
-$EndComp
-Text Label 8705 5750 0    60   ~ 0
-RESET
 Text Label 9575 1875 0    60   ~ 0
 M1
 $Comp
@@ -527,34 +514,6 @@ RC26
 Text Label 1130 2425 0    60   ~ 0
 RC27
 $Comp
-L 74LS05 U5
-U 5 1 5A907A86
-P 8155 6100
-F 0 "U5" H 8350 6215 50  0000 C CNN
-F 1 "74LS05" H 8345 5975 50  0000 C CNN
-F 2 "" H 8155 6100 50  0001 C CNN
-F 3 "" H 8155 6100 50  0001 C CNN
-	5    8155 6100
-	1    0    0    -1  
-$EndComp
-Text Label 8675 6100 0    60   ~ 0
-nRC24
-Text Label 7355 6100 0    60   ~ 0
-RC24
-$Comp
-L R R1
-U 1 1 5A90827C
-P 9280 6100
-F 0 "R1" V 9360 6100 50  0000 C CNN
-F 1 "R" V 9280 6100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 9210 6100 50  0001 C CNN
-F 3 "" H 9280 6100 50  0001 C CNN
-	1    9280 6100
-	0    -1   -1   0   
-$EndComp
-Text Label 9660 6100 2    60   ~ 0
-VCC
-$Comp
 L 74LS245 U3
 U 1 1 5A909313
 P 7750 2010
@@ -667,8 +626,6 @@ Text Label 8560 2410 0    60   ~ 0
 M1
 Text Label 8560 2510 0    60   ~ 0
 CLK
-Text Label 7355 5750 0    60   ~ 0
-RC27
 $Comp
 L TEST_1P J3
 U 1 1 5A924E75
@@ -920,13 +877,7 @@ Wire Wire Line
 Wire Wire Line
 	8600 5435 9145 5435
 Wire Wire Line
-	8600 5750 9155 5750
-Wire Wire Line
-	9155 5750 9155 5745
-Wire Wire Line
 	7700 5435 7180 5435
-Wire Wire Line
-	7700 5750 7190 5750
 Wire Wire Line
 	10380 3475 10780 3475
 Wire Wire Line
@@ -1104,12 +1055,6 @@ Wire Wire Line
 	820  2625 1430 2625
 Wire Wire Line
 	820  1825 1430 1825
-Wire Wire Line
-	7705 6100 7225 6100
-Wire Wire Line
-	8605 6100 9130 6100
-Wire Wire Line
-	9430 6100 9800 6100
 Wire Wire Line
 	8850 1910 8450 1910
 Wire Wire Line

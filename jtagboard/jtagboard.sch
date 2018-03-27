@@ -33,6 +33,8 @@ LIBS:contrib
 LIBS:valves
 LIBS:EMP240
 LIBS:altera_maxII_epm240
+LIBS:jtagboard-cache
+LIBS:tqfp100-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268

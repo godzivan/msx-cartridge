@@ -52,7 +52,7 @@ U 1 1 5AB911E3
 P 8945 2495
 F 0 "U5" H 8945 1345 60  0000 C CNN
 F 1 "WD65C02" V 8945 2395 60  0000 C CNN
-F 2 "Housings_DIP:DIP-40_W25.4mm_LongPads" H 8445 2695 60  0000 C CNN
+F 2 "Housings_DIP:DIP-40_W15.24mm_LongPads" H 8445 2695 60  0000 C CNN
 F 3 "" H 8445 2695 60  0000 C CNN
 	1    8945 2495
 	1    0    0    -1  
@@ -85,7 +85,7 @@ U 1 1 5AB913D6
 P 2345 5115
 F 0 "U1" H 2445 5690 50  0000 L BNN
 F 1 "74HC245" H 2395 4540 50  0000 L TNN
-F 2 "" H 2345 5115 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 2345 5115 50  0001 C CNN
 F 3 "" H 2345 5115 50  0001 C CNN
 	1    2345 5115
 	1    0    0    -1  
@@ -270,7 +270,7 @@ NMI
 Text Label 8050 1995 0    60   ~ 0
 ML
 Text Label 8060 1895 0    60   ~ 0
-NC
+IRQ
 Text Label 8060 1795 0    60   ~ 0
 PH1o
 Text Label 8065 1695 0    60   ~ 0
@@ -626,7 +626,7 @@ Wire Wire Line
 Wire Wire Line
 	1230 2640 1655 2640
 Text Label 1350 2540 0    60   ~ 0
-GND
+VCC
 Text Label 1350 2640 0    60   ~ 0
 GND
 Wire Wire Line
@@ -691,12 +691,6 @@ Wire Wire Line
 	5450 3315 5550 3315
 Wire Wire Line
 	5550 3315 5550 3875
-Wire Wire Line
-	5750 3875 5750 3310
-Wire Wire Line
-	5750 3310 5850 3310
-Wire Wire Line
-	5850 3310 5850 3875
 Text Label 5450 3615 1    60   ~ 0
 VCC
 Wire Wire Line
@@ -707,4 +701,161 @@ Text Label 4430 5575 0    60   ~ 0
 RC27
 Text Label 4430 5475 0    60   ~ 0
 RC26
+NoConn ~ 10020 1795
+NoConn ~ 10020 1995
+NoConn ~ 7870 1795
+NoConn ~ 7870 1995
+$Comp
+L C C1
+U 1 1 5ABA07C4
+P 7875 4370
+F 0 "C1" H 7900 4470 50  0000 L CNN
+F 1 "C" H 7900 4270 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7913 4220 50  0001 C CNN
+F 3 "" H 7875 4370 50  0001 C CNN
+	1    7875 4370
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 5ABA08EC
+P 8185 4370
+F 0 "C2" H 8210 4470 50  0000 L CNN
+F 1 "C" H 8210 4270 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8223 4220 50  0001 C CNN
+F 3 "" H 8185 4370 50  0001 C CNN
+	1    8185 4370
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 5ABA0952
+P 8450 4370
+F 0 "C3" H 8475 4470 50  0000 L CNN
+F 1 "C" H 8475 4270 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8488 4220 50  0001 C CNN
+F 3 "" H 8450 4370 50  0001 C CNN
+	1    8450 4370
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7875 4220 8955 4220
+Connection ~ 8185 4220
+Wire Wire Line
+	8185 4220 8185 4060
+Wire Wire Line
+	8185 4060 8835 4060
+Wire Wire Line
+	7875 4520 8955 4520
+Connection ~ 8185 4520
+Wire Wire Line
+	8185 4520 8185 4625
+Wire Wire Line
+	8185 4625 8840 4625
+Text Label 8390 4625 0    60   ~ 0
+GND
+Text Label 8420 4060 0    60   ~ 0
+VCC
+$Comp
+L C C4
+U 1 1 5ABA103C
+P 8710 4370
+F 0 "C4" H 8735 4470 50  0000 L CNN
+F 1 "C" H 8735 4270 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8748 4220 50  0001 C CNN
+F 3 "" H 8710 4370 50  0001 C CNN
+	1    8710 4370
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 5ABA10A6
+P 8955 4370
+F 0 "C5" H 8980 4470 50  0000 L CNN
+F 1 "C" H 8980 4270 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8993 4220 50  0001 C CNN
+F 3 "" H 8955 4370 50  0001 C CNN
+	1    8955 4370
+	1    0    0    -1  
+$EndComp
+Connection ~ 8450 4220
+Connection ~ 8710 4220
+Connection ~ 8450 4520
+Connection ~ 8710 4520
+Text Label 6050 6665 0    60   ~ 0
+GND
+$Comp
+L LED D1
+U 1 1 5ABA1CC6
+P 8160 5125
+F 0 "D1" H 8160 5225 50  0000 C CNN
+F 1 "LED" H 8160 5025 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8160 5125 50  0001 C CNN
+F 3 "" H 8160 5125 50  0001 C CNN
+	1    8160 5125
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5ABA1DC2
+P 8570 5125
+F 0 "R1" V 8650 5125 50  0000 C CNN
+F 1 "R" V 8570 5125 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" V 8500 5125 50  0001 C CNN
+F 3 "" H 8570 5125 50  0001 C CNN
+	1    8570 5125
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8010 5125 7705 5125
+Wire Wire Line
+	8310 5125 8420 5125
+Wire Wire Line
+	8720 5125 9040 5125
+Text Label 8780 5125 0    60   ~ 0
+3V3
+Text Label 7760 5125 0    60   ~ 0
+RC26
+$Comp
+L LED D2
+U 1 1 5ABA242D
+P 8160 5380
+F 0 "D2" H 8160 5480 50  0000 C CNN
+F 1 "LED" H 8160 5280 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8160 5380 50  0001 C CNN
+F 3 "" H 8160 5380 50  0001 C CNN
+	1    8160 5380
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5ABA2433
+P 8570 5380
+F 0 "R2" V 8650 5380 50  0000 C CNN
+F 1 "R" V 8570 5380 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" V 8500 5380 50  0001 C CNN
+F 3 "" H 8570 5380 50  0001 C CNN
+	1    8570 5380
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8010 5380 7705 5380
+Wire Wire Line
+	8310 5380 8420 5380
+Wire Wire Line
+	8720 5380 9040 5380
+Text Label 8780 5380 0    60   ~ 0
+3V3
+Text Label 7760 5380 0    60   ~ 0
+RC27
+Wire Wire Line
+	5750 3875 5750 3320
+Wire Wire Line
+	5850 3875 5850 3320
+Wire Wire Line
+	5850 3320 5845 3320
+Text Label 5750 3795 1    60   ~ 0
+3V3
+Text Label 5850 3795 1    60   ~ 0
+3V3
 $EndSCHEMATC

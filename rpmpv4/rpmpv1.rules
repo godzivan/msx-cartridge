@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 4479)
+    (start_pass_no 6801)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -59,7 +59,6 @@
     5V "Via[0-1]_600:400_um-5V"
   )
   (class default
-    GND
     (clearance_class default)
     (via_rule default)
     (rule
@@ -70,16 +69,18 @@
     )
   )
   (class "kicad_default"
-    /RD3 /RD4 /RD6 /RD7 /RD0 /RD1 /RD2 /RD5
-    /WAIT /INT /BUSDIR /IORQ /MREQ /WR /RD /RESET
-    /A9 /A15 /A11 /A10 /A7 /A6 /A12 /A8
-    /A14 /A13 /A1 /A0 /A3 /A2 /A5 /A4
-    /D1 /D0 /D3 /D2 /D5 /D4 /D7 /D6
-    /CLK +3V3 "Net-(P1-Pad5)" "Net-(P1-Pad16)" /RA8 /RA10 /RA11 /RA15
-    /RA12 /RA9 /RA13 /RA14 "Net-(P1-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" /SLTSL
-    "Net-(P1-Pad6)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad50)" /M1 /RC17 /RC18 /RC27
-    /RC22 /RC23 /RC24 /RC25 /RC19 /RC16 /RC26 /RC20
-    /RC21 /SOUNDIN "Net-(U3-Pad8)" "Net-(U3-Pad9)" "Net-(U3-Pad11)" "Net-(U3-Pad12)"
+    GND /RD3 /RD4 /RD6 /RD7 /RD0 /RD1 /RD2
+    /RD5 /WAIT /INT /BUSDIR /IORQ /MREQ /WR /RD
+    /RESET /A9 /A15 /A11 /A10 /A7 /A6 /A12
+    /A8 /A14 /A13 /A1 /A0 /A3 /A2 /A5
+    /A4 /D1 /D0 /D3 /D2 /D5 /D4 /D7
+    /D6 /CLK +3V3 "Net-(P1-Pad5)" "Net-(P1-Pad16)" /RA8 /RA10 /RA11
+    /RA15 /RA12 /RA9 /RA13 /RA14 "Net-(P1-Pad1)" "Net-(P1-Pad2)" "Net-(P1-Pad3)"
+    /SLTSL "Net-(P1-Pad6)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad50)" /M1 /RC17 /RC18
+    /RC27 /RC22 /RC23 /RC24 /RC25 /RC19 /RC16 /RC26
+    /RC20 /RC21 /SOUNDIN "Net-(U3-Pad9)" "Net-(U3-Pad11)" "Net-(U6-Pad3)" "Net-(U6-Pad5)" "Net-(U6-Pad7)"
+    "Net-(U6-Pad8)" "Net-(U6-Pad9)" "Net-(U6-Pad11)" "Net-(U6-Pad12)" "Net-(U6-Pad13)" "Net-(U6-Pad15)" "Net-(U6-Pad17)" "Net-(D1-Pad4)"
+    "Net-(D1-Pad5)" "Net-(D1-Pad6)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
