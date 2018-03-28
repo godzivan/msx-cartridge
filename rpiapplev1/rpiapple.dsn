@@ -64,12 +64,23 @@
       (place D1 178054 -73660 front 0 (PN LED_RGB))
     )
     (component Pin_Headers:Pin_Header_Straight_1x07
-      (place J2 180594 -86614 front 0 (PN Conn_01x07))
+      (place J2 180594 -86614 back 0 (PN Conn_01x07))
     )
     (component Resistors_SMD:R_0603_HandSoldering
       (place R1 179324 -72009 back 180 (PN R))
       (place R2 179324 -73660 back 180 (PN R))
       (place R3 179324 -75311 back 180 (PN R))
+      (place R4 170688 -126238 front 180 (PN R))
+      (place R5 170688 -128270 front 180 (PN R))
+    )
+    (component Capacitors_SMD:C_0603_HandSoldering
+      (place C1 179578 -118364 front 90 (PN C))
+      (place C2 155702 -117856 back 270 (PN C))
+      (place C3 160782 -117856 front 90 (PN C))
+      (place C4 140208 -118110 front 90 (PN C))
+      (place C5 135382 -118110 back 90 (PN C))
+      (place C6 114554 -117856 back 270 (PN C))
+      (place C7 145796 -91186 back 0 (PN C))
     )
   )
   (library
@@ -396,6 +407,20 @@
       (pin Rect[T]Pad_1200x900_um 1 -1100 0)
       (pin Rect[T]Pad_1200x900_um 2 1100 0)
     )
+    (image Capacitors_SMD:C_0603_HandSoldering
+      (outline (path signal 100  -800 -400  -800 400))
+      (outline (path signal 100  800 -400  -800 -400))
+      (outline (path signal 100  800 400  800 -400))
+      (outline (path signal 100  -800 400  800 400))
+      (outline (path signal 120  -350 600  350 600))
+      (outline (path signal 120  350 -600  -350 -600))
+      (outline (path signal 50  -1800 650  1800 650))
+      (outline (path signal 50  -1800 650  -1800 -650))
+      (outline (path signal 50  1800 -650  1800 650))
+      (outline (path signal 50  1800 -650  -1800 -650))
+      (pin Rect[T]Pad_1200x750_um 1 -950 0)
+      (pin Rect[T]Pad_1200x750_um 2 950 0)
+    )
     (padstack Oval[A]Pad_2032x1727.2_um
       (shape (path F.Cu 1727.2  -152.4 0  152.4 0))
       (shape (path B.Cu 1727.2  -152.4 0  152.4 0))
@@ -421,6 +446,10 @@
     )
     (padstack Rect[T]Pad_1100x2000_um
       (shape (rect F.Cu -550 -1000 550 1000))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1200x750_um
+      (shape (rect F.Cu -600 -375 600 375))
       (attach off)
     )
     (padstack Rect[T]Pad_1200x900_um
@@ -532,10 +561,11 @@
       (pins J1-40 U6-55)
     )
     (net VCC
-      (pins J1-2 J1-4 P1-25 U1-20 U2-20 U3-20 U4-20 U5-20 U7-1 U7-20)
+      (pins J1-2 J1-4 P1-25 U1-20 U2-20 U3-20 U4-20 U5-20 U7-1 U7-20 C1-1 C2-1 C3-1
+        C4-1 C5-1 C6-1)
     )
     (net /DMAO
-      (pins P1-24 U7-12)
+      (pins P1-24 U7-12 R4-2)
     )
     (net /DMA
       (pins P1-22 U7-13)
@@ -603,10 +633,10 @@
     (net GND
       (pins J1-6 J1-9 J1-14 J1-20 J1-25 J1-30 J1-34 J1-39 P1-26 U6-10 U6-11 U6-32
         U6-46 U6-60 U6-65 U6-79 U6-93 U1-10 U1-19 U2-10 U2-19 U3-1 U3-10 U3-19 U4-10
-        U4-19 U5-10 U5-19 U7-10 J2-2 J2-7)
+        U4-19 U5-10 U5-19 U7-10 J2-2 J2-7 C1-2 C2-2 C3-2 C4-2 C5-2 C6-2 C7-2)
     )
     (net /DMAI
-      (pins P1-27 U3-17)
+      (pins P1-27 U3-17 R4-1)
     )
     (net /NMI
       (pins P1-29 U7-15)
@@ -732,13 +762,13 @@
       (pins U3-18)
     )
     (net /INT0
-      (pins P1-23 U7-11)
+      (pins P1-23 U7-11 R5-2)
     )
     (net /IOSTRB
       (pins P1-20 U3-12)
     )
     (net /INTI
-      (pins P1-28 U3-16)
+      (pins P1-28 U3-16 R5-1)
     )
     (net /7M
       (pins P1-36 U3-15)
@@ -768,10 +798,10 @@
       (pins U6-75 U1-8)
     )
     (net /TD7
-      (pins U6-77 U1-9)
+      (pins U6-58 U1-9)
     )
     (net /TDIR
-      (pins U6-58 U2-1 U4-1 U5-1)
+      (pins U6-77 U2-1 U4-1 U5-1)
     )
     (net /TRW
       (pins U6-6 U2-9)
@@ -874,7 +904,7 @@
     )
     (net /3V3
       (pins J1-1 J1-17 U6-9 U6-13 U6-31 U6-45 U6-59 U6-63 U6-80 U6-94 J2-4 R1-1 R2-1
-        R3-1)
+        R3-1 C7-1)
     )
     (net /TMS
       (pins U6-22 J2-5)
@@ -911,23 +941,21 @@
     )
     (class kicad_default "" /3V3 /7M /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15
       /A2 /A3 /A4 /A5 /A6 /A7 /A8 /A9 /D0 /D1 /D2 /D3 /D4 /D5 /D6 /D7 /DEVSEL
-      /DMA /DMAI /DMAO /INH /INT0 /INTI /INTO /IOSEL /IOSTRB /IRQ /LED1 /LED2
-      /LED3 /NMI /PH0 /PH1 /RA0 /RA1 /RA2 /RA3 /RA4 /RA5 /RA6 /RA7 /RC0 /RC1
-      /RC10 /RC11 /RC2 /RC3 /RC4 /RC5 /RC6 /RC7 /RC8 /RC9 /RD0 /RD1 /RD2 /RD3
-      /RD4 /RD5 /RD6 /RD7 /RDY /RES /RW /T7M /TA0 /TA1 /TA10 /TA11 /TA12 /TA13
-      /TA14 /TA15 /TA2 /TA3 /TA4 /TA5 /TA6 /TA7 /TA8 /TA9 /TCK /TD0 /TD1 /TD2
-      /TD3 /TD4 /TD5 /TD6 /TD7 /TDEVSEL /TDI /TDIR /TDIR2 /TDMA /TDMAI /TDMAO
-      /TDO /TINH /TINTI /TINTO /TIOSEL /TIOSTRB /TIRQ /TMS /TNMI /TPH1 /TRDY
-      /TRES /TRW /TWR GND "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)"
-      "Net-(P1-Pad19)" "Net-(P1-Pad33)" "Net-(P1-Pad34)" "Net-(P1-Pad35)"
-      "Net-(P1-Pad37)" "Net-(P1-Pad39)" "Net-(P1-Pad40)" "Net-(P1-Pad50)"
-      "Net-(U2-Pad12)" "Net-(U2-Pad13)" "Net-(U2-Pad14)" "Net-(U2-Pad15)"
-      "Net-(U2-Pad16)" "Net-(U2-Pad17)" "Net-(U2-Pad18)" "Net-(U2-Pad2)" "Net-(U2-Pad3)"
-      "Net-(U2-Pad4)" "Net-(U2-Pad5)" "Net-(U2-Pad6)" "Net-(U2-Pad7)" "Net-(U2-Pad8)"
-      "Net-(U3-Pad18)" "Net-(U3-Pad2)" "Net-(U6-Pad1)" "Net-(U6-Pad10)" "Net-(U6-Pad100)"
-      "Net-(U6-Pad11)" "Net-(U6-Pad13)" "Net-(U6-Pad14)" "Net-(U6-Pad2)" "Net-(U6-Pad25)"
-      "Net-(U6-Pad3)" "Net-(U6-Pad4)" "Net-(U6-Pad5)" "Net-(U6-Pad56)" "Net-(U6-Pad57)"
-      "Net-(U6-Pad6)" "Net-(U6-Pad7)" "Net-(U6-Pad8)" "Net-(U6-Pad94)" VCC
+      /DMA /DMAI /DMAO /INH /INT0 /INTI /IOSEL /IOSTRB /IRQ /LED1 /LED2 /LED3
+      /NMI /PH1 /RA0 /RA1 /RA2 /RA3 /RA4 /RA5 /RA6 /RA7 /RC0 /RC1 /RC10 /RC11
+      /RC2 /RC3 /RC4 /RC5 /RC6 /RC7 /RC8 /RC9 /RD0 /RD1 /RD2 /RD3 /RD4 /RD5
+      /RD6 /RD7 /RDY /RES /RW /T7M /TA0 /TA1 /TA10 /TA11 /TA12 /TA13 /TA14
+      /TA15 /TA2 /TA3 /TA4 /TA5 /TA6 /TA7 /TA8 /TA9 /TCK /TD0 /TD1 /TD2 /TD3
+      /TD4 /TD5 /TD6 /TD7 /TDEVSEL /TDI /TDIR /TDIR2 /TDMA /TDMAI /TDMAO /TDO
+      /TINH /TINTI /TINTO /TIOSEL /TIOSTRB /TIRQ /TMS /TNMI /TPH1 /TRDY /TRES
+      /TRW /TWR GND "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)" "Net-(P1-Pad19)"
+      "Net-(P1-Pad33)" "Net-(P1-Pad34)" "Net-(P1-Pad35)" "Net-(P1-Pad37)"
+      "Net-(P1-Pad39)" "Net-(P1-Pad40)" "Net-(P1-Pad50)" "Net-(U2-Pad12)"
+      "Net-(U2-Pad13)" "Net-(U2-Pad14)" "Net-(U2-Pad15)" "Net-(U2-Pad16)"
+      "Net-(U2-Pad17)" "Net-(U2-Pad18)" "Net-(U2-Pad2)" "Net-(U2-Pad3)" "Net-(U2-Pad4)"
+      "Net-(U2-Pad5)" "Net-(U2-Pad6)" "Net-(U2-Pad7)" "Net-(U2-Pad8)" "Net-(U3-Pad18)"
+      "Net-(U3-Pad2)" "Net-(U6-Pad14)" "Net-(U6-Pad2)" "Net-(U6-Pad3)" "Net-(U6-Pad4)"
+      "Net-(U6-Pad5)" VCC
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
