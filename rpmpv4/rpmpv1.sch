@@ -33,7 +33,6 @@ LIBS:contrib
 LIBS:valves
 LIBS:IC_raspberry
 LIBS:msx_slot
-LIBS:rpmpv1-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -625,8 +624,6 @@ F 3 "" H 5015 5545 50  0001 C CNN
 	1    5015 5545
 	0    -1   -1   0   
 $EndComp
-Text Label 4155 5545 0    60   ~ 0
-RC18
 Text Label 5225 5545 0    60   ~ 0
 SOUNDIN
 Text Label 9580 3875 0    60   ~ 0
@@ -1262,8 +1259,6 @@ Wire Wire Line
 	3330 4825 3745 4825
 Wire Wire Line
 	4580 1625 4180 1625
-Wire Wire Line
-	4130 5545 4865 5545
 Connection ~ 4350 5545
 Connection ~ 4635 5545
 Wire Wire Line
@@ -1364,4 +1359,23 @@ Text Label 2010 7095 0    60   ~ 0
 MREQ
 Text Label 2015 7295 0    60   ~ 0
 IORQ
+Wire Wire Line
+	4350 5545 4865 5545
+$Comp
+L R R5
+U 1 1 5ABBAE89
+P 4350 5275
+F 0 "R5" V 4430 5275 50  0000 C CNN
+F 1 "R" V 4350 5275 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4280 5275 50  0001 C CNN
+F 3 "" H 4350 5275 50  0001 C CNN
+	1    4350 5275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 5545 4350 5425
+Wire Wire Line
+	4350 5125 4765 5125
+Text Label 4445 5125 0    60   ~ 0
+RC18
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-(pcb "C:\msys64\home\meeso.kim\msx-cartridge\rpmpv4\rpmpv1.dsn"
+(pcb "C:\msys64\home\meesokim\msx-cartridge\rpmpv4\rpmpv1.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -96,7 +96,7 @@
       (place P1 156210 -106680 front 0 (PN CONN_02X25))
     )
     (component Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm
-      (place J2 181635 -52451 back 270 (PN RPi_GPIO))
+      (place J2 181661 -54813.2 front 270 (PN RPi_GPIO))
       (place J1 195326 -76327 back 270 (PN RPi_GPIO))
     )
     (component "MSX:msx-logo"
@@ -795,10 +795,10 @@
       /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6 /RD7 /RESET /SLTSL /SOUNDIN /WAIT
       /WR GND "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)" "Net-(P1-Pad1)"
       "Net-(P1-Pad16)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)" "Net-(P1-Pad48)"
-      "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U3-Pad11)" "Net-(U3-Pad12)"
-      "Net-(U3-Pad8)" "Net-(U3-Pad9)" "Net-(U6-Pad11)" "Net-(U6-Pad12)" "Net-(U6-Pad13)"
-      "Net-(U6-Pad15)" "Net-(U6-Pad17)" "Net-(U6-Pad3)" "Net-(U6-Pad5)" "Net-(U6-Pad7)"
-      "Net-(U6-Pad8)" "Net-(U6-Pad9)"
+      "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U3-Pad11)" "Net-(U3-Pad9)"
+      "Net-(U6-Pad11)" "Net-(U6-Pad12)" "Net-(U6-Pad13)" "Net-(U6-Pad15)"
+      "Net-(U6-Pad17)" "Net-(U6-Pad3)" "Net-(U6-Pad5)" "Net-(U6-Pad7)" "Net-(U6-Pad8)"
+      "Net-(U6-Pad9)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
