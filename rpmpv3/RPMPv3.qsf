@@ -117,7 +117,8 @@ set_location_assignment PIN_88 -to cmd[0]
 set_location_assignment PIN_89 -to cmd[1]
 set_location_assignment PIN_70 -to ratn
 set_location_assignment PIN_3 -to nbusdir
-set_instance_assignment -name GLOBAL_SIGNAL GLOBAL_CLOCK -to gclk
 set_instance_assignment -name VIRTUAL_PIN ON -to osc
 set_location_assignment PIN_85 -to ack
 set_instance_assignment -name RESERVE_PIN AS_INPUT_TRI_STATED -to rstatus[4]
+set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to gclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r*

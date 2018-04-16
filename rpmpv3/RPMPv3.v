@@ -80,8 +80,8 @@ count = 0;
 rd0 = 1;
 ioreq = 256'b0;
 rtest = 1'b0;
-test_addr = 16'hffff;
-addr = 16'hffff;
+test_addr = 16'h0;
+addr = 16'h0;
 end
 
 always @ (negedge reset) begin
@@ -89,7 +89,7 @@ always @ (negedge reset) begin
 end
 
 always @ (negedge gclk) begin
-
+	test_addr <= test_addr + 1;
 end
 
 always @ (negedge clk) begin
@@ -113,12 +113,12 @@ always @ (posedge ratn) begin
 
 	case (cmd)
 		2'b00: begin
-//					if (rtest == 1'b1) begin
+					if (rtest == 1'b1) begin
 						r[15:0] <= test_addr;
-						test_addr <= test_addr + 1;
-//					end
-//					else
-//						r[15:0] <= addr;
+
+					end
+					else
+						r[15:0] <= addr;
 				 end
 		2'b01: begin
 					r[15] <= rw;
@@ -128,15 +128,17 @@ always @ (posedge ratn) begin
 					r[7:0] <= wdata;
 				 end
 		2'b10: begin
+					r[7:0] <= 8'bZ;
 					rdata <= r[7:0];
 				 end
 		2'b11: begin
+					r[15:0] <= 8'bZ;
 					rwait <= r[15];
 					rint <= r[14];
 					rready <= r[12];
 					rtest <= r[11];
 					if (r[13] == 1'b1)
-						ioreq[r[13]] = 1;
+						ioreq[r[7:0]] = 1;
 				 end
 	endcase
 	r[15:0] <= 16'hffff;
