@@ -50,9 +50,6 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name VERILOG_FILE RPMPv3.v
-set_location_assignment PIN_1 -to wait
-set_location_assignment PIN_2 -to int
-set_location_assignment PIN_3 -to busdir
 set_location_assignment PIN_4 -to led[0]
 set_location_assignment PIN_5 -to led[1]
 set_location_assignment PIN_6 -to led[2]
@@ -92,66 +89,35 @@ set_location_assignment PIN_62 -to mreq
 set_location_assignment PIN_64 -to iorq
 set_location_assignment PIN_66 -to m1
 set_location_assignment PIN_67 -to sltsl
-set_location_assignment PIN_85 -to "r[25], rc25"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[25], rc25"
-set_location_assignment PIN_87 -to "r[24], rc24"
-set_location_assignment PIN_88 -to "r[22], rc22"
-set_location_assignment PIN_89 -to "r[23], rc23"
-set_location_assignment PIN_91 -to "r[17], rc17"
-set_location_assignment PIN_92 -to "r[18], rc18"
-set_location_assignment PIN_95 -to "r[15], ra15"
-set_location_assignment PIN_97 -to "r[14],ra14"
-set_location_assignment PIN_68 -to "r[21],rc21"
-set_location_assignment PIN_70 -to "r[26],rc26"
-set_location_assignment PIN_69 -to "r[20],rc20"
-set_location_assignment PIN_71 -to "r[19],rc19"
-set_location_assignment PIN_72 -to "r[16],rc16"
-set_location_assignment PIN_74 -to "r[6],rd6"
-set_location_assignment PIN_77 -to "r[0],rd0"
-set_location_assignment PIN_78 -to "r[1],rd1"
-set_location_assignment PIN_75 -to "r[12],ra12,"
-set_location_assignment PIN_90 -to "r[27],rc27"
-set_location_assignment PIN_99 -to "r[2],rd2"
-set_location_assignment PIN_86 -to "r[10],ra10"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[10],ra10"
-set_location_assignment PIN_98 -to "r[3],rd3"
-set_location_assignment PIN_96 -to "r[4],rd4"
-set_location_assignment PIN_81 -to "r[7],rd7"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[7],rd7"
-set_location_assignment PIN_83 -to "r[8],ra8"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[8],ra8"
-set_location_assignment PIN_82 -to "r[11],ra11"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[11],ra11"
-set_location_assignment PIN_84 -to "r[9],ra9"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[9],ra9"
-set_location_assignment PIN_73 -to "r[13],ra13"
-set_location_assignment PIN_76 -to "r[5],rd5"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[12],ra12,"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[13],ra13"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[6],rd6"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[0],rd0"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[1],rd1"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[2],rd2"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[3],rd3"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[4],rd4"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[14],ra14"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[15], ra15"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[16],rc16"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[17], rc17"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[18], rc18"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[19],rc19"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[20],rc20"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[21],rc21"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[22], rc22"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[23], rc23"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[24], rc24"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[26],rc26"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to "r[27],rc27"
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to d[0]
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to d[1]
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to d[2]
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to d[3]
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to d[4]
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to d[5]
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to d[6]
-set_instance_assignment -name RESERVE_PIN AS_BIDIRECTIONAL -to d[7]
+set_location_assignment PIN_77 -to r[0]
+set_location_assignment PIN_78 -to r[1]
+set_location_assignment PIN_99 -to r[2]
+set_location_assignment PIN_98 -to r[3]
+set_location_assignment PIN_96 -to r[4]
+set_location_assignment PIN_76 -to r[5]
+set_location_assignment PIN_74 -to r[6]
+set_location_assignment PIN_81 -to r[7]
+set_location_assignment PIN_83 -to r[8]
+set_location_assignment PIN_84 -to r[9]
+set_location_assignment PIN_86 -to r[10]
+set_location_assignment PIN_82 -to r[11]
+set_location_assignment PIN_75 -to r[12]
+set_location_assignment PIN_73 -to r[13]
+set_location_assignment PIN_97 -to r[14]
+set_location_assignment PIN_95 -to r[15]
+set_location_assignment PIN_1 -to nwait
+set_location_assignment PIN_2 -to nint
+set_location_assignment PIN_90 -to atn
+set_location_assignment PIN_12 -to gclk
+set_location_assignment PIN_72 -to rstatus[0]
+set_location_assignment PIN_91 -to rstatus[1]
+set_location_assignment PIN_92 -to rstatus[2]
+set_location_assignment PIN_71 -to rstatus[3]
+set_location_assignment PIN_88 -to cmd[0]
+set_location_assignment PIN_89 -to cmd[1]
+set_location_assignment PIN_70 -to ratn
+set_location_assignment PIN_3 -to nbusdir
+set_instance_assignment -name GLOBAL_SIGNAL GLOBAL_CLOCK -to gclk
+set_instance_assignment -name VIRTUAL_PIN ON -to osc
+set_location_assignment PIN_85 -to ack
+set_instance_assignment -name RESERVE_PIN AS_INPUT_TRI_STATED -to rstatus[4]
