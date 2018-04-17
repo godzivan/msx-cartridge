@@ -48,6 +48,7 @@ reg [255:0] ioreq;
 reg rbusdir2;
 reg rtest;
 reg [15:0] test_addr;
+reg ratn0;
 
 assign led[0] = !ratn;
 assign led[1] = wr;
@@ -82,14 +83,11 @@ ioreq = 256'b0;
 rtest = 1'b0;
 test_addr = 16'h0;
 addr = 16'h0;
+ratn0 = 1'b0;
 end
 
 always @ (negedge reset) begin
 	
-end
-
-always @ (negedge gclk) begin
-	test_addr <= test_addr + 1;
 end
 
 always @ (negedge clk) begin
@@ -109,39 +107,42 @@ always @ (negedge clk) begin
 		rbusdir2 = 1'b1;
 end
 
-always @ (posedge ratn) begin
+always @ (*) begin
+	if (ratn == 1'b1) begin
+		case (cmd)
+			2'b00: begin
+						if (rtest == 1'b1) begin
+							r[15:0] <= test_addr;
+							test_addr <= test_addr + 1;
 
-	case (cmd)
-		2'b00: begin
-					if (rtest == 1'b1) begin
-						r[15:0] <= test_addr;
-
-					end
-					else
-						r[15:0] <= addr;
-				 end
-		2'b01: begin
-					r[15] <= rw;
-					r[14] <= iomem;
-					r[13] <= reset;
-					r[12] <= error;
-					r[7:0] <= wdata;
-				 end
-		2'b10: begin
-					r[7:0] <= 8'bZ;
-					rdata <= r[7:0];
-				 end
-		2'b11: begin
-					r[15:0] <= 8'bZ;
-					rwait <= r[15];
-					rint <= r[14];
-					rready <= r[12];
-					rtest <= r[11];
-					if (r[13] == 1'b1)
-						ioreq[r[7:0]] = 1;
-				 end
-	endcase
-	r[15:0] <= 16'hffff;
+						end
+						else
+							r[15:0] <= test_addr;
+							test_addr <= test_addr + 1;							
+					 end
+			2'b01: begin
+						r[15] <= rw;
+						r[14] <= iomem;
+						r[13] <= reset;
+						r[12] <= error;
+						r[7:0] <= wdata;
+					 end
+			2'b10: begin
+						r[7:0] <= 8'bZ;
+						rdata <= r[7:0];
+					 end
+			2'b11: begin
+						r[15:0] <= 8'bZ;
+						rwait <= r[15];
+						rint <= r[14];
+						rready <= r[12];
+						rtest <= r[11];
+						if (r[13] == 1'b1)
+							ioreq[r[7:0]] = 1;
+					 end
+		endcase
+	end
+	ratn0 <= ratn;
 end
 
 
