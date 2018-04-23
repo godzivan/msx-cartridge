@@ -1,4 +1,4 @@
-(pcb "C:\msys64\home\meeso.kim\msx-cartridge\rpmpv6\rpmpv1.dsn"
+(pcb "C:\msys64\home\meesokim\msx-cartridge\rpmpv6\rpmpv1.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -21,16 +21,16 @@
       )
     )
     (boundary
-      (path pcb 0  115443 -103886  115245 -103869  115052 -103817  114872 -103733
-            114708 -103619  114567 -103478  114453 -103314  114369 -103134
-            114317 -102941  114300 -102743  114300 -50800  114317 -50601.5
-            114369 -50409.1  114453 -50228.5  114567 -50065.3  114708 -49924.4
-            114872 -49810.1  115052 -49725.9  115245 -49674.4  115443 -49657
-            201041 -49657  201239 -49674.4  201432 -49725.9  201612 -49810.1
-            201776 -49924.4  201917 -50065.3  202031 -50228.5  202115 -50409.1
-            202167 -50601.5  202184 -50800  202184 -102743  202167 -102941
-            202115 -103134  202031 -103314  201917 -103478  201776 -103619
-            201612 -103733  201432 -103817  201239 -103869  201041 -103886
+      (path pcb 0  114427 -103886  114229 -103869  114036 -103817  113856 -103733
+            113692 -103619  113551 -103478  113437 -103314  113353 -103134
+            113301 -102941  113284 -102743  113284 -50800  113301 -50601.5
+            113353 -50409.1  113437 -50228.5  113551 -50065.3  113692 -49924.4
+            113856 -49810.1  114036 -49725.9  114229 -49674.4  114427 -49657
+            202565 -49657  202763 -49674.4  202956 -49725.9  203136 -49810.1
+            203300 -49924.4  203441 -50065.3  203555 -50228.5  203639 -50409.1
+            203691 -50601.5  203708 -50800  203708 -102743  203691 -102941
+            203639 -103134  203555 -103314  203441 -103478  203300 -103619
+            203136 -103733  202956 -103817  202763 -103869  202565 -103886
             191224 -103886  191025 -103903  190833 -103955  190652 -104039
             190489 -104153  190348 -104294  190234 -104458  190150 -104638
             190098 -104831  190081 -105029  190081 -112916  190064 -113114
@@ -41,8 +41,12 @@
             124960 -113114  124943 -112916  124943 -105042  124925 -104843
             124874 -104651  124789 -104470  124675 -104307  124534 -104166
             124371 -104052  124191 -103968  123998 -103916  123800 -103899
-            115443 -103886  115443 -103886)
+            114427 -103886  114427 -103886)
     )
+    (plane GND (polygon F.Cu 0  203352 -49911  203505 -113970  101321 -113906  101536 -93052.9
+            101181 -90716.1  101295 -49669.7))
+    (plane GND (polygon B.Cu 0  203467 -113894  98590.1 -113906  98323.4 -91897.2  98082.1 -91897.2
+            98437.7 -49949.1  195847 -49949.1  203340 -50101.5))
     (keepout "" (polygon signal 0  131550 -93687.9  131541 -93495  131516 -93303.7  131474 -93115.2
             131416 -92931.1  131342 -92752.8  131253 -92581.5  131149 -92418.7
             131032 -92265.6  130901 -92123.3  130759 -91992.9  130606 -91875.3
@@ -102,12 +106,14 @@
     (component "MSX:msx-logo"
       (place G*** 162814 -64770 front 0 (PN LOGO))
       (place G1 145415 -64770 front 0 (PN LOGO))
+      (place REF3 129083 -65379.6 back 0 (PN "KiCad-Logo2_6mm_SilkScreen"))
+      (place REF2 184455 -65379.6 back 0 (PN "OSHW-Logo_7.5x8mm_SilkScreen"))
     )
     (component Resistors_SMD:R_0603_HandSoldering
-      (place R1 196512 -53340 back 0 (PN R))
+      (place R1 200474 -53340 back 0 (PN R))
       (place R2 129032 -78994 back 0 (PN R))
-      (place R3 196512 -55118 back 0 (PN R))
-      (place R4 196512 -56896 back 0 (PN R))
+      (place R3 200474 -55118 back 0 (PN R))
+      (place R4 200474 -56896 back 0 (PN R))
       (place R5 129032 -74295 back 0 (PN R))
     )
     (component "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm"
@@ -125,20 +131,20 @@
       (place C3 150622 -98425 front 0 (PN C))
       (place C4 169738 -98171 front 0 (PN C))
       (place C5 182880 -92710 back 270 (PN C))
-      (place C6 150368 -90043 back 90 (PN C))
+      (place C6 151587 -89814.4 back 90 (PN C))
       (place C7 170053 -92710 back 270 (PN C))
       (place C8 170053 -92710 front 270 (PN C))
       (place C9 187198 -92771 front 270 (PN C))
-      (place C10 150241 -95946 back 270 (PN C))
+      (place C10 151587 -95808.8 back 90 (PN C))
     )
     (component Capacitors_SMD:CP_Elec_4x5.3
       (place C2 128524 -83693 back 0 (PN CP))
     )
     (component "LEDs:LED_RGB_5050-6"
-      (place D1 193040 -55118 front 0 (PN LED_RGB))
+      (place D1 190284 -55118 front 0 (PN LED_RGB))
     )
     (component "SMD_Packages:SOIC-24"
-      (place U7 140716 -92837 back 0 (PN LVC4245))
+      (place U7 141681 -92964 back 0 (PN 74LVC4245A))
     )
   )
   (library
@@ -202,6 +208,7 @@
             -27965.6 12191.9  -28157.4 12568.2  -28223.5 12985.4  -28157.4 13402.6
             -27965.6 13778.9  -27667 14077.6  -27290.6 14269.3  -26873.5 14335.4
             -26456.3 14269.3  -26079.9 14077.6  -25781.3 13778.9  -25589.5 13402.6))
+      (pin Round[A]Pad_6000_um @1 29123.6 7782.56)
       (pin Rect[B]Pad_1800x8000_um 1 31739.8 -3147.44)
       (pin Rect[T]Pad_1800x8000_um 2 31739.8 -3147.44)
       (pin Rect[B]Pad_1800x8000_um 3 29199.8 -3147.44)
@@ -252,10 +259,7 @@
       (pin Rect[T]Pad_1800x8000_um 48 -26680.2 -3147.44)
       (pin Rect[B]Pad_1800x8000_um 49 -29220.2 -3147.44)
       (pin Rect[T]Pad_1800x8000_um 50 -29220.2 -3147.44)
-      (keepout "" (circle F.Cu 4500 29123.6 7782.56))
-      (keepout "" (circle B.Cu 4500 29123.6 7782.56))
-      (keepout "" (circle F.Cu 4500 -26875.7 12984.5))
-      (keepout "" (circle B.Cu 4500 -26875.7 12984.5))
+      (pin Round[A]Pad_6000_um @2 -26875.7 12984.5)
     )
     (image Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm
       (outline (path signal 100  -3810 1270  -3810 -49530))
@@ -500,6 +504,11 @@
       (pin Rect[T]Pad_762x1524_um 14 5715 3810)
       (pin Rect[T]Pad_762x1524_um 13 6985 3810)
     )
+    (padstack Round[A]Pad_6000_um
+      (shape (circle F.Cu 6000))
+      (shape (circle B.Cu 6000))
+      (attach off)
+    )
     (padstack Oval[A]Pad_1700x1700_um
       (shape (path F.Cu 1700  0 0  0 0))
       (shape (path B.Cu 1700  0 0  0 0))
@@ -560,10 +569,10 @@
     (net GND
       (pins P1-41 P1-43 J2-6 J2-9 J2-14 J2-20 J2-25 J2-30 J2-34 J2-39 J1-6 J1-9 J1-14
         J1-20 J1-25 J1-30 J1-34 J1-39 U1-1 U1-10 U3-1 U3-10 U3-19 U4-1 U4-10 U5-7
-        C1-2 R2-2 C3-2 C4-2 C5-2 C6-2 C7-2 U7-11 U7-12 U7-13 U2-7 U6-7 C8-2 C9-2 C10-2)
+        C1-2 R2-2 C3-2 C4-2 C5-2 C6-2 C7-2 U2-7 U6-7 C8-2 C9-2 C10-1 U7-11 U7-12 U7-13)
     )
     (net +5V
-      (pins P1-45 P1-47 J2-2 J2-4 J1-2 J1-4 U7-1 C10-1)
+      (pins P1-45 P1-47 J2-2 J2-4 J1-2 J1-4 C10-2 U7-1)
     )
     (net /RD3
       (pins J2-5 J1-5 U4-4 U7-19)
@@ -608,7 +617,7 @@
       (pins P1-13 U3-17)
     )
     (net /RD
-      (pins P1-14 U3-16 U7-2 U6-2)
+      (pins P1-14 U3-16 U6-2)
     )
     (net /RESET
       (pins P1-15 U3-18)
@@ -690,7 +699,7 @@
     )
     (net +3V3
       (pins J2-1 J2-17 J1-1 J1-17 R1-1 U1-20 U3-20 U4-20 U5-14 C3-1 C4-1 C5-1 C6-1
-        C7-1 R3-1 R4-1 U7-24 U2-14 U6-14 C8-1 C9-1)
+        C7-1 R3-1 R4-1 U2-14 U6-14 C8-1 C9-1 U7-24 U7-23)
     )
     (net "Net-(P1-Pad5)"
       (pins P1-5)
@@ -765,7 +774,7 @@
       (pins J2-18 J1-18 U5-1)
     )
     (net /RC25
-      (pins J2-22 J1-22 D1-3)
+      (pins J2-22 J1-22 U2-11)
     )
     (net /RC19
       (pins J2-35 J1-35 U3-6)
@@ -825,10 +834,7 @@
       (pins U5-5 U6-11)
     )
     (net /DAT_EN
-      (pins U7-22 U6-8)
-    )
-    (net "Net-(U7-Pad23)"
-      (pins U7-23)
+      (pins U6-8 U7-22)
     )
     (net "Net-(U3-Pad5)"
       (pins U3-5)
@@ -839,19 +845,19 @@
     (net "Net-(U3-Pad15)"
       (pins U3-15)
     )
+    (net /DAT_DIR
+      (pins D1-3 U2-10 U7-2)
+    )
     (class kicad_default "" +3V3 /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15 /A2
       /A3 /A4 /A5 /A6 /A7 /A8 /A9 /ATN /BDIR /BUSDIR /CLK /D0 /D1 /D2 /D3
-      /D4 /D5 /D6 /D7 /DAT_EN /INT /IORQ /M1 /MREQ /RA10 /RA11 /RA12 /RA13
-      /RA14 /RA15 /RA8 /RA9 /RATN /RC16 /RC17 /RC18 /RC19 /RC20 /RC21 /RC22
-      /RC23 /RC24 /RC25 /RC26 /RC27 /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6
-      /RD7 /RESET /SLTSL /SOUNDIN /V3.3 /WAIT /WR /nATN /nIORQ /nMREQ /nRATN
-      GND "Net-(C1-Pad1)" "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)"
-      "Net-(P1-Pad1)" "Net-(P1-Pad16)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)"
-      "Net-(P1-Pad48)" "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U3-Pad11)"
-      "Net-(U3-Pad15)" "Net-(U3-Pad3)" "Net-(U3-Pad5)" "Net-(U3-Pad6)" "Net-(U3-Pad7)"
-      "Net-(U3-Pad8)" "Net-(U3-Pad9)" "Net-(U6-Pad11)" "Net-(U6-Pad12)" "Net-(U6-Pad13)"
-      "Net-(U6-Pad15)" "Net-(U6-Pad17)" "Net-(U6-Pad3)" "Net-(U6-Pad5)" "Net-(U6-Pad7)"
-      "Net-(U6-Pad8)" "Net-(U6-Pad9)" "Net-(U7-Pad23)"
+      /D4 /D5 /D6 /D7 /DAT_DIR /DAT_EN /INT /IORQ /M1 /MREQ /RA10 /RA11 /RA12
+      /RA13 /RA14 /RA15 /RA8 /RA9 /RATN /RC16 /RC17 /RC18 /RC19 /RC20 /RC23
+      /RC24 /RC25 /RC26 /RC27 /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6 /RD7
+      /RESET /SLTSL /SOUNDIN /WAIT /WR /nATN /nIORQ /nMREQ /nRATN GND "Net-(C1-Pad1)"
+      "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)" "Net-(P1-Pad1)" "Net-(P1-Pad16)"
+      "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad5)"
+      "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U3-Pad15)" "Net-(U3-Pad3)" "Net-(U3-Pad5)"
+      "Net-(U3-Pad7)" "Net-(U3-Pad9)" "Net-(U6-Pad12)" "Net-(U7-Pad23)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )

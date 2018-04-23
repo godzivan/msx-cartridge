@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sat Apr 21 18:55:17 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : RPMPv3
+Top-level Entity Name : RPMPv3
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 34 / 240 ( 14 % )
+Total pins : 69 / 80 ( 86 % )
+Total virtual pins : 1
+UFM blocks : 0 / 1 ( 0 % )

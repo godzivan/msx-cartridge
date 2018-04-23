@@ -1,5 +1,5 @@
 module RPMPv3(led, a, d, r, m1, rd, wr, mreq, iorq, sltsl, reset, 
-       nwait, ad, dd, cd, nint, rstatus, gclk, clk, atn, cmd, ratn, nbusdir, ack, clk0, osc);
+       nwait, ad, dd, cd, nint, rstatus, gclk, clk, atn, cmd, RATN, nbusdir, ack, clk0, osc);
 
 output [2:0] led;
 input [15:0] a;
@@ -23,8 +23,8 @@ inout reg [15:0] r;
 output [3:0] rstatus; // 16,17,18,19,20
 input gclk; // 20
 input clk;
-input ratn; // 26
-output ack; // 25
+input RATN; // 26
+output reg ack; // 25
 output atn; //27
 input [1:0] cmd; // 22,23
 
@@ -50,7 +50,11 @@ reg rtest;
 reg [15:0] test_addr;
 reg ratn0;
 
-assign led[0] = !ratn;
+reg [2:0] RATNr;  always @(posedge gclk) RATNr <= {RATNr[1:0], RATN};
+wire RATN_risingedge = (RATNr[2:1]==2'b01);  // now we can detect SCK rising edges
+wire RATN_fallingedge = (RATNr[2:1]==2'b10);  // and falling edges
+
+assign led[0] = !RATN;
 assign led[1] = wr;
 assign led[2] = mreq;
 assign d = (rd == 0 ? (mreq == 0 ? rdata : iordata) : 8'bZ);
@@ -66,7 +70,6 @@ assign rstatus[3] = reset;
 assign nwait = 1'b1;//((rd == 0 && ack == 1'b1 || rwait) ? 1'b0 : 1'b1);
 assign nbusdir = 1'b1;//((rd == 0 && iorq == 0 && rbusdir) ? 1'b0 : 1'b1);
 assign nint = 1'b1;//rint;
-assign ack = ratn;
 
 initial 
 begin
@@ -83,7 +86,8 @@ ioreq = 256'b0;
 rtest = 1'b0;
 test_addr = 16'h0;
 addr = 16'h0;
-ratn0 = 1'b0;
+ratn0 = 1'b1;
+ack = 1'b0;
 end
 
 always @ (negedge reset) begin
@@ -107,42 +111,46 @@ always @ (negedge clk) begin
 		rbusdir2 = 1'b1;
 end
 
-always @ (*) begin
-	if (ratn == 1'b1) begin
-		case (cmd)
-			2'b00: begin
-						if (rtest == 1'b1) begin
-							r[15:0] <= test_addr;
-							test_addr <= test_addr + 1;
-
-						end
-						else
-							r[15:0] <= test_addr;
-							test_addr <= test_addr + 1;							
-					 end
-			2'b01: begin
-						r[15] <= rw;
-						r[14] <= iomem;
-						r[13] <= reset;
-						r[12] <= error;
-						r[7:0] <= wdata;
-					 end
-			2'b10: begin
-						r[7:0] <= 8'bZ;
-						rdata <= r[7:0];
-					 end
-			2'b11: begin
-						r[15:0] <= 8'bZ;
-						rwait <= r[15];
-						rint <= r[14];
-						rready <= r[12];
-						rtest <= r[11];
-						if (r[13] == 1'b1)
-							ioreq[r[7:0]] = 1;
-					 end
-		endcase
-	end
-	ratn0 <= ratn;
+always @ (negedge gclk) begin
+//	if (RATN_risingedge) begin
+//		case (cmd)
+//			2'b00: begin
+//						if (rtest == 1'b1) begin
+//							r[15:0] <= test_addr;
+//							test_addr <= test_addr + 1;
+//
+//						end
+//						else
+//							r[15:0] <= test_addr;
+//							test_addr <= test_addr + 1;							
+//					 end
+//			2'b01: begin
+//						r[15] <= rw;
+//						r[14] <= iomem;
+//						r[13] <= reset;
+//						r[12] <= error;
+//						r[7:0] <= wdata;
+//					 end
+//			2'b10: begin
+//						r[7:0] <= 8'bZ;
+//						rdata <= r[7:0];
+//					 end
+//			default: begin
+//						r[15:0] <= 8'bZ;
+//						rwait <= r[15];
+//						rint <= r[14];
+//						rready <= r[12];
+//						rtest <= r[11];
+//						if (r[13] == 1'b1)
+//							ioreq[r[7:0]] = 1;
+//					 end
+//		endcase
+//		ack <= 1'b1;
+//	end
+//	if (RATN == 1'b0)
+//		ack <= 1'b0;
+	r <= test_addr;
+	test_addr <= test_addr + 1;			
 end
 
 

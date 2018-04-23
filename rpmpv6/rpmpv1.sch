@@ -33,7 +33,6 @@ LIBS:contrib
 LIBS:valves
 LIBS:IC_raspberry
 LIBS:msx_slot
-LIBS:rpmpv1-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -148,37 +147,37 @@ Text Label 10430 3375 0    60   ~ 0
 D6
 Text Label 10430 3475 0    60   ~ 0
 CLK
-Text Label 8445 3810 0    60   ~ 0
+Text Label 8505 3875 0    60   ~ 0
 D1
-Text Label 8445 3710 0    60   ~ 0
+Text Label 8505 3775 0    60   ~ 0
 D0
-Text Label 8445 3610 0    60   ~ 0
+Text Label 8505 3675 0    60   ~ 0
 D3
-Text Label 8445 3510 0    60   ~ 0
+Text Label 8505 3575 0    60   ~ 0
 D2
-Text Label 8445 3410 0    60   ~ 0
+Text Label 8505 3475 0    60   ~ 0
 D5
-Text Label 8445 3210 0    60   ~ 0
+Text Label 8505 3275 0    60   ~ 0
 D7
-Text Label 8445 3310 0    60   ~ 0
+Text Label 8505 3375 0    60   ~ 0
 D4
-Text Label 8445 3110 0    60   ~ 0
+Text Label 8505 3175 0    60   ~ 0
 D6
-Text Label 6845 3710 0    60   ~ 0
+Text Label 6805 3875 0    60   ~ 0
 RD1
-Text Label 6845 3610 0    60   ~ 0
+Text Label 6805 3775 0    60   ~ 0
 RD0
-Text Label 6845 3510 0    60   ~ 0
+Text Label 6805 3675 0    60   ~ 0
 RD3
-Text Label 6845 3410 0    60   ~ 0
+Text Label 6805 3575 0    60   ~ 0
 RD2
-Text Label 6845 3310 0    60   ~ 0
+Text Label 6805 3475 0    60   ~ 0
 RD5
-Text Label 6845 3110 0    60   ~ 0
+Text Label 6805 3275 0    60   ~ 0
 RD7
-Text Label 6845 3210 0    60   ~ 0
+Text Label 6805 3375 0    60   ~ 0
 RD4
-Text Label 6845 3010 0    60   ~ 0
+Text Label 6805 3175 0    60   ~ 0
 RD6
 $Comp
 L +5V #PWR01
@@ -620,7 +619,7 @@ Text Label 4345 1625 0    60   ~ 0
 GND
 NoConn ~ 8850 2210
 NoConn ~ 6650 1810
-Text Label 8455 4010 0    60   ~ 0
+Text Label 8515 3025 0    60   ~ 0
 V5.0
 Text Label 4330 1825 0    60   ~ 0
 RA15
@@ -733,41 +732,41 @@ F 3 "" H 2030 7330 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8395 3110 8795 3110
+	8455 3175 8855 3175
 Wire Wire Line
-	8395 3210 8795 3210
+	8455 3275 8855 3275
 Wire Wire Line
-	8395 3310 8795 3310
+	8455 3375 8855 3375
 Wire Wire Line
-	8395 3410 8795 3410
+	8455 3475 8855 3475
 Wire Wire Line
-	8395 3510 8795 3510
+	8455 3575 8855 3575
 Wire Wire Line
-	8395 3610 8795 3610
+	8455 3675 8855 3675
 Wire Wire Line
-	8395 3710 8795 3710
+	8455 3775 8855 3775
 Wire Wire Line
-	8395 3810 8795 3810
+	8455 3875 8855 3875
 Wire Wire Line
-	6695 3710 7095 3710
+	6655 3875 7055 3875
 Wire Wire Line
-	6695 3110 7095 3110
+	6655 3275 7055 3275
 Wire Wire Line
-	6695 3210 7095 3210
+	6655 3375 7055 3375
 Wire Wire Line
-	6695 3310 7095 3310
+	6655 3475 7055 3475
 Wire Wire Line
-	6695 3410 7095 3410
+	6655 3575 7055 3575
 Wire Wire Line
-	6695 3510 7095 3510
+	6655 3675 7055 3675
 Wire Wire Line
-	6695 3610 7095 3610
+	6655 3775 7055 3775
 Wire Wire Line
-	6695 3010 7095 3010
+	6655 3175 7055 3175
 Wire Wire Line
-	8395 3910 8795 3910
+	8455 2925 8855 2925
 Wire Wire Line
-	8395 4010 8795 4010
+	8455 3025 8855 3025
 Wire Wire Line
 	10380 1475 10780 1475
 Wire Wire Line
@@ -897,8 +896,6 @@ Wire Wire Line
 	5990 3115 6390 3115
 Wire Wire Line
 	5990 3015 6390 3015
-Wire Wire Line
-	6695 4010 7095 4010
 Wire Wire Line
 	4180 1525 4580 1525
 Wire Wire Line
@@ -1254,35 +1251,10 @@ Wire Wire Line
 	4345 4190 4760 4190
 Text Label 4440 4190 0    60   ~ 0
 RC18
-$Comp
-L LVC4245 U7
-U 1 1 5ADD8B37
-P 7745 3460
-F 0 "U7" H 7695 4160 60  0000 C CNN
-F 1 "LVC4245" H 7745 3610 60  0000 C CNN
-F 2 "SMD_Packages:SOIC-24" H 7895 4060 60  0001 C CNN
-F 3 "" H 7895 4060 60  0001 C CNN
-	1    7745 3460
-	-1   0    0    1   
-$EndComp
-Text Label 6850 4010 0    60   ~ 0
-VCC
-Text Label 6765 3810 0    60   ~ 0
+Text Label 6725 2925 0    60   ~ 0
 DAT_EN
 Wire Wire Line
-	6695 3810 7095 3810
-Text Label 8440 2910 0    60   ~ 0
-GND
-Wire Wire Line
-	8395 3010 8795 3010
-Wire Wire Line
-	8395 2910 8795 2910
-Text Label 8440 3010 0    60   ~ 0
-GND
-Text Label 6845 2910 0    60   ~ 0
-GND
-Wire Wire Line
-	6695 2910 7095 2910
+	6655 2925 7055 2925
 Text Label 4345 3815 0    60   ~ 0
 GND
 $Comp
@@ -1457,9 +1429,6 @@ NoConn ~ 6650 2210
 NoConn ~ 6650 2410
 Wire Wire Line
 	5990 2915 6390 2915
-NoConn ~ 6695 3910
-Wire Wire Line
-	6695 3910 7095 3910
 $Comp
 L C C8
 U 1 1 5ADE1883
@@ -1495,18 +1464,18 @@ Connection ~ 3910 6950
 $Comp
 L C C10
 U 1 1 5ADE2501
-P 8795 4160
-F 0 "C10" H 8820 4260 50  0000 L CNN
-F 1 "C" H 8820 4060 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8833 4010 50  0001 C CNN
-F 3 "" H 8795 4160 50  0001 C CNN
-	1    8795 4160
-	1    0    0    -1  
+P 9005 3025
+F 0 "C10" H 9030 3125 50  0000 L CNN
+F 1 "C" H 9030 2925 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9043 2875 50  0001 C CNN
+F 3 "" H 9005 3025 50  0001 C CNN
+	1    9005 3025
+	0    1    1    0   
 $EndComp
-Text Label 8495 4310 0    60   ~ 0
+Text Label 9155 2925 1    60   ~ 0
 GND
 Wire Wire Line
-	8395 4310 8795 4310
+	9155 3025 9155 2625
 Text Label 4340 2915 0    60   ~ 0
 RD1
 Text Label 4340 3015 0    60   ~ 0
@@ -1558,8 +1527,19 @@ Text Label 6140 7475 0    60   ~ 0
 DAT_DIR
 Wire Wire Line
 	6050 7475 6450 7475
-Text Label 8445 3910 0    60   ~ 0
+Text Label 8505 2925 0    60   ~ 0
 DAT_DIR
 Text Label 1150 7330 0    60   ~ 0
 DAT_DIR
+$Comp
+L 74LVC4245A U?
+U 1 1 5ADE1CF4
+P 7755 3375
+F 0 "U?" H 7705 3975 50  0000 L BNN
+F 1 "74LVC4245A" H 7655 2775 50  0000 L TNN
+F 2 "Housings_SSOP:SSOP-24_5.3x8.2mm_Pitch0.65mm" H 7755 3375 50  0001 C CNN
+F 3 "" H 7755 3375 50  0001 C CNN
+	1    7755 3375
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
