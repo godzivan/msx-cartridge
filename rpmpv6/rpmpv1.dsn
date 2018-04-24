@@ -1,4 +1,4 @@
-(pcb "C:\msys64\home\meesokim\msx-cartridge\rpmpv6\rpmpv1.dsn"
+(pcb "C:\msys64\home\meeso.kim\msx-cartridge\rpmpv6\rpmpv1.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -124,7 +124,7 @@
     (component "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm"
       (place U5 176530 -93091 back 0 (PN 74LS05))
       (place U2 176530 -93091 front 0 (PN 74HC04))
-      (place U6 193675 -93218 front 0 (PN 74LS32))
+      (place U6 194277 -93091 front 0 (PN 74LS08))
     )
     (component Capacitors_SMD:C_0603_HandSoldering
       (place C1 129032 -76708 back 0 (PN C))
@@ -137,14 +137,14 @@
       (place C9 187198 -92771 front 270 (PN C))
       (place C10 151587 -95808.8 back 90 (PN C))
     )
-    (component Capacitors_SMD:CP_Elec_4x5.3
-      (place C2 128524 -83693 back 0 (PN CP))
-    )
     (component "LEDs:LED_RGB_5050-6"
       (place D1 190284 -55118 front 0 (PN LED_RGB))
     )
     (component "SMD_Packages:SOIC-24"
-      (place U7 141681 -92964 back 0 (PN 74LVC4245A))
+      (place U7 141681 -92964 back 0 (PN LVC4245))
+    )
+    (component Capacitors_SMD:CP_Elec_4x4.5
+      (place C2 128524 -83693 back 0 (PN CP))
     )
   )
   (library
@@ -419,33 +419,6 @@
       (pin Rect[T]Pad_1200x750_um 1 -950 0)
       (pin Rect[T]Pad_1200x750_um 2 950 0)
     )
-    (image Capacitors_SMD:CP_Elec_4x5.3
-      (outline (path signal 100  2100 0  1997.22 -648.936  1698.94 -1234.35  1234.35 -1698.94
-            648.936 -1997.22  0 -2100  -648.936 -1997.22  -1234.35 -1698.94
-            -1698.94 -1234.35  -1997.22 -648.936  -2100 0  -1997.22 648.936
-            -1698.94 1234.35  -1234.35 1698.94  -648.936 1997.22  0 2100
-            648.936 1997.22  1234.35 1698.94  1698.94 1234.35  1997.22 648.936))
-      (outline (path signal 100  2130 -2130  2130 2130))
-      (outline (path signal 100  -1460 -2130  2130 -2130))
-      (outline (path signal 100  -2130 -1460  -1460 -2130))
-      (outline (path signal 100  -2130 1460  -2130 -1460))
-      (outline (path signal 100  -1460 2130  -2130 1460))
-      (outline (path signal 100  2130 2130  -1460 2130))
-      (outline (path signal 120  -2290 1520  -2290 1120))
-      (outline (path signal 120  2290 2290  2290 1120))
-      (outline (path signal 120  2290 -2290  2290 -1120))
-      (outline (path signal 120  -2290 -1520  -2290 -1120))
-      (outline (path signal 120  -1520 -2290  2290 -2290))
-      (outline (path signal 120  -1520 -2290  -2290 -1520))
-      (outline (path signal 120  -1520 2290  2290 2290))
-      (outline (path signal 120  -1520 2290  -2290 1520))
-      (outline (path signal 50  -3350 2390  3350 2390))
-      (outline (path signal 50  -3350 2390  -3350 -2380))
-      (outline (path signal 50  3350 -2380  3350 2390))
-      (outline (path signal 50  3350 -2380  -3350 -2380))
-      (pin Rect[T]Pad_2600x1600_um (rotate 180) 1 -1800 0)
-      (pin Rect[T]Pad_2600x1600_um (rotate 180) 2 1800 0)
-    )
     (image "LEDs:LED_RGB_5050-6"
       (outline (path signal 100  -2500 1900  -1900 2500))
       (outline (path signal 100  2500 2500  -2500 2500))
@@ -503,6 +476,33 @@
       (pin Rect[T]Pad_762x1524_um 15 4445 3810)
       (pin Rect[T]Pad_762x1524_um 14 5715 3810)
       (pin Rect[T]Pad_762x1524_um 13 6985 3810)
+    )
+    (image Capacitors_SMD:CP_Elec_4x4.5
+      (outline (path signal 100  2102.38 0  1999.48 -649.671  1700.86 -1235.75  1235.75 -1700.86
+            649.671 -1999.48  0 -2102.38  -649.671 -1999.48  -1235.75 -1700.86
+            -1700.86 -1235.75  -1999.48 -649.671  -2102.38 0  -1999.48 649.671
+            -1700.86 1235.75  -1235.75 1700.86  -649.671 1999.48  0 2102.38
+            649.671 1999.48  1235.75 1700.86  1700.86 1235.75  1999.48 649.671))
+      (outline (path signal 100  2130 -2120  2130 2150))
+      (outline (path signal 100  -1460 -2120  2130 -2120))
+      (outline (path signal 100  -2130 -1450  -1460 -2120))
+      (outline (path signal 100  -2130 1470  -2130 -1450))
+      (outline (path signal 100  -1460 2150  -2130 1470))
+      (outline (path signal 100  2130 2150  -1460 2150))
+      (outline (path signal 120  2290 2300  2290 1130))
+      (outline (path signal 120  2290 -2270  2290 -1100))
+      (outline (path signal 120  -2290 -1510  -2290 -1100))
+      (outline (path signal 120  -2290 1540  -2290 1130))
+      (outline (path signal 120  -1520 2300  2290 2300))
+      (outline (path signal 120  -1520 2300  -2290 1540))
+      (outline (path signal 120  -1520 -2270  2290 -2270))
+      (outline (path signal 120  -1520 -2270  -2290 -1510))
+      (outline (path signal 50  -3350 2400  3350 2400))
+      (outline (path signal 50  -3350 2400  -3350 -2370))
+      (outline (path signal 50  3350 -2370  3350 2400))
+      (outline (path signal 50  3350 -2370  -3350 -2370))
+      (pin Rect[T]Pad_2600x1600_um (rotate 180) 1 -1800 0)
+      (pin Rect[T]Pad_2600x1600_um (rotate 180) 2 1800 0)
     )
     (padstack Round[A]Pad_6000_um
       (shape (circle F.Cu 6000))
@@ -569,7 +569,8 @@
     (net GND
       (pins P1-41 P1-43 J2-6 J2-9 J2-14 J2-20 J2-25 J2-30 J2-34 J2-39 J1-6 J1-9 J1-14
         J1-20 J1-25 J1-30 J1-34 J1-39 U1-1 U1-10 U3-1 U3-10 U3-19 U4-1 U4-10 U5-7
-        C1-2 R2-2 C3-2 C4-2 C5-2 C6-2 C7-2 U2-7 U6-7 C8-2 C9-2 C10-1 U7-11 U7-12 U7-13)
+        C1-2 R2-2 C3-2 C4-2 C5-2 C6-2 C7-2 U2-7 C8-2 C9-2 C10-1 U7-11 U7-12 U7-13
+        U6-7)
     )
     (net +5V
       (pins P1-45 P1-47 J2-2 J2-4 J1-2 J1-4 C10-2 U7-1)
@@ -608,16 +609,16 @@
       (pins P1-10 U5-6)
     )
     (net /IORQ
-      (pins P1-11 U3-14 D1-2 U2-5 U6-1)
+      (pins P1-11 U3-14 D1-2 U2-5 U6-2)
     )
     (net /MREQ
-      (pins P1-12 U3-13 U2-9)
+      (pins P1-12 U3-13 U6-1)
     )
     (net /WR
       (pins P1-13 U3-17)
     )
     (net /RD
-      (pins P1-14 U3-16 U6-2)
+      (pins P1-14 U3-16)
     )
     (net /RESET
       (pins P1-15 U3-18)
@@ -699,7 +700,7 @@
     )
     (net +3V3
       (pins J2-1 J2-17 J1-1 J1-17 R1-1 U1-20 U3-20 U4-20 U5-14 C3-1 C4-1 C5-1 C6-1
-        C7-1 R3-1 R4-1 U2-14 U6-14 C8-1 C9-1 U7-24 U7-23)
+        C7-1 R3-1 R4-1 U2-14 C8-1 C9-1 U7-24 U7-23 U6-14)
     )
     (net "Net-(P1-Pad5)"
       (pins P1-5)
@@ -774,7 +775,7 @@
       (pins J2-18 J1-18 U5-1)
     )
     (net /RC25
-      (pins J2-22 J1-22 U2-11)
+      (pins J2-22 J1-22 U2-11 U6-10)
     )
     (net /RC19
       (pins J2-35 J1-35 U3-6)
@@ -794,9 +795,6 @@
     (net "Net-(U3-Pad9)"
       (pins U3-9)
     )
-    (net "Net-(U6-Pad12)"
-      (pins U6-3 U6-12)
-    )
     (net "Net-(D1-Pad4)"
       (pins D1-4 R4-2)
     )
@@ -807,34 +805,31 @@
       (pins R1-2 D1-6)
     )
     (net "Net-(C1-Pad1)"
-      (pins C1-1 C2-1 R2-1 R5-2)
+      (pins C1-1 R2-1 R5-2 C2-1)
     )
     (net /nRATN
-      (pins D1-1 U2-2 U6-10 U6-13)
+      (pins D1-1)
     )
     (net /RATN
-      (pins J2-15 J1-15 U1-19 U4-19 U2-1)
+      (pins J2-15 J1-15 U1-19 U4-19 U6-5)
     )
     (net /ATN
-      (pins J2-40 J1-40 U2-3 U6-6)
+      (pins J2-40 J1-40 U2-4 U6-4)
     )
     (net /nATN
-      (pins U2-4 U6-9)
+      (pins U2-3 U6-3)
     )
     (net /nIORQ
-      (pins U2-6 U6-5)
-    )
-    (net /nMREQ
-      (pins U2-8 U6-4)
+      (pins U2-6 U6-9)
     )
     (net "Net-(U3-Pad3)"
       (pins U3-3)
     )
     (net /BDIR
-      (pins U5-5 U6-11)
+      (pins U5-5 U2-2)
     )
     (net /DAT_EN
-      (pins U6-8 U7-22)
+      (pins U2-8 U7-22)
     )
     (net "Net-(U3-Pad5)"
       (pins U3-5)
@@ -848,16 +843,22 @@
     (net /DAT_DIR
       (pins D1-3 U2-10 U7-2)
     )
+    (net /nBDIR
+      (pins U2-1 U6-8)
+    )
+    (net /nDAT_EN
+      (pins U2-9 U6-6)
+    )
     (class kicad_default "" +3V3 /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15 /A2
       /A3 /A4 /A5 /A6 /A7 /A8 /A9 /ATN /BDIR /BUSDIR /CLK /D0 /D1 /D2 /D3
       /D4 /D5 /D6 /D7 /DAT_DIR /DAT_EN /INT /IORQ /M1 /MREQ /RA10 /RA11 /RA12
       /RA13 /RA14 /RA15 /RA8 /RA9 /RATN /RC16 /RC17 /RC18 /RC19 /RC20 /RC23
       /RC24 /RC25 /RC26 /RC27 /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6 /RD7
-      /RESET /SLTSL /SOUNDIN /WAIT /WR /nATN /nIORQ /nMREQ /nRATN GND "Net-(C1-Pad1)"
-      "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)" "Net-(P1-Pad1)" "Net-(P1-Pad16)"
-      "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad5)"
-      "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U3-Pad15)" "Net-(U3-Pad3)" "Net-(U3-Pad5)"
-      "Net-(U3-Pad7)" "Net-(U3-Pad9)" "Net-(U6-Pad12)" "Net-(U7-Pad23)"
+      /RESET /SLTSL /SOUNDIN /WAIT /WR /nATN /nBDIR /nDAT_EN /nIORQ /nMREQ
+      /nRATN GND "Net-(C1-Pad1)" "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)"
+      "Net-(P1-Pad1)" "Net-(P1-Pad16)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)"
+      "Net-(P1-Pad48)" "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U3-Pad15)"
+      "Net-(U3-Pad3)" "Net-(U3-Pad5)" "Net-(U3-Pad7)" "Net-(U3-Pad9)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
@@ -877,5 +878,6 @@
     )
   )
   (wiring
+    (wire (path B.Cu 250  140093 -109424  139690 -109827)(net /D7)(type protect))
   )
 )
