@@ -61,5 +61,5 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
-LibName33=C:/msys64/home/meeso.kim/msx-cartridge/libraries/apple2
-LibName34=C:/msys64/home/meeso.kim/msx-cartridge/libraries/altera_maxII_epm240
+LibName33=../libraries/apple2
+LibName34=../libraries/altera_maxII_epm240

@@ -1,4 +1,6 @@
 EESchema Schematic File Version 2
+LIBS:IC_raspberry
+LIBS:msx_slot
 LIBS:power
 LIBS:device
 LIBS:switches
@@ -31,8 +33,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:IC_raspberry
-LIBS:msx_slot
 LIBS:rpmpv1-cache
 EELAYER 25 0
 EELAYER END
@@ -1478,7 +1478,7 @@ U 1 1 5ADE7C52
 P 7750 3145
 F 0 "U7" H 7700 3845 60  0000 C CNN
 F 1 "LVC4245" H 7750 3295 60  0000 C CNN
-F 2 "" H 7900 3745 60  0001 C CNN
+F 2 "SMD_Packages:SOIC-24" H 7900 3745 60  0001 C CNN
 F 3 "" H 7900 3745 60  0001 C CNN
 	1    7750 3145
 	-1   0    0    1   

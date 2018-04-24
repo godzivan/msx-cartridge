@@ -1,4 +1,4 @@
-update=2018-01-21 오후 8:47:19
+update=2018-04-25 오전 12:34:29
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,12 +25,22 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=../libraries;../libraries/msx.pretty
 [eeschema/libraries]
-LibName1=rpmcv4-rescue
-LibName2=rpmcv3-rescue
+LibName1=IC_raspberry
+LibName2=msx_slot
 LibName3=power
 LibName4=device
 LibName5=switches
@@ -63,15 +73,3 @@ LibName31=opto
 LibName32=atmel
 LibName33=contrib
 LibName34=valves
-LibName35=IC_raspberry
-LibName36=msx_slot
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
