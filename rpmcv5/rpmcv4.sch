@@ -35,6 +35,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:IC_raspberry
 LIBS:msx_slot
+LIBS:rpmcv4-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -640,8 +641,6 @@ Text Label 6800 4750 0    60   ~ 0
 RD4
 Text Label 6800 4550 0    60   ~ 0
 RD6
-Text Label 8200 1750 0    60   ~ 0
-SLTSL3
 Text Label 900  5650 0    60   ~ 0
 RD0
 Text Label 3150 5650 0    60   ~ 0
@@ -677,7 +676,7 @@ RA14
 Text Label 900  4950 0    60   ~ 0
 RC27
 Text Label 3150 4350 0    60   ~ 0
-5V0
+VCC
 Text Label 3150 4450 0    60   ~ 0
 5V0
 Text Label 3150 4550 0    60   ~ 0
@@ -697,12 +696,12 @@ GND
 Text Label 900  5150 0    60   ~ 0
 VCC
 Text Label 900  4350 0    60   ~ 0
-VCC
+3V3
 $Comp
-L +5V #PWR01
+L +5V #PWR3
 U 1 1 5A435798
 P 3500 4050
-F 0 "#PWR01" H 3500 3900 50  0001 C CNN
+F 0 "#PWR3" H 3500 3900 50  0001 C CNN
 F 1 "+5V" H 3500 4190 50  0000 C CNN
 F 2 "" H 3500 4050 50  0000 C CNN
 F 3 "" H 3500 4050 50  0000 C CNN
@@ -712,10 +711,10 @@ $EndComp
 Wire Wire Line
 	3500 4050 3500 4450
 $Comp
-L GND #PWR02
+L GND #PWR1
 U 1 1 5A4358D3
 P 655 6410
-F 0 "#PWR02" H 655 6160 50  0001 C CNN
+F 0 "#PWR1" H 655 6160 50  0001 C CNN
 F 1 "GND" H 655 6260 50  0000 C CNN
 F 2 "" H 655 6410 50  0000 C CNN
 F 3 "" H 655 6410 50  0000 C CNN
@@ -969,9 +968,9 @@ Wire Wire Line
 Wire Wire Line
 	950  2450 1350 2450
 Wire Wire Line
-	950  2950 1350 2950
+	600  2950 1350 2950
 Wire Wire Line
-	950  3200 1350 3200
+	600  3200 1350 3200
 Wire Wire Line
 	950  3450 1350 3450
 Text Label 1000 1450 0    60   ~ 0
@@ -999,10 +998,10 @@ V3.3
 Text Label 3150 4950 0    60   ~ 0
 GND
 $Comp
-L +3.3V #PWR03
+L +3.3V #PWR2
 U 1 1 5A43A975
 P 800 4250
-F 0 "#PWR03" H 800 4100 50  0001 C CNN
+F 0 "#PWR2" H 800 4100 50  0001 C CNN
 F 1 "+3.3V" H 800 4390 50  0000 C CNN
 F 2 "" H 800 4250 50  0000 C CNN
 F 3 "" H 800 4250 50  0000 C CNN
@@ -1029,27 +1028,21 @@ Wire Wire Line
 Wire Wire Line
 	8200 1850 8600 1850
 Wire Wire Line
-	8200 1750 8600 1750
-Wire Wire Line
 	6800 1950 7200 1950
 Wire Wire Line
 	6800 1850 7200 1850
 Wire Wire Line
-	6800 1750 7200 1750
+	4390 2350 5915 2350
 Wire Wire Line
-	6950 1200 7350 1200
-Wire Wire Line
-	6950 1100 7350 1100
-Wire Wire Line
-	7950 1100 8350 1100
+	4390 2250 5910 2250
 Text Label 8200 1950 0    60   ~ 0
 CLK
-Text Label 7100 1100 0    60   ~ 0
-INT
+Text Label 4445 2250 0    60   ~ 0
+RC24
 Text Label 8200 1850 0    60   ~ 0
 RESET
-Text Label 7100 1200 0    60   ~ 0
-WAIT
+Text Label 4445 2350 0    60   ~ 0
+RC25
 Text Label 6950 1950 0    60   ~ 0
 RC20
 Text Label 6950 1850 0    60   ~ 0
@@ -1233,7 +1226,7 @@ A14
 Text Label 5900 3400 0    60   ~ 0
 A15
 Text Notes 7360 7510 0    91   ~ 0
-RPMC V4 with 74HC373 and 74HC245
+RPMC V5 with 74HC373 and 74LVC4245
 Wire Wire Line
 	6600 4100 7000 4100
 Wire Wire Line
@@ -1269,7 +1262,7 @@ RA15
 Text Label 3150 4750 0    60   ~ 0
 RA15
 Text Label 3150 6050 0    60   ~ 0
-RA16
+RC16
 Text Label 900  4850 0    60   ~ 0
 RC17
 Text Label 3150 4850 0    60   ~ 0
@@ -1293,32 +1286,19 @@ RC26
 $Comp
 L R R10
 U 1 1 5A44671B
-P 10650 2900
-F 0 "R10" V 10730 2900 50  0000 C CNN
-F 1 "R" V 10650 2900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 10580 2900 50  0001 C CNN
-F 3 "" H 10650 2900 50  0001 C CNN
-	1    10650 2900
-	0    1    1    0   
+P 5525 1965
+F 0 "R10" V 5605 1965 50  0000 C CNN
+F 1 "R" V 5525 1965 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5455 1965 50  0001 C CNN
+F 3 "" H 5525 1965 50  0001 C CNN
+	1    5525 1965
+	-1   0    0    1   
 $EndComp
 $Comp
-L +3.3V #PWR04
-U 1 1 5A44697F
-P 10800 2700
-F 0 "#PWR04" H 10800 2550 50  0001 C CNN
-F 1 "+3.3V" H 10800 2840 50  0000 C CNN
-F 2 "" H 10800 2700 50  0001 C CNN
-F 3 "" H 10800 2700 50  0001 C CNN
-	1    10800 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10800 2900 10800 2700
-$Comp
-L GND #PWR05
+L GND #PWR5
 U 1 1 5A446BD1
 P 10800 3200
-F 0 "#PWR05" H 10800 2950 50  0001 C CNN
+F 0 "#PWR5" H 10800 2950 50  0001 C CNN
 F 1 "GND" H 10800 3050 50  0000 C CNN
 F 2 "" H 10800 3200 50  0001 C CNN
 F 3 "" H 10800 3200 50  0001 C CNN
@@ -1327,14 +1307,8 @@ F 3 "" H 10800 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10800 3000 10800 3200
-Text Label 10800 2900 0    60   ~ 0
-V3.3
-Text Label 8150 1100 0    60   ~ 0
-GND
-Text Label 6950 1750 0    60   ~ 0
-RC21
 Text Notes 8165 7635 0    60   ~ 0
-2017.12.29
+2018.4.30
 Text Notes 7275 7245 0    60   ~ 0
 1 1
 Wire Wire Line
@@ -1344,35 +1318,34 @@ RC17
 $Comp
 L R R11
 U 1 1 5A5D6E33
-P 7500 1100
-F 0 "R11" V 7580 1100 50  0000 C CNN
-F 1 "R" V 7500 1100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7430 1100 50  0001 C CNN
-F 3 "" H 7500 1100 50  0001 C CNN
-	1    7500 1100
-	0    1    1    0   
+P 4950 1965
+F 0 "R11" V 5030 1965 50  0000 C CNN
+F 1 "R" V 4950 1965 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4880 1965 50  0001 C CNN
+F 3 "" H 4950 1965 50  0001 C CNN
+	1    4950 1965
+	-1   0    0    1   
 $EndComp
 $Comp
 L R R12
 U 1 1 5A5D70B3
-P 7500 1200
-F 0 "R12" V 7580 1200 50  0000 C CNN
-F 1 "R" V 7290 1200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7430 1200 50  0001 C CNN
-F 3 "" H 7500 1200 50  0001 C CNN
-	1    7500 1200
-	0    1    1    0   
+P 5150 1965
+F 0 "R12" V 5230 1965 50  0000 C CNN
+F 1 "R" V 5140 1960 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5080 1965 50  0001 C CNN
+F 3 "" H 5150 1965 50  0001 C CNN
+	1    5150 1965
+	-1   0    0    1   
 $EndComp
-NoConn ~ 800  5850
 Wire Wire Line
 	655  4750 655  6410
 Connection ~ 655  6250
 Connection ~ 655  5550
 $Comp
-L GND #PWR06
+L GND #PWR4
 U 1 1 5A5D9C37
 P 3655 6420
-F 0 "#PWR06" H 3655 6170 50  0001 C CNN
+F 0 "#PWR4" H 3655 6170 50  0001 C CNN
 F 1 "GND" H 3655 6270 50  0000 C CNN
 F 2 "" H 3655 6420 50  0000 C CNN
 F 3 "" H 3655 6420 50  0000 C CNN
@@ -1387,7 +1360,6 @@ Connection ~ 3495 5750
 Connection ~ 3655 5750
 Connection ~ 3655 4950
 Connection ~ 3655 5250
-Connection ~ 6160 1800
 $Comp
 L LVC4245 U5
 U 1 1 5AE5DA34
@@ -1412,7 +1384,7 @@ GND
 Wire Wire Line
 	6650 5550 7050 5550
 Text Label 6800 5550 0    60   ~ 0
-VCC
+3V3
 Wire Wire Line
 	8350 5550 8750 5550
 Text Label 8400 5550 0    60   ~ 0
@@ -1453,46 +1425,6 @@ F 3 "" H 7700 2250 50  0000 C CNN
 	1    7700 2250
 	1    0    0    -1  
 $EndComp
-$Comp
-L R R13
-U 1 1 5AE845CF
-P 7800 1100
-F 0 "R13" V 7880 1100 50  0000 C CNN
-F 1 "R" V 7800 1100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7730 1100 50  0001 C CNN
-F 3 "" H 7800 1100 50  0001 C CNN
-	1    7800 1100
-	0    1    1    0   
-$EndComp
-$Comp
-L R R14
-U 1 1 5AE8467D
-P 7800 1200
-F 0 "R14" V 7880 1200 50  0000 C CNN
-F 1 "R" V 7590 1200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7730 1200 50  0001 C CNN
-F 3 "" H 7800 1200 50  0001 C CNN
-	1    7800 1200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7650 1100 7650 850 
-Wire Wire Line
-	7650 850  7950 850 
-Wire Wire Line
-	7650 1200 7650 1450
-Wire Wire Line
-	7650 1450 7950 1450
-Text Label 7700 850  0    60   ~ 0
-RC22
-Text Label 7700 1450 0    60   ~ 0
-RC23
-Wire Wire Line
-	7950 1200 8350 1200
-Text Label 8150 1200 0    60   ~ 0
-GND
-Text Label 10350 2900 0    60   ~ 0
-RC24
 Wire Wire Line
 	6800 2650 7200 2650
 Text Label 7000 2650 0    60   ~ 0
@@ -1519,4 +1451,143 @@ Wire Wire Line
 	7700 1550 8600 1550
 Text Label 7800 1550 0    60   ~ 0
 5V0
+Wire Wire Line
+	5915 2350 5915 2345
+Text Label 5660 2250 0    60   ~ 0
+INT
+Text Label 5660 2350 0    60   ~ 0
+WAIT
+$Comp
+L R R13
+U 1 1 5AE69E2C
+P 5345 1965
+F 0 "R13" V 5425 1965 50  0000 C CNN
+F 1 "R" V 5335 1960 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5275 1965 50  0001 C CNN
+F 3 "" H 5345 1965 50  0001 C CNN
+	1    5345 1965
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4390 2455 5915 2455
+Text Label 4440 2455 0    60   ~ 0
+RC26
+Text Label 5660 2455 0    60   ~ 0
+BUSDIR
+Wire Wire Line
+	4950 2115 4950 2250
+Connection ~ 4950 2250
+Wire Wire Line
+	5150 2115 5150 2350
+Connection ~ 5150 2350
+Wire Wire Line
+	5345 2115 5345 2455
+Connection ~ 5345 2455
+Wire Wire Line
+	4950 1815 5525 1815
+Connection ~ 5150 1815
+Wire Wire Line
+	5150 1560 5150 1815
+Text Label 5150 1780 1    60   ~ 0
+3V3
+Wire Wire Line
+	4390 2555 5915 2555
+Text Label 4440 2555 0    60   ~ 0
+RC27
+Text Label 5660 2555 0    60   ~ 0
+SW1
+Wire Wire Line
+	5525 2115 5525 2555
+Connection ~ 5525 2555
+Connection ~ 5345 1815
+$Comp
+L 74HC04 U6
+U 1 1 5AE70F03
+P 5210 6075
+F 0 "U6" H 5360 6175 50  0000 C CNN
+F 1 "74HC04" H 5410 5975 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5210 6075 50  0001 C CNN
+F 3 "" H 5210 6075 50  0001 C CNN
+	1    5210 6075
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC04 U6
+U 2 1 5AE70FBE
+P 5210 6435
+F 0 "U6" H 5360 6535 50  0000 C CNN
+F 1 "74HC04" H 5410 6335 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5210 6435 50  0001 C CNN
+F 3 "" H 5210 6435 50  0001 C CNN
+	2    5210 6435
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5660 6075 6235 6075
+Wire Wire Line
+	5660 6435 6235 6435
+Wire Wire Line
+	4185 6075 4760 6075
+Wire Wire Line
+	4185 6435 4760 6435
+Text Label 5730 6075 0    60   ~ 0
+SLTSL3
+Text Label 5740 6435 0    60   ~ 0
+PWR
+Text Label 4300 6435 0    60   ~ 0
+nPWR
+Text Label 4300 6075 0    60   ~ 0
+nSLTSL3
+$Comp
+L 74LS08 U7
+U 1 1 5AE71989
+P 5350 6950
+F 0 "U7" H 5350 7000 50  0000 C CNN
+F 1 "74LS08" H 5350 6900 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5350 6950 50  0001 C CNN
+F 3 "" H 5350 6950 50  0001 C CNN
+	1    5350 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4175 6850 4750 6850
+Wire Wire Line
+	4175 7050 4750 7050
+Wire Wire Line
+	5950 6950 6525 6950
+Text Label 6065 6950 0    60   ~ 0
+nSLTSL3
+Text Label 4290 7050 0    60   ~ 0
+SLTSL1
+Text Label 4295 6850 0    60   ~ 0
+IORQ
+NoConn ~ 7200 1750
+NoConn ~ 8200 1750
+Text Label 690  2950 0    60   ~ 0
+RC21
+Text Label 695  3200 0    60   ~ 0
+RC22
+$Comp
+L 74LS08 U7
+U 2 1 5AE73E66
+P 5355 7460
+F 0 "U7" H 5355 7510 50  0000 C CNN
+F 1 "74LS08" H 5355 7410 50  0000 C CNN
+F 2 "" H 5355 7460 50  0001 C CNN
+F 3 "" H 5355 7460 50  0001 C CNN
+	2    5355 7460
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4180 7360 4755 7360
+Wire Wire Line
+	4180 7560 4755 7560
+Text Label 4295 7560 0    60   ~ 0
+RC23
+Text Label 4300 7360 0    60   ~ 0
+RESET
+Wire Wire Line
+	5955 7460 6530 7460
+Text Label 6070 7460 0    60   ~ 0
+nPWR
 $EndSCHEMATC
