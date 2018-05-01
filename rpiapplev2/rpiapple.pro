@@ -1,4 +1,4 @@
-update=2018-04-30 오후 8:14:57
+update=2018-05-01 오전 12:18:37
 version=1
 last_client=kicad
 [pcbnew]
@@ -64,3 +64,4 @@ LibName32=valves
 LibName33=../libraries/apple2
 LibName34=../libraries/altera_maxII_epm240
 LibName35=C:/msys64/home/meeso.kim/msx-cartridge/libraries/msx_slot
+LibName36=C:/msys64/home/meesokim/msx-cartridge/libraries/msx_slot

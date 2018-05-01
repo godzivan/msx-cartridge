@@ -34,6 +34,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:IC_raspberry
 LIBS:msx_slot
+LIBS:rpspc-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -766,4 +767,8 @@ Wire Wire Line
 	6895 2420 6245 2420
 Wire Wire Line
 	6895 2220 6245 2220
+Text Label 6395 2320 0    60   ~ 0
+VCC
+Wire Wire Line
+	6895 2320 6245 2320
 $EndSCHEMATC

@@ -774,20 +774,9 @@ Connection ~ 9585 5235
 Connection ~ 9785 5235
 Connection ~ 9985 5235
 Text Label 10200 5235 0    60   ~ 0
-VCC
+3V3
 Text Label 10210 5535 0    60   ~ 0
 GND
-$Comp
-L R R4
-U 1 1 5ABB0B9E
-P 9550 5880
-F 0 "R4" V 9630 5880 50  0000 C CNN
-F 1 "R" V 9550 5880 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 9480 5880 50  0001 C CNN
-F 3 "" H 9550 5880 50  0001 C CNN
-	1    9550 5880
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	9700 5880 10125 5880
 Wire Wire Line
@@ -818,7 +807,7 @@ Connection ~ 10185 5235
 Wire Wire Line
 	10750 4820 10750 5235
 Text Label 10750 5180 1    60   ~ 0
-3V3
+VCC
 $Comp
 L 74LS05 U2
 U 3 1 5AE6FEDC
@@ -970,7 +959,7 @@ U 1 1 5AE737CD
 P 2175 4645
 F 0 "U1" H 2125 5345 60  0000 C CNN
 F 1 "LVC4245" H 2175 4795 60  0000 C CNN
-F 2 "Housings_SOIC:SOIC-24W_7.5x15.4mm_Pitch1.27mm" H 2325 5245 60  0001 C CNN
+F 2 "SMD_Packages:SOIC-24" H 2325 5245 60  0001 C CNN
 F 3 "" H 2325 5245 60  0001 C CNN
 	1    2175 4645
 	-1   0    0    1   
@@ -1304,4 +1293,8 @@ Text Label 7615 6330 0    60   ~ 0
 GND
 NoConn ~ 5975 4995
 NoConn ~ 5975 4795
+Text Label 1290 5095 0    60   ~ 0
+3V3
+Wire Wire Line
+	1130 5095 1525 5095
 $EndSCHEMATC
