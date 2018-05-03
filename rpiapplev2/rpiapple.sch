@@ -72,7 +72,7 @@ F 3 "" H 2565 2030 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 3160 5195 2    60   ~ 0
-VCC
+5V0
 Text Label 9790 4780 3    60   ~ 0
 GND
 Text Label 8870 1360 0    60   ~ 0
@@ -319,13 +319,13 @@ GND
 Text Label 2995 5095 0    60   ~ 0
 DAT_DIR
 Text Label 5520 2925 0    60   ~ 0
-PH0
+ATN
 Text Label 5555 4555 0    60   ~ 0
-PH0
+ATN
 Text Label 1300 4995 0    60   ~ 0
-PH1
+nATN
 Text Label 2435 670  0    60   ~ 0
-VCC
+5V0
 Text Label 2730 670  0    60   ~ 0
 3V3
 Wire Wire Line
@@ -807,7 +807,7 @@ Connection ~ 10185 5235
 Wire Wire Line
 	10750 4820 10750 5235
 Text Label 10750 5180 1    60   ~ 0
-VCC
+5V0
 $Comp
 L 74LS05 U2
 U 3 1 5AE6FEDC
@@ -950,7 +950,7 @@ F 3 "" H 4910 3425 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label 5520 3025 0    60   ~ 0
-PH0
+ATN
 Wire Wire Line
 	5410 3025 5805 3025
 $Comp
@@ -996,7 +996,7 @@ $EndComp
 Wire Wire Line
 	4910 2725 5295 2725
 Text Label 5555 4655 0    60   ~ 0
-PH0
+ATN
 Wire Wire Line
 	5410 4655 5805 4655
 $Comp
@@ -1052,11 +1052,11 @@ Wire Wire Line
 Wire Wire Line
 	4030 7085 4415 7085
 Text Label 4165 6685 0    60   ~ 0
-RC21
+RC18
 Wire Wire Line
 	4030 6685 4415 6685
 Text Label 3415 5095 0    60   ~ 0
-RC25
+RC21
 Text Label 5565 6085 0    60   ~ 0
 GND
 Wire Wire Line
@@ -1085,15 +1085,12 @@ NoConn ~ 4415 6585
 NoConn ~ 5415 6585
 NoConn ~ 5415 6485
 NoConn ~ 5415 6385
-NoConn ~ 1525 5095
-NoConn ~ 1230 2280
-NoConn ~ 1230 2080
 Wire Wire Line
 	9690 1060 9690 950 
 Wire Wire Line
 	9690 950  9900 950 
 Text Label 9750 950  0    60   ~ 0
-VCC
+5V0
 NoConn ~ 8705 3560
 NoConn ~ 10875 3260
 $Comp
@@ -1112,7 +1109,7 @@ RES
 Wire Wire Line
 	2725 7390 3110 7390
 Text Label 1565 7390 0    60   ~ 0
-RC18
+RC24
 Wire Wire Line
 	1440 7390 1825 7390
 $Comp
@@ -1183,9 +1180,9 @@ RC26
 Text Label 6100 5295 0    60   ~ 0
 RC27
 Text Label 7180 3385 0    60   ~ 0
-VCC
+5V0
 Text Label 7475 3385 0    60   ~ 0
-3V3
+VCC
 Wire Wire Line
 	5975 5595 6360 5595
 Wire Wire Line
@@ -1259,7 +1256,7 @@ Connection ~ 7160 3435
 Wire Wire Line
 	7160 3385 7350 3385
 Wire Wire Line
-	7460 3385 7630 3385
+	7460 3385 7810 3385
 Wire Wire Line
 	7630 3385 7630 3380
 Wire Wire Line
@@ -1291,10 +1288,93 @@ Wire Wire Line
 Connection ~ 7560 6330
 Text Label 7615 6330 0    60   ~ 0
 GND
-NoConn ~ 5975 4995
-NoConn ~ 5975 4795
 Text Label 1290 5095 0    60   ~ 0
 3V3
 Wire Wire Line
 	1130 5095 1525 5095
+Wire Wire Line
+	7345 2595 7785 2595
+Wire Wire Line
+	6445 2595 6045 2595
+Text Label 7385 2595 0    60   ~ 0
+DAT_DIR
+Wire Wire Line
+	7785 2595 7785 2590
+Text Label 6160 2595 0    60   ~ 0
+RW
+Wire Wire Line
+	7810 3385 7810 3380
+Connection ~ 7630 3385
+Text Label 7705 3385 0    60   ~ 0
+3V3
+Wire Wire Line
+	6440 2945 6040 2945
+Text Label 6155 2945 0    60   ~ 0
+ATN
+Wire Wire Line
+	7340 2945 7780 2945
+Text Label 7380 2945 0    60   ~ 0
+nATN
+Wire Wire Line
+	7780 2945 7780 2940
+$Comp
+L 74HC04 U7
+U 2 1 5AEA8B9C
+P 6895 2595
+F 0 "U7" H 7045 2695 50  0000 C CNN
+F 1 "74HC04" H 7095 2495 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 6895 2595 50  0001 C CNN
+F 3 "" H 6895 2595 50  0001 C CNN
+	2    6895 2595
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC04 U7
+U 1 1 5AEA8C63
+P 6890 2945
+F 0 "U7" H 7040 3045 50  0000 C CNN
+F 1 "74HC04" H 7090 2845 50  0000 C CNN
+F 2 "" H 6890 2945 50  0001 C CNN
+F 3 "" H 6890 2945 50  0001 C CNN
+	1    6890 2945
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5AEAAADD
+P 6845 795
+F 0 "R4" V 6925 795 50  0000 C CNN
+F 1 "R" V 6845 795 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6775 795 50  0001 C CNN
+F 3 "" H 6845 795 50  0001 C CNN
+	1    6845 795 
+	0    1    1    0   
+$EndComp
+$Comp
+L R R5
+U 1 1 5AEAABA7
+P 6850 975
+F 0 "R5" V 6930 975 50  0000 C CNN
+F 1 "R" V 6850 975 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6780 975 50  0001 C CNN
+F 3 "" H 6850 975 50  0001 C CNN
+	1    6850 975 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6695 795  6295 795 
+Text Label 6410 795  0    60   ~ 0
+ATN
+Wire Wire Line
+	6700 975  6300 975 
+Text Label 6415 975  0    60   ~ 0
+ATN
+Wire Wire Line
+	7395 795  6995 795 
+Text Label 7110 795  0    60   ~ 0
+RC22
+Wire Wire Line
+	7400 975  7000 975 
+Text Label 7115 975  0    60   ~ 0
+RC18
 $EndSCHEMATC

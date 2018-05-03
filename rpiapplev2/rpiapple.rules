@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 12624)
+    (start_pass_no 11726)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -69,12 +69,12 @@
     /A4 /A3 /A2 /A1 /A0 /IOSEL GND /DMAI
     /NMI /IRQ /RES /INH "Net-(P1-Pad33)" "Net-(P1-Pad34)" "Net-(P1-Pad35)" "Net-(P1-Pad37)"
     /PH1 "Net-(P1-Pad39)" /DEVSEL /D7 /D6 /D5 /D4 /D3
-    /D2 /D1 /D0 "Net-(P1-Pad50)" /INT0 /IOSTRB /INTI /3V3
-    "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)" /SLTSL "/DAT_DIR" /RA14 /RA15 /RC17
-    /RC18 /RC27 /RC22 /RC23 /RC24 /RA10 /RA9 /RA11
-    /RA8 /RA12 /RA13 /RC19 /RC16 /RC26 /RC20 /RC21
-    "Net-(P1-Pad36)" /PH0 "Net-(U1-Pad23)" "Net-(U5-Pad5)" "Net-(U5-Pad7)" "Net-(U5-Pad9)" "Net-(U5-Pad11)" "Net-(U5-Pad13)"
-    "Net-(U5-Pad15)"
+    /D2 /D1 /D0 "Net-(P1-Pad50)" /INT0 /IOSTRB /INTI "Net-(D1-Pad4)"
+    "Net-(D1-Pad5)" "Net-(D1-Pad6)" /SLTSL "/DAT_DIR" /RA14 /RA15 /RC17 /RC18
+    /RC27 /RC22 /RC23 /RC24 /RA10 /RA9 /RA11 /RA8
+    /RA12 /RA13 /RC19 /RC16 /RC26 /RC20 "Net-(P1-Pad36)" /PH0
+    "Net-(U5-Pad5)" "Net-(U5-Pad7)" "Net-(U5-Pad9)" "Net-(U5-Pad11)" "Net-(U5-Pad13)" "Net-(U5-Pad15)" /5V0 /RC25
+    /ATN /nATN
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

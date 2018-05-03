@@ -78,6 +78,7 @@
     (component "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm"
       (place U2 167798 -117983 front 0 (PN 74LS05))
       (place U6 167800 -117983 back 0 (PN 74LS08))
+      (place U7 112591 -117932 front 0 (PN 74HC04))
     )
     (component "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm"
       (place U3 128397 -117982 front 270 (PN 74HC244))
@@ -86,6 +87,10 @@
     )
     (component "SMD_Packages:SOIC-24"
       (place U1 127127 -117982 back 0 (PN LVC4245))
+    )
+    (component Resistors_SMD:R_0805_HandSoldering
+      (place R4 137414 -108048 back 90 (PN R))
+      (place R5 140411 -108030 back 90 (PN R))
     )
   )
   (library
@@ -353,6 +358,20 @@
       (pin Rect[T]Pad_762x1524_um 14 5715 3810)
       (pin Rect[T]Pad_762x1524_um 13 6985 3810)
     )
+    (image Resistors_SMD:R_0805_HandSoldering
+      (outline (path signal 100  -1000 -620  -1000 620))
+      (outline (path signal 100  1000 -620  -1000 -620))
+      (outline (path signal 100  1000 620  1000 -620))
+      (outline (path signal 100  -1000 620  1000 620))
+      (outline (path signal 120  600 -880  -600 -880))
+      (outline (path signal 120  -600 880  600 880))
+      (outline (path signal 50  -2350 900  2350 900))
+      (outline (path signal 50  -2350 900  -2350 -900))
+      (outline (path signal 50  2350 -900  2350 900))
+      (outline (path signal 50  2350 -900  -2350 -900))
+      (pin Rect[T]Pad_1500x1300_um 1 -1350 0)
+      (pin Rect[T]Pad_1500x1300_um 2 1350 0)
+    )
     (padstack Oval[A]Pad_1727.2x1727.2_um
       (shape (path F.Cu 1727.2  0 0  0 0))
       (shape (path B.Cu 1727.2  0 0  0 0))
@@ -384,6 +403,10 @@
     )
     (padstack Rect[T]Pad_1500x600_um
       (shape (rect F.Cu -750 -300 750 300))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1500x1300_um
+      (shape (rect F.Cu -750 -650 750 650))
       (attach off)
     )
     (padstack Rect[A]Pad_1727.2x1727.2_um
@@ -427,7 +450,8 @@
       (pins J1-31 U3-16 J2-31 U1-20)
     )
     (net VCC
-      (pins J1-2 J1-4 P1-25 C7-1 U2-14 J2-2 J2-4 U6-14 U1-1)
+      (pins J1-1 J1-17 R1-1 R2-1 R3-1 C1-1 C2-1 C3-1 C4-1 C5-1 C6-1 U2-14 U3-20 U4-20
+        U5-20 J2-1 J2-17 U6-14 U1-24 U1-23 U7-14)
     )
     (net /DMA
       (pins P1-22)
@@ -439,7 +463,7 @@
       (pins P1-19)
     )
     (net /RW
-      (pins P1-18 U5-8)
+      (pins P1-18 U5-8 U7-3)
     )
     (net /A15
       (pins P1-17 U4-2)
@@ -495,7 +519,7 @@
     (net GND
       (pins J1-6 J1-9 J1-14 J1-20 J1-25 J1-30 J1-34 J1-39 P1-26 C1-2 C2-2 C3-2 C4-2
         C5-2 C6-2 C7-2 U2-7 U3-10 U4-10 U5-1 U5-10 U5-19 J2-6 J2-9 J2-14 J2-20 J2-25
-        J2-30 J2-34 J2-39 U6-7 U1-11 U1-12 U1-13)
+        J2-30 J2-34 J2-39 U6-7 U1-11 U1-12 U1-13 U7-7)
     )
     (net /DMAI
       (pins P1-24 P1-27)
@@ -525,7 +549,7 @@
       (pins P1-37)
     )
     (net /PH1
-      (pins P1-38 D1-1 U1-22)
+      (pins P1-38 D1-1)
     )
     (net "Net-(P1-Pad39)"
       (pins P1-39)
@@ -569,10 +593,6 @@
     (net /INTI
       (pins P1-28 U5-6 U6-4)
     )
-    (net /3V3
-      (pins J1-1 J1-17 R1-1 R2-1 R3-1 C1-1 C2-1 C3-1 C4-1 C5-1 C6-1 U3-20 U4-20 U5-20
-        J2-1 J2-17 U1-24)
-    )
     (net "Net-(D1-Pad4)"
       (pins D1-4 R3-2)
     )
@@ -586,7 +606,7 @@
       (pins D1-2 U5-4 U6-3)
     )
     (net /DAT_DIR
-      (pins J1-22 D1-3 U2-5 J2-22 U1-2)
+      (pins J1-40 D1-3 J2-40 U1-2 U7-4)
     )
     (net /RA14
       (pins J1-8 U4-16 J2-8)
@@ -598,19 +618,19 @@
       (pins J1-11 U5-16 J2-11)
     )
     (net /RC18
-      (pins J1-12 U2-11 J2-12)
+      (pins J1-12 U5-3 J2-12 R5-1)
     )
     (net /RC27
       (pins J1-13 U2-1 J2-13)
     )
     (net /RC22
-      (pins J1-15 J2-15)
+      (pins J1-15 J2-15 R4-1)
     )
     (net /RC23
       (pins J1-16 U2-3 J2-16 U6-5)
     )
     (net /RC24
-      (pins J1-18 J2-18)
+      (pins J1-18 U2-11 J2-18)
     )
     (net /RA10
       (pins J1-19 U4-5 J2-19)
@@ -642,17 +662,11 @@
     (net /RC20
       (pins J1-38 U5-12 J2-38)
     )
-    (net /RC21
-      (pins J1-40 U5-3 J2-40)
-    )
     (net "Net-(P1-Pad36)"
       (pins P1-36)
     )
     (net /PH0
-      (pins P1-40 U3-1 U3-19 U4-1 U4-19 U5-17)
-    )
-    (net "Net-(U1-Pad23)"
-      (pins U1-23)
+      (pins P1-40 U5-17)
     )
     (net "Net-(U5-Pad5)"
       (pins U5-5)
@@ -672,15 +686,27 @@
     (net "Net-(U5-Pad15)"
       (pins U5-15)
     )
-    (class kicad_default "" /3V3 /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15 /A2
-      /A3 /A4 /A5 /A6 /A7 /A8 /A9 /D0 /D1 /D2 /D3 /D4 /D5 /D6 /D7 /DAT_DIR
-      /DEVSEL /DMA /DMAI /INH /INT0 /INTI /IOSEL /IOSTRB /IRQ /NMI /PH0 /PH1
-      /RA10 /RA11 /RA12 /RA13 /RA14 /RA15 /RA8 /RA9 /RC16 /RC17 /RC18 /RC19
-      /RC20 /RC21 /RC22 /RC23 /RC24 /RC26 /RC27 /RD0 /RD1 /RD2 /RD3 /RD4 /RD5
-      /RD6 /RD7 /RDY /RES /RW /SLTSL GND "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)"
-      "Net-(P1-Pad19)" "Net-(P1-Pad33)" "Net-(P1-Pad34)" "Net-(P1-Pad35)"
-      "Net-(P1-Pad36)" "Net-(P1-Pad37)" "Net-(P1-Pad39)" "Net-(P1-Pad50)"
-      "Net-(U1-Pad23)" "Net-(U5-Pad11)" "Net-(U5-Pad13)" "Net-(U5-Pad15)"
+    (net /5V0
+      (pins J1-2 J1-4 P1-25 C7-1 J2-2 J2-4 U1-1)
+    )
+    (net /RC25
+      (pins J1-22 U2-5 J2-22)
+    )
+    (net /ATN
+      (pins U3-1 U3-19 U4-1 U4-19 R4-2 R5-2 U7-1)
+    )
+    (net /nATN
+      (pins U1-22 U7-2)
+    )
+    (class kicad_default "" /3V3 /5V0 /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15
+      /A2 /A3 /A4 /A5 /A6 /A7 /A8 /A9 /ATN /D0 /D1 /D2 /D3 /D4 /D5 /D6 /D7
+      /DAT_DIR /DEVSEL /DMA /DMAI /INH /INT0 /INTI /IOSEL /IOSTRB /IRQ /NMI
+      /PH0 /PH1 /RA10 /RA11 /RA12 /RA13 /RA14 /RA15 /RA8 /RA9 /RC16 /RC17
+      /RC18 /RC19 /RC20 /RC21 /RC22 /RC23 /RC24 /RC25 /RC26 /RC27 /RD0 /RD1
+      /RD2 /RD3 /RD4 /RD5 /RD6 /RD7 /RDY /RES /RW /SLTSL /nATN GND "Net-(D1-Pad4)"
+      "Net-(D1-Pad5)" "Net-(D1-Pad6)" "Net-(P1-Pad19)" "Net-(P1-Pad33)" "Net-(P1-Pad34)"
+      "Net-(P1-Pad35)" "Net-(P1-Pad36)" "Net-(P1-Pad37)" "Net-(P1-Pad39)"
+      "Net-(P1-Pad50)" "Net-(U5-Pad11)" "Net-(U5-Pad13)" "Net-(U5-Pad15)"
       "Net-(U5-Pad5)" "Net-(U5-Pad7)" "Net-(U5-Pad9)" VCC
       (circuit
         (use_via Via[0-1]_600:400_um)
