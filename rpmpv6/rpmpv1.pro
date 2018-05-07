@@ -1,4 +1,4 @@
-update=2018-05-02 오전 2:06:30
+update=2018-05-06 오후 3:26:05
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,13 +63,14 @@ LibName31=opto
 LibName32=atmel
 LibName33=contrib
 LibName34=valves
+LibName35=TTL
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
 PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=
+NetFmtName=Pcbnew
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
