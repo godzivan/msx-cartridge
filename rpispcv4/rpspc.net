@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/msys64/home/meesokim/msx-cartridge/rpispcv4/rpspc.sch)
-    (date "2018-05-01 오후 10:21:45")
+    (date "2018-06-25 오전 1:10:14")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -29,7 +29,7 @@
       (tstamp 5A3E9D10))
     (comp (ref U1)
       (value LVC4245)
-      (footprint SMD_Packages:SOIC-24)
+      (footprint Housings_SOIC:SOIC-24W_7.5x15.4mm_Pitch1.27mm)
       (libsource (lib msx_slot) (part LVC4245))
       (sheetpath (names /) (tstamps /))
       (tstamp 5AE08A06))
