@@ -34,6 +34,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:TTL
+LIBS:rpmpv1-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -549,7 +550,7 @@ RC19
 Text Label 6995 2115 0    60   ~ 0
 RC16
 Text Label 5815 1190 0    60   ~ 0
-RATN
+nRATN
 NoConn ~ 8645 1815
 NoConn ~ 6845 1415
 Text Label 8455 3695 0    60   ~ 0
@@ -1461,7 +1462,7 @@ F 3 "" H 5225 1590 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label 5815 1090 0    60   ~ 0
-RATN
+nRATN
 Text Label 5315 890  0    60   ~ 0
 GND
 Wire Wire Line
@@ -1482,11 +1483,11 @@ F 3 "" H 5230 3145 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label 5790 2645 0    60   ~ 0
-nRATN
+RATN
 Wire Wire Line
 	5730 2645 6430 2645
 Text Label 5795 2745 0    60   ~ 0
-nRATN
+RATN
 Wire Wire Line
 	5730 2745 6130 2745
 Connection ~ 4335 5660
@@ -1511,7 +1512,7 @@ F 3 "" H 7745 1615 50  0000 C CNN
 	1    7745 1615
 	-1   0    0    1   
 $EndComp
-Text Label 6145 1090 0    60   ~ 0
+Text Label 6215 2645 0    60   ~ 0
 RC22
 Text Label 8410 1115 0    60   ~ 0
 GND
@@ -1524,7 +1525,7 @@ VCC
 Text Notes 8680 6245 0    79   ~ 0
 RC16     RESET\nRC17     SLTSL\nRC18     SNDOUT\nRC19     IORQ\nRC20     RD\nRC21     DAT_EN
 Text Notes 9995 6230 0    79   ~ 0
-RC22     RATN\nRC23     INT\nRC24     WAIT\nRC25     DAT_DIR\nRC26     MREQ\nRC27     WR
+RC22     HiAddr\nRC23     INT\nRC24     WAIT\nRC25     DAT_DIR\nRC26     MREQ\nRC27     WR
 $Comp
 L 74LS07 U5
 U 3 1 5AEDC8DE
