@@ -1,4 +1,4 @@
-(pcb "C:\msys64\home\meeso.kim\msx-cartridge\rpmpv8\rpmpv1.dsn"
+(pcb "C:\msys64\home\meesokim\msx-cartridge\rpmpv8\rpmpv1.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -865,11 +865,11 @@
       /D4 /D5 /D6 /D7 /DAT_DIR /DAT_EN /DAT_EN0 /INT /IORQ /M1 /MREQ /RA10
       /RA11 /RA12 /RA13 /RA14 /RA15 /RA8 /RA9 /RATN /RC16 /RC17 /RC18 /RC19
       /RC20 /RC21 /RC23 /RC24 /RC25 /RC26 /RC27 /RD /RD0 /RD1 /RD2 /RD3 /RD4
-      /RD5 /RD6 /RD7 /RESET /SLTSL /SOUNDIN /WAIT /WR /nATN /nBDIR /nDAT_EN
-      /nDIR /nIORQ /nRATN /nRC21 GND "Net-(C1-Pad1)" "Net-(D1-Pad4)" "Net-(D1-Pad5)"
-      "Net-(D1-Pad6)" "Net-(P1-Pad1)" "Net-(P1-Pad16)" "Net-(P1-Pad2)" "Net-(P1-Pad3)"
-      "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)"
-      "Net-(U4-Pad12)" "Net-(U4-Pad16)" "Net-(U4-Pad5)" "Net-(U4-Pad8)" "Net-(U4-Pad9)"
+      /RD5 /RD6 /RD7 /RESET /SLTSL /SOUNDIN /WAIT /WR /nATN /nBDIR /nDIR /nIORQ
+      /nRATN /nRC21 GND "Net-(C1-Pad1)" "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)"
+      "Net-(P1-Pad1)" "Net-(P1-Pad16)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)"
+      "Net-(P1-Pad48)" "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U4-Pad12)"
+      "Net-(U4-Pad8)" "Net-(U4-Pad9)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
@@ -889,6 +889,5 @@
     )
   )
   (wiring
-    (wire (path B.Cu 250  140093 -109424  139690 -109827)(net /D7)(type protect))
   )
 )
