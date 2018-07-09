@@ -35,7 +35,6 @@ LIBS:contrib
 LIBS:valves
 LIBS:IC_raspberry
 LIBS:msx_slot
-LIBS:rpmcv4-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1226,7 +1225,7 @@ A14
 Text Label 5920 2640 0    60   ~ 0
 A15
 Text Notes 7360 7510 0    91   ~ 0
-RPMC V5 with 74HC373 and 74LVC4245
+RPMC V8 with 74HC373 and 74LVC4245
 Wire Wire Line
 	6620 3340 7020 3340
 Wire Wire Line
@@ -1308,7 +1307,7 @@ $EndComp
 Wire Wire Line
 	10800 3000 10800 3200
 Text Notes 8165 7635 0    60   ~ 0
-2018.4.30
+2018.6.30
 Text Notes 7275 7245 0    60   ~ 0
 1 1
 Wire Wire Line
@@ -1575,4 +1574,6 @@ Wire Wire Line
 	6820 1290 7220 1290
 Text Label 8230 1290 0    60   ~ 0
 SLTSL3
+Text Notes 6800 6200 0    60   ~ 0
+RC16   ADDR_SEL\nRC17   CTRL_SEL\nRC18   DATA_SEL\nRC19   RESET\nRC20   CLK\nRC21   HAN\nRC22   CAPS\nRC23   PWR\nRC24   INT\nRC25   WAIT\nRC26   SW1
 $EndSCHEMATC
