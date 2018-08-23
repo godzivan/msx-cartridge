@@ -488,7 +488,7 @@ $EndComp
 Text Label 875  4005 0    60   ~ 0
 RD6
 Text Label 8320 3545 0    60   ~ 0
-WR
+RC21
 Text Label 8320 2645 0    60   ~ 0
 GND
 Text Label 6720 3645 0    60   ~ 0
@@ -519,7 +519,7 @@ WAIT
 Text Label 7440 4455 1    60   ~ 0
 3V3
 Text Label 6930 5230 0    60   ~ 0
-RC26
+RC27
 Text Label 8150 5230 0    60   ~ 0
 SW1
 $Comp
@@ -559,7 +559,7 @@ RESET
 Text Label 6725 3545 0    60   ~ 0
 3V3
 Text Notes 4700 6890 0    60   ~ 0
-RC16   LE_A\nRC17   LE_C\nRC18   LE_D\nRC19   RESET\nRC20   CLK\nRC21   SER\nRC22   SRCLK\nRC23   RCLK\nRC24   INT\nRC25   WAIT\nRC26   SW1
+RC16   LE_A\nRC17   LE_C\nRC18   LE_D\nRC19   RESET\nRC20   CLK\nRC21   DAT_DIR\nRC22   SRCLK\nRC23   RCLK\nRC24   INT\nRC25   WAIT\nRC26   SER\nRC27   SW1
 $Comp
 L 74LS08 U7
 U 3 1 5B4CCBDF
@@ -1469,7 +1469,7 @@ RC23
 Text Label 3425 6660 0    60   ~ 0
 RC22
 Text Label 3415 6860 0    60   ~ 0
-RC21
+RC26
 Wire Wire Line
 	2935 7010 2935 7220
 Text Label 2935 7050 3    60   ~ 0
