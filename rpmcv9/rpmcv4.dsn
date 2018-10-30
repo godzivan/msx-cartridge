@@ -69,25 +69,29 @@
       (place J1 205572 -55727.6 back 270 (PN RPi_GPIO))
     )
     (component LEDs:LED_D3.0mm
-      (place D1 202184 -131064 front 0 (PN LED))
-      (place D2 195072 -131064 front 0 (PN LED))
-      (place D5 187452 -131064 front 0 (PN LED))
+      (place D1 201930 -130810 front 0 (PN LED))
+      (place D2 195580 -130810 front 0 (PN LED))
+      (place D5 189230 -130810 front 0 (PN LED))
     )
     (component LEDs:LED_D3.0mm::1
-      (place D3 133604 -131064 front 0 (PN LED))
-      (place D4 141732 -131064 front 0 (PN LED))
-      (place D6 125476 -131064 front 0 (PN LED))
+      (place D3 132080 -130810 front 0 (PN LED))
+      (place D4 138430 -130810 front 0 (PN LED))
+      (place D6 125730 -130810 front 0 (PN LED))
+      (place D7 144780 -130810 front 0 (PN LED))
+      (place D8 182880 -130810 front 0 (PN LED))
     )
     (component Resistors_SMD:R_0603_HandSoldering
-      (place R1 203200 -127508 back 180 (PN R))
-      (place R2 196088 -127508 back 180 (PN R))
-      (place R3 134620 -128016 back 180 (PN R))
-      (place R4 143256 -128016 back 180 (PN R))
-      (place R5 188468 -127508 back 180 (PN R))
-      (place R6 126492 -128016 back 180 (PN R))
+      (place R1 203200 -127635 back 180 (PN R))
+      (place R2 196850 -127635 back 180 (PN R))
+      (place R3 133350 -127635 back 180 (PN R))
+      (place R4 139700 -127635 back 180 (PN R))
+      (place R5 190500 -127635 back 180 (PN R))
+      (place R6 127000 -127635 back 180 (PN R))
       (place R7 189611 -121963 back 270 (PN R))
       (place R8 143891 -121836 back 90 (PN R))
       (place R9 189611 -109093 back 90 (PN R))
+      (place R10 146050 -127635 back 180 (PN R))
+      (place R11 184150 -127635 back 180 (PN R))
     )
     (component "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm"
       (place U1 179959 -74168 back 270 (PN 74LS373))
@@ -104,7 +108,8 @@
       (place G2 137732 -74104.5 front 0 (PN LOGO))
       (place G1 167640 -74422 front 0 (PN LOGO))
       (place G3 195199 -74041 front 0 (PN "KiCad-Logo2_6mm_SilkScreen"))
-      (place G*** 156464 -130556 front 0 (PN LOGO))
+      (place GMSX 162458 -130505 front 0 (PN LOGO))
+      (place G*** 124460 -119380 back 0 (PN LOGO))
     )
     (component "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm"
       (place U3 166370 -125730 back 270 (PN 74HC595))
@@ -503,7 +508,7 @@
     (net GND
       (pins P1-41 P1-43 P1-46 P2-41 P2-43 P2-46 J1-6 J1-9 J1-14 J1-20 J1-25 J1-30
         J1-34 J1-39 R1-2 R2-2 R3-2 R4-2 R5-2 R6-2 U1-1 U1-10 U2-1 U2-10 U4-1 U4-10
-        U5-11 U5-12 U5-13 U7-7 U3-8 U3-13)
+        U5-11 U5-12 U5-13 U7-7 U3-8 U3-13 R10-2 R11-2)
     )
     (net "Net-(U3-Pad9)"
       (pins U3-9)
@@ -736,9 +741,6 @@
     (net /RC16
       (pins J1-36 U1-11 U2-11)
     )
-    (net "Net-(U3-Pad7)"
-      (pins U3-7)
-    )
     (net /RC26
       (pins J1-37 U3-14)
     )
@@ -769,8 +771,17 @@
     (net "Net-(D6-Pad1)"
       (pins D6-1 R6-1)
     )
-    (net "Net-(U3-Pad6)"
-      (pins U3-6)
+    (net "Net-(D7-Pad1)"
+      (pins D7-1 R10-1)
+    )
+    (net "Net-(D7-Pad2)"
+      (pins U3-7 D7-2)
+    )
+    (net "Net-(D8-Pad1)"
+      (pins D8-1 R11-1)
+    )
+    (net "Net-(D8-Pad2)"
+      (pins U3-6 D8-2)
     )
     (class kicad_default "" +3V3 /+12V /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15
       /A2 /A3 /A4 /A5 /A6 /A7 /A8 /A9 /BUSDIR /CLK /CS1 /CS12 /CS2 /D0 /D1
@@ -780,8 +791,9 @@
       /RFSH /SLTSL1 /SLTSL2 /SNDIN /WR GND "Net-(D1-Pad1)" "Net-(D1-Pad2)"
       "Net-(D2-Pad1)" "Net-(D2-Pad2)" "Net-(D3-Pad1)" "Net-(D3-Pad2)" "Net-(D4-Pad1)"
       "Net-(D4-Pad2)" "Net-(D5-Pad1)" "Net-(D5-Pad2)" "Net-(D6-Pad1)" "Net-(D6-Pad2)"
-      "Net-(P1-Pad16)" "Net-(P1-Pad5)" "Net-(P2-Pad16)" "Net-(P2-Pad5)" "Net-(U3-Pad6)"
-      "Net-(U3-Pad7)" "Net-(U3-Pad9)"
+      "Net-(D7-Pad1)" "Net-(D7-Pad2)" "Net-(D8-Pad1)" "Net-(D8-Pad2)" "Net-(P1-Pad16)"
+      "Net-(P1-Pad5)" "Net-(P2-Pad16)" "Net-(P2-Pad5)" "Net-(U3-Pad6)" "Net-(U3-Pad7)"
+      "Net-(U3-Pad9)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )

@@ -1,4 +1,4 @@
-update=2018-05-01 오전 12:18:37
+update=2018-08-27 오전 10:00:24
 version=1
 last_client=kicad
 [pcbnew]
@@ -65,3 +65,13 @@ LibName33=../libraries/apple2
 LibName34=../libraries/altera_maxII_epm240
 LibName35=C:/msys64/home/meeso.kim/msx-cartridge/libraries/msx_slot
 LibName36=C:/msys64/home/meesokim/msx-cartridge/libraries/msx_slot
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

@@ -52,12 +52,12 @@ $EndDescr
 $Comp
 L RPi_GPIO J1
 U 1 1 5A3E97D7
-P 1375 2505
-F 0 "J1" H 2125 2755 60  0000 C CNN
-F 1 "RPi_GPIO" H 2125 2655 60  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm" H 2075 1755 60  0001 C CNN
-F 3 "" H 1375 2505 60  0000 C CNN
-	1    1375 2505
+P 1410 1685
+F 0 "J1" H 2160 1935 60  0000 C CNN
+F 1 "RPi_GPIO" H 2160 1835 60  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm" H 2110 935 60  0001 C CNN
+F 3 "" H 1410 1685 60  0000 C CNN
+	1    1410 1685
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -201,98 +201,98 @@ Text Label 6720 2845 0    60   ~ 0
 RD4
 Text Label 6720 2645 0    60   ~ 0
 RD6
-Text Label 875  3805 0    60   ~ 0
+Text Label 910  2985 0    60   ~ 0
 RD0
-Text Label 3125 3805 0    60   ~ 0
+Text Label 3160 2985 0    60   ~ 0
 RD1
-Text Label 875  2605 0    60   ~ 0
+Text Label 910  1785 0    60   ~ 0
 RD2
-Text Label 875  2705 0    60   ~ 0
+Text Label 910  1885 0    60   ~ 0
 RD3
-Text Label 875  2805 0    60   ~ 0
+Text Label 910  1985 0    60   ~ 0
 RD4
-Text Label 875  3905 0    60   ~ 0
+Text Label 910  3085 0    60   ~ 0
 RD5
 Text Label 6670 1195 0    60   ~ 0
 GND
 Text Label 6720 2545 0    60   ~ 0
 GND
-Text Label 3125 3705 0    60   ~ 0
+Text Label 3160 2885 0    60   ~ 0
 RD7
-Text Label 3125 3605 0    60   ~ 0
+Text Label 3160 2785 0    60   ~ 0
 RA8
-Text Label 875  3505 0    60   ~ 0
+Text Label 910  2685 0    60   ~ 0
 RA9
-Text Label 875  3405 0    60   ~ 0
+Text Label 910  2585 0    60   ~ 0
 RA10
-Text Label 875  3605 0    60   ~ 0
+Text Label 910  2785 0    60   ~ 0
 RA11
-Text Label 3125 4005 0    60   ~ 0
+Text Label 3160 3185 0    60   ~ 0
 RA12
-Text Label 875  4105 0    60   ~ 0
+Text Label 910  3285 0    60   ~ 0
 RA13
-Text Label 3125 2805 0    60   ~ 0
+Text Label 3160 1985 0    60   ~ 0
 RA14
-Text Label 875  3105 0    60   ~ 0
+Text Label 910  2285 0    60   ~ 0
 RC27
-Text Label 3125 2505 0    60   ~ 0
+Text Label 3160 1685 0    60   ~ 0
 VCC
-Text Label 3125 2605 0    60   ~ 0
+Text Label 3160 1785 0    60   ~ 0
 5V0
-Text Label 3125 2705 0    60   ~ 0
+Text Label 3160 1885 0    60   ~ 0
 GND
-Text Label 3125 3405 0    60   ~ 0
+Text Label 3160 2585 0    60   ~ 0
 GND
-Text Label 3125 3905 0    60   ~ 0
+Text Label 3160 3085 0    60   ~ 0
 GND
-Text Label 3125 4105 0    60   ~ 0
+Text Label 3160 3285 0    60   ~ 0
 GND
-Text Label 875  4405 0    60   ~ 0
+Text Label 910  3585 0    60   ~ 0
 GND
-Text Label 875  3705 0    60   ~ 0
+Text Label 910  2885 0    60   ~ 0
 GND
-Text Label 875  2905 0    60   ~ 0
+Text Label 910  2085 0    60   ~ 0
 GND
-Text Label 875  3305 0    60   ~ 0
+Text Label 910  2485 0    60   ~ 0
 3V3
-Text Label 875  2505 0    60   ~ 0
+Text Label 910  1685 0    60   ~ 0
 3V3
 $Comp
 L +5V #PWR01
 U 1 1 5A435798
-P 3475 2205
-F 0 "#PWR01" H 3475 2055 50  0001 C CNN
-F 1 "+5V" H 3475 2345 50  0000 C CNN
-F 2 "" H 3475 2205 50  0000 C CNN
-F 3 "" H 3475 2205 50  0000 C CNN
-	1    3475 2205
+P 3510 1385
+F 0 "#PWR01" H 3510 1235 50  0001 C CNN
+F 1 "+5V" H 3510 1525 50  0000 C CNN
+F 2 "" H 3510 1385 50  0000 C CNN
+F 3 "" H 3510 1385 50  0000 C CNN
+	1    3510 1385
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR02
 U 1 1 5A4358D3
-P 630 4565
-F 0 "#PWR02" H 630 4315 50  0001 C CNN
-F 1 "GND" H 630 4415 50  0000 C CNN
-F 2 "" H 630 4565 50  0000 C CNN
-F 3 "" H 630 4565 50  0000 C CNN
-	1    630  4565
+P 665 3745
+F 0 "#PWR02" H 665 3495 50  0001 C CNN
+F 1 "GND" H 665 3595 50  0000 C CNN
+F 2 "" H 665 3745 50  0000 C CNN
+F 3 "" H 665 3745 50  0000 C CNN
+	1    665  3745
 	1    0    0    -1  
 $EndComp
-Text Label 3125 3105 0    60   ~ 0
+Text Label 3160 2285 0    60   ~ 0
 GND
 $Comp
 L +3.3V #PWR03
 U 1 1 5A43A975
-P 775 2405
-F 0 "#PWR03" H 775 2255 50  0001 C CNN
-F 1 "+3.3V" H 775 2545 50  0000 C CNN
-F 2 "" H 775 2405 50  0000 C CNN
-F 3 "" H 775 2405 50  0000 C CNN
-	1    775  2405
+P 810 1585
+F 0 "#PWR03" H 810 1435 50  0001 C CNN
+F 1 "+3.3V" H 810 1725 50  0000 C CNN
+F 2 "" H 810 1585 50  0000 C CNN
+F 3 "" H 810 1585 50  0000 C CNN
+	1    810  1585
 	1    0    0    -1  
 $EndComp
-Text Label 3125 3305 0    60   ~ 0
+Text Label 3160 2485 0    60   ~ 0
 RC24
 Text Label 6935 4925 0    60   ~ 0
 RC24
@@ -422,29 +422,29 @@ Text Label 6670 1595 0    60   ~ 0
 RA14
 Text Label 6670 1495 0    60   ~ 0
 RA15
-Text Label 3125 2905 0    60   ~ 0
+Text Label 3160 2085 0    60   ~ 0
 RA15
-Text Label 3125 4205 0    60   ~ 0
+Text Label 3160 3385 0    60   ~ 0
 RC16
-Text Label 875  3005 0    60   ~ 0
+Text Label 910  2185 0    60   ~ 0
 RC17
-Text Label 3125 3005 0    60   ~ 0
+Text Label 3160 2185 0    60   ~ 0
 RC18
 Text Label 4070 2095 0    60   ~ 0
 RA9
-Text Label 875  4205 0    60   ~ 0
+Text Label 910  3385 0    60   ~ 0
 RC19
-Text Label 3125 4305 0    60   ~ 0
+Text Label 3160 3485 0    60   ~ 0
 RC20
-Text Label 3125 4405 0    60   ~ 0
+Text Label 3160 3585 0    60   ~ 0
 RC21
-Text Label 875  3205 0    60   ~ 0
+Text Label 910  2385 0    60   ~ 0
 RC22
-Text Label 3125 3205 0    60   ~ 0
+Text Label 3160 2385 0    60   ~ 0
 RC23
-Text Label 3125 3505 0    60   ~ 0
+Text Label 3160 2685 0    60   ~ 0
 RC25
-Text Label 875  4305 0    60   ~ 0
+Text Label 910  3485 0    60   ~ 0
 RC26
 $Comp
 L GND #PWR04
@@ -466,12 +466,12 @@ RC17
 $Comp
 L GND #PWR05
 U 1 1 5A5D9C37
-P 3630 4575
-F 0 "#PWR05" H 3630 4325 50  0001 C CNN
-F 1 "GND" H 3630 4425 50  0000 C CNN
-F 2 "" H 3630 4575 50  0000 C CNN
-F 3 "" H 3630 4575 50  0000 C CNN
-	1    3630 4575
+P 3665 3755
+F 0 "#PWR05" H 3665 3505 50  0001 C CNN
+F 1 "GND" H 3665 3605 50  0000 C CNN
+F 2 "" H 3665 3755 50  0000 C CNN
+F 3 "" H 3665 3755 50  0000 C CNN
+	1    3665 3755
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -485,7 +485,7 @@ F 3 "" H 7770 3695 60  0001 C CNN
 	1    7620 3095
 	-1   0    0    1   
 $EndComp
-Text Label 875  4005 0    60   ~ 0
+Text Label 910  3185 0    60   ~ 0
 RD6
 Text Label 8320 3545 0    60   ~ 0
 RC21
@@ -866,98 +866,96 @@ F 3 "" H 865 6860 50  0001 C CNN
 	1    865  6860
 	0    1    1    0   
 $EndComp
-NoConn ~ 1935 6260
-NoConn ~ 1935 6160
-NoConn ~ 1935 5960
+NoConn ~ 2035 5960
 $Comp
 L GND #PWR07
 U 1 1 5B75FD0E
-P 635 5130
-F 0 "#PWR07" H 635 4880 50  0001 C CNN
-F 1 "GND" H 635 4980 50  0000 C CNN
-F 2 "" H 635 5130 50  0000 C CNN
-F 3 "" H 635 5130 50  0000 C CNN
-	1    635  5130
+P 635 4485
+F 0 "#PWR07" H 635 4235 50  0001 C CNN
+F 1 "GND" H 635 4335 50  0000 C CNN
+F 2 "" H 635 4485 50  0000 C CNN
+F 3 "" H 635 4485 50  0000 C CNN
+	1    635  4485
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3075 2505 3475 2505
+	3110 1685 3510 1685
 Wire Wire Line
-	3475 2605 3075 2605
+	3510 1785 3110 1785
 Wire Wire Line
-	3075 2705 3630 2705
+	3110 1885 3665 1885
 Wire Wire Line
-	3075 2805 3475 2805
+	3110 1985 3510 1985
 Wire Wire Line
-	3075 2905 3475 2905
+	3110 2085 3510 2085
 Wire Wire Line
-	3075 3005 3475 3005
+	3110 2185 3510 2185
 Wire Wire Line
-	3075 3105 3630 3105
+	3110 2285 3665 2285
 Wire Wire Line
-	3075 3205 3475 3205
+	3110 2385 3510 2385
 Wire Wire Line
-	3075 3305 3475 3305
+	3110 2485 3510 2485
 Wire Wire Line
-	3630 3405 3075 3405
+	3665 2585 3110 2585
 Wire Wire Line
-	3075 3505 3475 3505
+	3110 2685 3510 2685
 Wire Wire Line
-	3075 3605 3475 3605
+	3110 2785 3510 2785
 Wire Wire Line
-	3075 3705 3475 3705
+	3110 2885 3510 2885
 Wire Wire Line
-	3075 3805 3475 3805
+	3110 2985 3510 2985
 Wire Wire Line
-	3075 3905 3475 3905
+	3110 3085 3510 3085
 Wire Wire Line
-	3075 4005 3475 4005
+	3110 3185 3510 3185
 Wire Wire Line
-	3075 4105 3475 4105
+	3110 3285 3510 3285
 Wire Wire Line
-	3075 4205 3475 4205
+	3110 3385 3510 3385
 Wire Wire Line
-	3075 4305 3475 4305
+	3110 3485 3510 3485
 Wire Wire Line
-	3075 4405 3475 4405
+	3110 3585 3510 3585
 Wire Wire Line
-	775  2505 1175 2505
+	810  1685 1210 1685
 Wire Wire Line
-	775  2605 1175 2605
+	810  1785 1210 1785
 Wire Wire Line
-	775  2705 1175 2705
+	810  1885 1210 1885
 Wire Wire Line
-	775  2805 1175 2805
+	810  1985 1210 1985
 Wire Wire Line
-	630  2905 1175 2905
+	665  2085 1210 2085
 Wire Wire Line
-	775  3005 1175 3005
+	810  2185 1210 2185
 Wire Wire Line
-	775  3105 1175 3105
+	810  2285 1210 2285
 Wire Wire Line
-	775  3205 1175 3205
+	810  2385 1210 2385
 Wire Wire Line
-	775  3405 1175 3405
+	810  2585 1210 2585
 Wire Wire Line
-	775  3505 1175 3505
+	810  2685 1210 2685
 Wire Wire Line
-	775  3605 1175 3605
+	810  2785 1210 2785
 Wire Wire Line
-	630  3705 1175 3705
+	665  2885 1210 2885
 Wire Wire Line
-	775  3805 1175 3805
+	810  2985 1210 2985
 Wire Wire Line
-	775  3905 1175 3905
+	810  3085 1210 3085
 Wire Wire Line
-	775  4005 1175 4005
+	810  3185 1210 3185
 Wire Wire Line
-	775  4105 1175 4105
+	810  3285 1210 3285
 Wire Wire Line
-	775  4205 1175 4205
+	810  3385 1210 3385
 Wire Wire Line
-	775  4305 1175 4305
+	810  3485 1210 3485
 Wire Wire Line
-	630  4405 1175 4405
+	665  3585 1210 3585
 Wire Wire Line
 	8270 2745 8670 2745
 Wire Wire Line
@@ -1113,12 +1111,12 @@ Wire Wire Line
 Wire Wire Line
 	6520 1195 6920 1195
 Wire Wire Line
-	3475 2205 3475 2605
+	3510 1385 3510 1785
 Wire Wire Line
-	775  2405 775  2505
+	810  1585 810  1685
 Wire Wire Line
-	775  3305 1175 3305
-Connection ~ 3475 2505
+	810  2485 1210 2485
+Connection ~ 3510 1685
 Wire Wire Line
 	6880 5075 8405 5075
 Wire Wire Line
@@ -1214,17 +1212,17 @@ Wire Wire Line
 Wire Wire Line
 	10750 3145 10750 3345
 Wire Wire Line
-	630  2905 630  4565
-Connection ~ 630  4405
-Connection ~ 630  3705
+	665  2085 665  3745
+Connection ~ 665  3585
+Connection ~ 665  2885
 Wire Wire Line
-	3630 3905 3470 3905
+	3665 3085 3505 3085
 Wire Wire Line
-	3630 2705 3630 4575
-Connection ~ 3470 3905
-Connection ~ 3630 3905
-Connection ~ 3630 3105
-Connection ~ 3630 3405
+	3665 1885 3665 3755
+Connection ~ 3505 3085
+Connection ~ 3665 3085
+Connection ~ 3665 2285
+Connection ~ 3665 2585
 Wire Wire Line
 	8270 3545 8670 3545
 Wire Wire Line
@@ -1389,7 +1387,7 @@ Wire Wire Line
 Wire Wire Line
 	1430 6535 1785 6535
 Wire Wire Line
-	1440 6860 1935 6860
+	1440 6860 2035 6860
 Wire Wire Line
 	1015 5305 1140 5305
 Wire Wire Line
@@ -1403,29 +1401,27 @@ Wire Wire Line
 Wire Wire Line
 	1015 6860 1140 6860
 Wire Wire Line
-	1935 6760 1785 6760
+	1785 6760 2035 6760
 Wire Wire Line
-	1785 6760 1785 6535
+	1785 6535 1785 6760
 Wire Wire Line
-	1935 6660 1810 6660
+	1810 6660 2035 6660
 Wire Wire Line
-	1810 6660 1810 6230
+	1810 6230 1810 6660
 Wire Wire Line
-	1935 6560 1835 6560
+	1835 6560 2035 6560
 Wire Wire Line
-	1835 6560 1835 5920
+	1835 5920 1835 6560
 Wire Wire Line
-	1935 6460 1860 6460
+	1860 6460 2035 6460
 Wire Wire Line
-	1860 6460 1860 5615
+	1860 5615 1860 6460
 Wire Wire Line
-	1935 6360 1890 6360
+	1890 6360 2035 6360
 Wire Wire Line
-	1890 6360 1890 5305
+	1890 5305 1890 6360
 Wire Wire Line
 	715  6860 635  6860
-Wire Wire Line
-	635  6860 635  5130
 Wire Wire Line
 	715  5305 635  5305
 Connection ~ 635  5305
@@ -1442,47 +1438,115 @@ Wire Wire Line
 	705  6535 635  6535
 Connection ~ 635  6535
 Wire Wire Line
-	3335 6560 3900 6560
+	3435 6560 4000 6560
 Wire Wire Line
-	3335 6360 3895 6360
+	3435 6360 3995 6360
 Wire Wire Line
-	3335 6260 3745 6260
+	3435 6260 3845 6260
 Wire Wire Line
-	3335 6660 3900 6660
+	3435 6660 4000 6660
 Wire Wire Line
-	3335 6860 3895 6860
+	3435 6860 3995 6860
 $Comp
 L GND #PWR08
 U 1 1 5B760B64
-P 3745 6260
-F 0 "#PWR08" H 3745 6010 50  0001 C CNN
-F 1 "GND" H 3745 6110 50  0000 C CNN
-F 2 "" H 3745 6260 50  0000 C CNN
-F 3 "" H 3745 6260 50  0000 C CNN
-	1    3745 6260
+P 3845 6260
+F 0 "#PWR08" H 3845 6010 50  0001 C CNN
+F 1 "GND" H 3845 6110 50  0000 C CNN
+F 2 "" H 3845 6260 50  0000 C CNN
+F 3 "" H 3845 6260 50  0000 C CNN
+	1    3845 6260
 	-1   0    0    1   
 $EndComp
-Text Label 3420 6560 0    60   ~ 0
+Text Label 3520 6560 0    60   ~ 0
 3V3
-Text Label 3425 6360 0    60   ~ 0
+Text Label 3525 6360 0    60   ~ 0
 RC23
-Text Label 3425 6660 0    60   ~ 0
+Text Label 3525 6660 0    60   ~ 0
 RC22
-Text Label 3415 6860 0    60   ~ 0
+Text Label 3515 6860 0    60   ~ 0
 RC26
 Wire Wire Line
-	2935 7010 2935 7220
-Text Label 2935 7050 3    60   ~ 0
+	3035 7010 3035 7220
+Text Label 3035 7050 3    60   ~ 0
 3V3
 $Comp
 L 74HC595 U3
 U 1 1 5B763459
-P 2635 6410
-F 0 "U3" H 2785 7010 50  0000 C CNN
-F 1 "74HC595" H 2635 5810 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 2635 6410 50  0001 C CNN
-F 3 "" H 2635 6410 50  0001 C CNN
-	1    2635 6410
+P 2735 6410
+F 0 "U3" H 2885 7010 50  0000 C CNN
+F 1 "74HC595" H 2735 5810 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 2735 6410 50  0001 C CNN
+F 3 "" H 2735 6410 50  0001 C CNN
+	1    2735 6410
 	-1   0    0    1   
 $EndComp
+$Comp
+L LED D7
+U 1 1 5B80B519
+P 1290 4660
+F 0 "D7" H 1290 4760 50  0000 C CNN
+F 1 "LED" H 1290 4560 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 1290 4660 50  0001 C CNN
+F 3 "" H 1290 4660 50  0001 C CNN
+	1    1290 4660
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D8
+U 1 1 5B80B51F
+P 1290 4970
+F 0 "D8" H 1290 5070 50  0000 C CNN
+F 1 "LED" H 1290 4870 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 1290 4970 50  0001 C CNN
+F 3 "" H 1290 4970 50  0001 C CNN
+	1    1290 4970
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R10
+U 1 1 5B80B525
+P 865 4660
+F 0 "R10" V 945 4660 50  0000 C CNN
+F 1 "R" V 865 4660 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 795 4660 50  0001 C CNN
+F 3 "" H 865 4660 50  0001 C CNN
+	1    865  4660
+	0    1    1    0   
+$EndComp
+$Comp
+L R R11
+U 1 1 5B80B52B
+P 865 4970
+F 0 "R11" V 945 4970 50  0000 C CNN
+F 1 "R" V 865 4970 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 795 4970 50  0001 C CNN
+F 3 "" H 865 4970 50  0001 C CNN
+	1    865  4970
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1440 4660 1940 4660
+Wire Wire Line
+	1440 4970 1915 4970
+Wire Wire Line
+	1015 4660 1140 4660
+Wire Wire Line
+	1015 4970 1140 4970
+Wire Wire Line
+	1915 4970 1915 6260
+Wire Wire Line
+	1940 4660 1940 6160
+Wire Wire Line
+	715  4660 635  4660
+Connection ~ 635  4660
+Wire Wire Line
+	715  4970 635  4970
+Connection ~ 635  4970
+Wire Wire Line
+	635  6860 635  4485
+Wire Wire Line
+	1915 6260 2035 6260
+Wire Wire Line
+	1940 6160 2035 6160
 $EndSCHEMATC

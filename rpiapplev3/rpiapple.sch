@@ -34,7 +34,6 @@ LIBS:valves
 LIBS:apple2
 LIBS:altera_maxII_epm240
 LIBS:msx_slot
-LIBS:rpiapple-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -316,8 +315,6 @@ Text Label 5015 2725 0    60   ~ 0
 GND
 Text Label 5060 4355 0    60   ~ 0
 GND
-Text Label 2995 5095 0    60   ~ 0
-DAT_DIR
 Text Label 5520 2925 0    60   ~ 0
 ATN
 Text Label 5555 4555 0    60   ~ 0
@@ -959,7 +956,7 @@ U 1 1 5AE737CD
 P 2175 4645
 F 0 "U1" H 2125 5345 60  0000 C CNN
 F 1 "LVC4245" H 2175 4795 60  0000 C CNN
-F 2 "SMD_Packages:SOIC-24" H 2325 5245 60  0001 C CNN
+F 2 "Housings_SOIC:SOIC-24W_7.5x15.4mm_Pitch1.27mm" H 2325 5245 60  0001 C CNN
 F 3 "" H 2325 5245 60  0001 C CNN
 	1    2175 4645
 	-1   0    0    1   
@@ -1055,7 +1052,7 @@ Text Label 4165 6685 0    60   ~ 0
 RC18
 Wire Wire Line
 	4030 6685 4415 6685
-Text Label 3415 5095 0    60   ~ 0
+Text Label 2990 5095 0    60   ~ 0
 RC21
 Text Label 5565 6085 0    60   ~ 0
 GND
@@ -1301,7 +1298,7 @@ DAT_DIR
 Wire Wire Line
 	7785 2595 7785 2590
 Text Label 6160 2595 0    60   ~ 0
-RW
+RC21
 Wire Wire Line
 	7810 3385 7810 3380
 Connection ~ 7630 3385
@@ -1339,42 +1336,6 @@ F 3 "" H 6890 2945 50  0001 C CNN
 	1    6890 2945
 	1    0    0    -1  
 $EndComp
-$Comp
-L R R4
-U 1 1 5AEAAADD
-P 6845 795
-F 0 "R4" V 6925 795 50  0000 C CNN
-F 1 "R" V 6845 795 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6775 795 50  0001 C CNN
-F 3 "" H 6845 795 50  0001 C CNN
-	1    6845 795 
-	0    1    1    0   
-$EndComp
-$Comp
-L R R5
-U 1 1 5AEAABA7
-P 6850 975
-F 0 "R5" V 6930 975 50  0000 C CNN
-F 1 "R" V 6850 975 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6780 975 50  0001 C CNN
-F 3 "" H 6850 975 50  0001 C CNN
-	1    6850 975 
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6695 795  6295 795 
-Text Label 6410 795  0    60   ~ 0
-ATN
-Wire Wire Line
-	6700 975  6300 975 
-Text Label 6415 975  0    60   ~ 0
-ATN
-Wire Wire Line
-	7395 795  6995 795 
-Text Label 7110 795  0    60   ~ 0
+Text Label 5755 2925 0    60   ~ 0
 RC22
-Wire Wire Line
-	7400 975  7000 975 
-Text Label 7115 975  0    60   ~ 0
-RC18
 $EndSCHEMATC
