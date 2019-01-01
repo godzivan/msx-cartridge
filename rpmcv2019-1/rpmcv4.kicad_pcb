@@ -2640,12 +2640,12 @@
       (xy 1.633829 -1.594475) (xy 1.687285 -1.5875) (xy 1.791864 -1.629393)) (layer B.SilkS) (width 0.01))
   )
 
-  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 587A3A7B) (tstamp 5B833EE3)
+  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 5C2B9F33) (tstamp 5B833EE3)
     (at 149.098 130.683)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (path /5B80B519)
-    (fp_text reference D7 (at 1.27 -2.96) (layer F.SilkS)
+    (fp_text reference D7 (at 1.27 -2.96) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LED (at 1.27 2.96) (layer F.Fab)
@@ -2675,12 +2675,12 @@
     )
   )
 
-  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 587A3A7B) (tstamp 5B833EF6)
+  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 5C2B9F3A) (tstamp 5B833EF6)
     (at 170.779 130.776)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (path /5B80B51F)
-    (fp_text reference D8 (at 1.27 -2.96) (layer F.SilkS)
+    (fp_text reference D8 (at 1.27 -2.96) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LED (at 1.27 2.96) (layer F.Fab)
@@ -3016,12 +3016,12 @@
       (net 50 /+12V))
   )
 
-  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 587A3A7B) (tstamp 5B75C1FB)
+  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 5C2B9F42) (tstamp 5B75C1FB)
     (at 179.696 130.806)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (path /5B758D6B)
-    (fp_text reference D5 (at 1.27 -2.96) (layer F.SilkS)
+    (fp_text reference D5 (at 1.27 -2.96) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LED (at 1.27 2.96) (layer F.Fab)
@@ -3051,12 +3051,12 @@
     )
   )
 
-  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 587A3A7B) (tstamp 5B75C1C2)
+  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 5C2B9F46) (tstamp 5B75C1C2)
     (at 188.595 130.81)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (path /5B75906B)
-    (fp_text reference D2 (at 1.27 -2.96) (layer F.SilkS)
+    (fp_text reference D2 (at 1.27 -2.96) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LED (at 1.27 2.96) (layer F.Fab)
@@ -3086,12 +3086,12 @@
     )
   )
 
-  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 587A3A7B) (tstamp 5B75C1AF)
+  (module LEDs:LED_D3.0mm (layer F.Cu) (tedit 5C2B9F4B) (tstamp 5B75C1AF)
     (at 197.485 130.81)
     (descr "LED, diameter 3.0mm, 2 pins")
     (tags "LED diameter 3.0mm 2 pins")
     (path /5B759104)
-    (fp_text reference D1 (at 1.27 -2.96) (layer F.SilkS)
+    (fp_text reference D1 (at 1.27 -2.96) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LED (at 1.27 2.96) (layer F.Fab)
