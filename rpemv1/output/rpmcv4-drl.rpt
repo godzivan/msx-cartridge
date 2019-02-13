@@ -1,0 +1,25 @@
+Drill report for C:\msys64\home\meesokim\msx-cartridge\rpemv1\rpmcv4.kicad_pcb
+Created on 2018-11-25 오후 7:34:23
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'rpmcv4.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.40mm  0.016"  (47 holes)
+    T2  0.78mm  0.031"  (49 holes)
+    T3  1.00mm  0.039"  (40 holes)
+    T4  1.45mm  0.057"  (40 holes)
+
+    Total plated holes count 176
+
+
+Drill file 'rpmcv4-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+
+    Total unplated holes count 0
