@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 13901)
+    (start_pass_no 12439)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -79,6 +79,7 @@
     /RC19 /RC20 /RC16 /RC26 /RC22 /RC21 "Net-(C1-Pad1)" "Net-(C2-Pad2)"
     "Net-(C3-Pad1)" "Net-(C4-Pad2)" /RC24 "Net-(J2-Pad1)" "Net-(J2-Pad2)" "Net-(J2-Pad3)" "Net-(J2-Pad4)" /BUSACK
     /WAIT /BUSRQ /NMI /HALT "Net-(U6-Pad7)" "Net-(U6-Pad9)" "Net-(U6-Pad11)" "Net-(U6-Pad13)"
+    "Net-(U1-Pad20)" "Net-(U2-Pad20)" "Net-(U4-Pad20)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

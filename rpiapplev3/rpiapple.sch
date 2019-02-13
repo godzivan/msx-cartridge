@@ -34,6 +34,7 @@ LIBS:valves
 LIBS:apple2
 LIBS:altera_maxII_epm240
 LIBS:msx_slot
+LIBS:rpiapple-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1338,4 +1339,8 @@ F 3 "" H 6890 2945 50  0001 C CNN
 $EndComp
 Text Label 5755 2925 0    60   ~ 0
 RC22
+Text Notes 10245 6860 0    60   ~ 0
+RC16   -I-  RES\nRC17   -I-  SLTSL\nRC18   -I-  PH0\nRC19   -I-  INTI\nRC20   -I-  RW\nRC21   -O- DATDIR\nRC22   -O- ATN\nRC23   -I-  IRQ\nRC24   -O-  RES\nRC25   -O-  RDY\nRC26   -O-  INH\nRC27   -O-  NMI
+Text Notes 7345 7495 0    60   ~ 0
+RAS APPLE II CARD
 $EndSCHEMATC

@@ -314,37 +314,47 @@ D5
 Text Label 5600 4085 0    60   ~ 0
 D7
 Text Label 5600 4485 0    60   ~ 0
-5V0
+VCC
 Text Label 5595 4385 0    60   ~ 0
-5V0
+VCC
 Text Label 5585 4185 0    60   ~ 0
 GND
 Text Label 5590 4285 0    60   ~ 0
 GND
-Text Label 2940 4030 0    60   ~ 0
-RD
 Text Label 2935 4130 0    60   ~ 0
 SLTSL
-Text Label 5545 2285 0    60   ~ 0
+Text Label 7245 2285 0    60   ~ 0
 SLTSL
-NoConn ~ 2855 3930
 NoConn ~ 5500 2185
-NoConn ~ 5500 2385
 NoConn ~ 5500 2485
 NoConn ~ 5500 2585
 NoConn ~ 5500 2685
 NoConn ~ 5500 2785
 NoConn ~ 5500 2885
-NoConn ~ 7475 2185
-NoConn ~ 7480 2285
+NoConn ~ 7480 2185
 NoConn ~ 7480 2385
 NoConn ~ 7480 2485
 NoConn ~ 7480 2585
 NoConn ~ 7480 2685
-NoConn ~ 7480 2785
 NoConn ~ 7480 2885
 Text Notes 8010 6900 0    118  ~ 0
 MSX ROM CARTRIDGE
 Text Label 7275 2985 0    60   ~ 0
 A14
+Text Label 5570 2285 0    60   ~ 0
+CS12
+Text Label 2935 4030 0    60   ~ 0
+CS12
+Text Label 2930 3930 0    60   ~ 0
+WR0
+Text Label 5580 2385 0    60   ~ 0
+WR0
+NoConn ~ 7480 2785
+NoConn ~ 7480 4585
+NoConn ~ 7480 4485
+NoConn ~ 7480 4185
+NoConn ~ 5500 4585
+NoConn ~ 7405 3790
+NoConn ~ 5500 3385
+NoConn ~ 6080 2830
 $EndSCHEMATC

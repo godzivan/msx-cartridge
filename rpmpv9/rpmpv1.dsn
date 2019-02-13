@@ -104,10 +104,11 @@
       (place J1 195326 -76327 back 270 (PN RPi_GPIO))
     )
     (component "MSX:msx-logo"
-      (place G*** 162814 -64770 front 0 (PN LOGO))
+      (place G2 162814 -64770 front 0 (PN LOGO))
       (place G1 145415 -64770 front 0 (PN LOGO))
       (place REF3 129083 -65379.6 back 0 (PN "KiCad-Logo2_6mm_SilkScreen"))
       (place REF2 184455 -65379.6 back 0 (PN "OSHW-Logo_7.5x8mm_SilkScreen"))
+      (place G*** 195580 -95885 back 0 (PN LOGO))
     )
     (component Resistors_SMD:R_0603_HandSoldering
       (place R1 200474 -53340 back 0 (PN R))
@@ -116,7 +117,6 @@
       (place R4 200474 -56896 back 0 (PN R))
       (place R5 129032 -74295 back 0 (PN R))
       (place R6 157734 -95123 back 0 (PN R))
-      (place R7 157734 -93345 back 180 (PN R))
       (place R8 157734 -91567 back 180 (PN R))
     )
     (component Capacitors_SMD:C_0603_HandSoldering
@@ -703,8 +703,8 @@
       (pins P1-42)
     )
     (net +3V3
-      (pins J2-1 J2-17 J1-1 J1-17 R1-2 R2-2 C3-1 C4-1 C5-1 R3-2 U4-20 R6-1 R7-1 U5-23
-        U5-24 U2-20 U3-14 U1-20 C1-1 C2-1 R8-1)
+      (pins J2-1 J2-17 J1-1 J1-17 R1-2 R2-2 C3-1 C4-1 C5-1 R3-2 U4-20 R6-1 U5-23 U5-24
+        U2-20 U3-14 U1-20 C1-1 C2-1 R8-1)
     )
     (net "Net-(P1-Pad5)"
       (pins P1-5)
@@ -778,9 +778,6 @@
     (net /RC24
       (pins J2-18 J1-18 U3-9)
     )
-    (net /RC25
-      (pins J2-22 J1-22 U3-11)
-    )
     (net /RC19
       (pins J2-35 J1-35 U4-3)
     )
@@ -809,7 +806,7 @@
       (pins D1-1 R6-2 U5-22 U3-6)
     )
     (net /DAT_DIR
-      (pins D1-3 R7-2 U5-2 U3-10)
+      (pins J2-22 J1-22 D1-3 U5-2)
     )
     (net "Net-(U4-Pad8)"
       (pins U4-8)
@@ -842,16 +839,14 @@
       (pins U3-13)
     )
     (class kicad_default "" +3V3 /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15 /A2
-      /A3 /A4 /A5 /A6 /A7 /A8 /A9 /ADDR /ATN /BDIR /BUSDIR /CLK /D0 /D1 /D2
-      /D3 /D4 /D5 /D6 /D7 /DAT_DIR /DAT_EN /DAT_EN0 /EXTRA /INT /IORQ /M1
-      /MREQ /RA10 /RA11 /RA12 /RA13 /RA14 /RA15 /RA8 /RA9 /RATN /RC16 /RC17
-      /RC18 /RC19 /RC20 /RC21 /RC23 /RC24 /RC25 /RC26 /RC27 /RD /RD0 /RD1
-      /RD2 /RD3 /RD4 /RD5 /RD6 /RD7 /RESET /SLTSL /SOUNDIN /WAIT /WR /nATN
-      /nBDIR /nDIR /nIORQ /nRATN /nRC21 GND "Net-(C1-Pad1)" "Net-(C5-Pad1)"
-      "Net-(C6-Pad1)" "Net-(C8-Pad1)" "Net-(D1-Pad4)" "Net-(D1-Pad5)" "Net-(D1-Pad6)"
-      "Net-(J2-Pad2)" "Net-(J2-Pad4)" "Net-(P1-Pad1)" "Net-(P1-Pad16)" "Net-(P1-Pad2)"
-      "Net-(P1-Pad3)" "Net-(P1-Pad44)" "Net-(P1-Pad48)" "Net-(P1-Pad5)" "Net-(P1-Pad50)"
-      "Net-(P1-Pad6)" "Net-(U3-Pad13)" "Net-(U4-Pad10)" "Net-(U4-Pad12)" "Net-(U4-Pad20)"
+      /A3 /A4 /A5 /A6 /A7 /A8 /A9 /ADDR /BUSDIR /CLK /D0 /D1 /D2 /D3 /D4 /D5
+      /D6 /D7 /DAT_DIR /DAT_EN /EXTRA /INT /IORQ /M1 /MREQ /RA10 /RA11 /RA12
+      /RA13 /RA14 /RA15 /RA8 /RA9 /RC16 /RC17 /RC18 /RC19 /RC20 /RC21 /RC23
+      /RC24 /RC25 /RC26 /RC27 /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6 /RD7
+      /RESET /SLTSL /SOUNDIN /WAIT /WR GND "Net-(C6-Pad1)" "Net-(D1-Pad4)"
+      "Net-(D1-Pad5)" "Net-(D1-Pad6)" "Net-(J2-Pad2)" "Net-(J2-Pad4)" "Net-(P1-Pad1)"
+      "Net-(P1-Pad16)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)" "Net-(P1-Pad48)"
+      "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U3-Pad13)" "Net-(U4-Pad12)"
       "Net-(U4-Pad8)" "Net-(U4-Pad9)"
       (circuit
         (use_via Via[0-1]_600:400_um)
@@ -872,10 +867,5 @@
     )
   )
   (wiring
-    (wire (path B.Cu 250  134610 -109827  134610 -107665)(net GND)(type protect))
-    (wire (path B.Cu 250  160010 -109827  160930 -108908)(net /A12)(type protect))
-    (wire (path B.Cu 250  140093 -109424  139690 -109827)(net /D7)(type protect))
-    (wire (path B.Cu 250  139690 -109827  139690 -109827)(net /D7)(type protect))
-    (wire (path B.Cu 250  139690 -109827  139690 -109827)(net /D7)(type protect))
   )
 )

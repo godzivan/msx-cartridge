@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 7109)
+    (start_pass_no 12565)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -73,12 +73,12 @@
     /BUSRQ /CLK /RESET /D4 /M1 /D3 /RFSH /D5
     /D6 /A0 /A1 /D2 /A2 /D7 /A3 /D0
     /A4 /D1 /A5 /INT /A6 /NMI /A7 /HALT
-    /A8 /A9 /A10 MERQ IORQ RD WR "Net-(U2-Pad3)"
-    "Net-(U2-Pad17)" "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "Net-(D4-Pad2)" VCC /RD2 /RD3
-    /RD4 /RA14 /RA15 /RC17 /RC18 /RATN /RC22 /RC23
-    /RC24 /RA10 /RA9 /RC25 /RA11 /RA8 /RC7 /RD0
-    /RD1 /RD5 /RD6 /RA12 /RA13 /RC19 /RC16 /RC26
-    /RC20 /RC21 /RD7 "/DAT_EN" "/DAT_DIR"
+    /A8 /A9 /A10 MERQ IORQ RD WR "Net-(D1-Pad2)"
+    "Net-(D2-Pad2)" "Net-(D3-Pad2)" "Net-(D4-Pad2)" VCC /RD2 /RD3 /RD4 /RA14
+    /RA15 /RC17 /RC18 /RATN /RC22 /RC23 /RC24 /RA10
+    /RA9 /RC25 /RA11 /RA8 /RD0 /RD1 /RD5 /RD6
+    /RA12 /RA13 /RC19 /RC16 /RC26 /RC20 /RC21 /RD7
+    "/DAT_EN" "/DAT_DIR" /3V3 "Net-(U5-Pad9)" "Net-(U5-Pad11)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

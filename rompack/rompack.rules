@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 930)
+    (start_pass_no 1158)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -63,13 +63,12 @@
     )
   )
   (class "kicad_default"
-    "Net-(P1-Pad1)" "Net-(P1-Pad2)" /SLTSL "Net-(P1-Pad4)" "Net-(P1-Pad5)" "Net-(P1-Pad6)" "Net-(P1-Pad7)" "Net-(P1-Pad8)"
-    "Net-(P1-Pad9)" "Net-(P1-Pad10)" "Net-(P1-Pad11)" "Net-(P1-Pad12)" "Net-(P1-Pad13)" "Net-(P1-Pad14)" "Net-(P1-Pad15)" "Net-(P1-Pad16)"
-    /A9 /A11 /A10 /A7 /A6 /A12 /A8 /A14
-    /A13 /A1 /A0 /A3 /A2 /A5 /A4 /D1
-    /D0 /D3 /D2 /D5 /D4 /D7 /D6 GND
-    "Net-(P1-Pad42)" "Net-(P1-Pad44)" /5V0 "Net-(P1-Pad48)" "Net-(P1-Pad49)" "Net-(P1-Pad50)" /RD "Net-(U1-Pad27)"
-    VCC "Net-(P1-Pad25)"
+    "Net-(P1-Pad1)" "Net-(P1-Pad2)" /SLTSL "Net-(P1-Pad6)" "Net-(P1-Pad7)" "Net-(P1-Pad8)" "Net-(P1-Pad9)" "Net-(P1-Pad10)"
+    "Net-(P1-Pad11)" "Net-(P1-Pad12)" "Net-(P1-Pad13)" "Net-(P1-Pad15)" "Net-(P1-Pad16)" /A9 /A11 /A10
+    /A7 /A6 /A12 /A8 /A14 /A13 /A1 /A0
+    /A3 /A2 /A5 /A4 /D1 /D0 /D3 /D2
+    /D5 /D4 /D7 /D6 GND "Net-(P1-Pad42)" "Net-(P1-Pad44)" "Net-(P1-Pad48)"
+    "Net-(P1-Pad49)" "Net-(P1-Pad50)" VCC "Net-(P1-Pad25)" /CS12 /WR0 "Net-(P1-Pad14)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

@@ -1,4 +1,4 @@
-update=2018-08-27 오후 2:42:48
+update=2018-12-14 오후 9:01:17
 version=1
 last_client=kicad
 [cvpcb]

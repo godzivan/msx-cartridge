@@ -1,4 +1,4 @@
-(module MSX_SLOT locked (layer F.Cu) (tedit 5B7EDFB9)
+(module MSX_SLOT locked (layer F.Cu) (tedit 5BF9794D)
   (fp_text reference P2 (at 0 0) (layer F.SilkS) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )

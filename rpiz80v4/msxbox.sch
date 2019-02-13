@@ -62,12 +62,12 @@ $EndComp
 $Comp
 L Z80CPU U1
 U 1 1 5A631CBB
-P 2600 2860
-F 0 "U1" H 2050 4260 50  0000 L CNN
-F 1 "Z80CPU" H 2850 4260 50  0000 L CNN
-F 2 "Housings_DIP:DIP-40_W15.24mm_Socket" H 2600 3260 50  0001 C CNN
-F 3 "" H 2600 3260 50  0001 C CNN
-	1    2600 2860
+P 2620 2580
+F 0 "U1" H 2070 3980 50  0000 L CNN
+F 1 "Z80CPU" H 2870 3980 50  0000 L CNN
+F 2 "Housings_DIP:DIP-40_W15.24mm_Socket" H 2620 2980 50  0001 C CNN
+F 3 "" H 2620 2980 50  0001 C CNN
+	1    2620 2580
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -84,12 +84,12 @@ $EndComp
 $Comp
 L +5V #PWR02
 U 1 1 5A632DF2
-P 2600 1075
-F 0 "#PWR02" H 2600 925 50  0001 C CNN
-F 1 "+5V" H 2600 1215 50  0000 C CNN
-F 2 "" H 2600 1075 50  0001 C CNN
-F 3 "" H 2600 1075 50  0001 C CNN
-	1    2600 1075
+P 2620 795
+F 0 "#PWR02" H 2620 645 50  0001 C CNN
+F 1 "+5V" H 2620 935 50  0000 C CNN
+F 2 "" H 2620 795 50  0001 C CNN
+F 3 "" H 2620 795 50  0001 C CNN
+	1    2620 795 
 	1    0    0    -1  
 $EndComp
 Text Label 9055 1605 1    60   ~ 0
@@ -98,237 +98,237 @@ Text Label 9155 1600 1    60   ~ 0
 5V0
 Text Label 9355 1590 1    60   ~ 0
 3V3
-Text Label 3390 1660 0    60   ~ 0
+Text Label 3410 1380 0    60   ~ 0
 A0
-Text Label 3390 1760 0    60   ~ 0
+Text Label 3410 1480 0    60   ~ 0
 A1
-Text Label 3395 1860 0    60   ~ 0
+Text Label 3415 1580 0    60   ~ 0
 A2
-Text Label 3395 1960 0    60   ~ 0
+Text Label 3415 1680 0    60   ~ 0
 A3
-Text Label 3390 2060 0    60   ~ 0
+Text Label 3410 1780 0    60   ~ 0
 A4
-Text Label 3395 2160 0    60   ~ 0
+Text Label 3415 1880 0    60   ~ 0
 A5
-Text Label 3395 2260 0    60   ~ 0
+Text Label 3415 1980 0    60   ~ 0
 A6
-Text Label 3395 2360 0    60   ~ 0
+Text Label 3415 2080 0    60   ~ 0
 A7
-Text Label 3390 2460 0    60   ~ 0
+Text Label 3410 2180 0    60   ~ 0
 A8
-Text Label 3390 2560 0    60   ~ 0
+Text Label 3410 2280 0    60   ~ 0
 A9
-Text Label 3395 2660 0    60   ~ 0
+Text Label 3415 2380 0    60   ~ 0
 A10
-Text Label 3395 2760 0    60   ~ 0
+Text Label 3415 2480 0    60   ~ 0
 A11
-Text Label 3390 2860 0    60   ~ 0
+Text Label 3410 2580 0    60   ~ 0
 A12
-Text Label 3395 2960 0    60   ~ 0
+Text Label 3415 2680 0    60   ~ 0
 A13
-Text Label 3395 3060 0    60   ~ 0
+Text Label 3415 2780 0    60   ~ 0
 A14
-Text Label 3395 3160 0    60   ~ 0
+Text Label 3415 2880 0    60   ~ 0
 A15
-Text Label 3400 3360 0    60   ~ 0
+Text Label 3420 3080 0    60   ~ 0
 D0
-Text Label 3400 3460 0    60   ~ 0
+Text Label 3420 3180 0    60   ~ 0
 D1
-Text Label 3400 3560 0    60   ~ 0
+Text Label 3420 3280 0    60   ~ 0
 D2
-Text Label 3400 3660 0    60   ~ 0
+Text Label 3420 3380 0    60   ~ 0
 D3
-Text Label 3400 3760 0    60   ~ 0
+Text Label 3420 3480 0    60   ~ 0
 D4
-Text Label 3400 3860 0    60   ~ 0
+Text Label 3420 3580 0    60   ~ 0
 D5
-Text Label 3400 3960 0    60   ~ 0
+Text Label 3420 3680 0    60   ~ 0
 D6
-Text Label 3400 4060 0    60   ~ 0
+Text Label 3420 3780 0    60   ~ 0
 D7
-Text Label 4520 880  0    60   ~ 0
+Text Label 4550 1355 0    60   ~ 0
 A0
-Text Label 4520 980  0    60   ~ 0
+Text Label 4550 1455 0    60   ~ 0
 A1
-Text Label 4525 1080 0    60   ~ 0
+Text Label 4555 1555 0    60   ~ 0
 A2
-Text Label 4525 1180 0    60   ~ 0
+Text Label 4555 1655 0    60   ~ 0
 A3
-Text Label 4520 1280 0    60   ~ 0
+Text Label 4550 1755 0    60   ~ 0
 A4
-Text Label 4525 1380 0    60   ~ 0
+Text Label 4555 1855 0    60   ~ 0
 A5
-Text Label 4525 1480 0    60   ~ 0
+Text Label 4555 1955 0    60   ~ 0
 A6
-Text Label 4525 1580 0    60   ~ 0
+Text Label 4555 2055 0    60   ~ 0
 A7
-Text Label 4525 2190 0    60   ~ 0
+Text Label 4575 2870 0    60   ~ 0
 A8
-Text Label 4525 2290 0    60   ~ 0
+Text Label 4575 2970 0    60   ~ 0
 A9
-Text Label 4530 2390 0    60   ~ 0
+Text Label 4580 3070 0    60   ~ 0
 A10
-Text Label 4530 2490 0    60   ~ 0
+Text Label 4580 3170 0    60   ~ 0
 A11
-Text Label 4525 2590 0    60   ~ 0
+Text Label 4575 3270 0    60   ~ 0
 A12
-Text Label 4530 2690 0    60   ~ 0
+Text Label 4580 3370 0    60   ~ 0
 A13
-Text Label 4530 2790 0    60   ~ 0
+Text Label 4580 3470 0    60   ~ 0
 A14
-Text Label 4530 2890 0    60   ~ 0
+Text Label 4580 3570 0    60   ~ 0
 A15
-Text Label 4570 3770 0    60   ~ 0
+Text Label 1570 6390 0    60   ~ 0
 D0
-Text Label 4570 3870 0    60   ~ 0
+Text Label 1570 6490 0    60   ~ 0
 D1
-Text Label 4570 3970 0    60   ~ 0
+Text Label 1570 6590 0    60   ~ 0
 D2
-Text Label 4570 4070 0    60   ~ 0
+Text Label 1570 6690 0    60   ~ 0
 D3
-Text Label 4570 4170 0    60   ~ 0
+Text Label 1570 6790 0    60   ~ 0
 D4
-Text Label 4570 4270 0    60   ~ 0
+Text Label 1570 6890 0    60   ~ 0
 D5
-Text Label 4570 4370 0    60   ~ 0
+Text Label 1570 6990 0    60   ~ 0
 D6
-Text Label 4570 4470 0    60   ~ 0
+Text Label 1570 7090 0    60   ~ 0
 D7
-Text Label 6335 880  0    60   ~ 0
+Text Label 5965 1355 0    60   ~ 0
 RD0
-Text Label 6335 980  0    60   ~ 0
+Text Label 5965 1455 0    60   ~ 0
 RD1
-Text Label 6340 1080 0    60   ~ 0
+Text Label 5970 1555 0    60   ~ 0
 RD2
-Text Label 6340 1180 0    60   ~ 0
+Text Label 5970 1655 0    60   ~ 0
 RD3
-Text Label 6335 1280 0    60   ~ 0
+Text Label 5965 1755 0    60   ~ 0
 RD4
-Text Label 6340 1380 0    60   ~ 0
+Text Label 5970 1855 0    60   ~ 0
 RD5
-Text Label 6340 1480 0    60   ~ 0
+Text Label 5970 1955 0    60   ~ 0
 RD6
-Text Label 6340 1580 0    60   ~ 0
+Text Label 5970 2055 0    60   ~ 0
 RD7
-Text Label 6340 2190 0    60   ~ 0
+Text Label 5990 2870 0    60   ~ 0
 RA8
-Text Label 6340 2290 0    60   ~ 0
+Text Label 5990 2970 0    60   ~ 0
 RA9
-Text Label 6345 2390 0    60   ~ 0
+Text Label 5995 3070 0    60   ~ 0
 RA10
-Text Label 6345 2490 0    60   ~ 0
+Text Label 5995 3170 0    60   ~ 0
 RA11
-Text Label 6340 2590 0    60   ~ 0
+Text Label 5990 3270 0    60   ~ 0
 RA12
-Text Label 6345 2690 0    60   ~ 0
+Text Label 5995 3370 0    60   ~ 0
 RA13
-Text Label 6345 2790 0    60   ~ 0
+Text Label 5995 3470 0    60   ~ 0
 RA14
-Text Label 6345 2890 0    60   ~ 0
+Text Label 5995 3570 0    60   ~ 0
 RA15
-Text Label 6275 3870 0    60   ~ 0
+Text Label 3275 6490 0    60   ~ 0
 RD0
-Text Label 6275 3970 0    60   ~ 0
+Text Label 3275 6590 0    60   ~ 0
 RD1
-Text Label 6280 4070 0    60   ~ 0
+Text Label 3280 6690 0    60   ~ 0
 RD2
-Text Label 6280 4170 0    60   ~ 0
+Text Label 3280 6790 0    60   ~ 0
 RD3
-Text Label 6275 4270 0    60   ~ 0
+Text Label 3275 6890 0    60   ~ 0
 RD4
-Text Label 6280 4370 0    60   ~ 0
+Text Label 3280 6990 0    60   ~ 0
 RD5
-Text Label 6280 4470 0    60   ~ 0
+Text Label 3280 7090 0    60   ~ 0
 RD6
-Text Label 6280 4570 0    60   ~ 0
+Text Label 3280 7190 0    60   ~ 0
 RD7
-Text Label 4520 5685 0    60   ~ 0
+Text Label 4585 5110 0    60   ~ 0
 M1
-Text Label 4520 5085 0    60   ~ 0
+Text Label 4585 4510 0    60   ~ 0
 MERQ
-Text Label 4515 5385 0    60   ~ 0
+Text Label 4580 4810 0    60   ~ 0
 BUSACK
-Text Label 4520 5185 0    60   ~ 0
+Text Label 4585 4610 0    60   ~ 0
 IORQ
-Text Label 4520 5585 0    60   ~ 0
+Text Label 4585 5010 0    60   ~ 0
 WR
-Text Label 4520 5785 0    60   ~ 0
+Text Label 4585 5210 0    60   ~ 0
 RFSH
-Text Label 6310 7015 0    60   ~ 0
+Text Label 5990 6595 0    60   ~ 0
 RC17
-Text Label 6310 6815 0    60   ~ 0
+Text Label 5990 6395 0    60   ~ 0
 RC20
-Text Label 6330 5085 0    60   ~ 0
+Text Label 5995 4510 0    60   ~ 0
 RC19
-Text Label 6330 5185 0    60   ~ 0
+Text Label 5995 4610 0    60   ~ 0
 RC18
-Text Label 6325 5485 0    60   ~ 0
+Text Label 5990 4910 0    60   ~ 0
 RA12
-Text Label 6330 5585 0    60   ~ 0
+Text Label 5995 5010 0    60   ~ 0
 RA13
-Text Label 6330 5685 0    60   ~ 0
+Text Label 5995 5110 0    60   ~ 0
 RA14
-Text Label 6330 5785 0    60   ~ 0
+Text Label 5995 5210 0    60   ~ 0
 RA15
-Text Label 4500 6415 0    60   ~ 0
+Text Label 4580 5995 0    60   ~ 0
 WAIT
-Text Label 4500 6515 0    60   ~ 0
+Text Label 4580 6095 0    60   ~ 0
 INT
-Text Label 4500 6615 0    60   ~ 0
+Text Label 4580 6195 0    60   ~ 0
 NMI
-Text Label 4500 6715 0    60   ~ 0
+Text Label 4580 6295 0    60   ~ 0
 BUSRQ
-Text Label 4500 6915 0    60   ~ 0
+Text Label 4580 6495 0    60   ~ 0
 RESET
-Text Label 4500 7015 0    60   ~ 0
+Text Label 4580 6595 0    60   ~ 0
 DAT_DIR
-Text Label 6305 6415 0    60   ~ 0
+Text Label 5985 5995 0    60   ~ 0
 RC24
-Text Label 6305 6515 0    60   ~ 0
+Text Label 5985 6095 0    60   ~ 0
 RC23
-Text Label 6310 6615 0    60   ~ 0
+Text Label 5990 6195 0    60   ~ 0
 RC25
-Text Label 6310 6715 0    60   ~ 0
+Text Label 5990 6295 0    60   ~ 0
 RC26
-Text Label 6310 6915 0    60   ~ 0
+Text Label 5990 6495 0    60   ~ 0
 RC16
-Text Label 1585 1660 0    60   ~ 0
+Text Label 1605 1380 0    60   ~ 0
 RESET
-Text Label 1600 1960 0    60   ~ 0
+Text Label 1620 1680 0    60   ~ 0
 CLK
-Text Label 1590 2260 0    60   ~ 0
+Text Label 1610 1980 0    60   ~ 0
 NMI
-Text Label 1595 2360 0    60   ~ 0
+Text Label 1615 2080 0    60   ~ 0
 INT
-Text Label 1600 2660 0    60   ~ 0
+Text Label 1620 2380 0    60   ~ 0
 M1
-Text Label 1605 2760 0    60   ~ 0
+Text Label 1625 2480 0    60   ~ 0
 RFSH
-Text Label 1605 2860 0    60   ~ 0
+Text Label 1625 2580 0    60   ~ 0
 WAIT
-Text Label 1610 2960 0    60   ~ 0
+Text Label 1630 2680 0    60   ~ 0
 HALT
-Text Label 1610 3360 0    60   ~ 0
+Text Label 1630 3080 0    60   ~ 0
 RD
-Text Label 1610 3460 0    60   ~ 0
+Text Label 1630 3180 0    60   ~ 0
 WR
-Text Label 1615 3560 0    60   ~ 0
+Text Label 1635 3280 0    60   ~ 0
 MREQ
-Text Label 1615 3660 0    60   ~ 0
+Text Label 1635 3380 0    60   ~ 0
 IORQ
-Text Label 1610 3960 0    60   ~ 0
+Text Label 1630 3680 0    60   ~ 0
 BUSRQ
-Text Label 1610 4060 0    60   ~ 0
+Text Label 1630 3780 0    60   ~ 0
 BUSACK
 $Comp
 L GND #PWR03
 U 1 1 5A63441F
-P 2600 4360
-F 0 "#PWR03" H 2600 4110 50  0001 C CNN
-F 1 "GND" H 2600 4210 50  0000 C CNN
-F 2 "" H 2600 4360 50  0001 C CNN
-F 3 "" H 2600 4360 50  0001 C CNN
-	1    2600 4360
+P 2620 4080
+F 0 "#PWR03" H 2620 3830 50  0001 C CNN
+F 1 "GND" H 2620 3930 50  0000 C CNN
+F 2 "" H 2620 4080 50  0001 C CNN
+F 3 "" H 2620 4080 50  0001 C CNN
+	1    2620 4080
 	1    0    0    -1  
 $EndComp
 Text Label 8140 3705 0    60   ~ 0
@@ -341,9 +341,9 @@ Text Label 10215 2005 0    60   ~ 0
 RD2
 Text Label 10215 2105 0    60   ~ 0
 RD3
-Text Label 4500 6815 0    60   ~ 0
+Text Label 4580 6395 0    60   ~ 0
 CLK
-Text Label 6330 5285 0    60   ~ 0
+Text Label 5995 4710 0    60   ~ 0
 RC21
 Text Label 10210 2405 0    60   ~ 0
 RD5
@@ -379,236 +379,188 @@ Text Label 8145 2805 0    60   ~ 0
 RC22
 Text Label 8145 2905 0    60   ~ 0
 RC23
-Text Label 2600 1305 1    60   ~ 0
+Text Label 2620 1025 1    60   ~ 0
 5V0
-Text Label 4530 1880 0    60   ~ 0
+Text Label 4560 2355 0    60   ~ 0
 RATN
-Text Label 4535 3190 0    60   ~ 0
+Text Label 4585 3870 0    60   ~ 0
 RATN
-Text Label 4570 3670 0    60   ~ 0
+Text Label 1570 6290 0    60   ~ 0
 DAT_DIR
-Text Label 4520 6085 0    60   ~ 0
+Text Label 4585 5510 0    60   ~ 0
 DAT_EN
 Text Label 8145 3005 0    60   ~ 0
 RC24
 Text Label 8145 3105 0    60   ~ 0
 RC25
-NoConn ~ 8045 3205
-NoConn ~ 8045 3305
-NoConn ~ 10465 2705
 $Comp
 L LED_Small D1
 U 1 1 5A63CA77
-P 2330 5210
-F 0 "D1" H 2280 5335 50  0000 L CNN
-F 1 "LED_Small" H 2155 5110 50  0000 L CNN
-F 2 "LEDs:LED_0603_HandSoldering" V 2330 5210 50  0001 C CNN
-F 3 "" V 2330 5210 50  0001 C CNN
-	1    2330 5210
+P 2570 4590
+F 0 "D1" H 2520 4715 50  0000 L CNN
+F 1 "LED_Small" H 2395 4490 50  0000 L CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2570 4590 50  0001 C CNN
+F 3 "" V 2570 4590 50  0001 C CNN
+	1    2570 4590
 	1    0    0    -1  
 $EndComp
-Text GLabel 1950 5210 0    60   Input ~ 0
+Text GLabel 2190 4590 0    60   Input ~ 0
 MERQ
 $Comp
 L R R1
 U 1 1 5A63CDFC
-P 2795 5210
-F 0 "R1" V 2875 5210 50  0000 C CNN
-F 1 "R" V 2795 5210 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2725 5210 50  0001 C CNN
-F 3 "" H 2795 5210 50  0001 C CNN
-	1    2795 5210
+P 3035 4590
+F 0 "R1" V 3115 4590 50  0000 C CNN
+F 1 "R" V 3035 4590 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2965 4590 50  0001 C CNN
+F 3 "" H 3035 4590 50  0001 C CNN
+	1    3035 4590
 	0    1    1    0   
 $EndComp
 $Comp
 L LED_Small D2
 U 1 1 5A63D0E5
-P 2330 5520
-F 0 "D2" H 2280 5645 50  0000 L CNN
-F 1 "LED_Small" H 2155 5420 50  0000 L CNN
-F 2 "LEDs:LED_0603_HandSoldering" V 2330 5520 50  0001 C CNN
-F 3 "" V 2330 5520 50  0001 C CNN
-	1    2330 5520
+P 2570 4900
+F 0 "D2" H 2520 5025 50  0000 L CNN
+F 1 "LED_Small" H 2395 4800 50  0000 L CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2570 4900 50  0001 C CNN
+F 3 "" V 2570 4900 50  0001 C CNN
+	1    2570 4900
 	1    0    0    -1  
 $EndComp
-Text GLabel 1950 5520 0    60   Input ~ 0
+Text GLabel 2190 4900 0    60   Input ~ 0
 IORQ
 $Comp
 L R R2
 U 1 1 5A63D0EE
-P 2795 5520
-F 0 "R2" V 2875 5520 50  0000 C CNN
-F 1 "R" V 2795 5520 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2725 5520 50  0001 C CNN
-F 3 "" H 2795 5520 50  0001 C CNN
-	1    2795 5520
+P 3035 4900
+F 0 "R2" V 3115 4900 50  0000 C CNN
+F 1 "R" V 3035 4900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2965 4900 50  0001 C CNN
+F 3 "" H 3035 4900 50  0001 C CNN
+	1    3035 4900
 	0    1    1    0   
 $EndComp
 $Comp
 L LED_Small D3
 U 1 1 5A63D1F7
-P 2335 5840
-F 0 "D3" H 2285 5965 50  0000 L CNN
-F 1 "LED_Small" H 2160 5740 50  0000 L CNN
-F 2 "LEDs:LED_0603_HandSoldering" V 2335 5840 50  0001 C CNN
-F 3 "" V 2335 5840 50  0001 C CNN
-	1    2335 5840
+P 2575 5220
+F 0 "D3" H 2525 5345 50  0000 L CNN
+F 1 "LED_Small" H 2400 5120 50  0000 L CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2575 5220 50  0001 C CNN
+F 3 "" V 2575 5220 50  0001 C CNN
+	1    2575 5220
 	1    0    0    -1  
 $EndComp
-Text GLabel 1955 5840 0    60   Input ~ 0
+Text GLabel 2195 5220 0    60   Input ~ 0
 RD
 $Comp
 L R R3
 U 1 1 5A63D200
-P 2800 5840
-F 0 "R3" V 2880 5840 50  0000 C CNN
-F 1 "R" V 2800 5840 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2730 5840 50  0001 C CNN
-F 3 "" H 2800 5840 50  0001 C CNN
-	1    2800 5840
+P 3040 5220
+F 0 "R3" V 3120 5220 50  0000 C CNN
+F 1 "R" V 3040 5220 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2970 5220 50  0001 C CNN
+F 3 "" H 3040 5220 50  0001 C CNN
+	1    3040 5220
 	0    1    1    0   
 $EndComp
 $Comp
 L LED_Small D4
 U 1 1 5A63D207
-P 2335 6150
-F 0 "D4" H 2285 6275 50  0000 L CNN
-F 1 "LED_Small" H 2160 6050 50  0000 L CNN
-F 2 "LEDs:LED_0603_HandSoldering" V 2335 6150 50  0001 C CNN
-F 3 "" V 2335 6150 50  0001 C CNN
-	1    2335 6150
+P 2575 5530
+F 0 "D4" H 2525 5655 50  0000 L CNN
+F 1 "LED_Small" H 2400 5430 50  0000 L CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2575 5530 50  0001 C CNN
+F 3 "" V 2575 5530 50  0001 C CNN
+	1    2575 5530
 	1    0    0    -1  
 $EndComp
-Text GLabel 1955 6150 0    60   Input ~ 0
+Text GLabel 2195 5530 0    60   Input ~ 0
 WR
 $Comp
 L R R4
 U 1 1 5A63D210
-P 2800 6150
-F 0 "R4" V 2880 6150 50  0000 C CNN
-F 1 "R" V 2800 6150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2730 6150 50  0001 C CNN
-F 3 "" H 2800 6150 50  0001 C CNN
-	1    2800 6150
+P 3040 5530
+F 0 "R4" V 3120 5530 50  0000 C CNN
+F 1 "R" V 3040 5530 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2970 5530 50  0001 C CNN
+F 3 "" H 3040 5530 50  0001 C CNN
+	1    3040 5530
 	0    1    1    0   
 $EndComp
-Text GLabel 1500 3560 0    60   Input ~ 0
+Text GLabel 1520 3280 0    60   Input ~ 0
 MERQ
-Text GLabel 1500 3660 0    60   Input ~ 0
+Text GLabel 1520 3380 0    60   Input ~ 0
 IORQ
-Text GLabel 1500 3360 0    60   Input ~ 0
+Text GLabel 1520 3080 0    60   Input ~ 0
 RD
-Text GLabel 1500 3460 0    60   Input ~ 0
+Text GLabel 1520 3180 0    60   Input ~ 0
 WR
-$Comp
-L 74LS244 U6
-U 1 1 5A63EE28
-P 5530 1380
-F 0 "U6" H 5580 1180 50  0000 C CNN
-F 1 "74LS244" H 5630 980 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5530 1380 50  0001 C CNN
-F 3 "" H 5530 1380 50  0001 C CNN
-	1    5530 1380
-	1    0    0    -1  
-$EndComp
-Text Label 4530 1780 0    60   ~ 0
+Text Label 4560 2255 0    60   ~ 0
 RATN
-$Comp
-L 74LS244 U5
-U 1 1 5A63F426
-P 5520 5585
-F 0 "U5" H 5570 5385 50  0000 C CNN
-F 1 "74LS244" H 5620 5185 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5520 5585 50  0001 C CNN
-F 3 "" H 5520 5585 50  0001 C CNN
-	1    5520 5585
-	1    0    0    -1  
-$EndComp
-Text Label 4520 5985 0    60   ~ 0
+Text Label 4585 5410 0    60   ~ 0
 GND
-$Comp
-L 74LS244 U3
-U 1 1 5A63F608
-P 5535 2690
-F 0 "U3" H 5585 2490 50  0000 C CNN
-F 1 "74LS244" H 5635 2290 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5535 2690 50  0001 C CNN
-F 3 "" H 5535 2690 50  0001 C CNN
-	1    5535 2690
-	1    0    0    -1  
-$EndComp
-Text Label 4540 3090 0    60   ~ 0
+Text Label 4590 3770 0    60   ~ 0
 RATN
-$Comp
-L 74LS244 U2
-U 1 1 5A63F7A5
-P 5500 6915
-F 0 "U2" H 5550 6715 50  0000 C CNN
-F 1 "74LS244" H 5600 6515 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5500 6915 50  0001 C CNN
-F 3 "" H 5500 6915 50  0001 C CNN
-	1    5500 6915
-	-1   0    0    -1  
-$EndComp
 $Comp
 L GND #PWR04
 U 1 1 5A63FE7C
-P 6350 7510
-F 0 "#PWR04" H 6350 7260 50  0001 C CNN
-F 1 "GND" H 6350 7360 50  0000 C CNN
-F 2 "" H 6350 7510 50  0001 C CNN
-F 3 "" H 6350 7510 50  0001 C CNN
-	1    6350 7510
+P 6030 7090
+F 0 "#PWR04" H 6030 6840 50  0001 C CNN
+F 1 "GND" H 6030 6940 50  0000 C CNN
+F 2 "" H 6030 7090 50  0001 C CNN
+F 3 "" H 6030 7090 50  0001 C CNN
+	1    6030 7090
 	1    0    0    -1  
 $EndComp
-NoConn ~ 10465 2505
-Text Label 3140 5095 1    60   ~ 0
+Text Label 3380 4475 1    60   ~ 0
 VCC
 Text Label 10210 2505 0    60   ~ 0
 RD6
 $Comp
 L LVC4245 U4
 U 1 1 5AE9CA4C
-P 5520 4120
-F 0 "U4" H 5470 4820 60  0000 C CNN
-F 1 "LVC4245" H 5520 4270 60  0000 C CNN
-F 2 "Housings_SOIC:SOIC-24W_7.5x15.4mm_Pitch1.27mm" H 5670 4720 60  0001 C CNN
-F 3 "" H 5670 4720 60  0001 C CNN
-	1    5520 4120
+P 2520 6740
+F 0 "U4" H 2470 7440 60  0000 C CNN
+F 1 "LVC4245" H 2520 6890 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-24W_7.5x15.4mm_Pitch1.27mm" H 2670 7340 60  0001 C CNN
+F 3 "" H 2670 7340 60  0001 C CNN
+	1    2520 6740
 	1    0    0    -1  
 $EndComp
-Text Label 4745 3570 2    60   ~ 0
+Text Label 1745 6190 2    60   ~ 0
 5V0
 Wire Wire Line
-	3300 1860 3700 1860
+	3320 1580 3720 1580
 Wire Wire Line
-	3300 1960 3700 1960
+	3320 1680 3720 1680
 Wire Wire Line
-	3300 2060 3700 2060
+	3320 1780 3720 1780
 Wire Wire Line
-	3300 2160 3700 2160
+	3320 1880 3720 1880
 Wire Wire Line
-	3300 2260 3700 2260
+	3320 1980 3720 1980
 Wire Wire Line
-	3300 2360 3700 2360
+	3320 2080 3720 2080
 Wire Wire Line
-	3300 3360 3700 3360
+	3320 3080 3720 3080
 Wire Wire Line
-	3300 3560 3700 3560
+	3320 3280 3720 3280
 Wire Wire Line
-	3300 3660 3700 3660
+	3320 3380 3720 3380
 Wire Wire Line
-	3300 3760 3700 3760
+	3320 3480 3720 3480
 Wire Wire Line
-	3300 3860 3700 3860
+	3320 3580 3720 3580
 Wire Wire Line
-	3300 3960 3700 3960
+	3320 3680 3720 3680
 Wire Wire Line
-	3300 4060 3700 4060
+	3320 3780 3720 3780
 Wire Wire Line
-	3300 1660 3700 1660
+	3320 1380 3720 1380
 Wire Wire Line
-	3300 1760 3700 1760
+	3320 1480 3720 1480
 Wire Wire Line
 	10155 2405 10465 2405
 Wire Wire Line
@@ -694,300 +646,298 @@ Wire Wire Line
 Wire Wire Line
 	9455 1335 9455 1605
 Wire Wire Line
-	6230 1080 6630 1080
+	5860 1555 6260 1555
 Wire Wire Line
-	6230 1180 6630 1180
+	5860 1655 6260 1655
 Wire Wire Line
-	6230 1280 6630 1280
+	5860 1755 6260 1755
 Wire Wire Line
-	6230 1380 6630 1380
+	5860 1855 6260 1855
 Wire Wire Line
-	6230 1480 6630 1480
+	5860 1955 6260 1955
 Wire Wire Line
-	6230 1580 6630 1580
+	5860 2055 6260 2055
 Wire Wire Line
-	6230 880  6630 880 
+	5860 1355 6260 1355
 Wire Wire Line
-	6230 980  6630 980 
+	5860 1455 6260 1455
 Wire Wire Line
-	1500 2660 1900 2660
+	1520 2380 1920 2380
 Wire Wire Line
-	1500 2760 1900 2760
+	1520 2480 1920 2480
 Wire Wire Line
-	1500 2860 1900 2860
+	1520 2580 1920 2580
 Wire Wire Line
-	1500 2960 1900 2960
+	1520 2680 1920 2680
 Wire Wire Line
-	1500 3360 1900 3360
+	1520 3080 1920 3080
 Wire Wire Line
-	1500 3460 1900 3460
+	1520 3180 1920 3180
 Wire Wire Line
-	1500 3560 1900 3560
+	1520 3280 1920 3280
 Wire Wire Line
-	1500 3660 1900 3660
+	1520 3380 1920 3380
 Wire Wire Line
-	1500 3960 1900 3960
+	1520 3680 1920 3680
 Wire Wire Line
-	1500 4060 1900 4060
+	1520 3780 1920 3780
 Wire Wire Line
-	1500 2260 1900 2260
+	1520 1980 1920 1980
 Wire Wire Line
-	1500 2360 1900 2360
+	1520 2080 1920 2080
 Wire Wire Line
-	1500 1960 1900 1960
+	1520 1680 1920 1680
 Wire Wire Line
-	1500 1660 1900 1660
+	1520 1380 1920 1380
 Wire Wire Line
-	2600 1360 2600 1075
+	2620 1080 2620 795 
 Wire Wire Line
-	3300 2660 3700 2660
+	3320 2380 3720 2380
 Wire Wire Line
-	3300 2760 3700 2760
+	3320 2480 3720 2480
 Wire Wire Line
-	3300 2860 3700 2860
+	3320 2580 3720 2580
 Wire Wire Line
-	3300 2960 3700 2960
+	3320 2680 3720 2680
 Wire Wire Line
-	3300 3060 3700 3060
+	3320 2780 3720 2780
 Wire Wire Line
-	3300 3160 3700 3160
+	3320 2880 3720 2880
 Wire Wire Line
-	3300 2460 3700 2460
+	3320 2180 3720 2180
 Wire Wire Line
-	3300 2560 3700 2560
+	3320 2280 3720 2280
 Wire Wire Line
-	3300 3460 3700 3460
+	3320 3180 3720 3180
 Wire Wire Line
-	4430 1080 4830 1080
+	4460 1555 4860 1555
 Wire Wire Line
-	4430 1180 4830 1180
+	4460 1655 4860 1655
 Wire Wire Line
-	4430 1280 4830 1280
+	4460 1755 4860 1755
 Wire Wire Line
-	4430 1380 4830 1380
+	4460 1855 4860 1855
 Wire Wire Line
-	4430 1480 4830 1480
+	4460 1955 4860 1955
 Wire Wire Line
-	4430 1880 4830 1880
+	4460 2355 4860 2355
 Wire Wire Line
-	4430 880  4830 880 
+	4460 1355 4860 1355
 Wire Wire Line
-	4430 980  4830 980 
+	4460 1455 4860 1455
 Wire Wire Line
-	4435 2390 4835 2390
+	4485 3070 4885 3070
 Wire Wire Line
-	4435 2490 4835 2490
+	4485 3170 4885 3170
 Wire Wire Line
-	4435 2590 4835 2590
+	4485 3270 4885 3270
 Wire Wire Line
-	4435 2690 4835 2690
+	4485 3370 4885 3370
 Wire Wire Line
-	4435 2790 4835 2790
+	4485 3470 4885 3470
 Wire Wire Line
-	4435 2890 4835 2890
+	4485 3570 4885 3570
 Wire Wire Line
-	4435 2190 4835 2190
+	4485 2870 4885 2870
 Wire Wire Line
-	4435 2290 4835 2290
+	4485 2970 4885 2970
 Wire Wire Line
-	4470 3770 4870 3770
+	1470 6390 1870 6390
 Wire Wire Line
-	4470 3970 4870 3970
+	1470 6590 1870 6590
 Wire Wire Line
-	4470 4070 4870 4070
+	1470 6690 1870 6690
 Wire Wire Line
-	4470 4170 4870 4170
+	1470 6790 1870 6790
 Wire Wire Line
-	4470 4270 4870 4270
+	1470 6890 1870 6890
 Wire Wire Line
-	4470 4370 4870 4370
+	1470 6990 1870 6990
 Wire Wire Line
-	4470 4470 4870 4470
+	1470 7090 1870 7090
 Wire Wire Line
-	4470 3870 4870 3870
+	1470 6490 1870 6490
 Wire Wire Line
-	6235 2390 6635 2390
+	5885 3070 6285 3070
 Wire Wire Line
-	6235 2490 6635 2490
+	5885 3170 6285 3170
 Wire Wire Line
-	6235 2590 6635 2590
+	5885 3270 6285 3270
 Wire Wire Line
-	6235 2690 6635 2690
+	5885 3370 6285 3370
 Wire Wire Line
-	6235 2790 6635 2790
+	5885 3470 6285 3470
 Wire Wire Line
-	6235 2890 6635 2890
+	5885 3570 6285 3570
 Wire Wire Line
-	6235 2190 6635 2190
+	5885 2870 6285 2870
 Wire Wire Line
-	6235 2290 6635 2290
+	5885 2970 6285 2970
 Wire Wire Line
-	6170 4070 6570 4070
+	3170 6690 3570 6690
 Wire Wire Line
-	6170 4170 6570 4170
+	3170 6790 3570 6790
 Wire Wire Line
-	6170 4270 6570 4270
+	3170 6890 3570 6890
 Wire Wire Line
-	6170 4370 6570 4370
+	3170 6990 3570 6990
 Wire Wire Line
-	6170 4470 6570 4470
+	3170 7090 3570 7090
 Wire Wire Line
-	6170 4570 6570 4570
+	3170 7190 3570 7190
 Wire Wire Line
-	6170 3870 6570 3870
+	3170 6490 3570 6490
 Wire Wire Line
-	6170 3970 6570 3970
+	3170 6590 3570 6590
 Wire Wire Line
-	4420 5085 4820 5085
+	4485 4510 4885 4510
 Wire Wire Line
-	4420 5285 4820 5285
+	4485 4710 4885 4710
 Wire Wire Line
-	4420 5385 4820 5385
+	4485 4810 4885 4810
 Wire Wire Line
-	4420 5485 4820 5485
+	4485 4910 4885 4910
 Wire Wire Line
-	4420 5585 4820 5585
+	4485 5010 4885 5010
 Wire Wire Line
-	4420 5685 4820 5685
+	4485 5110 4885 5110
 Wire Wire Line
-	4420 5785 4820 5785
+	4485 5210 4885 5210
 Wire Wire Line
-	4420 5185 4820 5185
+	4485 4610 4885 4610
 Wire Wire Line
-	6220 5285 6620 5285
+	5885 4710 6285 4710
 Wire Wire Line
-	6220 5385 6620 5385
+	5885 4810 6285 4810
 Wire Wire Line
-	6220 5485 6620 5485
+	5885 4910 6285 4910
 Wire Wire Line
-	6220 5585 6620 5585
+	5885 5010 6285 5010
 Wire Wire Line
-	6220 5685 6620 5685
+	5885 5110 6285 5110
 Wire Wire Line
-	6220 5785 6620 5785
+	5885 5210 6285 5210
 Wire Wire Line
-	6220 5085 6620 5085
+	5885 4510 6285 4510
 Wire Wire Line
-	6220 5185 6620 5185
+	5885 4610 6285 4610
 Wire Wire Line
-	4400 6415 4800 6415
+	4480 5995 4880 5995
 Wire Wire Line
-	4400 6615 4800 6615
+	4480 6195 4880 6195
 Wire Wire Line
-	4400 6715 4800 6715
+	4480 6295 4880 6295
 Wire Wire Line
-	4400 6815 4800 6815
+	4480 6395 4880 6395
 Wire Wire Line
-	4400 6915 4800 6915
+	4480 6495 4880 6495
 Wire Wire Line
-	4400 6515 4800 6515
+	4480 6095 4880 6095
 Wire Wire Line
-	6200 6615 6600 6615
+	5880 6195 6280 6195
 Wire Wire Line
-	6200 6715 6600 6715
+	5880 6295 6280 6295
 Wire Wire Line
-	6200 6815 6600 6815
+	5880 6395 6280 6395
 Wire Wire Line
-	6200 6915 6600 6915
+	5880 6495 6280 6495
 Wire Wire Line
-	6200 6415 6600 6415
+	5880 5995 6280 5995
 Wire Wire Line
-	6200 6515 6600 6515
+	5880 6095 6280 6095
 Wire Wire Line
-	4430 1580 4830 1580
+	4460 2055 4860 2055
 Wire Wire Line
-	4430 1780 4830 1780
+	4460 2255 4860 2255
 Wire Wire Line
-	4435 3190 4835 3190
+	4485 3870 4885 3870
 Wire Wire Line
-	4435 3090 4835 3090
+	4485 3770 4885 3770
 Wire Wire Line
-	4420 6085 4820 6085
+	4485 5510 4885 5510
 Wire Wire Line
-	4420 5985 4820 5985
+	4485 5410 4885 5410
 Wire Wire Line
-	4400 7115 4800 7115
+	4480 6695 4880 6695
 Wire Wire Line
-	4400 7015 4800 7015
+	4480 6595 4880 6595
 Wire Wire Line
-	6200 7115 6600 7115
+	5880 6695 6280 6695
 Wire Wire Line
-	6200 7015 6600 7015
+	5880 6595 6280 6595
 Wire Wire Line
-	2230 5210 1950 5210
+	2470 4590 2190 4590
 Wire Wire Line
-	2430 5210 2645 5210
+	2670 4590 2885 4590
 Wire Wire Line
-	2945 5210 3140 5210
+	3185 4590 3380 4590
 Wire Wire Line
-	2230 5520 1950 5520
+	2470 4900 2190 4900
 Wire Wire Line
-	2430 5520 2645 5520
+	2670 4900 2885 4900
 Wire Wire Line
-	2235 5840 1955 5840
+	2475 5220 2195 5220
 Wire Wire Line
-	2435 5840 2650 5840
+	2675 5220 2890 5220
 Wire Wire Line
-	2950 5840 3140 5840
+	3190 5220 3380 5220
 Wire Wire Line
-	2235 6150 1955 6150
+	2475 5530 2195 5530
 Wire Wire Line
-	2435 6150 2650 6150
+	2675 5530 2890 5530
 Wire Wire Line
-	3140 6150 2950 6150
+	3380 5530 3190 5530
 Wire Wire Line
-	3140 4850 3140 6150
-Connection ~ 3140 5840
+	3380 4230 3380 5530
+Connection ~ 3380 5220
 Wire Wire Line
-	2945 5520 3140 5520
-Connection ~ 3140 5520
-Connection ~ 3140 5210
+	3185 4900 3380 4900
+Connection ~ 3380 4900
+Connection ~ 3380 4590
 Wire Wire Line
-	6200 7315 6350 7315
+	5880 6895 6030 6895
 Wire Wire Line
-	6350 7315 6350 7510
+	6030 6895 6030 7090
 Wire Wire Line
-	6200 7415 6350 7415
-Connection ~ 6350 7415
+	5880 6995 6030 6995
+Connection ~ 6030 6995
 Wire Wire Line
-	4470 3570 4870 3570
+	1470 6190 1870 6190
 Wire Wire Line
-	4470 3670 4870 3670
+	1470 6290 1870 6290
 Text Label 10215 2705 0    60   ~ 0
-RC7
+RD7
 Text Label 8140 3205 0    60   ~ 0
 RC26
 Text Label 8140 3305 0    60   ~ 0
 RC27
 Text Label 9455 1595 1    60   ~ 0
 3V3
-Text Label 6275 3570 0    60   ~ 0
+Text Label 3275 6190 0    60   ~ 0
 3V3
-Text Label 6275 3670 0    60   ~ 0
+Text Label 3275 6290 0    60   ~ 0
 3V3
-Text Label 6280 3770 0    60   ~ 0
+Text Label 3280 6390 0    60   ~ 0
 DAT_EN
 Wire Wire Line
-	6170 3770 6570 3770
+	3170 6390 3570 6390
 Wire Wire Line
-	6170 3570 6570 3570
+	3170 6190 3570 6190
 Wire Wire Line
-	6170 3670 6570 3670
-Text Label 4570 4670 0    60   ~ 0
+	3170 6290 3570 6290
+Text Label 1570 7290 0    60   ~ 0
 GND
 Wire Wire Line
-	4470 4670 4870 4670
+	1470 7290 1870 7290
 Wire Wire Line
-	4470 4570 4870 4570
-Text Label 4575 4570 0    60   ~ 0
+	1470 7190 1870 7190
+Text Label 1575 7190 0    60   ~ 0
 GND
-Text Label 6280 4670 0    60   ~ 0
+Text Label 3280 7290 0    60   ~ 0
 GND
 Wire Wire Line
-	6170 4670 6570 4670
-Text Label 9355 1385 1    60   ~ 0
-VCC
-Text Label 4515 5485 0    60   ~ 0
+	3170 7290 3570 7290
+Text Label 4580 4910 0    60   ~ 0
 RD
 $Comp
 L 74LS05 U7
@@ -1000,9 +950,9 @@ F 3 "" H 7860 4930 50  0001 C CNN
 	1    7860 4930
 	1    0    0    -1  
 $EndComp
-Text Label 6325 5385 0    60   ~ 0
+Text Label 5990 4810 0    60   ~ 0
 RC22
-Text Label 4520 5285 0    60   ~ 0
+Text Label 4585 4710 0    60   ~ 0
 HALT
 Text Label 7045 4930 0    60   ~ 0
 RC27
@@ -1019,5 +969,85 @@ RA12     I RD\nRA13     I WR\nRA14     I M1\nRA15     I RFSH\nRC16     O RESET\n
 Text Notes 7345 6890 0    118  ~ 0
 Raspberry Pi based real Z80 board V4
 Text Notes 8165 7645 0    60   ~ 0
-2018.08.15
+2018.11.26
+NoConn ~ 6280 6695
+NoConn ~ 4480 6695
+$Comp
+L 74HC244 U6
+U 1 1 5BFA8C84
+P 5385 5010
+F 0 "U6" H 5485 5660 50  0000 L CNN
+F 1 "74HC244" H 5435 4360 50  0000 L CNN
+F 2 "" H 5385 5010 50  0000 C CNN
+F 3 "" H 5385 5010 50  0000 C CNN
+	1    5385 5010
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC244 U3
+U 1 1 5BFA8E69
+P 5385 3370
+F 0 "U3" H 5485 4020 50  0000 L CNN
+F 1 "74HC244" H 5435 2720 50  0000 L CNN
+F 2 "" H 5385 3370 50  0000 C CNN
+F 3 "" H 5385 3370 50  0000 C CNN
+	1    5385 3370
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC244 U2
+U 1 1 5BFA8EF0
+P 5360 1855
+F 0 "U2" H 5460 2505 50  0000 L CNN
+F 1 "74HC244" H 5410 1205 50  0000 L CNN
+F 2 "" H 5360 1855 50  0000 C CNN
+F 3 "" H 5360 1855 50  0000 C CNN
+	1    5360 1855
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC244 U5
+U 1 1 5BFA9528
+P 5380 6495
+F 0 "U5" H 5480 7145 50  0000 L CNN
+F 1 "74HC244" H 5430 5845 50  0000 L CNN
+F 2 "" H 5380 6495 50  0000 C CNN
+F 3 "" H 5380 6495 50  0000 C CNN
+	1    5380 6495
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5360 1155 5625 1155
+Wire Wire Line
+	5360 2555 5685 2555
+Wire Wire Line
+	5385 2670 5710 2670
+Wire Wire Line
+	5710 2670 5710 2665
+Wire Wire Line
+	5385 4070 5710 4070
+Wire Wire Line
+	5385 4310 5730 4310
+Wire Wire Line
+	5385 5710 5685 5710
+Wire Wire Line
+	5380 5795 5685 5795
+Wire Wire Line
+	5380 7195 5705 7195
+Text Label 5475 4070 0    60   ~ 0
+GND
+Text Label 5460 2555 0    60   ~ 0
+GND
+Text Label 5460 5710 0    60   ~ 0
+GND
+Text Label 5505 7195 0    60   ~ 0
+GND
+Text Label 5580 1155 2    60   ~ 0
+3V3
+Text Label 5645 2670 2    60   ~ 0
+3V3
+Text Label 5660 4310 2    60   ~ 0
+3V3
+Text Label 5635 5795 2    60   ~ 0
+5V0
 $EndSCHEMATC

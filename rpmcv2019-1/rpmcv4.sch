@@ -124,7 +124,7 @@ GND
 Text Label 9250 3345 0    60   ~ 0
 SNDIN
 Text Label 10100 3345 0    60   ~ 0
-+12V
+-12V
 Text Label 10100 3245 0    60   ~ 0
 +12V
 Text Label 9250 1245 0    60   ~ 0
@@ -639,7 +639,7 @@ GND
 Text Label 9245 6230 0    60   ~ 0
 SNDIN
 Text Label 10095 6230 0    60   ~ 0
-+12V
+-12V
 Text Label 10095 6130 0    60   ~ 0
 +12V
 Text Label 9245 4130 0    60   ~ 0

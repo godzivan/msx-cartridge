@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source C:\msys64\home\meesokim\msx-cartridge\rpiapplev3\rpiapple.sch)
-    (date "2018-08-17 오전 2:44:55")
+    (source C:/msys64/home/meesokim/msx-cartridge/rpiapplev3/rpiapple.sch)
+    (date "2018-11-25 오후 11:01:53")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -415,10 +415,10 @@
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
     (library (logical 74xx)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\74xx.lib"))
-    (library (logical msx_slot)
-      (uri C:\msys64\home\meesokim\msx-cartridge\libraries\msx_slot.lib))
     (library (logical apple2)
-      (uri ..\libraries\apple2.lib)))
+      (uri ..\libraries\apple2.lib))
+    (library (logical msx_slot)
+      (uri C:\msys64\home\meesokim\msx-cartridge\libraries\msx_slot.lib)))
   (nets
     (net (code 1) (name GND)
       (node (ref J1) (pin 39))

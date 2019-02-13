@@ -1,5 +1,5 @@
 Drill report for C:\msys64\home\meesokim\msx-cartridge\rompack\rompack.kicad_pcb
-Created on 2018-09-12 오전 2:47:03
+Created on 2019-01-20 오전 1:56:05
 
 Copper Layer Stackup:
     =============================================================
@@ -10,10 +10,10 @@ Copper Layer Stackup:
 Drill file 'rompack.drl' contains
     plated through holes:
     =============================================================
-    T1  0.40mm  0.016"  (21 holes)
-    T2  0.80mm  0.031"  (28 holes)
+    T1  0.40mm  0.016"  (15 holes)
+    T2  1.45mm  0.057"  (28 holes)
 
-    Total plated holes count 49
+    Total plated holes count 43
 
 
 Drill file 'rompack-NPTH.drl' contains
