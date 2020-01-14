@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 7974)
+    (start_pass_no 5190)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -77,7 +77,8 @@
     /D5 /D4 /D7 /D6 /CLK +3V3 /RA8 /RA10
     /RA11 /RA15 /RA12 /RA9 /RA13 /RA14 "Net-(D1-Pad2)" "Net-(D2-Pad2)"
     "Net-(D3-Pad2)" /RC17 /RC18 /RC27 /RC23 /RC25 /RC19 /RC20
-    /RC16 /RC26 /RC22 /RC21
+    /RC16 /RC26 /RC22 /RC21 "/WR_EXT" /RFSH /BUSDIR "Net-(P1-Pad16)"
+    /+12V /SNDIN "/-12V"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

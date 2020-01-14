@@ -1,0 +1,21 @@
+Drill report for C:\msys64\home\meesokim\msx-cartridge\minipack\minipack.kicad_pcb
+Created on 2019-02-20 오후 9:14:58
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'minipack.drl' contains
+    plated through holes:
+    =============================================================
+
+    Total plated holes count 0
+
+
+Drill file 'minipack-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+
+    Total unplated holes count 0

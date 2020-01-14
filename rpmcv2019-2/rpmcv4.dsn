@@ -43,6 +43,18 @@
     )
   )
   (placement
+    (component Mounting_Holes:MountingHole_2.5mm
+      (place REF6 209753 -111036 front 0 (PN MountingHole_2.5mm))
+    )
+    (component Mounting_Holes:MountingHole_2.5mm::1
+      (place REF4 209499 -61925.2 front 0 (PN MountingHole_2.5mm))
+    )
+    (component Mounting_Holes:MountingHole_2.5mm::2
+      (place REF1 119215 -110947 front 0 (PN MountingHole_2.5mm))
+      (place REF2 119202 -61925.2 front 0 (PN MountingHole_2.5mm))
+      (place REF5 177152 -110960 front 0 (PN MountingHole_2.5mm))
+      (place REF3 177140 -61963.3 front 0 (PN MountingHole_2.5mm))
+    )
     (component Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm
       (place J1 172298 -109703 back 270 (PN RPi_GPIO))
     )
@@ -58,20 +70,67 @@
       (place U7 129235 -93037.7 back 90 (PN 74LS08))
     )
     (component LEDs:LED_D3.0mm
-      (place D1 180340 -109220 front 0 (PN LED))
-      (place D2 189230 -109220 front 0 (PN LED))
-      (place D3 198120 -109220 front 0 (PN LED))
+      (place D1 182842 -110465 front 0 (PN LED))
+      (place D2 191732 -110465 front 0 (PN LED))
+      (place D3 200622 -110465 front 0 (PN LED))
     )
     (component MSX:MSX_SLOT
       (place P1 161798 -74676 front 0 (PN CONN_02X25))
     )
     (component Resistors_SMD:R_0603_HandSoldering
-      (place R1 181610 -105410 back 180 (PN R))
-      (place R2 190500 -105410 back 180 (PN R))
-      (place R3 199390 -105410 back 180 (PN R))
+      (place R1 184112 -106655 back 180 (PN R))
+      (place R2 193002 -106655 back 180 (PN R))
+      (place R3 201892 -106655 back 180 (PN R))
+    )
+    (component MSX:raspberry_pi_logo
+      (place G1 172110 -93167.2 front 0 (PN LOGO))
+      (place G*** 203848 -93611.7 back 0 (PN LOGO))
+      (place G2 193802 -92722.7 front 0 (PN LOGO))
     )
   )
   (library
+    (image Mounting_Holes:MountingHole_2.5mm
+      (outline (path signal 150  2500 0  2377.64 -772.542  2022.54 -1469.46  1469.46 -2022.54
+            772.542 -2377.64  0 -2500  -772.542 -2377.64  -1469.46 -2022.54
+            -2022.54 -1469.46  -2377.64 -772.542  -2500 0  -2377.64 772.542
+            -2022.54 1469.46  -1469.46 2022.54  -772.542 2377.64  0 2500
+            772.542 2377.64  1469.46 2022.54  2022.54 1469.46  2377.64 772.542))
+      (outline (path signal 50  2750 0  2615.41 -849.797  2224.8 -1616.41  1616.41 -2224.8
+            849.797 -2615.41  0 -2750  -849.797 -2615.41  -1616.41 -2224.8
+            -2224.8 -1616.41  -2615.41 -849.797  -2750 0  -2615.41 849.797
+            -2224.8 1616.41  -1616.41 2224.8  -849.797 2615.41  0 2750  849.797 2615.41
+            1616.41 2224.8  2224.8 1616.41  2615.41 849.797))
+      (keepout "" (circle F.Cu 2500 -254 76.2))
+      (keepout "" (circle B.Cu 2500 -254 76.2))
+    )
+    (image Mounting_Holes:MountingHole_2.5mm::1
+      (outline (path signal 150  2500 0  2377.64 -772.542  2022.54 -1469.46  1469.46 -2022.54
+            772.542 -2377.64  0 -2500  -772.542 -2377.64  -1469.46 -2022.54
+            -2022.54 -1469.46  -2377.64 -772.542  -2500 0  -2377.64 772.542
+            -2022.54 1469.46  -1469.46 2022.54  -772.542 2377.64  0 2500
+            772.542 2377.64  1469.46 2022.54  2022.54 1469.46  2377.64 772.542))
+      (outline (path signal 50  2750 0  2615.41 -849.797  2224.8 -1616.41  1616.41 -2224.8
+            849.797 -2615.41  0 -2750  -849.797 -2615.41  -1616.41 -2224.8
+            -2224.8 -1616.41  -2615.41 -849.797  -2750 0  -2615.41 849.797
+            -2224.8 1616.41  -1616.41 2224.8  -849.797 2615.41  0 2750  849.797 2615.41
+            1616.41 2224.8  2224.8 1616.41  2615.41 849.797))
+      (keepout "" (circle F.Cu 2500 0 -34.7))
+      (keepout "" (circle B.Cu 2500 0 -34.7))
+    )
+    (image Mounting_Holes:MountingHole_2.5mm::2
+      (outline (path signal 150  2500 0  2377.64 -772.542  2022.54 -1469.46  1469.46 -2022.54
+            772.542 -2377.64  0 -2500  -772.542 -2377.64  -1469.46 -2022.54
+            -2022.54 -1469.46  -2377.64 -772.542  -2500 0  -2377.64 772.542
+            -2022.54 1469.46  -1469.46 2022.54  -772.542 2377.64  0 2500
+            772.542 2377.64  1469.46 2022.54  2022.54 1469.46  2377.64 772.542))
+      (outline (path signal 50  2750 0  2615.41 -849.797  2224.8 -1616.41  1616.41 -2224.8
+            849.797 -2615.41  0 -2750  -849.797 -2615.41  -1616.41 -2224.8
+            -2224.8 -1616.41  -2615.41 -849.797  -2750 0  -2615.41 849.797
+            -2224.8 1616.41  -1616.41 2224.8  -849.797 2615.41  0 2750  849.797 2615.41
+            1616.41 2224.8  2224.8 1616.41  2615.41 849.797))
+      (keepout "" (circle F.Cu 2500))
+      (keepout "" (circle B.Cu 2500))
+    )
     (image Socket_Strips:Socket_Strip_Straight_2x20_Pitch2.54mm
       (outline (path signal 100  -3810 1270  -3810 -49530))
       (outline (path signal 100  -3810 -49530  1270 -49530))
@@ -330,6 +389,8 @@
       (pin Rect[T]Pad_1200x900_um 1 -1100 0)
       (pin Rect[T]Pad_1200x900_um 2 1100 0)
     )
+    (image MSX:raspberry_pi_logo
+    )
     (padstack Round[A]Pad_1524_um
       (shape (circle F.Cu 1524))
       (shape (circle B.Cu 1524))
@@ -425,7 +486,7 @@
       (pins J1-18 P1-8)
     )
     (net /M1
-      (pins U4-5 U7-11 P1-5 P1-9)
+      (pins U7-11 P1-9)
     )
     (net /IORQ
       (pins U4-16 P1-11)
@@ -586,12 +647,33 @@
     (net /RC21
       (pins J1-40 U5-2)
     )
+    (net /WR_EXT
+      (pins U4-5 P1-5)
+    )
+    (net /RFSH
+      (pins P1-6)
+    )
+    (net /BUSDIR
+      (pins P1-10)
+    )
+    (net "Net-(P1-Pad16)"
+      (pins P1-16)
+    )
+    (net /+12V
+      (pins P1-48)
+    )
+    (net /SNDIN
+      (pins P1-49)
+    )
+    (net "/-12V"
+      (pins P1-50)
+    )
     (class kicad_default "" +3V3 /+12V "/-12V" /A0 /A1 /A10 /A11 /A12 /A13
       /A14 /A15 /A2 /A3 /A4 /A5 /A6 /A7 /A8 /A9 /BUSDIR /CLK /CS1 /CS12 /CS2
       /D0 /D1 /D2 /D3 /D4 /D5 /D6 /D7 /INT /IORQ /M1 /MREQ /RA10 /RA11 /RA12
       /RA13 /RA14 /RA15 /RA8 /RA9 /RC16 /RC17 /RC18 /RC19 /RC20 /RC21 /RC22
       /RC23 /RC25 /RC26 /RC27 /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6 /RD7
-      /RESET /RFSH /SLTSL1 /SNDIN /WR GND "Net-(D1-Pad2)" "Net-(D2-Pad2)"
+      /RESET /RFSH /SLTSL1 /SNDIN /WR /WR_EXT GND "Net-(D1-Pad2)" "Net-(D2-Pad2)"
       "Net-(D3-Pad2)" "Net-(P1-Pad16)"
       (circuit
         (use_via Via[0-1]_600:400_um)

@@ -176,7 +176,7 @@ Wire Wire Line
 Wire Wire Line
 	5500 2285 5750 2285
 Wire Wire Line
-	5500 2385 5750 2385
+	5210 2385 5750 2385
 Wire Wire Line
 	5500 2485 5750 2485
 Wire Wire Line
@@ -356,5 +356,21 @@ NoConn ~ 7480 4185
 NoConn ~ 5500 4585
 NoConn ~ 7405 3790
 NoConn ~ 5500 3385
-NoConn ~ 6080 2830
+$Comp
+L R R1
+U 1 1 5C6D686C
+P 5210 2215
+F 0 "R1" V 5290 2215 50  0000 C CNN
+F 1 "R" V 5210 2215 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5140 2215 50  0001 C CNN
+F 3 "" H 5210 2215 50  0001 C CNN
+	1    5210 2215
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5210 2385 5210 2365
+Wire Wire Line
+	5210 2065 5210 1905
+Text Label 5210 2050 1    60   ~ 0
+VCC
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=2019-02-13 오전 1:32:37
+update=2019-03-19 오전 3:04:42
 version=1
 last_client=kicad
 [cvpcb]
@@ -69,16 +69,6 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -180,3 +170,13 @@ LibName94=zetex
 LibName95=Zilog
 LibName96=C:/msys64/home/meesokim/msx-cartridge/libraries/IC_raspberry
 LibName97=C:/msys64/home/meesokim/msx-cartridge/libraries/msx_slot
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

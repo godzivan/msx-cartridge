@@ -1,0 +1,186 @@
+(pcb "C:\msys64\home\meesokim\msx-cartridge\minipack\minipack.dsn"
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "4.0.7")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  139189 -77083.9  138364 -77083.9  138364 -93403.4  138366 -109728
+            139192 -109728  139192 -109538  139192 -106045  140018 -106045
+            140018 -109728  141732 -109728  141732 -109538  141732 -106045
+            142558 -106045  142558 -109728  144272 -109728  144272 -109538
+            144272 -106045  145098 -106045  145098 -109728  146812 -109728
+            146812 -109538  146812 -106045  147638 -106045  147638 -109728
+            149352 -109728  149352 -109538  149352 -106045  150178 -106045
+            150178 -109728  151892 -109728  151892 -109538  151892 -106045
+            152718 -106045  152718 -109728  154432 -109728  154432 -109538
+            154432 -106045  155258 -106045  155258 -109728  156972 -109728
+            156972 -109538  156972 -106045  157798 -106045  157798 -109728
+            158623 -109728  158623 -93408.5  158620 -77083.9  157795 -77083.9
+            157795 -77274.4  157795 -80766.9  156969 -80766.9  156969 -77083.9
+            155255 -77083.9  155255 -77274.4  155255 -80766.9  154429 -80766.9
+            154429 -77083.9  152715 -77083.9  152715 -77274.4  152715 -80766.9
+            151889 -80766.9  151889 -77083.9  150175 -77083.9  150175 -77274.4
+            150175 -80766.9  149349 -80766.9  149349 -77083.9  147635 -77083.9
+            147635 -77274.4  147635 -80766.9  146809 -80766.9  146809 -77083.9
+            145095 -77083.9  145095 -77274.4  145095 -80766.9  144269 -80766.9
+            144269 -77083.9  142555 -77083.9  142555 -77274.4  142555 -80766.9
+            141729 -80766.9  141729 -77083.9  140015 -77083.9  140015 -77274.4
+            140015 -80766.9  139189 -80766.9  139189 -77083.9  139189 -77083.9)
+    )
+    (plane /GND (polygon F.Cu 0  138074 -92964  138138 -110871  159512 -110300  159194 -75946
+            138201 -76301.6))
+    (plane /GND (polygon B.Cu 0  138189 -92989.4  138024 -110871  159131 -110490  159322 -76327
+            138100 -76314.3))
+    (via "Via[0-1]_600:400_um")
+    (rule
+      (width 250)
+      (clearance 200.1)
+      (clearance 200.1 (type default_smd))
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component MSX:minipack
+      (place J1 148501 -105004 front 0 (PN Conn_01x08))
+      (place J2 148473 -81742.3 front 180 (PN Conn_01x08))
+    )
+    (component "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm"
+      (place U1 148476 -99136.2 front 0 (PN W25Q16BVSSIG))
+      (place U2 148504 -87701.1 front 180 (PN W25Q16BVSSIG))
+    )
+  )
+  (library
+    (image MSX:minipack
+      (outline (path signal 150  6350 -5080  10160 -5080))
+      (outline (path signal 150  10160 -5080  10160 11430))
+      (outline (path signal 150  10160 11430  -10160 11430))
+      (outline (path signal 150  -10160 11430  -10160 7620))
+      (outline (path signal 150  -10160 0  -10160 -5080))
+      (outline (path signal 150  -10160 -5080  6350 -5080))
+      (outline (path signal 150  -10160 7620  -10160 0))
+      (pin Rect[T]Pad_1524x4000_um 8 8890 -2540)
+      (pin Rect[T]Pad_1524x4000_um 7 6350 -2540)
+      (pin Rect[T]Pad_1524x4000_um 6 3810 -2540)
+      (pin Rect[T]Pad_1524x4000_um 5 1270 -2540)
+      (pin Rect[T]Pad_1524x4000_um 4 -1270 -2540)
+      (pin Rect[T]Pad_1524x4000_um 3 -3810 -2540)
+      (pin Rect[T]Pad_1524x4000_um 2 -6350 -2540)
+      (pin Rect[T]Pad_1524x4000_um 1 -8890 -2540)
+    )
+    (image "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm"
+      (outline (path signal 100  -950 2450  1950 2450))
+      (outline (path signal 100  1950 2450  1950 -2450))
+      (outline (path signal 100  1950 -2450  -1950 -2450))
+      (outline (path signal 100  -1950 -2450  -1950 1450))
+      (outline (path signal 100  -1950 1450  -950 2450))
+      (outline (path signal 50  -3730 2700  -3730 -2700))
+      (outline (path signal 50  3730 2700  3730 -2700))
+      (outline (path signal 50  -3730 2700  3730 2700))
+      (outline (path signal 50  -3730 -2700  3730 -2700))
+      (outline (path signal 150  -2075 2575  -2075 2525))
+      (outline (path signal 150  2075 2575  2075 2430))
+      (outline (path signal 150  2075 -2575  2075 -2430))
+      (outline (path signal 150  -2075 -2575  -2075 -2430))
+      (outline (path signal 150  -2075 2575  2075 2575))
+      (outline (path signal 150  -2075 -2575  2075 -2575))
+      (outline (path signal 150  -2075 2525  -3475 2525))
+      (pin Rect[T]Pad_1550x600_um 1 -2700 1905)
+      (pin Rect[T]Pad_1550x600_um 2 -2700 635)
+      (pin Rect[T]Pad_1550x600_um 3 -2700 -635)
+      (pin Rect[T]Pad_1550x600_um 4 -2700 -1905)
+      (pin Rect[T]Pad_1550x600_um 5 2700 -1905)
+      (pin Rect[T]Pad_1550x600_um 6 2700 -635)
+      (pin Rect[T]Pad_1550x600_um 7 2700 635)
+      (pin Rect[T]Pad_1550x600_um 8 2700 1905)
+    )
+    (padstack Rect[T]Pad_1524x4000_um
+      (shape (rect F.Cu -762 -2000 762 2000))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1550x600_um
+      (shape (rect F.Cu -775 -300 775 300))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:400_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+  )
+  (network
+    (net /WP
+      (pins J1-3 U1-3)
+    )
+    (net /CS
+      (pins J1-1 U1-1)
+    )
+    (net /GND
+      (pins J1-4 U1-4 J2-4 U2-4)
+    )
+    (net /CLK
+      (pins J1-6 U1-6)
+    )
+    (net /MOSI
+      (pins J1-5 U1-5)
+    )
+    (net /MISO
+      (pins J1-2 U1-2)
+    )
+    (net /VCC
+      (pins J1-8 U1-8)
+    )
+    (net /HOLD
+      (pins J1-7 U1-7)
+    )
+    (net /VCC2
+      (pins J2-8 U2-8)
+    )
+    (net /HOLD2
+      (pins J2-7 U2-7)
+    )
+    (net /CLK2
+      (pins J2-6 U2-6)
+    )
+    (net /MOSI2
+      (pins J2-5 U2-5)
+    )
+    (net /WP2
+      (pins J2-3 U2-3)
+    )
+    (net /MISO2
+      (pins J2-2 U2-2)
+    )
+    (net /CS2
+      (pins J2-1 U2-1)
+    )
+    (class kicad_default "" /CLK /CLK2 /CS /CS2 /GND /HOLD /HOLD2 /MISO /MISO2
+      /MOSI /MOSI2 /VCC /VCC2 /WP /WP2
+      (circuit
+        (use_via Via[0-1]_600:400_um)
+      )
+      (rule
+        (width 250)
+        (clearance 200.1)
+      )
+    )
+  )
+  (wiring
+  )
+)
