@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\msys64\home\meeso.kim\msx-cartridge\rpmpv6\rpmpv1.sch</source>
+	  <source>./rpmpv1.sch</source>
     <date>2018-04-23 오후 7:24:15</date>
     <tool>Eeschema 4.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
@@ -511,16 +511,16 @@
   </libparts>
   <libraries>
     <library logical="device">
-      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
+	    <uri>/usr/share/kicad/library/device.lib</uri>
     </library>
     <library logical="74xx">
-      <uri>C:\Program Files\KiCad\share\kicad\library\74xx.lib</uri>
+	    <uri>/usr/share/kicad/library/74xx.lib</uri>
     </library>
     <library logical="IC_raspberry">
-      <uri>C:\msys64\home\meeso.kim\msx-cartridge\libraries\IC_raspberry.lib</uri>
+	    <uri>/home-mc/meeso.kim/msx-cartridge/libraries/IC_raspberry.lib</uri>
     </library>
     <library logical="msx_slot">
-      <uri>C:\msys64\home\meeso.kim\msx-cartridge\libraries\msx_slot.lib</uri>
+	    <uri>/home-mc/meeso.kim/msx-cartridge/libraries/msx_slot.lib</uri>
     </library>
   </libraries>
   <nets>

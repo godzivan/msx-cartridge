@@ -1,103 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:74xgxx
-LIBS:74xx
-LIBS:ac-dc
-LIBS:actel
-LIBS:adc-dac
-LIBS:allegro
-LIBS:Altera
-LIBS:analog_devices
-LIBS:analog_switches
-LIBS:atmel
-LIBS:audio
-LIBS:battery_management
-LIBS:bbd
-LIBS:bosch
-LIBS:brooktre
-LIBS:cmos_ieee
-LIBS:cmos4000
-LIBS:conn
-LIBS:contrib
-LIBS:cypress
-LIBS:dc-dc
-LIBS:device
-LIBS:digital-audio
-LIBS:diode
-LIBS:display
-LIBS:dsp
-LIBS:elec-unifil
-LIBS:ESD_Protection
-LIBS:ftdi
-LIBS:gennum
-LIBS:graphic_symbols
-LIBS:hc11
-LIBS:infineon
-LIBS:intel
-LIBS:interface
-LIBS:intersil
-LIBS:ir
-LIBS:Lattice
-LIBS:leds
-LIBS:LEM
-LIBS:linear
-LIBS:logic_programmable
-LIBS:maxim
-LIBS:mechanical
-LIBS:memory
-LIBS:microchip
-LIBS:microchip_dspic33dsc
-LIBS:microchip_pic10mcu
-LIBS:microchip_pic12mcu
-LIBS:microchip_pic16mcu
-LIBS:microchip_pic18mcu
-LIBS:microchip_pic24mcu
-LIBS:microchip_pic32mcu
-LIBS:microcontrollers
-LIBS:modules
-LIBS:motor_drivers
-LIBS:motorola
-LIBS:motors
-LIBS:msp430
-LIBS:nordicsemi
-LIBS:nxp
-LIBS:nxp_armmcu
-LIBS:onsemi
-LIBS:opto
-LIBS:Oscillators
-LIBS:philips
-LIBS:power
-LIBS:Power_Management
-LIBS:powerint
-LIBS:pspice
-LIBS:references
-LIBS:regul
-LIBS:relays
-LIBS:rfcom
-LIBS:RFSolutions
-LIBS:sensors
-LIBS:silabs
-LIBS:siliconi
-LIBS:stm8
-LIBS:stm32
-LIBS:supertex
-LIBS:switches
-LIBS:texas
-LIBS:transf
-LIBS:transistors
-LIBS:triac_thyristor
-LIBS:ttl_ieee
-LIBS:valves
-LIBS:video
-LIBS:wiznet
-LIBS:Worldsemi
-LIBS:Xicor
-LIBS:xilinx
-LIBS:zetex
-LIBS:Zilog
-LIBS:IC_raspberry
-LIBS:msx_slot
-LIBS:rpmpv1-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -112,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_02X25 P1
+L msx:CONN_02X25 P1
 U 1 1 5A3E9812
 P 10120 2410
 F 0 "P1" H 10120 3710 50  0000 C CNN
@@ -232,39 +134,39 @@ Text Label 6840 3060 0    60   ~ 0
 RD4
 Text Label 6840 2860 0    60   ~ 0
 RD6
-Text Label 8330 1815 0    60   ~ 0
+Text Label 8300 1800 0    60   ~ 0
 RD
 Text Notes 7400 7525 0    98   ~ 0
 RPMP V1.9 only with 74LVC4245 and some logics
-Text Label 4475 1890 0    60   ~ 0
+Text Label 4449 1950 0    60   ~ 0
 RA10
-Text Label 4475 1490 0    60   ~ 0
+Text Label 4449 1550 0    60   ~ 0
 RA14
-Text Label 4475 2090 0    60   ~ 0
+Text Label 4449 2150 0    60   ~ 0
 RA8
-Text Label 4475 1990 0    60   ~ 0
+Text Label 4449 2050 0    60   ~ 0
 RA9
-Text Label 4475 1790 0    60   ~ 0
+Text Label 4449 1850 0    60   ~ 0
 RA11
-Text Label 4475 1690 0    60   ~ 0
+Text Label 4449 1750 0    60   ~ 0
 RA12
-Text Label 4475 1590 0    60   ~ 0
+Text Label 4449 1650 0    60   ~ 0
 RA13
-Text Label 5830 1990 0    60   ~ 0
+Text Label 5800 2050 0    60   ~ 0
 A9
-Text Label 5830 2090 0    60   ~ 0
+Text Label 5800 2150 0    60   ~ 0
 A8
-Text Label 5835 1790 0    60   ~ 0
+Text Label 5800 1850 0    60   ~ 0
 A11
-Text Label 5830 1890 0    60   ~ 0
+Text Label 5800 1950 0    60   ~ 0
 A10
-Text Label 5825 1590 0    60   ~ 0
+Text Label 5800 1650 0    60   ~ 0
 A13
-Text Label 5830 1690 0    60   ~ 0
+Text Label 5800 1750 0    60   ~ 0
 A12
-Text Label 5820 1390 0    60   ~ 0
+Text Label 5800 1450 0    60   ~ 0
 A15
-Text Label 5820 1490 0    60   ~ 0
+Text Label 5800 1550 0    60   ~ 0
 A14
 Text Label 5840 3500 0    60   ~ 0
 A2
@@ -282,11 +184,11 @@ Text Label 5835 3600 0    60   ~ 0
 A5
 Text Label 5835 3800 0    60   ~ 0
 A7
-Text Label 8270 4420 0    60   ~ 0
+Text Label 6700 5750 0    60   ~ 0
 WAIT
-Text Label 8215 5050 0    60   ~ 0
+Text Label 6700 5450 0    60   ~ 0
 BUSDIR
-Text Label 8290 4735 0    60   ~ 0
+Text Label 6700 5150 0    60   ~ 0
 INT
 NoConn ~ 9470 1210
 NoConn ~ 9470 1310
@@ -300,9 +202,9 @@ Text Notes 8165 7645 0    60   ~ 0
 2020.1.12
 Text Label 9565 1610 0    60   ~ 0
 M1
-Text Label 8330 1515 0    60   ~ 0
+Text Label 8300 1500 0    60   ~ 0
 SLTSL
-Text Label 8325 1715 0    60   ~ 0
+Text Label 8300 1700 0    60   ~ 0
 IORQ
 Text Label 3370 3260 0    60   ~ 0
 RC16
@@ -384,27 +286,27 @@ Text Label 1125 3360 0    60   ~ 0
 RC26
 Text Label 1120 2160 0    60   ~ 0
 RC27
-Text Label 7915 915  0    60   ~ 0
+Text Label 7800 800  0    60   ~ 0
 GND
-Text Label 8330 1615 0    60   ~ 0
+Text Label 8300 1600 0    60   ~ 0
 MREQ
-Text Label 6870 5050 0    60   ~ 0
+Text Label 5450 5450 0    60   ~ 0
 RC25
-Text Label 6870 4735 0    60   ~ 0
+Text Label 5450 5150 0    60   ~ 0
 RC23
-Text Label 8335 1915 0    60   ~ 0
+Text Label 8300 1900 0    60   ~ 0
 WR
 Text Label 9570 3610 0    60   ~ 0
 SOUNDIN
-Text Label 6995 1515 0    60   ~ 0
+Text Label 6850 1500 0    60   ~ 0
 RC17
-Text Label 6995 1715 0    60   ~ 0
+Text Label 6850 1700 0    60   ~ 0
 RC19
 Text Label 8445 3860 0    60   ~ 0
 5V0
-Text Label 4475 1390 0    60   ~ 0
+Text Label 4449 1450 0    60   ~ 0
 RA15
-Text Label 3365 5990 0    60   ~ 0
+Text Label 3350 5950 0    60   ~ 0
 RC24
 NoConn ~ 10770 3210
 Text Label 2375 4375 0    60   ~ 0
@@ -418,7 +320,7 @@ DAT_DIR
 Text Label 1225 4575 0    60   ~ 0
 DAT_DIR
 $Comp
-L LVC4245 U5
+L msx:LVC4245 U5
 U 1 1 5ADE7C52
 P 7740 3310
 F 0 "U5" H 7690 4010 60  0000 C CNN
@@ -440,47 +342,36 @@ Text Label 6790 2760 0    60   ~ 0
 GND
 Text Label 6760 3660 0    60   ~ 0
 DAT_EN
-Text Label 5315 890  0    60   ~ 0
+Text Label 5250 850  0    60   ~ 0
 GND
-Text Label 5340 2290 0    60   ~ 0
+Text Label 5250 2450 0    60   ~ 0
 VCC
-$Comp
-L 74xx:74HC244 U?
-U 1 1 5AEA30DE
-P 5225 3400
-F 0 "U?" H 5295 4305 50  0000 L CNN
-F 1 "74HC244" H 5275 2750 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5225 3400 50  0001 C CNN
-F 3 "" H 5225 3400 50  0000 C CNN
-	1    5225 3400
-	-1   0    0    1   
-$EndComp
 Text Label 5785 2900 0    60   ~ 0
 ADDR
 Text Label 5790 3000 0    60   ~ 0
 ADDR
-Text Label 5365 4100 0    60   ~ 0
+Text Label 5300 4200 0    60   ~ 0
 VCC
 $Comp
-L 74HC244 U4
+L 74xx:74HC244 U4
 U 1 1 5AEA5251
-P 7745 1615
-F 0 "U4" H 7845 2265 50  0000 L CNN
-F 1 "74HC244" H 7795 965 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 7745 1615 50  0001 C CNN
-F 3 "" H 7745 1615 50  0000 C CNN
-	1    7745 1615
+P 7700 1600
+F 0 "U4" H 7800 2250 50  0000 L CNN
+F 1 "74HC244" H 7750 950 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 7700 1600 50  0001 C CNN
+F 3 "" H 7700 1600 50  0000 C CNN
+	1    7700 1600
 	-1   0    0    1   
 $EndComp
 Text Label 6210 2900 0    60   ~ 0
 RC22
-Text Label 8395 1115 0    60   ~ 0
+Text Label 8300 1100 0    60   ~ 0
 GND
 Text Notes 9625 5200 0    79   ~ 0
 RC16     DAT_EN\nRC17     SLTSL\nRC18     SNDOUT\nRC19     IORQ\nRC20     RD\nRC21     M1
 Text Notes 9620 5960 0    79   ~ 0
 RC22     ADDR\nRC23     INTR\nRC24     WAIT\nRC25     DAT_DIR\nRC26     MREQ\nRC27     WR
-Text Label 6995 1615 0    60   ~ 0
+Text Label 6850 1600 0    60   ~ 0
 RC26
 Text Label 4475 3500 0    60   ~ 0
 RD2
@@ -499,7 +390,7 @@ RD5
 Text Label 4470 3800 0    60   ~ 0
 RD7
 $Comp
-L RPi_GPIO J1
+L rpi:RPi_GPIO J1
 U 1 1 5B6D96EB
 P 1620 1560
 F 0 "J1" H 2370 1810 60  0000 C CNN
@@ -510,18 +401,18 @@ F 3 "" H 1620 1560 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power_+3.3V #PWR01
+L power:+3V3 #PWR01
 U 1 1 5B6D9EE8
 P 1020 1460
 F 0 "#PWR01" H 1020 1310 50  0001 C CNN
-F 1 "power_+3.3V" H 1020 1600 50  0000 C CNN
+F 1 "+3V3" H 1020 1600 50  0000 C CNN
 F 2 "" H 1020 1460 50  0001 C CNN
 F 3 "" H 1020 1460 50  0001 C CNN
 	1    1020 1460
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR02
+L power:+5V #PWR02
 U 1 1 5B6DA1D8
 P 3720 1260
 F 0 "#PWR02" H 3720 1110 50  0001 C CNN
@@ -532,7 +423,7 @@ F 3 "" H 3720 1260 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 5B6DA4F9
 P 820 3610
 F 0 "#PWR03" H 820 3360 50  0001 C CNN
@@ -543,18 +434,7 @@ F 3 "" H 820 3610 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74HC244 U1
-U 1 1 5B6DAD95
-P 5225 1590
-F 0 "U1" H 5325 2240 50  0000 L CNN
-F 1 "74HC244" H 5275 940 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5225 1590 50  0001 C CNN
-F 3 "" H 5225 1590 50  0000 C CNN
-	1    5225 1590
-	-1   0    0    1   
-$EndComp
-$Comp
-L LED_RGB D1
+L Device:LED_RGB D1
 U 1 1 5B6DB9E5
 P 1650 4375
 F 0 "D1" H 1650 4745 50  0000 C CNN
@@ -565,7 +445,7 @@ F 3 "" H 1650 4325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 5B6DBBA0
 P 2105 4175
 F 0 "R1" V 2185 4175 50  0000 C CNN
@@ -576,7 +456,7 @@ F 3 "" H 2105 4175 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 5B6DBD2F
 P 2105 4375
 F 0 "R2" V 2185 4375 50  0000 C CNN
@@ -587,7 +467,7 @@ F 3 "" H 2105 4375 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R3
+L Device:R R3
 U 1 1 5B6DBDB9
 P 2105 4575
 F 0 "R3" V 2185 4575 50  0000 C CNN
@@ -598,81 +478,69 @@ F 3 "" H 2105 4575 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74LS05 U3
-U 1 1 5B708C78
-P 7660 4735
-F 0 "U3" H 7810 4845 50  0000 C CNN
-F 1 "74LS07" H 7965 4685 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7660 4735 40  0001 R CNN
-F 3 "" H 7660 4735 60  0000 C CNN
-	1    7660 4735
+L 74xx:74LS07 U3
+U 2 1 5B708C78
+P 6200 5150
+F 0 "U3" H 6350 5260 50  0000 C CNN
+F 1 "74LS07" H 6505 5100 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6200 5150 40  0001 R CNN
+F 3 "www.ti.com/lit/ds/symlink/sn74ls07.pdf" H 6200 5150 60  0000 C CNN
+	2    6200 5150
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS05 U3
-U 2 1 5B708D76
-P 7660 5050
-F 0 "U3" H 7810 5160 50  0000 C CNN
-F 1 "74LS07" H 7965 5000 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7660 5050 40  0001 R CNN
-F 3 "" H 7660 5050 60  0000 C CNN
-	2    7660 5050
+L 74xx:74LS07 U3
+U 3 1 5B708D76
+P 6200 5450
+F 0 "U3" H 6350 5560 50  0000 C CNN
+F 1 "74LS07" H 6505 5400 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6200 5450 40  0001 R CNN
+F 3 "" H 6200 5450 60  0000 C CNN
+	3    6200 5450
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS05 U3
-U 4 1 5B709B95
-P 7665 4420
-F 0 "U3" H 7815 4530 50  0000 C CNN
-F 1 "74LS07" H 7970 4370 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7665 4420 40  0001 R CNN
-F 3 "" H 7665 4420 60  0000 C CNN
-	4    7665 4420
+L 74xx:74LS07 U3
+U 1 1 5B709B95
+P 6200 5750
+F 0 "U3" H 6350 5860 50  0000 C CNN
+F 1 "74LS07" H 6505 5700 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6200 5750 40  0001 R CNN
+F 3 "" H 6200 5750 60  0000 C CNN
+	1    6200 5750
 	1    0    0    -1  
 $EndComp
-Text Label 7890 2315 0    60   ~ 0
+Text Label 7800 2400 0    60   ~ 0
 VCC
-Text Label 5345 2700 0    60   ~ 0
+Text Label 5300 2600 0    60   ~ 0
 GND
-$Comp
-L 74HC244 U2
-U 1 1 5B6DB31E
-P 5225 3400
-F 0 "U2" H 5510 4085 50  0000 L CNN
-F 1 "74HC244" H 5275 2750 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5225 3400 50  0001 C CNN
-F 3 "" H 5225 3400 50  0000 C CNN
-	1    5225 3400
-	-1   0    0    1   
-$EndComp
 Text Label 8905 3760 0    60   ~ 0
 RC25
 Text Label 6470 3660 0    60   ~ 0
 RC16
-Text Label 8395 1215 0    60   ~ 0
+Text Label 8300 1200 0    60   ~ 0
 GND
-Text Label 5800 1090 0    60   ~ 0
+Text Label 5750 1150 0    60   ~ 0
 RC22
-Text Label 7000 2015 0    60   ~ 0
+Text Label 6850 2000 0    60   ~ 0
 RC21
-Text Label 8340 2015 0    60   ~ 0
+Text Label 8300 2000 0    60   ~ 0
 M1
-Text Label 5800 1190 0    60   ~ 0
+Text Label 5750 1250 0    60   ~ 0
 RC22
-Text Label 7000 1915 0    60   ~ 0
+Text Label 6850 1900 0    60   ~ 0
 RC27
-Text Label 6995 1815 0    60   ~ 0
+Text Label 6850 1800 0    60   ~ 0
 RC20
-Text Label 8340 2115 0    60   ~ 0
+Text Label 8300 2100 0    60   ~ 0
 CLK
-NoConn ~ 6845 2115
 $Comp
-L Conn_01x04 J2
+L Connector_Generic:Conn_01x04 J2
 U 1 1 5E1B2F47
 P 1585 5120
 F 0 "J2" H 1585 5320 50  0000 C CNN
 F 1 "Conn_01x04" H 1585 4820 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x04_Pitch2.54mm" H 1585 5120 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 1585 5120 50  0001 C CNN
 F 3 "" H 1585 5120 50  0001 C CNN
 	1    1585 5120
 	-1   0    0    -1  
@@ -690,7 +558,7 @@ RD2
 Text Label 2065 5120 0    60   ~ 0
 RD3
 $Comp
-L C C2
+L Device:C C2
 U 1 1 5E1B7EAF
 P 4210 4555
 F 0 "C2" H 4235 4655 50  0000 L CNN
@@ -701,7 +569,7 @@ F 3 "" H 4210 4555 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CP C1
+L Device:CP C1
 U 1 1 5E1B7F04
 P 3865 4775
 F 0 "C1" H 3890 4875 50  0000 L CNN
@@ -712,7 +580,7 @@ F 3 "" H 3865 4775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L Device:R R4
 U 1 1 5E1B8043
 P 3565 4315
 F 0 "R4" V 3645 4315 50  0000 C CNN
@@ -723,7 +591,7 @@ F 3 "" H 3565 4315 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R5
+L Device:R R5
 U 1 1 5E1B80DA
 P 4200 4315
 F 0 "R5" V 4280 4315 50  0000 C CNN
@@ -739,9 +607,6 @@ Text Label 3865 5000 0    60   ~ 0
 SOUNDIN
 Text Label 3190 4315 0    60   ~ 0
 RC18
-Text Label 8325 1415 0    60   ~ 0
-RESET
-NoConn ~ 6845 1415
 Wire Wire Line
 	8390 2960 8790 2960
 Wire Wire Line
@@ -869,112 +734,34 @@ Wire Wire Line
 Wire Wire Line
 	9470 3610 9870 3610
 Wire Wire Line
-	3720 1260 3720 1660
+	3720 1260 3720 1560
 Connection ~ 3720 1560
-Wire Wire Line
-	5725 2090 6125 2090
-Wire Wire Line
-	5725 1990 6125 1990
-Wire Wire Line
-	5725 1890 6125 1890
-Wire Wire Line
-	5725 1790 6125 1790
-Wire Wire Line
-	5725 1690 6125 1690
-Wire Wire Line
-	5725 1590 6125 1590
-Wire Wire Line
-	5725 1490 6125 1490
-Wire Wire Line
-	5725 1390 6125 1390
-Wire Wire Line
-	5725 3900 6125 3900
-Wire Wire Line
-	5725 3800 6125 3800
-Wire Wire Line
-	5725 3700 6125 3700
-Wire Wire Line
-	5725 3600 6125 3600
-Wire Wire Line
-	5725 3500 6125 3500
-Wire Wire Line
-	5725 3400 6125 3400
-Wire Wire Line
-	5725 3300 6125 3300
-Wire Wire Line
-	4325 2090 4725 2090
-Wire Wire Line
-	4325 1990 4725 1990
-Wire Wire Line
-	4325 1890 4725 1890
-Wire Wire Line
-	4325 1790 4725 1790
-Wire Wire Line
-	4325 1690 4725 1690
-Wire Wire Line
-	4325 1590 4725 1590
-Wire Wire Line
-	4325 1490 4725 1490
-Wire Wire Line
-	4325 1390 4725 1390
 Wire Wire Line
 	10370 3410 10770 3410
 Wire Wire Line
 	10770 3410 10770 3310
 Wire Wire Line
-	6475 4420 7215 4420
-Wire Wire Line
-	8115 4420 8655 4420
-Wire Wire Line
-	8110 4735 8640 4735
-Wire Wire Line
-	8110 5050 8655 5050
-Wire Wire Line
-	7210 5050 6690 5050
-Wire Wire Line
 	10370 3210 10770 3210
 Wire Wire Line
 	3735 2060 3735 2055
 Wire Wire Line
-	810  1555 810  2360
+	810  1555 810  1560
 Connection ~ 810  1560
 Wire Wire Line
 	1020 1460 1020 1560
 Connection ~ 1020 1560
-Connection ~ 3850 2160
-Connection ~ 3850 2460
-Connection ~ 3850 2960
 Wire Wire Line
 	1025 3460 1025 3730
 Wire Wire Line
 	1025 3730 3850 3730
-Connection ~ 3850 3160
 Connection ~ 1025 3460
-Connection ~ 3850 1760
-Connection ~ 3850 3730
 Wire Wire Line
 	9470 3210 9470 3310
 Wire Wire Line
 	9470 3210 9870 3210
 Wire Wire Line
-	7210 4735 6710 4735
-Wire Wire Line
-	820  2760 820  3610
+	820  2760 820  3460
 Connection ~ 820  3460
-Wire Wire Line
-	8245 1415 8645 1415
-Wire Wire Line
-	8245 1615 8645 1615
-Wire Wire Line
-	8245 1715 8645 1715
-Wire Wire Line
-	8245 1815 8645 1815
-Wire Wire Line
-	8245 1915 8645 1915
-Wire Wire Line
-	8245 2015 8645 2015
-Wire Wire Line
-	8245 2115 8645 2115
 Wire Wire Line
 	3720 1560 3320 1560
 Wire Wire Line
@@ -1050,35 +837,13 @@ Wire Wire Line
 Wire Wire Line
 	1020 3360 1420 3360
 Wire Wire Line
-	820  3460 1420 3460
+	820  3460 1025 3460
 Wire Wire Line
 	810  2360 1420 2360
 Wire Wire Line
-	810  1560 1420 1560
-Wire Wire Line
-	8645 1515 8245 1515
+	810  1560 1020 1560
 Wire Wire Line
 	7745 915  8145 915 
-Wire Wire Line
-	8245 1215 8645 1215
-Wire Wire Line
-	6125 1190 5725 1190
-Wire Wire Line
-	6845 2115 7245 2115
-Wire Wire Line
-	6845 2015 7245 2015
-Wire Wire Line
-	6845 1915 7245 1915
-Wire Wire Line
-	6845 1815 7245 1815
-Wire Wire Line
-	6845 1715 7245 1715
-Wire Wire Line
-	6845 1615 7245 1615
-Wire Wire Line
-	6845 1515 7245 1515
-Wire Wire Line
-	6845 1415 7245 1415
 Wire Wire Line
 	1450 4175 1180 4175
 Wire Wire Line
@@ -1092,14 +857,12 @@ Wire Wire Line
 Wire Wire Line
 	1850 4575 1955 4575
 Wire Wire Line
-	2255 4175 2255 4575
+	2255 4175 2255 4375
 Connection ~ 2255 4375
 Wire Wire Line
 	2255 4375 2620 4375
 Wire Wire Line
 	6690 3860 7090 3860
-Wire Wire Line
-	5725 3200 6125 3200
 Wire Wire Line
 	6690 3760 7090 3760
 Wire Wire Line
@@ -1111,37 +874,13 @@ Wire Wire Line
 Wire Wire Line
 	6690 2760 7090 2760
 Wire Wire Line
-	5625 890  5225 890 
-Wire Wire Line
-	5725 2900 6425 2900
-Wire Wire Line
-	5725 3000 6125 3000
+	5575 940  5175 940 
 Wire Wire Line
 	5225 4100 5625 4100
 Wire Wire Line
-	8245 1115 8645 1115
-Wire Wire Line
-	4325 3900 4725 3900
-Wire Wire Line
-	4325 3800 4725 3800
-Wire Wire Line
-	4325 3700 4725 3700
-Wire Wire Line
-	4325 3600 4725 3600
-Wire Wire Line
-	4325 3500 4725 3500
-Wire Wire Line
-	4325 3400 4725 3400
-Wire Wire Line
-	4325 3300 4725 3300
-Wire Wire Line
-	4325 3200 4725 3200
-Wire Wire Line
 	9470 3310 9870 3310
 Wire Wire Line
-	6125 1090 5725 1090
-Wire Wire Line
-	5225 2290 5620 2290
+	5175 2340 5570 2340
 Wire Wire Line
 	8390 3760 9095 3760
 Wire Wire Line
@@ -1159,9 +898,9 @@ Wire Wire Line
 Wire Wire Line
 	3415 4315 3135 4315
 Wire Wire Line
-	3715 4315 4050 4315
+	3715 4315 3865 4315
 Wire Wire Line
-	3865 4625 3865 4315
+	3865 4625 3865 4555
 Connection ~ 3865 4315
 Wire Wire Line
 	4060 4555 3865 4555
@@ -1174,44 +913,295 @@ Wire Wire Line
 	4500 4315 4500 4555
 Wire Wire Line
 	4500 4555 4360 4555
-Wire Wire Line
-	3675 5545 3260 5545
-Wire Wire Line
-	3675 5745 3260 5745
-Wire Wire Line
-	3275 5990 4875 5990
-Wire Wire Line
-	4875 5990 4875 5845
-Text Label 3355 5745 0    60   ~ 0
+Text Label 3350 5750 0    60   ~ 0
 MREQ
-Text Label 3355 5545 0    60   ~ 0
+Text Label 3350 5550 0    60   ~ 0
 IORQ
-Wire Wire Line
-	6075 5745 6475 5745
-Wire Wire Line
-	6475 5745 6475 4420
-Text Label 6815 4420 0    60   ~ 0
+Text Label 5450 5750 0    60   ~ 0
 CWAIT
+Wire Wire Line
+	3720 1560 3720 1660
+Wire Wire Line
+	810  1560 810  2360
+Wire Wire Line
+	1020 1560 1420 1560
+Wire Wire Line
+	1025 3460 1420 3460
+Wire Wire Line
+	820  3460 820  3610
+Wire Wire Line
+	2255 4375 2255 4575
+Wire Wire Line
+	3865 4315 4050 4315
+Wire Wire Line
+	3865 4555 3865 4315
+Wire Wire Line
+	3700 5550 3250 5550
+Wire Wire Line
+	3700 5750 3250 5750
+Wire Wire Line
+	4450 5850 4450 5950
+Wire Wire Line
+	4450 5950 3250 5950
+Wire Wire Line
+	5900 5150 5300 5150
+Wire Wire Line
+	5900 5450 5300 5450
+Wire Wire Line
+	6500 5150 7050 5150
+Wire Wire Line
+	6500 5450 7050 5450
+Wire Wire Line
+	6500 5750 7050 5750
+Wire Wire Line
+	5695 1150 5698 1150
+Wire Wire Line
+	5695 1250 5698 1250
+Wire Wire Line
+	5699 1451 5700 1451
+Wire Wire Line
+	7745 818  8154 818 
+Wire Wire Line
+	8154 818  8154 828 
+Wire Wire Line
+	4299 2150 4699 2150
+Wire Wire Line
+	4299 2050 4699 2050
+Wire Wire Line
+	4299 1950 4699 1950
+Wire Wire Line
+	4299 1850 4699 1850
+Wire Wire Line
+	4299 1750 4699 1750
+Wire Wire Line
+	4299 1650 4699 1650
+Wire Wire Line
+	4299 1550 4699 1550
+Wire Wire Line
+	4299 1450 4699 1450
+Wire Wire Line
+	5700 2150 6050 2150
+Wire Wire Line
+	5700 2050 6050 2050
+Wire Wire Line
+	5700 1950 6050 1950
+Wire Wire Line
+	5700 1850 6050 1850
+Wire Wire Line
+	5700 1750 6050 1750
+Wire Wire Line
+	5700 1650 6050 1650
+Wire Wire Line
+	5700 1550 6050 1550
 $Comp
-L 7400 U6
-U 2 1 5E57DA83
-P 5475 5745
-F 0 "U6" H 5475 5795 50  0000 C CNN
-F 1 "7400" H 5475 5645 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5475 5745 50  0001 C CNN
-F 3 "" H 5475 5745 50  0001 C CNN
-	2    5475 5745
+L 74xx:74HC244 U1
+U 1 1 5B6DAD95
+P 5200 1650
+F 0 "U1" H 5300 2300 50  0000 L CNN
+F 1 "74HC244" H 5250 1000 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5200 1650 50  0001 C CNN
+F 3 "" H 5200 1650 50  0000 C CNN
+	1    5200 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 1450 6050 1450
+Wire Wire Line
+	5700 1150 6050 1150
+Wire Wire Line
+	5700 1250 6050 1250
+Wire Wire Line
+	5200 850  5600 850 
+Wire Wire Line
+	7200 1400 6700 1400
+Wire Wire Line
+	7200 1500 6700 1500
+Wire Wire Line
+	7200 1600 6700 1600
+Wire Wire Line
+	7200 1700 6700 1700
+Wire Wire Line
+	7200 1800 6700 1800
+Wire Wire Line
+	7200 1900 6700 1900
+Wire Wire Line
+	7200 2000 6700 2000
+Wire Wire Line
+	7200 2100 6700 2100
+Wire Wire Line
+	8200 2100 8650 2100
+Wire Wire Line
+	8200 2000 8650 2000
+Wire Wire Line
+	8200 1900 8650 1900
+Wire Wire Line
+	8200 1800 8650 1800
+Wire Wire Line
+	8200 1700 8650 1700
+Wire Wire Line
+	8200 1600 8650 1600
+Wire Wire Line
+	8650 1600 8650 1650
+Wire Wire Line
+	8200 1500 8650 1500
+Wire Wire Line
+	8200 1400 8650 1400
+Wire Wire Line
+	8200 1200 8650 1200
+Wire Wire Line
+	8200 1100 8650 1100
+Wire Wire Line
+	7700 800  8150 800 
+Wire Wire Line
+	7700 2400 8150 2400
+NoConn ~ 6700 1400
+NoConn ~ 6700 2100
+Wire Wire Line
+	5700 3900 6100 3900
+Wire Wire Line
+	5700 3800 6100 3800
+Wire Wire Line
+	5700 3700 6100 3700
+Wire Wire Line
+	5700 3600 6100 3600
+Wire Wire Line
+	5700 3500 6100 3500
+Wire Wire Line
+	5700 3400 6100 3400
+Wire Wire Line
+	5700 3300 6100 3300
+Wire Wire Line
+	5700 3200 6100 3200
+Wire Wire Line
+	5700 3000 6100 3000
+Wire Wire Line
+	5700 2900 6500 2900
+Wire Wire Line
+	5200 4200 5650 4200
+Wire Wire Line
+	5200 2600 5600 2600
+Wire Wire Line
+	5200 2450 5600 2450
+Wire Wire Line
+	4700 3200 4300 3200
+Wire Wire Line
+	4700 3200 4725 3200
+Connection ~ 4700 3200
+Wire Wire Line
+	4700 3300 4300 3300
+Wire Wire Line
+	4700 3300 4725 3300
+Connection ~ 4700 3300
+Wire Wire Line
+	4700 3400 4300 3400
+Wire Wire Line
+	4700 3400 4725 3400
+Connection ~ 4700 3400
+Wire Wire Line
+	4700 3500 4300 3500
+Wire Wire Line
+	4700 3500 4725 3500
+Connection ~ 4700 3500
+Wire Wire Line
+	4700 3900 4300 3900
+Wire Wire Line
+	4700 3900 4725 3900
+Connection ~ 4700 3900
+Wire Wire Line
+	4700 3800 4300 3800
+Wire Wire Line
+	4700 3800 4725 3800
+Connection ~ 4700 3800
+Wire Wire Line
+	4700 3700 4300 3700
+Wire Wire Line
+	4700 3700 4725 3700
+Connection ~ 4700 3700
+Wire Wire Line
+	4700 3600 4300 3600
+Wire Wire Line
+	4700 3600 4725 3600
+Connection ~ 4700 3600
+$Comp
+L 74xx:74HC244 U2
+U 1 1 5AEA30DE
+P 5200 3400
+F 0 "U2" H 5270 4305 50  0000 L CNN
+F 1 "74HC244" H 5250 2750 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 5200 3400 50  0001 C CNN
+F 3 "" H 5200 3400 50  0000 C CNN
+	1    5200 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L 74xx:74HC00 U6
+U 1 1 5F2D6A39
+P 4000 5650
+F 0 "U6" H 4000 5975 50  0000 C CNN
+F 1 "74HC00" H 4000 5884 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4000 5650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4000 5650 50  0001 C CNN
+	1    4000 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 5650 4450 5650
+$Comp
+L 74xx:74HC00 U6
+U 2 1 5F2F5223
+P 4750 5750
+F 0 "U6" H 4750 6075 50  0000 C CNN
+F 1 "74HC00" H 4750 5984 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4750 5983 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4750 5750 50  0001 C CNN
+	2    4750 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5750 5900 5750
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F39B12C
+P 4500 6300
+F 0 "#FLG0101" H 4500 6375 50  0001 C CNN
+F 1 "PWR_FLAG" H 4500 6473 50  0000 C CNN
+F 2 "" H 4500 6300 50  0001 C CNN
+F 3 "~" H 4500 6300 50  0001 C CNN
+	1    4500 6300
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7400 U6
-U 1 1 5E57D9C4
-P 4275 5645
-F 0 "U6" H 4275 5695 50  0000 C CNN
-F 1 "7400" H 4275 5545 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 4275 5645 50  0001 C CNN
-F 3 "" H 4275 5645 50  0001 C CNN
-	1    4275 5645
+L power:PWR_FLAG #FLG0102
+U 1 1 5F39B64F
+P 5050 6300
+F 0 "#FLG0102" H 5050 6375 50  0001 C CNN
+F 1 "PWR_FLAG" H 5050 6473 50  0000 C CNN
+F 2 "" H 5050 6300 50  0001 C CNN
+F 3 "~" H 5050 6300 50  0001 C CNN
+	1    5050 6300
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5F39BABE
+P 4500 6300
+F 0 "#PWR0101" H 4500 6150 50  0001 C CNN
+F 1 "+3V3" H 4515 6473 50  0000 C CNN
+F 2 "" H 4500 6300 50  0001 C CNN
+F 3 "" H 4500 6300 50  0001 C CNN
+	1    4500 6300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5F39D01A
+P 5050 6300
+F 0 "#PWR0102" H 5050 6050 50  0001 C CNN
+F 1 "GND" H 5055 6127 50  0000 C CNN
+F 2 "" H 5050 6300 50  0001 C CNN
+F 3 "" H 5050 6300 50  0001 C CNN
+	1    5050 6300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8650 1400
 $EndSCHEMATC
