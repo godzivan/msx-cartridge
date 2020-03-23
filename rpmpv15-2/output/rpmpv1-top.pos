@@ -1,0 +1,10 @@
+### Module positions - created on 01/15/20 00:16:26 ###
+### Printed by Pcbnew version pcbnew 4.0.7
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val       Package                               PosX       PosY       Rot  Side
+C1        CP        CP_Elec_4x4.5                     119.0620   -97.2185    0.0000  top
+D1        LED_RGB   LED_RGB_5050-6                    117.8690   -54.0530    0.0000  top
+U1        74HC244   SOIC-20W_7.5x12.8mm_Pitch1.27mm   131.3940   -76.6836   90.0000  top
+U2        74HC244   SOIC-20W_7.5x12.8mm_Pitch1.27mm   115.5950   -76.6836   90.0000  top
+## End

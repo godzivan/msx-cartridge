@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name msx)(type Legacy)(uri /home-mc/meeso.kim/msx-cartridge/libraries/msx_slot.lib)(options "")(descr ""))
+  (lib (name rpi)(type Legacy)(uri /home-mc/meeso.kim/msx-cartridge/libraries/IC_raspberry.lib)(options "")(descr ""))
+)

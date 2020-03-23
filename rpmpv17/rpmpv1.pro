@@ -1,4 +1,4 @@
-update=Sat 21 Mar 2020 09:07:40 AM KST
+update=Fri 28 Feb 2020 17:32:09 KST
 version=1
 last_client=kicad
 [cvpcb]
@@ -69,16 +69,16 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
+[eeschema]
+version=1
+LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
 PlotDirectoryName=
-SubpartIdSeparator=0
+SubpartIdSeparator=95
 SubpartFirstId=65
 NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
+SpiceAjustPassiveValues=0
 LabSize=60
-[eeschema]
-version=1
-LibDir=
+ERC_TestSimilarLabels=1
