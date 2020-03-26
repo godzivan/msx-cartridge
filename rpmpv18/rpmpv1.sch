@@ -102,37 +102,21 @@ Text Label 10420 3110 0    60   ~ 0
 D6
 Text Label 10420 3210 0    60   ~ 0
 CLK
-Text Label 8640 3760 0    60   ~ 0
-D1
-Text Label 8640 3660 0    60   ~ 0
-D0
-Text Label 8640 3560 0    60   ~ 0
-D3
-Text Label 8640 3460 0    60   ~ 0
-D2
-Text Label 8640 3360 0    60   ~ 0
-D5
-Text Label 8640 3160 0    60   ~ 0
-D7
-Text Label 8640 3260 0    60   ~ 0
-D4
-Text Label 8640 3060 0    60   ~ 0
-D6
-Text Label 7040 3660 0    60   ~ 0
+Text Label 7050 3800 0    60   ~ 0
 RD1
-Text Label 7040 3560 0    60   ~ 0
+Text Label 7050 3700 0    60   ~ 0
 RD0
-Text Label 7040 3460 0    60   ~ 0
+Text Label 7050 3600 0    60   ~ 0
 RD3
-Text Label 7040 3360 0    60   ~ 0
+Text Label 7050 3500 0    60   ~ 0
 RD2
-Text Label 7040 3260 0    60   ~ 0
+Text Label 7050 3400 0    60   ~ 0
 RD5
-Text Label 7040 3060 0    60   ~ 0
+Text Label 7050 3200 0    60   ~ 0
 RD7
-Text Label 7040 3160 0    60   ~ 0
+Text Label 7050 3300 0    60   ~ 0
 RD4
-Text Label 7040 2960 0    60   ~ 0
+Text Label 7050 3100 0    60   ~ 0
 RD6
 Text Label 8500 1800 0    60   ~ 0
 RD
@@ -222,8 +206,6 @@ Text Label 7050 1600 0    60   ~ 0
 RA11
 Text Label 7050 1800 0    60   ~ 0
 RA8
-Text Label 8645 3960 0    60   ~ 0
-5V0
 Text Label 4650 1550 0    60   ~ 0
 RA15
 NoConn ~ 10770 3210
@@ -233,32 +215,26 @@ Text Label 1007 5470 0    60   ~ 0
 DAT_EN
 Text Label 1007 5670 0    60   ~ 0
 SLTSL
-Text Label 8640 3860 0    60   ~ 0
-DAT_DIR
 Text Label 992  5870 0    60   ~ 0
 DAT_DIR
 $Comp
 L msx:LVC4245 U5
 U 1 1 5ADE7C52
-P 7940 3410
-F 0 "U5" H 7890 4110 60  0000 C CNN
-F 1 "LVC4245" H 7940 3560 60  0000 C CNN
-F 2 "Housings_SOIC:SOIC-24W_7.5x15.4mm_Pitch1.27mm" H 8090 4010 60  0001 C CNN
-F 3 "" H 8090 4010 60  0001 C CNN
-	1    7940 3410
+P 7950 3550
+F 0 "U5" H 7900 4250 60  0000 C CNN
+F 1 "LVC4245" H 7950 3700 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-24W_7.5x15.4mm_Pitch1.27mm" H 8100 4150 60  0001 C CNN
+F 3 "" H 8100 4150 60  0001 C CNN
+	1    7950 3550
 	-1   0    0    1   
 $EndComp
-Text Label 7030 3960 0    60   ~ 0
+Text Label 7040 4100 0    60   ~ 0
 VCC
-Text Label 7030 3860 0    60   ~ 0
+Text Label 7040 4000 0    60   ~ 0
 VCC
-Text Label 8690 2860 0    60   ~ 0
+Text Label 7051 3000 0    60   ~ 0
 GND
-Text Label 8690 2960 0    60   ~ 0
-GND
-Text Label 6990 2860 0    60   ~ 0
-GND
-Text Label 6960 3760 0    60   ~ 0
+Text Label 6970 3900 0    60   ~ 0
 DAT_EN
 Text Label 5450 950  0    60   ~ 0
 GND
@@ -274,10 +250,10 @@ Text Label 6410 3000 0    60   ~ 0
 RC22
 Text Label 8500 1200 0    60   ~ 0
 DAT_EN
-Text Notes 9625 5200 0    79   ~ 0
-RC16     DAT_EN\nRC17     SLTSL\nRC18     SNDOUT\nRC19     IORQ\nRC20     RD\nRC21     M1
-Text Notes 9620 5960 0    79   ~ 0
-RC22     ADDR\nRC23     INTR\nRC24     WAIT\nRC25     DAT_DIR\nRC26     MREQ\nRC27     WR
+Text Notes 9650 5200 0    79   ~ 0
+RC16     DAT_EN\nRC17     INT\nRC18     DAT_DIR\nRC19     WAIT\nRC20     \nRC21     MREQ
+Text Notes 9650 5700 0    79   ~ 0
+RC22     ADDR\nRC23     IORQ\nRC24     CLK\nRC25     RESET\n
 Text Label 7050 1700 0    60   ~ 0
 RA9
 Text Label 4681 3600 0    60   ~ 0
@@ -375,9 +351,7 @@ Text Label 8000 2500 0    60   ~ 0
 VCC
 Text Label 5500 2700 0    60   ~ 0
 GND
-Text Label 9105 3860 0    60   ~ 0
-RC25
-Text Label 6670 3760 0    60   ~ 0
+Text Label 6680 3900 0    60   ~ 0
 RC16
 Text Label 8500 1300 0    60   ~ 0
 GND
@@ -413,39 +387,21 @@ VCC
 Text Label 1625 6650 0    60   ~ 0
 GND
 Wire Wire Line
-	8590 3060 8990 3060
+	6900 3800 7300 3800
 Wire Wire Line
-	8590 3160 8990 3160
+	6900 3200 7300 3200
 Wire Wire Line
-	8590 3260 8990 3260
+	6900 3300 7300 3300
 Wire Wire Line
-	8590 3360 8990 3360
+	6900 3400 7300 3400
 Wire Wire Line
-	8590 3460 8990 3460
+	6900 3500 7300 3500
 Wire Wire Line
-	8590 3560 8990 3560
+	6900 3600 7300 3600
 Wire Wire Line
-	8590 3660 8990 3660
+	6900 3700 7300 3700
 Wire Wire Line
-	8590 3760 8990 3760
-Wire Wire Line
-	6890 3660 7290 3660
-Wire Wire Line
-	6890 3060 7290 3060
-Wire Wire Line
-	6890 3160 7290 3160
-Wire Wire Line
-	6890 3260 7290 3260
-Wire Wire Line
-	6890 3360 7290 3360
-Wire Wire Line
-	6890 3460 7290 3460
-Wire Wire Line
-	6890 3560 7290 3560
-Wire Wire Line
-	6890 2960 7290 2960
-Wire Wire Line
-	8590 3960 8990 3960
+	6900 3100 7300 3100
 Wire Wire Line
 	10370 1210 10770 1210
 Wire Wire Line
@@ -566,21 +522,15 @@ Connection ~ 2022 5670
 Wire Wire Line
 	2022 5670 2387 5670
 Wire Wire Line
-	6890 3960 7290 3960
+	6900 4100 7300 4100
 Wire Wire Line
-	6890 3860 7290 3860
+	6900 4000 7300 4000
 Wire Wire Line
-	6635 3760 7290 3760
+	6645 3900 7300 3900
 Wire Wire Line
-	8590 2960 8990 2960
-Wire Wire Line
-	8590 2860 8990 2860
-Wire Wire Line
-	6890 2860 7290 2860
+	6900 3000 7300 3000
 Wire Wire Line
 	9470 3310 9870 3310
-Wire Wire Line
-	8590 3860 9295 3860
 Wire Wire Line
 	1575 6350 1950 6350
 Wire Wire Line
@@ -607,14 +557,6 @@ Wire Wire Line
 	7400 1700 6900 1700
 Wire Wire Line
 	7400 1800 6900 1800
-Wire Wire Line
-	7400 1900 6900 1900
-Wire Wire Line
-	7400 2000 6900 2000
-Wire Wire Line
-	7400 2100 6900 2100
-Wire Wire Line
-	7400 2200 6900 2200
 Wire Wire Line
 	8400 2200 8850 2200
 Wire Wire Line
@@ -730,31 +672,7 @@ Wire Wire Line
 Text Label 4681 3300 0    60   ~ 0
 RD1
 Wire Wire Line
-	4900 3400 4902 3400
-Wire Wire Line
-	4900 3500 4902 3500
-Wire Wire Line
-	4900 3600 4902 3600
-Wire Wire Line
-	4900 3700 4902 3700
-Wire Wire Line
-	4900 3800 4902 3800
-Wire Wire Line
-	4900 3900 4902 3900
-Wire Wire Line
-	4900 4000 4902 4000
-Wire Wire Line
 	4506 3300 4900 3300
-Connection ~ 4900 3300
-Wire Wire Line
-	4900 3300 4904 3300
-Connection ~ 4900 3400
-Connection ~ 4900 3500
-Connection ~ 4900 3600
-Connection ~ 4900 3700
-Connection ~ 4900 3800
-Connection ~ 4900 3900
-Connection ~ 4900 4000
 Wire Wire Line
 	-600 900  -150 900 
 Wire Wire Line
@@ -827,16 +745,6 @@ Wire Wire Line
 	-600 2400 -150 2400
 Wire Wire Line
 	-600 1900 -150 1900
-Text Label 2900 4550 3    60   ~ 0
-RC18
-Wire Wire Line
-	2900 4400 2900 4900
-Wire Wire Line
-	5500 6200 4900 6200
-Wire Wire Line
-	4900 5900 5500 5900
-Wire Wire Line
-	4900 5600 5500 5600
 Wire Wire Line
 	6100 5600 6650 5600
 Wire Wire Line
@@ -851,8 +759,8 @@ Text Label 7050 2100 0    60   ~ 0
 RCLK
 Text Label 7050 2200 0    60   ~ 0
 RRST
-Text Label 1200 4800 1    60   ~ 0
-RRST
+Text Label 1750 4600 1    60   ~ 0
+RA9
 $Comp
 L 74xx:74HC244 U1
 U 1 1 5B6DAD95
@@ -910,11 +818,9 @@ F 3 "" H 7900 1700 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1200 4400 1200 4900
+	1650 4250 1650 4750
 Wire Wire Line
-	2000 4400 2000 4900
-Text Label 2000 4800 1    60   ~ 0
-GND
+	2450 4250 2450 4750
 Text Notes 7300 6900 0    98   ~ 0
 RPMP V1.9 only with 74LVC4245 and some logics
 $Comp
@@ -949,17 +855,13 @@ Wire Wire Line
 Wire Wire Line
 	2850 5650 3150 5650
 Wire Wire Line
-	2100 4400 2100 4900
+	2550 4250 2550 4750
 Wire Wire Line
-	1800 4400 1800 4900
-Text Label 1800 4800 1    60   ~ 0
-5V0
-Text Label 2100 4800 1    60   ~ 0
-VCC
+	2250 4250 2250 4750
+Text Label 2250 4600 1    60   ~ 0
+RA14
 Wire Wire Line
-	1500 4400 1500 4900
-Text Label 1500 4800 1    60   ~ 0
-TVOUT
+	1950 4250 1950 4750
 $Comp
 L Device:R R6
 U 1 1 5F284FAF
@@ -1008,4 +910,279 @@ Wire Wire Line
 	1050 2250 650  2250
 Wire Wire Line
 	1050 2350 650  2350
+Wire Wire Line
+	1050 2450 650  2450
+Wire Wire Line
+	1050 2550 650  2550
+Wire Wire Line
+	1050 2650 650  2650
+Wire Wire Line
+	1050 2750 650  2750
+Wire Wire Line
+	1050 2850 650  2850
+Wire Wire Line
+	1050 2950 650  2950
+Wire Wire Line
+	1050 3050 650  3050
+Wire Wire Line
+	1050 3150 650  3150
+Wire Wire Line
+	1050 3250 650  3250
+Wire Wire Line
+	1050 3350 650  3350
+Wire Wire Line
+	1050 3450 650  3450
+Wire Wire Line
+	1050 3550 650  3550
+Wire Wire Line
+	1050 3650 650  3650
+Wire Wire Line
+	1050 3750 650  3750
+Wire Wire Line
+	1750 4250 1750 4750
+Wire Wire Line
+	1850 4250 1850 4750
+Wire Wire Line
+	2050 4250 2050 4750
+Wire Wire Line
+	2150 4250 2150 4750
+Wire Wire Line
+	2350 4250 2350 4750
+Wire Wire Line
+	2650 4250 2650 4750
+Wire Wire Line
+	2750 4250 2750 4750
+Wire Wire Line
+	2850 4250 2850 4750
+Wire Wire Line
+	2950 4250 2950 4750
+Wire Wire Line
+	3050 4250 3050 4750
+Wire Wire Line
+	3850 3950 4200 3950
+Text Label 800  2950 0    60   ~ 0
+RD0
+Text Label 800  3050 0    60   ~ 0
+RD1
+Text Label 800  3150 0    60   ~ 0
+RD2
+Text Label 800  3250 0    60   ~ 0
+RD3
+Text Label 800  3350 0    60   ~ 0
+RD4
+Text Label 800  3450 0    60   ~ 0
+RD5
+Text Label 800  3550 0    60   ~ 0
+RD6
+Text Label 800  3750 0    60   ~ 0
+RD7
+Text Label 1650 4600 1    60   ~ 0
+RA8
+Text Label 1850 4600 1    60   ~ 0
+RA10
+Text Label 1950 4600 1    60   ~ 0
+RA11
+Text Label 2050 4600 1    60   ~ 0
+RA12
+Text Label 2150 4600 1    60   ~ 0
+RA13
+Text Label 2350 4600 1    60   ~ 0
+RA15
+Text Label 2850 4600 1    60   ~ 0
+RC16
+Text Label 2950 4600 1    60   ~ 0
+RC17
+Text Label 3050 4600 1    60   ~ 0
+RC18
+Text Label 3150 4600 1    60   ~ 0
+RC19
+Text Label 3250 4600 1    60   ~ 0
+RC20
+Text Label 3350 4600 1    60   ~ 0
+RC21
+Text Label 3900 3750 0    60   ~ 0
+RC22
+Text Label 3900 3650 0    60   ~ 0
+RC23
+Text Label 3900 3550 0    60   ~ 0
+RC24
+Text Label 3900 3450 0    60   ~ 0
+RC25
+Wire Wire Line
+	3850 3750 4250 3750
+Wire Wire Line
+	3850 3650 4250 3650
+Wire Wire Line
+	3850 3550 4250 3550
+Wire Wire Line
+	3850 3450 4250 3450
+Wire Wire Line
+	3850 3350 4250 3350
+Wire Wire Line
+	3850 3250 4250 3250
+Wire Wire Line
+	3850 3150 4250 3150
+Text Label 3900 3350 0    60   ~ 0
+PCM_RCK
+Text Label 3900 3250 0    60   ~ 0
+PCM_WS
+Text Label 3900 3150 0    60   ~ 0
+PCM_DATA
+Text Label 2450 4700 1    60   ~ 0
+SPI0_MISO
+Text Label 2550 4700 1    60   ~ 0
+SPIO_SCLK
+Text Label 2650 4700 1    60   ~ 0
+SPI0_MOSI
+Text Label 3950 2350 0    60   ~ 0
+5V0
+Wire Wire Line
+	3850 2350 4300 2350
+Wire Wire Line
+	3850 2250 4300 2250
+Wire Wire Line
+	3850 2150 4300 2150
+Wire Wire Line
+	3850 2050 4300 2050
+Text Label 3950 2050 0    60   ~ 0
+VCC
+Text Label 3950 2250 0    60   ~ 0
+5V0
+Text Label 2750 4700 1    60   ~ 0
+SPIO_CS
+Wire Wire Line
+	3150 4250 3150 4750
+Wire Wire Line
+	3250 4250 3250 4750
+Wire Wire Line
+	3350 4250 3350 4750
+Wire Wire Line
+	8600 4000 9305 4000
+Wire Wire Line
+	8600 3000 9000 3000
+Wire Wire Line
+	8600 3100 9000 3100
+Wire Wire Line
+	8600 4100 9000 4100
+Wire Wire Line
+	8600 3900 9000 3900
+Wire Wire Line
+	8600 3800 9000 3800
+Wire Wire Line
+	8600 3700 9000 3700
+Wire Wire Line
+	8600 3600 9000 3600
+Wire Wire Line
+	8600 3500 9000 3500
+Wire Wire Line
+	8600 3400 9000 3400
+Wire Wire Line
+	8600 3300 9000 3300
+Wire Wire Line
+	8600 3200 9000 3200
+Text Label 9100 4000 0    60   ~ 0
+RC25
+Text Label 8650 3100 0    60   ~ 0
+GND
+Text Label 8650 3000 0    60   ~ 0
+GND
+Text Label 8650 4000 0    60   ~ 0
+DAT_DIR
+Text Label 8655 4100 0    60   ~ 0
+5V0
+Text Label 8650 3200 0    60   ~ 0
+D6
+Text Label 8650 3400 0    60   ~ 0
+D4
+Text Label 8650 3300 0    60   ~ 0
+D7
+Text Label 8650 3500 0    60   ~ 0
+D5
+Text Label 8650 3600 0    60   ~ 0
+D2
+Text Label 8650 3700 0    60   ~ 0
+D3
+Text Label 8650 3800 0    60   ~ 0
+D0
+Text Label 8650 3900 0    60   ~ 0
+D1
+Wire Wire Line
+	6500 1900 7400 1900
+Wire Wire Line
+	6500 2000 7400 2000
+Wire Wire Line
+	6500 2100 7400 2100
+Wire Wire Line
+	6500 2200 7400 2200
+Text Label 6600 1900 0    60   ~ 0
+RC21
+Text Label 6600 2000 0    60   ~ 0
+RC23
+Text Label 6600 2100 0    60   ~ 0
+RC24
+Text Label 6600 2200 0    60   ~ 0
+RC25
+Wire Wire Line
+	4450 5600 5500 5600
+Wire Wire Line
+	4450 5900 5500 5900
+Wire Wire Line
+	4450 6200 5500 6200
+Text Label 4550 5600 0    60   ~ 0
+RC17
+Text Label 4550 5900 0    60   ~ 0
+RC18
+Text Label 4550 6200 0    60   ~ 0
+RC19
+NoConn ~ 3850 2650
+NoConn ~ 3850 2750
+NoConn ~ 3850 2850
+NoConn ~ 3850 2950
+NoConn ~ 3850 3050
+Wire Wire Line
+	3850 2450 4300 2450
+Wire Wire Line
+	3850 2550 4300 2550
+NoConn ~ 4300 2150
+Text Label 3950 2450 0    60   ~ 0
+GND
+Text Label 3950 2550 0    60   ~ 0
+GND
+Text Label 800  3650 0    60   ~ 0
+BOOT
+NoConn ~ 650  2050
+NoConn ~ 650  2150
+NoConn ~ 650  2250
+NoConn ~ 650  2350
+NoConn ~ 650  2650
+NoConn ~ 650  2750
+NoConn ~ 650  2850
+Text Label 700  2450 0    60   ~ 0
+UARTRX
+Text Label 700  2550 0    60   ~ 0
+UARTTX
+Text Label 700  2650 0    60   ~ 0
+WIFI_RX
+Text Label 700  2750 0    60   ~ 0
+WIFI_TX
+Text Label 700  2850 0    60   ~ 0
+WIFI_EN
+NoConn ~ 1650 1500
+NoConn ~ 1750 1500
+NoConn ~ 1850 1500
+NoConn ~ 1950 1500
+NoConn ~ 2050 1500
+NoConn ~ 2150 1500
+NoConn ~ 2250 1500
+NoConn ~ 2350 1500
+NoConn ~ 2450 1500
+NoConn ~ 2550 1500
+NoConn ~ 2650 1500
+NoConn ~ 2750 1500
+NoConn ~ 2850 1500
+NoConn ~ 2950 1500
+NoConn ~ 3050 1500
+NoConn ~ 3150 1500
+NoConn ~ 3250 1500
+NoConn ~ 3350 1500
 $EndSCHEMATC
