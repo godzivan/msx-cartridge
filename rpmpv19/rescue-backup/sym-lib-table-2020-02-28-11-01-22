@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name rpmpv1-rescue)(type Legacy)(uri ${KIPRJMOD}/rpmpv1-rescue.lib)(options "")(descr ""))
+  (lib (name IC_raspberry)(type Legacy)(uri /home-mc/meeso.kim/msx-cartridge/libraries/IC_raspberry.lib)(options "")(descr ""))
+  (lib (name msx_slot)(type Legacy)(uri /home-mc/meeso.kim/msx-cartridge/libraries/msx_slot.lib)(options "")(descr ""))
+)

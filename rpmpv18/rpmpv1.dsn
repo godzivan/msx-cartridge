@@ -106,19 +106,19 @@
       (place D1 117869 -54053 front 0 (PN LED_RGB))
     )
     (component "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm"
-      (place U1 174942 -92075 front 90 (PN 74HC244))
-      (place U2 141922 -92075 front 90 (PN 74HC244))
-      (place U4 174942 -92075 back 270 (PN 74HC244))
+      (place U1 175260 -90170 front 90 (PN 74HC244))
+      (place U2 142240 -90170 front 90 (PN 74HC244))
+      (place U4 175260 -90170 back 270 (PN 74HC244))
     )
     (component "Housings_SOIC:SOIC-24W_7.5x15.4mm_Pitch1.27mm"
-      (place U5 141922 -92075 back 270 (PN LVC4245))
+      (place U5 142240 -90170 back 270 (PN LVC4245))
     )
     (component MSX:LOGO
       (place G2 134493 -66548 front 0 (PN LOGO))
       (place G1 132334 -54610 front 0 (PN LOGO))
     )
     (component "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-      (place U3 159448 -92075 back 270 (PN 74LS07))
+      (place U3 159766 -90170 back 270 (PN 74LS07))
     )
     (component Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm
       (place C1 116802 -98171 front 0 (PN CP))
@@ -127,7 +127,7 @@
       (place R7 111887 -55245 back 0 (PN R))
     )
     (component MSX:sipeed_m1
-      (place U6 180467 -66040 front 0 (PN sipeed_m1))
+      (place U6 181610 -65786 front 180 (PN sipeed_m1))
     )
     (component "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
       (place U7 119380 -86995 front 180 (PN PT8211))
@@ -140,7 +140,7 @@
       (place J3 108204 -67310 front 0 (PN Conn_01x04_Male))
     )
     (component MSX:Conn_uSDcard
-      (place J1 200660 -62738 back 90 (PN Micro_SD_Card))
+      (place J1 200596 -64262 back 90 (PN Micro_SD_Card))
     )
   )
   (library
@@ -1176,36 +1176,26 @@
       (pins U6-8)
     )
     (net /SND0
-      (pins U7-8)
-    )
-    (net /SDN0
-      (pins W1-2)
+      (pins U7-8 W1-2)
     )
     (class kicad_default "" /3V3 /5V0 /A0 /A1 /A10 /A11 /A12 /A13 /A14 /A15
       /A2 /A3 /A4 /A5 /A6 /A7 /A8 /A9 /ADDR /BOOT /BUSDIR /CLK /D0 /D1 /D2
-      /D3 /D4 /D5 /D6 /D7 /DAT_DIR /DAT_EN /GND /INT /INTR /IORQ /M1 /MREQ
-      /PCM_DATA /PCM_RCK /PCM_WS /RA10 /RA11 /RA12 /RA13 /RA14 /RA15 /RA8
-      /RA9 /RC17 /RC18 /RC19 /RC20 /RC21 /RC23 /RC24 /RCLK /RD /RD0 /RD1 /RD2
-      /RD3 /RD4 /RD5 /RD6 /RD7 /RESET /RINT /RIORQ /RMREQ /RRST /RWAIT /SCK
-      /SCL /SDA /SDN0 /SLTSL /SND /SND0 /SOUNDIN /SPI0_MISO /SPI0_MOSI /SPIO_CS
-      /SPIO_SCLK /TVOUT /UARTRX /UARTTX /VCC /WAIT /WIFI_EN /WIFI_RX /WIFI_TX
-      /WR GND "Net-(C1-Pad1)" "Net-(C2-Pad1)" "Net-(D1-Pad4)" "Net-(D1-Pad5)"
+      /D3 /D4 /D5 /D6 /D7 /DAT_DIR /DAT_EN /GND /INT /IORQ /M1 /MREQ /PCM_DATA
+      /PCM_RCK /PCM_WS /RA10 /RA11 /RA12 /RA13 /RA14 /RA15 /RA8 /RA9 /RC17
+      /RC19 /RC20 /RC21 /RC23 /RC24 /RD /RD0 /RD1 /RD2 /RD3 /RD4 /RD5 /RD6
+      /RD7 /RESET /SCK /SCL /SDA /SDN0 /SLTSL /SND /SND0 /SOUNDIN /SPI0_MISO
+      /SPI0_MOSI /SPIO_CS /SPIO_SCLK /UARTRX /UARTTX /VCC /WAIT /WIFI_EN /WIFI_RX
+      /WIFI_TX /WR GND "Net-(C1-Pad1)" "Net-(C2-Pad1)" "Net-(D1-Pad4)" "Net-(D1-Pad5)"
       "Net-(D1-Pad6)" "Net-(J1-Pad1)" "Net-(J1-Pad2)" "Net-(J1-Pad8)" "Net-(J1-Pad9)"
       "Net-(P1-Pad1)" "Net-(P1-Pad16)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(P1-Pad44)"
-      "Net-(P1-Pad48)" "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(R4-Pad2)"
-      "Net-(U6-Pad1)" "Net-(U6-Pad10)" "Net-(U6-Pad11)" "Net-(U6-Pad12)" "Net-(U6-Pad13)"
-      "Net-(U6-Pad14)" "Net-(U6-Pad15)" "Net-(U6-Pad16)" "Net-(U6-Pad17)"
-      "Net-(U6-Pad18)" "Net-(U6-Pad19)" "Net-(U6-Pad20)" "Net-(U6-Pad21)"
-      "Net-(U6-Pad22)" "Net-(U6-Pad23)" "Net-(U6-Pad24)" "Net-(U6-Pad25)"
-      "Net-(U6-Pad26)" "Net-(U6-Pad27)" "Net-(U6-Pad28)" "Net-(U6-Pad29)"
-      "Net-(U6-Pad3)" "Net-(U6-Pad30)" "Net-(U6-Pad31)" "Net-(U6-Pad32)" "Net-(U6-Pad33)"
-      "Net-(U6-Pad34)" "Net-(U6-Pad35)" "Net-(U6-Pad36)" "Net-(U6-Pad37)"
-      "Net-(U6-Pad38)" "Net-(U6-Pad39)" "Net-(U6-Pad4)" "Net-(U6-Pad40)" "Net-(U6-Pad41)"
-      "Net-(U6-Pad42)" "Net-(U6-Pad43)" "Net-(U6-Pad44)" "Net-(U6-Pad46)"
-      "Net-(U6-Pad48)" "Net-(U6-Pad50)" "Net-(U6-Pad52)" "Net-(U6-Pad54)"
-      "Net-(U6-Pad56)" "Net-(U6-Pad58)" "Net-(U6-Pad6)" "Net-(U6-Pad60)" "Net-(U6-Pad62)"
-      "Net-(U6-Pad64)" "Net-(U6-Pad7)" "Net-(U6-Pad73)" "Net-(U6-Pad8)" "Net-(U6-Pad9)"
-      "Net-(U7-Pad7)"
+      "Net-(P1-Pad48)" "Net-(P1-Pad5)" "Net-(P1-Pad50)" "Net-(P1-Pad6)" "Net-(U6-Pad10)"
+      "Net-(U6-Pad11)" "Net-(U6-Pad12)" "Net-(U6-Pad17)" "Net-(U6-Pad19)"
+      "Net-(U6-Pad20)" "Net-(U6-Pad21)" "Net-(U6-Pad22)" "Net-(U6-Pad23)"
+      "Net-(U6-Pad24)" "Net-(U6-Pad25)" "Net-(U6-Pad26)" "Net-(U6-Pad27)"
+      "Net-(U6-Pad28)" "Net-(U6-Pad29)" "Net-(U6-Pad30)" "Net-(U6-Pad31)"
+      "Net-(U6-Pad32)" "Net-(U6-Pad33)" "Net-(U6-Pad34)" "Net-(U6-Pad35)"
+      "Net-(U6-Pad36)" "Net-(U6-Pad37)" "Net-(U6-Pad38)" "Net-(U6-Pad39)"
+      "Net-(U6-Pad40)" "Net-(U6-Pad73)" "Net-(U7-Pad7)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
@@ -1225,42 +1215,5 @@
     )
   )
   (wiring
-    (wire (path B.Cu 250  180320 -109827  180320 -105502)(net /WAIT)(type protect))
-    (wire (path F.Cu 250  180320 -109827  180320 -105502)(net /INT)(type protect))
-    (wire (path F.Cu 250  177780 -109827  177780 -105502)(net /BUSDIR)(type protect))
-    (wire (path B.Cu 250  175240 -109827  175240 -105502)(net /IORQ)(type protect))
-    (wire (path F.Cu 250  175240 -109827  175240 -105502)(net /MREQ)(type protect))
-    (wire (path B.Cu 250  172700 -109827  172700 -105502)(net /WR)(type protect))
-    (wire (path F.Cu 250  172700 -109827  172700 -105502)(net /RD)(type protect))
-    (wire (path B.Cu 250  170160 -109827  170160 -105502)(net /RESET)(type protect))
-    (wire (path B.Cu 250  167620 -109827  167620 -105502)(net /A9)(type protect))
-    (wire (path F.Cu 250  167620 -109827  167620 -105502)(net /A15)(type protect))
-    (wire (path B.Cu 250  165080 -109827  165080 -105502)(net /A11)(type protect))
-    (wire (path F.Cu 250  165080 -109827  165080 -105502)(net /A10)(type protect))
-    (wire (path B.Cu 250  162540 -109827  162540 -105502)(net /A7)(type protect))
-    (wire (path F.Cu 250  162540 -109827  162540 -105502)(net /A6)(type protect))
-    (wire (path B.Cu 250  160000 -109827  160000 -105502)(net /A12)(type protect))
-    (wire (path F.Cu 250  160000 -109827  160000 -105502)(net /A8)(type protect))
-    (wire (path F.Cu 250  157460 -109827  157460 -105502)(net /A13)(type protect))
-    (wire (path B.Cu 250  154920 -109827  154920 -105502)(net /A1)(type protect))
-    (wire (path F.Cu 250  154920 -109827  154920 -105502)(net /A0)(type protect))
-    (wire (path F.Cu 250  152380 -109827  152380 -105502)(net /A2)(type protect))
-    (wire (path B.Cu 250  149840 -109827  149840 -105502)(net /A5)(type protect))
-    (wire (path F.Cu 250  149840 -109827  149840 -105502)(net /A4)(type protect))
-    (wire (path F.Cu 250  147300 -109827  147300 -105502)(net /D0)(type protect))
-    (wire (path B.Cu 250  144760 -109827  144760 -105502)(net /D3)(type protect))
-    (wire (path F.Cu 250  144760 -109827  144760 -105502)(net /D2)(type protect))
-    (wire (path B.Cu 250  142220 -109827  142220 -105502)(net /D5)(type protect))
-    (wire (path F.Cu 250  142220 -109827  142220 -105502)(net /D4)(type protect))
-    (wire (path B.Cu 250  139680 -109827  139680 -105502)(net /D7)(type protect))
-    (wire (path F.Cu 250  139680 -109827  139680 -105502)(net /D6)(type protect))
-    (wire (path F.Cu 250  137140 -109827  137140 -105502)(net /CLK)(type protect))
-    (wire (path F.Cu 250  185400 -109827  185400 -105502)(net /SLTSL)(type protect))
-    (wire (path F.Cu 250  134595 -109335  134595 -105509)(net "Net-(P1-Pad44)")(type protect))
-    (wire (path F.Cu 250  132060 -109827  132060 -105502)(net "Net-(P1-Pad44)")(type protect))
-    (wire (path B.Cu 250  137140 -109827  137140 -105502)(net /GND)(type protect))
-    (wire (path B.Cu 250  134600 -109827  134600 -105502)(net /GND)(type protect))
-    (wire (path B.Cu 250  132060 -109827  132060 -105502)(net /5V0)(type protect))
-    (wire (path B.Cu 250  129520 -109827  129520 -105502)(net /5V0)(type protect))
   )
 )

@@ -1149,7 +1149,7 @@ Wire Wire Line
 Wire Wire Line
 	3250 5350 3600 5350
 Text Label 3300 5350 0    60   ~ 0
-SDN0
+SND0
 Text Label 6000 5300 0    60   ~ 0
 SND0
 Text Label 6000 5500 0    60   ~ 0
