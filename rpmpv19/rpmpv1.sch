@@ -653,7 +653,7 @@ RC18
 Text Label 6900 5800 0    60   ~ 0
 RC19
 $Comp
-L MSX:PT8211 U7
+L msx:PT8211 U7
 U 1 1 5E813C25
 P 5400 5400
 F 0 "U7" H 5400 5787 60  0000 C CNN
@@ -689,7 +689,7 @@ BOOT
 Wire Wire Line
 	1050 5025 675  5025
 $Comp
-L MSX:TEST W2
+L msx:TEST W2
 U 1 1 5EBAEF55
 P 1250 5025
 F 0 "W2" H 1250 5310 50  0000 C CNN
@@ -714,7 +714,7 @@ Wire Wire Line
 Wire Wire Line
 	2850 5650 2850 5350
 $Comp
-L MSX:TEST W1
+L msx:TEST W1
 U 1 1 5E8FD30E
 P 3050 5350
 F 0 "W1" H 3050 5635 50  0000 C CNN
@@ -1026,7 +1026,7 @@ Wire Wire Line
 Wire Wire Line
 	1650 2150 1650 1700
 $Comp
-L MSX:SipeedMaixBit U6
+L msx:SipeedMaixBit U6
 U 1 1 5E9D5F5A
 P 2700 2650
 F 0 "U6" H 2600 2650 60  0000 L CNN
@@ -1052,8 +1052,6 @@ Text Label 3450 3900 1    60   ~ 0
 RC29
 Text Label 3550 3900 1    60   ~ 0
 RC20
-Text Label 1900 4250 1    60   ~ 0
-RD0
 Text Label 1950 3900 1    60   ~ 0
 RA15
 Wire Wire Line
