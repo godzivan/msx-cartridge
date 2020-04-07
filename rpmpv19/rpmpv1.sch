@@ -671,15 +671,13 @@ Wire Wire Line
 	5900 5600 6400 5600
 NoConn ~ 5900 5400
 Text Label 6000 5300 0    60   ~ 0
-SND0
-Text Label 6000 5500 0    60   ~ 0
 SND
+Text Label 6000 5500 0    60   ~ 0
+SND0
 Text Label 6000 5600 0    60   ~ 0
 VCC
 Wire Wire Line
 	5500 4300 5900 4300
-Text Label 2900 5650 0    60   ~ 0
-SND
 Text Label 1500 5025 0    60   ~ 0
 GND
 Wire Wire Line
@@ -707,8 +705,6 @@ Text Label 4500 5500 0    60   ~ 0
 PCM_DATA
 Text Label 4550 5600 0    60   ~ 0
 GND
-Text Label 3300 5350 0    60   ~ 0
-SDN0
 Wire Wire Line
 	3250 5350 3600 5350
 Wire Wire Line
@@ -1162,4 +1158,8 @@ Text Label 3050 3900 1    60   ~ 0
 SPI_CS
 NoConn ~ 4650 3050
 NoConn ~ 4650 3150
+Text Label 2900 5650 0    60   ~ 0
+SND
+Text Label 3300 5350 0    60   ~ 0
+SND0
 $EndSCHEMATC

@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name rpi)(type Legacy)(uri ${KIPRJMOD}/../libraries/IC_raspberry.lib)(options "")(descr ""))
+  (lib (name MSX)(type Legacy)(uri ${KIPRJMOD}/../libraries/msx_slot.lib)(options "")(descr ""))
 )
