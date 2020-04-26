@@ -134,7 +134,7 @@ Text Label 6800 3450 0    60   ~ 0
 RD4
 Text Label 6800 3250 0    60   ~ 0
 RD6
-Text Label 8300 2000 0    60   ~ 0
+Text Label 8300 1700 0    60   ~ 0
 RD
 Text Notes 7400 7525 0    98   ~ 0
 RPMP V1.9 only with 74LVC4245 and some logics
@@ -202,8 +202,6 @@ Text Notes 8165 7645 0    60   ~ 0
 2020.1.12
 Text Label 9565 1860 0    60   ~ 0
 M1
-Text Label 8300 1700 0    60   ~ 0
-CLK
 Text Label 8300 1900 0    60   ~ 0
 IORQ
 Text Label 3370 3510 0    60   ~ 0
@@ -350,7 +348,7 @@ RC22
 Text Label 8300 1300 0    60   ~ 0
 GND
 Text Notes 9625 5450 0    79   ~ 0
-RC16     DAT_EN\nRC17     RESET\nRC18     PCM_CLK\nRC19     PCM_LRCK\nRC20     CLK\nRC21     PCM_DAT
+RC16     DAT_EN\nRC17     SLTSL\nRC18     PCM_CLK\nRC19     PCM_LRCK\nRC20     RD\nRC21     PCM_DAT
 Text Notes 9620 6210 0    79   ~ 0
 RC22     ADDR\nRC23     INTR\nRC24     WAIT\nRC25     DAT_DIR\nRC26     MREQ\nRC27     IORQ
 Text Label 6950 1800 0    60   ~ 0
@@ -443,7 +441,7 @@ U 1 1 5B6DBBA0
 P 2405 5275
 F 0 "R1" V 2485 5275 50  0000 C CNN
 F 1 "R" V 2405 5275 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 2335 5275 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2335 5275 50  0001 C CNN
 F 3 "" H 2405 5275 50  0001 C CNN
 	1    2405 5275
 	0    -1   -1   0   
@@ -454,7 +452,7 @@ U 1 1 5B6DBD2F
 P 2405 5475
 F 0 "R2" V 2485 5475 50  0000 C CNN
 F 1 "R" V 2405 5475 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 2335 5475 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2335 5475 50  0001 C CNN
 F 3 "" H 2405 5475 50  0001 C CNN
 	1    2405 5475
 	0    -1   -1   0   
@@ -465,7 +463,7 @@ U 1 1 5B6DBDB9
 P 2405 5675
 F 0 "R3" V 2485 5675 50  0000 C CNN
 F 1 "R" V 2405 5675 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 2335 5675 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2335 5675 50  0001 C CNN
 F 3 "" H 2405 5675 50  0001 C CNN
 	1    2405 5675
 	0    -1   -1   0   
@@ -523,7 +521,7 @@ Text Label 6955 2100 0    60   ~ 0
 RA9
 Text Label 6950 2000 0    60   ~ 0
 RA8
-Text Label 8300 2300 0    60   ~ 0
+Text Label 8300 1600 0    60   ~ 0
 SLTSL
 Wire Wire Line
 	10370 1460 10770 1460
@@ -828,33 +826,23 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x04_Female J2
 U 1 1 5E1B2F47
-P 1885 6220
-F 0 "J2" H 1885 6420 50  0000 C CNN
-F 1 "Conn_01x04" H 1885 5920 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x04_Pitch2.54mm" H 1885 6220 50  0001 C CNN
-F 3 "" H 1885 6220 50  0001 C CNN
-	1    1885 6220
+P 1800 6250
+F 0 "J2" H 1800 6450 50  0000 C CNN
+F 1 "Conn_01x04" H 1800 5950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x04_Pitch2.54mm" H 1800 6250 50  0001 C CNN
+F 3 "" H 1800 6250 50  0001 C CNN
+	1    1800 6250
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2085 6120 2460 6120
-Wire Wire Line
-	2085 6220 2460 6220
-Wire Wire Line
-	2085 6320 2465 6320
-Wire Wire Line
-	2085 6420 2465 6420
-Text Label 2140 6120 0    60   ~ 0
+Text Label 2150 6150 0    60   ~ 0
 SDA
-Text Label 2135 6220 0    60   ~ 0
-SCK
-Text Label 2140 6320 0    60   ~ 0
+Text Label 2150 6350 0    60   ~ 0
 VCC
-Text Label 2135 6420 0    60   ~ 0
+Text Label 2150 6450 0    60   ~ 0
 GND
-Text Label 2365 6120 0    60   ~ 0
+Text Label 2350 6150 0    60   ~ 0
 RD2
-Text Label 2365 6220 0    60   ~ 0
+Text Label 2350 6250 0    60   ~ 0
 RD3
 $Comp
 L Device:C C2
@@ -884,7 +872,7 @@ U 1 1 5E1B8043
 P 4715 5965
 F 0 "R4" V 4795 5965 50  0000 C CNN
 F 1 "R" V 4715 5965 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 4645 5965 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4645 5965 50  0001 C CNN
 F 3 "" H 4715 5965 50  0001 C CNN
 	1    4715 5965
 	0    1    1    0   
@@ -895,7 +883,7 @@ U 1 1 5E1B80DA
 P 5350 5965
 F 0 "R5" V 5430 5965 50  0000 C CNN
 F 1 "R" V 5350 5965 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 5280 5965 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5280 5965 50  0001 C CNN
 F 3 "" H 5350 5965 50  0001 C CNN
 	1    5350 5965
 	0    1    1    0   
@@ -924,7 +912,7 @@ Text Label 5015 6650 0    60   ~ 0
 SOUNDIN
 Text Label 4340 5965 0    60   ~ 0
 SND
-Text Label 8300 1600 0    60   ~ 0
+Text Label 8300 2000 0    60   ~ 0
 RESET
 Wire Wire Line
 	3720 1810 3720 1910
@@ -972,8 +960,6 @@ Wire Wire Line
 	4450 5400 4000 5400
 Wire Wire Line
 	4450 5500 4000 5500
-Wire Wire Line
-	5450 5400 5650 5400
 Wire Wire Line
 	5450 5500 6050 5500
 Text Label 5600 5500 0    60   ~ 0
@@ -1113,12 +1099,12 @@ Wire Wire Line
 $Comp
 L MSX:TEST W1
 U 1 1 5F4FC298
-P 5850 5200
-F 0 "W1" H 5850 5485 50  0000 C CNN
-F 1 "TEST_1P" H 5850 5394 50  0000 C CNN
-F 2 "MSX:TestPoint_Pad_D1.0mm" H 5850 5303 50  0000 C CNN
-F 3 "" H 6050 5200 50  0000 C CNN
-	1    5850 5200
+P 5850 5400
+F 0 "W1" H 5850 5685 50  0000 C CNN
+F 1 "TEST_1P" H 5850 5594 50  0000 C CNN
+F 2 "MSX:TestPoint_Pad_D1.0mm" H 5850 5503 50  0000 C CNN
+F 3 "" H 6050 5400 50  0000 C CNN
+	1    5850 5400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1146,14 +1132,59 @@ Text Label 10450 4200 0    60   ~ 0
 TVOUT
 NoConn ~ 10750 4200
 Wire Wire Line
-	5450 5200 5650 5200
-Wire Wire Line
-	6050 5200 6300 5200
-Text Label 6050 5200 0    60   ~ 0
+	6050 5400 6100 5400
+Text Label 6100 5400 0    60   ~ 0
 SND
-Wire Wire Line
-	5650 5200 5650 5400
-Connection ~ 5650 5200
 NoConn ~ 10750 4300
 NoConn ~ 9500 4300
+Wire Wire Line
+	5450 5400 5650 5400
+Wire Wire Line
+	6100 5200 6100 5400
+Wire Wire Line
+	5450 5200 6100 5200
+Connection ~ 6100 5400
+Wire Wire Line
+	6100 5400 6300 5400
+$Comp
+L Device:R R6
+U 1 1 5EAFBA2A
+P 2750 6150
+F 0 "R6" V 2830 6150 50  0000 C CNN
+F 1 "R" V 2750 6150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2680 6150 50  0001 C CNN
+F 3 "" H 2750 6150 50  0001 C CNN
+	1    2750 6150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5EAFC8A4
+P 2750 6250
+F 0 "R7" V 2830 6250 50  0000 C CNN
+F 1 "R" V 2750 6250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2680 6250 50  0001 C CNN
+F 3 "" H 2750 6250 50  0001 C CNN
+	1    2750 6250
+	0    -1   -1   0   
+$EndComp
+Text Label 2150 6250 0    60   ~ 0
+SCK
+Wire Wire Line
+	2000 6150 2600 6150
+Wire Wire Line
+	2000 6250 2600 6250
+Wire Wire Line
+	2000 6450 2600 6450
+Wire Wire Line
+	2900 6350 2900 6250
+Wire Wire Line
+	2000 6350 2900 6350
+Wire Wire Line
+	3050 6150 2900 6150
+Wire Wire Line
+	2900 6350 3050 6350
+Wire Wire Line
+	3050 6150 3050 6350
+Connection ~ 2900 6350
 $EndSCHEMATC
