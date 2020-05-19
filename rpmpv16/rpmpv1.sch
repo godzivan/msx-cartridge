@@ -1063,5 +1063,11 @@ Connection ~ 2250 6450
 Wire Wire Line
 	2250 6450 2600 6450
 Text Label 2350 6450 0    60   ~ 0
-3V3
+VCC
+Text Label 4200 5700 3    60   ~ 0
+GND
+Wire Wire Line
+	2050 3950 2050 4450
+Text Label 2050 4350 1    60   ~ 0
+VCC
 $EndSCHEMATC
