@@ -1,5 +1,4 @@
 (sym_lib_table
-  (lib (name IC_raspberry)(type Legacy)(uri C:/msys64/home/meesokim/msx-cartridge/libraries/IC_raspberry.lib)(options "")(descr ""))
-  (lib (name msx_slot)(type Legacy)(uri C:/msys64/home/meesokim/msx-cartridge/libraries/msx_slot.lib)(options "")(descr ""))
-  (lib (name TTL)(type Legacy)(uri C:/msys64/home/meesokim/msx-cartridge/libraries/TTL.lib)(options "")(descr ""))
+  (lib (name IC_raspberry)(type Legacy)(uri /home-mc/meeso.kim/msx-cartridge/libraries/IC_raspberry.lib)(options "")(descr ""))
+  (lib (name msx_slot)(type Legacy)(uri /home-mc/meeso.kim/msx-cartridge/libraries/msx_slot.lib)(options "")(descr ""))
 )
