@@ -1,3 +1,5 @@
 (fp_lib_table
-  (lib (name rpspc)(type KiCad)(uri "$(KIPRJMOD)")(options "")(descr ""))
+  (version 7)
+  (lib (name "rpspc")(type "KiCad")(uri "$(KIPRJMOD)")(options "")(descr ""))
+  (lib (name "rpispcv4")(type "KiCad")(uri "Z:/home/msx/msx-cartridge/rpispcv4.pretty")(options "")(descr ""))
 )
