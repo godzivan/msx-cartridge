@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "msx")(type "KiCad")(uri "Z:/home/msx/msx-cartridge/libraries/msx.pretty")(options "")(descr ""))
+)

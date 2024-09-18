@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "msx_slot")(type "KiCad")(uri "Z:/home/msx/msx-cartridge/libraries/msx_slot.kicad_sym")(options "")(descr ""))
+)

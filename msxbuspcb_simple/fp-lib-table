@@ -1,4 +1,6 @@
 (fp_lib_table
-  (lib (name .pretty)(type KiCad)(uri "$(KIPRJMOD)\\.pretty")(options "")(descr ""))
-  (lib (name msxlib)(type KiCad)(uri "$(KIPRJMOD)\\..\\msxlib")(options "")(descr ""))
+  (version 7)
+  (lib (name ".pretty")(type "KiCad")(uri "$(KIPRJMOD)/.pretty")(options "")(descr ""))
+  (lib (name "msxlib")(type "KiCad")(uri "$(KIPRJMOD)/../msxlib")(options "")(descr ""))
+  (lib (name "msx")(type "KiCad")(uri "${KIPRJMOD}/msx.pretty")(options "")(descr ""))
 )
