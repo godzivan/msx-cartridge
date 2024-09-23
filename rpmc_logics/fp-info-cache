@@ -1,4 +1,4 @@
-23841356138576339
+23848263964718374
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -64693,6 +64693,13 @@ Yellow 5381 Series LED
 0
 2
 2
+Library
+PCM1808_EVB
+
+
+0
+15
+15
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -96740,12 +96747,33 @@ Varistor VF
 2
 2
 footprint
+PCM1808_EVB
+
+
+0
+15
+15
+footprint
 SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL
 SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL footprint
 SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL footprint C5636
 0
 20
 20
+footprint
+TSSOP-20_L6.5-W4.4-P0.65-LS6.4-BL
+TSSOP-20_L6.5-W4.4-P0.65-LS6.4-BL footprint
+TSSOP-20_L6.5-W4.4-P0.65-LS6.4-BL footprint C53406
+0
+20
+20
+libraries
+PCM1808_EVB
+
+
+0
+15
+15
 libraries
 raspberry_pi_zero_layout
 

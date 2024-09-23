@@ -1,5 +1,6 @@
 (fp_lib_table
   (version 7)
-  (lib (name "libraries")(type "KiCad")(uri "Z:/home/msx/msx-cartridge/libraries")(options "")(descr ""))
-  (lib (name "footprint")(type "KiCad")(uri "Z:/home/msx/msx-cartridge/libraries/footprint")(options "")(descr ""))
+  (lib (name "libraries")(type "KiCad")(uri "${KIPROMOD}/../libraries")(options "")(descr "")(disabled))
+  (lib (name "footprint")(type "KiCad")(uri "${KIPROMOD}/../libraries/footprint")(options "")(descr ""))
+  (lib (name "Library")(type "KiCad")(uri "${KIPROMOD}/../libraries/msx.pretty/Library.pretty")(options "")(descr ""))
 )
