@@ -6972,6 +6972,17 @@
 		)
 		(uuid "010f8732-c059-4555-8296-b2654361ef61")
 	)
+	(label "TMS"
+		(at 68.58 156.21 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "04b92186-a560-48e5-9e9d-b31dcbe14bb3")
+	)
 	(label "A9"
 		(at 181.61 104.14 0)
 		(fields_autoplaced yes)
@@ -7048,6 +7059,17 @@
 			(justify left bottom)
 		)
 		(uuid "197d8a7a-c277-4003-b68f-c488885be8e7")
+	)
+	(label "TDO"
+		(at 68.58 153.67 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "2272bf62-a62d-405d-ab90-c0c5ef66df70")
 	)
 	(label "DIN"
 		(at 214.63 123.19 0)
@@ -7467,6 +7489,17 @@
 		)
 		(uuid "6b3bc57a-1eea-4591-b33d-a16ad606674e")
 	)
+	(label "TCK"
+		(at 68.58 151.13 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "6bab7b78-9f3f-4175-8fc0-f1e107d27eaa")
+	)
 	(label "GND"
 		(at 237.49 48.26 0)
 		(fields_autoplaced yes)
@@ -7477,6 +7510,17 @@
 			(justify left bottom)
 		)
 		(uuid "6d00b7ea-1aa8-4487-8c76-869123b1c254")
+	)
+	(label "TDI"
+		(at 68.58 161.29 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "6d931f56-7029-4cc4-a178-9526fafe372b")
 	)
 	(label "A7"
 		(at 237.49 76.2 0)
