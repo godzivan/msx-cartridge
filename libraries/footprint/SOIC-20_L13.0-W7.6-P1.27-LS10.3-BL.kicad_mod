@@ -1,6 +1,6 @@
-(module "SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL" (layer F.Cu) (tedit 66EDA8D3)
+(module "SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL" (layer F.Cu) (tedit 66EAA473)
   (descr "SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL footprint")
-  (tags "SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL footprint C5636")
+  (tags "SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL footprint C6844")
   (attr smd)
   (fp_text reference REF** (at 0 -6.729997) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -39,7 +39,7 @@
   (fp_text user REF** (at 0 8.729997) (layer F.Fab)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (model msx-cartridge/libraries/footprint/msx-cartridge/libraries/packages3d/SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL.step
+  (model JLC2KiCad_lib/footprint/packages3d/SOIC-20_L13.0-W7.6-P1.27-LS10.3-BL.step
     (at (xyz -34.995 33.15 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
