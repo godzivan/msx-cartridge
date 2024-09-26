@@ -5072,142 +5072,6 @@
 				)
 			)
 		)
-		(symbol "Regulator_Linear:AP1117-33"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -3.81 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "AP1117-33"
-				(at 0 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.diodes.com/datasheets/AP1117.pdf"
-				(at 2.54 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "linear regulator ldo fixed positive obsolete"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?223*TabPin2*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "AP1117-33_0_1"
-				(rectangle
-					(start -5.08 -5.08)
-					(end 5.08 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "AP1117-33_1_1"
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "VO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "VI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:+3V3"
 			(power)
 			(pin_numbers hide)
@@ -5436,12 +5300,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "084e25cc-f826-41f8-86c1-b110c72fc731")
-	)
-	(junction
-		(at 66.04 46.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2dd15831-ec68-45ea-933e-100c4aab5921")
 	)
 	(junction
 		(at 215.9 142.24)
@@ -7300,16 +7158,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 46.99) (xy 72.39 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4ca7fa9-0a6b-4096-92d8-f9eecde59e0d")
-	)
-	(wire
-		(pts
 			(xy 48.26 137.16) (xy 58.42 137.16)
 		)
 		(stroke
@@ -7337,16 +7185,6 @@
 			(type default)
 		)
 		(uuid "f8a3771b-9eb6-4833-b206-06ea73897fff")
-	)
-	(wire
-		(pts
-			(xy 73.66 35.56) (xy 83.82 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe96a376-41b4-4b01-8c7b-a2cf0e4d3c65")
 	)
 	(wire
 		(pts
@@ -7720,17 +7558,6 @@
 			(justify left bottom)
 		)
 		(uuid "38380c4c-248f-4bb6-8e2e-558580b85adc")
-	)
-	(label "+3V3"
-		(at 67.31 46.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left bottom)
-		)
-		(uuid "39f5a56a-0a2d-4c8e-828c-14acb1c09948")
 	)
 	(label "TDO"
 		(at 113.03 146.05 0)
@@ -8182,17 +8009,6 @@
 			(justify left bottom)
 		)
 		(uuid "7fa55e66-b150-4279-846c-837a38c6b2a7")
-	)
-	(label "5V0"
-		(at 76.2 35.56 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left bottom)
-		)
-		(uuid "80259551-c234-4023-9809-549dc1edb950")
 	)
 	(label "G23"
 		(at 114.3 97.79 0)
@@ -9610,144 +9426,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:AP1117-33")
-		(at 91.44 35.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5a7c3dfb-a455-4af2-a965-652b0e5f428d")
-		(property "Reference" "U2"
-			(at 91.44 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AP1117-33"
-			(at 91.44 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 91.44 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.diodes.com/datasheets/AP1117.pdf"
-			(at 93.98 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
-			(at 91.44 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "26087fd1-f97f-44dc-829f-a31c947df220")
-		)
-		(pin "3"
-			(uuid "1450a74f-87ea-4b6b-aa8b-31c7154afab6")
-		)
-		(pin "2"
-			(uuid "87c25f9e-f358-4a69-b44c-507a2f0dd120")
-		)
-		(instances
-			(project ""
-				(path "/c5d2437d-c985-4d89-ab07-b311a0c743e4"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 99.06 35.56 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5d8a6621-4109-4144-90eb-1299433a9eb8")
-		(property "Reference" "#PWR020"
-			(at 95.25 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 102.87 35.5599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 99.06 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 99.06 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 99.06 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3cccb3dd-816d-4509-be32-e1b97a1a2202")
-		)
-		(instances
-			(project "epm240_msxcart"
-				(path "/c5d2437d-c985-4d89-ab07-b311a0c743e4"
-					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 137.16 34.29 0)
 		(unit 1)
@@ -9808,72 +9486,6 @@
 			(project "epm240_msxcart"
 				(path "/c5d2437d-c985-4d89-ab07-b311a0c743e4"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 91.44 43.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6afe62d5-dc00-4668-89ff-d5c85b98c011")
-		(property "Reference" "#PWR019"
-			(at 91.44 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 91.44 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 91.44 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 91.44 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "81e5fe2f-32ec-494e-9395-34587ddb9b63")
-		)
-		(instances
-			(project "epm240_msxcart"
-				(path "/c5d2437d-c985-4d89-ab07-b311a0c743e4"
-					(reference "#PWR019")
 					(unit 1)
 				)
 			)
