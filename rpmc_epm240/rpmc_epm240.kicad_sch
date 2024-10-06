@@ -8451,7 +8451,7 @@
 		)
 		(uuid "dbd1876d-e2e0-490b-91a3-8f09a7380329")
 	)
-	(label "WAIT"
+	(label "G14"
 		(at 124.46 76.2 0)
 		(fields_autoplaced yes)
 		(effects
