@@ -4901,7 +4901,7 @@
 				)
 			)
 		)
-		(symbol "Oscillator:SG-7050CCN"
+		(symbol "Oscillator:ASV-xxxMHz"
 			(pin_names
 				(offset 0.254)
 			)
@@ -4917,7 +4917,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "SG-7050CCN"
+			(property "Value" "ASV-xxxMHz"
 				(at 1.27 -6.35 0)
 				(effects
 					(font
@@ -4926,7 +4926,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Oscillator:Oscillator_SMD_SeikoEpson_SG8002CA-4Pin_7.0x5.0mm"
+			(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm"
 				(at 17.78 -8.89 0)
 				(effects
 					(font
@@ -4935,7 +4935,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://support.epson.biz/td/api/doc_check.php?dl=brief_SG7050CAN&lang=en"
+			(property "Datasheet" "http://www.abracon.com/Oscillators/ASV.pdf"
 				(at -2.54 0 0)
 				(effects
 					(font
@@ -4944,7 +4944,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "CMOS Clock Oscillator 2.5 to 50 MHz"
+			(property "Description" "3.3V HCMOS SMD Crystal Clock Oscillator, Abracon"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4953,7 +4953,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Crystal Clock Oscillator"
+			(property "ki_keywords" "3.3V HCMOS SMD Crystal Clock Oscillator"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4962,7 +4962,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Oscillator*SMD*SeikoEpson*SG8002CA*7.0x5.0mm*"
+			(property "ki_fp_filters" "Oscillator*SMD*Abracon*ASV*7.0x5.1mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4971,7 +4971,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SG-7050CCN_0_1"
+			(symbol "ASV-xxxMHz_0_1"
 				(rectangle
 					(start -5.08 5.08)
 					(end 5.08 -5.08)
@@ -4997,11 +4997,11 @@
 					)
 				)
 			)
-			(symbol "SG-7050CCN_1_1"
+			(symbol "ASV-xxxMHz_1_1"
 				(pin input line
 					(at -7.62 0 0)
 					(length 2.54)
-					(name "OE"
+					(name "EN"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5055,7 +5055,7 @@
 				(pin power_in line
 					(at 0 7.62 270)
 					(length 2.54)
-					(name "Vcc"
+					(name "Vdd"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -10703,73 +10703,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 55.88 44.45 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b52706a5-1b64-4968-addd-bb6c11d7052d")
-		(property "Reference" "#PWR019"
-			(at 49.53 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 52.07 44.4499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 55.88 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 55.88 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 55.88 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b8477449-f7f0-4288-a0a2-5e2316293b11")
-		)
-		(instances
-			(project "rpmp_epm240"
-				(path "/fdfbe04e-0f67-42f5-bc7c-9ea50b5ce9ad"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 132.08 30.48 0)
 		(unit 1)
@@ -10968,7 +10901,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Oscillator:SG-7050CCN")
+		(lib_id "Oscillator:ASV-xxxMHz")
 		(at 63.5 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10993,7 +10926,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Oscillator:Oscillator_SMD_SeikoEpson_SG8002CA-4Pin_7.0x5.0mm"
+		(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm"
 			(at 81.28 53.34 0)
 			(effects
 				(font
@@ -11002,7 +10935,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://support.epson.biz/td/api/doc_check.php?dl=brief_SG7050CAN&lang=en"
+		(property "Datasheet" "http://www.abracon.com/Oscillators/ASV.pdf"
 			(at 60.96 44.45 0)
 			(effects
 				(font
@@ -11011,7 +10944,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CMOS Clock Oscillator 2.5 to 50 MHz"
+		(property "Description" "3.3V HCMOS SMD Crystal Clock Oscillator, Abracon"
 			(at 63.5 44.45 0)
 			(effects
 				(font
@@ -11102,6 +11035,74 @@
 			(project "rpmp_epm240"
 				(path "/fdfbe04e-0f67-42f5-bc7c-9ea50b5ce9ad"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 52.07 44.45 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "df8dff57-f62a-491c-8fa0-cd46cdb4a36c")
+		(property "Reference" "R5"
+			(at 52.07 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 52.07 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 52.07 46.228 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 52.07 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2ec4eb89-ba52-466c-8cb1-218c86b1489e")
+		)
+		(pin "2"
+			(uuid "cbc49e13-02ac-405b-869e-c9f5e890271c")
+		)
+		(instances
+			(project ""
+				(path "/fdfbe04e-0f67-42f5-bc7c-9ea50b5ce9ad"
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -11234,6 +11235,73 @@
 			(project "rpmp_epm240"
 				(path "/fdfbe04e-0f67-42f5-bc7c-9ea50b5ce9ad"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 48.26 44.45 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ff61e142-e37b-4543-be4f-8dcf8344fcb3")
+		(property "Reference" "#PWR019"
+			(at 52.07 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 44.45 44.4499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 48.26 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9c7371a-2a49-4d24-a33e-20a288440559")
+		)
+		(instances
+			(project "rpmp_epm240"
+				(path "/fdfbe04e-0f67-42f5-bc7c-9ea50b5ce9ad"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
