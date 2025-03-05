@@ -9,157 +9,222 @@
 //
 //  This module is the top level module for MAX II MSX BUS Master.
 //
+// Modify port declaration
+module msxbus_simple (
+    input CS,
+    input PCLK,
+    inout [7:0] RDATA,
+    input [1:0] SW,
+    input INT, BUSDIR, WAIT,
+    inout [7:0] DATA,
+    output reg RD,
+    output reg WR,
+    output reg MREQ,
+    output reg IORQ,
+    output reg RESET,
+    output reg [15:0] ADDR,
+    output reg SLTSL1,
+    output reg SLTSL2,
+    output reg SLTSL1_CS1,    // Changed from CS1
+    output reg SLTSL1_CS2,    // Changed from CS2
+    output reg SLTSL1_CS12,   // Changed from CS12
+    output reg SLTSL2_CS1,    // New
+    output reg SLTSL2_CS2,    // New
+    output reg SLTSL2_CS12,   // New
+    output reg CS1,
+    output reg CS2,
+    output reg CS12,
+    output MCLK, SWOUT, RFSH,
+    output reg M1
+);
 
-module msxbus_simple (MODE, MD, READY, CLK, PSW0, PSW1, 
-ADDR, DATA, RESET, RD, WR, MREQ, IORQ, SLTSL, CS1, CS2, CS12, INT, BUSDIR, WAIT, MCLK, SW, SWOUT, RFSH, M1);
+// Add CMD register to the reg declarations
+reg [7:0] input_data;
+reg [7:0] rdata_out;
+reg [7:0] CMD;        // Added CMD register
+reg [2:0] state;
+reg rdata_drive;
 
-input [1:0] MODE;
-input CLK;
-inout reg [20:0] MD;
-output reg READY;
-output PSW0;
-output PSW1;
+// Add data_drive register declaration
+reg [7:0] data_out;
+reg data_drive;
 
-input [1:0] SW;
-input INT, BUSDIR, WAIT;
-inout reg [7:0] DATA;
-output reg RD;
-output reg WR;
-output reg MREQ;
-output reg IORQ;
-output RESET;
-output reg [15:0] ADDR;
-output reg [1:0] SLTSL;
-output reg CS1;
-output reg CS2;
-output reg CS12;
-output MCLK, SWOUT, RFSH;
-output reg M1;
+// Add bidirectional control for DATA bus
+assign RDATA = rdata_drive ? rdata_out : 8'bZ;
+assign DATA = data_drive ? data_out : 8'bZ;
+assign SWOUT = 1'b1;
 
-reg [7:0] rdata;
-reg [7:0] wdata;
-reg [2:0] clkcount;
-reg ready1, mready0, mready1;
-reg msxclk;
-reg wr0, rd0, iorq0, mreq0;
-reg [12:0] cycle;
-reg [1:0] sltsl;
-reg [7:0] cnt;
-reg [1:0] mode;
-reg [13:0] timeout;
-reg mclk;
-reg reset;
-reg mio, rw, slt;
+// Add to register declarations
+reg [1:0] delay_count;
 
-//assign MD[7:0] = MODE == 2'b01 ? rdata : 2'h00;
+// Add new state to localparam
+localparam 
+    IDLE = 3'd0,
+    GET_CMD = 3'd1,
+    GET_ADDR_L = 3'd2,
+    GET_ADDR_H = 3'd3,
+    SET_CONTROL = 3'd4,
+    DELAY_STATE = 3'd5,
+    GET_DATA = 3'd6,
+    WAIT_STATE = 3'd7,
+    GET_STATUS = 3'd8,    // New state
+    COMPLETE = 4'd9;
 
-assign MCLK = msxclk;
-assign SWOUT = 1'b0;
-assign RESET = reset;
-assign PSW0 = SW[0];
-assign PSW1 = SW[1];
+initial begin
+    state = IDLE;
+    byte_counter = 0;
+    SLTSL1 = 1'b1;
+    SLTSL2 = 1'b1;
+    SLTSL1_CS1 = 1'b1;
+    SLTSL1_CS2 = 1'b1;
+    SLTSL1_CS12 = 1'b1;
+    SLTSL2_CS1 = 1'b1;
+    SLTSL2_CS2 = 1'b1;
+    SLTSL2_CS12 = 1'b1;
+    CS1 = 1'b1;
+    CS2 = 1'b1;
+    CS12 = 1'b1;
+    WR = 1'b1;
+    RD = 1'b1;
+    MREQ = 1'b1;
+    IORQ = 1'b1;
+    RESET = 1'b1;
+    M1 = 1'b1;
+    rdata_drive = 1'b0;
+	data_drive = 1'b0;
 
-initial
-begin
-mready1 = 1'b1;
-mready0 = 1'b1;
-ready1 = 1'b1;	
-SLTSL = 3;
-CS1 = 1'b1;
-CS2 = 1'b1;
-CS12 = 1'b1;
-wr0 = 1'b1;
-rd0 = 1'b1;
-mreq0 = 1'b1;
-iorq0 = 1'b1;
-clkcount = 0;
-cycle = 0;
-IORQ = 1'b1;
-MREQ = 1'b1;
-READY = 1'b1;
-cnt = 0;
-timeout = 0;
-wdata = 0;
-M1 = 1'bZ;
+end
+// Modify always block to use only positive edge of CS
+always @(negedge PCLK or posedge CS) begin
+    if (CS) begin
+        state <= GET_CMD;
+        RD <= 1'b1;
+        WR <= 1'b1;
+        MREQ <= 1'b1;
+        IORQ <= 1'b1;
+        SLTSL1 <= 1'b1;    // Added
+        SLTSL2 <= 1'b1;    // Added
+		SLTSL1_CS1 = 1'b1;
+		SLTSL1_CS2 = 1'b1;
+		SLTSL1_CS12 = 1'b1;
+		SLTSL2_CS1 = 1'b1;
+		SLTSL2_CS2 = 1'b1;
+		SLTSL2_CS12 = 1'b1;
+	    RESET = 1'b1;
+		M1 = 1'b1;
+        rdata_drive <= 1'b0;
+		data_drive <= 1'b0;
+    end else begin
+        case (state)
+            GET_CMD: begin
+                CMD <= RDATA;
+                case (RDATA[3:0])    // Only use lower 4 bits for command
+                    4'h1: begin // Memory Read
+                        state <= GET_ADDR_L;
+                    end
+                    4'h2: begin // Memory Write
+                        state <= GET_ADDR_L;
+                    end
+                    4'h3: begin // IO Read
+                        state <= GET_ADDR_L;
+                    end
+                    4'h4: begin // IO Write
+                        state <= GET_ADDR_L;
+                    end
+                    4'h5: begin // Reset
+                        RESET <= 1'b0;
+                        state <= COMPLETE;
+                    end
+                    4'h8: begin // Get Status
+                        state <= GET_STATUS;
+                        rdata_drive <= 1'b1;
+                    end
+                    default: state <= IDLE;
+                endcase
+            end
+
+            GET_ADDR_L: begin
+                ADDR[7:0] <= RDATA;
+                state <= GET_ADDR_H;
+            end
+
+            GET_ADDR_H: begin
+                ADDR[15:8] <= RDATA;
+                if (CMD[3:0] != 4'h5) begin
+                    state <= SET_CONTROL;
+                end
+            end
+
+            SET_CONTROL: begin
+                // Common control signals
+                MREQ <= CMD[1];
+                IORQ <= !CMD[1];
+                RD <= CMD[0];    
+                WR <= !CMD[0];     
+                M1 <= CMD[7];
+                // Memory access signals
+                if (!CMD[1]) begin  // If MREQ is active
+                    SLTSL1 <= !CMD[4];
+                    SLTSL2 <= CMD[4];
+                    if (!CMD[4]) begin  // SLTSL1 active
+                        SLTSL1_CS1 <= (ADDR[15:14] == 2'b01) ? 1'b0 : 1'b1;
+                        SLTSL1_CS2 <= (ADDR[15:14] == 2'b10) ? 1'b0 : 1'b1;
+                        SLTSL1_CS12 <= ((ADDR[15:14] == 2'b01) || (ADDR[15:14] == 2'b10)) ? 1'b0 : 1'b1;
+                    end else begin     // SLTSL2 active
+                        SLTSL2_CS1 <= (ADDR[15:14] == 2'b01) ? 1'b0 : 1'b1;
+                        SLTSL2_CS2 <= (ADDR[15:14] == 2'b10) ? 1'b0 : 1'b1;
+                        SLTSL2_CS12 <= ((ADDR[15:14] == 2'b01) || (ADDR[15:14] == 2'b10)) ? 1'b0 : 1'b1;
+                    end
+                end
+                // State transition and data direction
+                if (CMD[0]) begin  // Write operations
+                    data_out <= RDATA;
+                    data_drive <= 1'b1;
+                end else begin
+                    data_drive <= 1'b0;
+                end
+                rdata_drive <= 1'b1;
+				rdata_out <= 8'h00;
+                delay_count <= 2'b11;  // Initialize delay counter
+                state <= DELAY_STATE;
+            end
+
+            DELAY_STATE: begin
+                if (delay_count == 2'b00) begin
+                    state <= WAIT_STATE;
+                end else begin
+                    delay_count <= delay_count - 1;
+                end
+            end
+            WAIT_STATE: begin
+                if (WAIT) begin
+                    rdata_out <= 8'hFF; // ACK
+					if (CMD[0]) begin
+	                    state <= GET_DATA;
+					end else begin
+	                    state <= COMPLETE;
+					end
+                end
+            end
+
+            GET_DATA: begin
+                rdata_out <= DATA;
+                state <= COMPLETE;
+            end
+
+            GET_STATUS: begin
+                rdata_out <= {INT, SW, 6'b0000, WAIT};  // INT in bit 7, SW[1:0] in bit 6-5, WAIT in bit 0
+                state <= COMPLETE;
+            end
+
+            COMPLETE: begin
+                state <= IDLE;
+				RESET <= 1'b1;
+            end
+        endcase
+    end
 end
 
-always @(negedge CLK) begin
-	case (MODE)
-	0: begin
-		MD <= 16'bZ;
-		ADDR <= MD[15:0];
-		READY <= 1'b0;
-		cycle <= 0;
-		end
-	1: begin
-		cycle <= cycle + 1;
-		mio <= MD[15];
-		rw <= MD[14];
-		slt <= MD[13];
-		MREQ  <= mio;
-		IORQ  <= !mio;
-		if (!rw)
-			begin
-			RD <= 1'b0;
-			WR <= 1'b1;
-			if (cycle > 4)
-				READY <= 1'b0;
-			MD[7:0] <= DATA;
-			DATA <= 8'bZ;
-			end
-		else
-			begin
-			WR <= 1'b0;
-			if (cycle < 2) 
-				DATA <= MD[7:0];
-			MD[7:0] <= 8'bZ;
-			if (cycle > 18)
-				READY <= 1'b0;
-			end
-		MD[12] <= INT; 
-		MD[11] <= BUSDIR; 
-		MD[10] <= WAIT; 
-		MD[9]  <= SW[0]; 
-		MD[8]  <= SW[1];
-		if (!mio)
-		begin
-			SLTSL[1] <= slt;
-			SLTSL[0] <= !slt;
-			CS1 <=  ADDR[15:14] == 1 ? 1'b0 : 1;
-			CS2 <=  ADDR[15:14] == 2 ? 1'b0 : 1;
-			CS12 <= ADDR[15] ~^ ADDR[14];
-		end
-		end
-	2: READY <= 1'b1;
-	3: READY <= 1'b1;
-	endcase
-	if (cycle > 100) begin
-		READY <= 1'b0;	
-		cycle <= 0;
-	end
-	if (READY) begin
-		reset <= 1'b1;
-		DATA <= 8'bZ;
-		MREQ <= 1'b1;
-		IORQ <= 1'b1;
-		RD <= 1'bZ;
-		WR <= 1'bZ;
-		SLTSL <= 2'bZZ;
-		CS1 <= 1'bZ;
-		CS2 <= 1'bZ;
-		CS12 <= 1'bZ;	
-	end
-end
-
-always @ (negedge CLK) begin
-    clkcount <= clkcount + 3'b001;
-    if (clkcount == 3'b000)
-		msxclk = ~msxclk; 
-end
-
-always @ (negedge CLK) begin
-	mclk = ~mclk;
-end
-
+// Remove the old combinational chip select logic block
 endmodule
 
