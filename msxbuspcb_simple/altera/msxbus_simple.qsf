@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EPM240T100C5
 set_global_assignment -name TOP_LEVEL_ENTITY msxbus_simple
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:35:26  JANUARY 29, 2017"
-set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY reports
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -69,9 +69,9 @@ set_location_assignment PIN_42 -to ADDR[0]
 set_location_assignment PIN_58 -to WR
 set_location_assignment PIN_83 -to BUSDIR
 set_location_assignment PIN_64 -to CLK
-set_location_assignment PIN_72 -to CS1
-set_location_assignment PIN_71 -to CS2
-set_location_assignment PIN_70 -to CS12
+set_location_assignment PIN_72 -to SLTSL1_CS1
+set_location_assignment PIN_71 -to SLTSL1_CS2
+set_location_assignment PIN_70 -to SLTSL1_CS12
 set_location_assignment PIN_29 -to DATA[7]
 set_location_assignment PIN_28 -to DATA[6]
 set_location_assignment PIN_33 -to DATA[5]
@@ -89,24 +89,24 @@ set_location_assignment PIN_8 -to MD[13]
 set_location_assignment PIN_7 -to MD[12]
 set_location_assignment PIN_98 -to MD[11]
 set_location_assignment PIN_92 -to MD[10]
-set_location_assignment PIN_96 -to MD[9]
-set_location_assignment PIN_99 -to MD[8]
-set_location_assignment PIN_1 -to MD[7]
-set_location_assignment PIN_6 -to MD[6]
-set_location_assignment PIN_4 -to MD[5]
-set_location_assignment PIN_78 -to MD[4]
-set_location_assignment PIN_76 -to MD[3]
-set_location_assignment PIN_77 -to MD[2]
-set_location_assignment PIN_3 -to MD[1]
-set_location_assignment PIN_2 -to MD[0]
+set_location_assignment PIN_96 -to CS
+set_location_assignment PIN_99 -to PCLK
+set_location_assignment PIN_1 -to RDATA[7]
+set_location_assignment PIN_6 -to RDATA[6]
+set_location_assignment PIN_4 -to RDATA[5]
+set_location_assignment PIN_78 -to RDATA[4]
+set_location_assignment PIN_76 -to RDATA[3]
+set_location_assignment PIN_77 -to RDATA[2]
+set_location_assignment PIN_3 -to RDATA[1]
+set_location_assignment PIN_2 -to RDATA[0]
 set_location_assignment PIN_16 -to MODE[1]
 set_location_assignment PIN_91 -to MODE[0]
 set_location_assignment PIN_61 -to MREQ
 set_location_assignment PIN_57 -to RD
 set_location_assignment PIN_97 -to READY
 set_location_assignment PIN_56 -to RESET
-set_location_assignment PIN_73 -to SLTSL[1]
-set_location_assignment PIN_69 -to SLTSL[0]
+set_location_assignment PIN_73 -to SLTSL2
+set_location_assignment PIN_69 -to SLTSL1
 set_location_assignment PIN_21 -to SW[1]
 set_location_assignment PIN_20 -to SW[0]
 set_location_assignment PIN_26 -to SWOUT
@@ -117,7 +117,7 @@ set_location_assignment PIN_85 -to MD[18]
 set_location_assignment PIN_14 -to MD[19]
 set_location_assignment PIN_17 -to MD[20]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to DATA
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to DATA
+# set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to DATA
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DATA
 set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to DATA
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to ADDR
@@ -130,13 +130,12 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to WR
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to IORQ
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MREQ
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SLTSL
-set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to RD
-set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to IORQ
+# set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to IORQ
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to ADDR
 set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to CLK
-set_instance_assignment -name FAST_INPUT_REGISTER ON -to DATA
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to ADDR
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to MREQ
+# set_instance_assignment -name FAST_INPUT_REGISTER ON -to DATA
+# set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to ADDR
+# set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to MREQ
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDR
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to WR
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to WR
@@ -154,8 +153,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to INT
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to INT
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RD
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to RD
-set_global_assignment -name VHDL_FILE sram_controller.vhd
 set_global_assignment -name VERILOG_FILE msxbus_simple.v
-set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to WR
 set_global_assignment -name SOURCE_FILE ./msxbus_simple.v
 set_global_assignment -name SOURCE_FILE ./sram_controller.vhd
+set_global_assignment -name SOURCE_FILE sram_controller.vhd
